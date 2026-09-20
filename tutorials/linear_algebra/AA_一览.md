@@ -76,6 +76,13 @@
 | 标准基 | standard basis | $\mathbb R^n$ 的 $\vec e_1,\dots,\vec e_n$、$P_n$ 的 $1,t,\dots,t^n$；最顺手的一副基，坐标=分量 | 第 08 讲 | 要会用 |
 | 维数 | dimension, $\dim W$ | 基的大小；良定义（任何两组基个数相同），$n$ 维空间里 $n$ 个向量"张成⇔无关"自动互推 | 第 08 讲 | 要能推导/手算 |
 | 坐标向量 | coordinate vector | 向量在给定基下的表示系数组成的向量；换基时坐标按换基矩阵变换 | 第 08 讲 | 要知道有这回事 |
+| 四个基本子空间 | four fundamental subspaces | $\mathrm{col}(A)$、$N(A)$、$\mathrm{col}(A^T)$、$N(A^T)$ 四个子空间的合称；线性代数基本定理的载体 | 第 09 讲 | 要建立直觉 |
+| 行空间 | row space, $\mathrm{col}(A^T)$ | $A$ 全部行向量的所有线性组合；恰好等于 $A^T$ 的列空间；住在 $\mathbb{R}^n$ | 第 09 讲 | 要建立直觉 |
+| 左零空间 | left null space, $N(A^T)$ | 所有满足 $A^T\vec y=\vec 0$（即 $\vec y^{\,T}A=\vec 0^{\,T}$）的 $\vec y$；“左”来自 $\vec y$ 乘在 $A$ 左边；住在 $\mathbb{R}^m$ | 第 09 讲 | 要建立直觉 |
+| 点积（简版） | dot product | $\vec u\cdot\vec v=u_1v_1+\cdots+u_dv_d$（逐分量乘再求和）；几何意义（长度/夹角/投影）第 13 讲详讲 | 第 09 讲 | 要会用 |
+| 正交 | orthogonal | 两向量点积为 0，几何上垂直；是对“同一 $\mathbb{R}^d$ 里”两向量说的 | 第 09 讲 | 要建立直觉 |
+| 正交补 | orthogonal complement, $W^{\perp}$ | 与 $W$ 中每个向量都正交的全部向量构成的子空间（与 $W$ 同住 $\mathbb{R}^d$） | 第 09 讲 | 要建立直觉 |
+| 直和 | direct sum, $\oplus$ | $V=W_1\oplus W_2$：$V$ 中每个向量可**唯一**写成 $\vec w_1+\vec w_2$；判据：交为零 + 维数和 = 全维 | 第 09 讲 | 要会用 |
 
 ## 二、公式
 
@@ -98,3 +105,9 @@
 | $(AB)^{-1}=B^{-1}A^{-1}$；$(A^{-1})^T=(A^T)^{-1}$；$(A^k)^{-1}=(A^{-1})^k$ | $A,B$ 同尺寸可逆 | 逆的反序律；逆与转置可交换；逆与幂可交换 | 第 06 讲 |
 | $[A\mid I]\to[I\mid A^{-1}]$ | 高斯-若尔当求逆流程 | $A$ 可逆时；化一半发现全零行=不可逆 | 第 06 讲 |
 | $\dim W=n$ 时 $n$ 个向量：张成 ⇔ 无关 | $W$ 是 $n$ 维空间 | 基验证可只查一个条件 | 第 08 讲 |
+| 维数四件套 | $A$ 为 $m\times n$、$r=\mathrm{rank}(A)$ | $\dim\mathrm{col}(A)=\dim\mathrm{col}(A^T)=r$；$\dim N(A)=n-r$；$\dim N(A^T)=m-r$ | 第 09 讲 |
+| 两条对账线 | 同上 | $r+(n-r)=n$（输入侧）；$r+(m-r)=m$（输出侧） | 第 09 讲 |
+| 正交对 | 同上 | $N(A)\perp\mathrm{col}(A^T)$（都在 $\mathbb{R}^n$）；$N(A^T)\perp\mathrm{col}(A)$（都在 $\mathbb{R}^m$） | 第 09 讲 |
+| 正交补给出等号 | 同上 | $N(A)=\mathrm{col}(A^T)^{\perp}$；$\mathrm{col}(A)=N(A^T)^{\perp}$（两个包含方向互夹，不用维数） | 第 09 讲 |
+| 正交分解（直和） | 同上 | $\mathbb{R}^n=\mathrm{col}(A^T)\oplus N(A)$；$\mathbb{R}^m=\mathrm{col}(A)\oplus N(A^T)$ | 第 09 讲 |
+| 维数公式（预告） | $W$ 为 $\mathbb{R}^d$ 的子空间 | $\dim W^{\perp}=d-\dim W$；完整证明留第 13 讲 | 第 09 讲 |
