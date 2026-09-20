@@ -47,7 +47,7 @@
 | 秩 | rank, $\mathrm{rank}(A)$ | 矩阵化 REF 后的主元个数 = 独立行(列)数 = 列空间维数；行秩恒等于列秩 | 第 04 讲 | 要能推导/手算 |
 | 行秩 / 列秩 | row rank / column rank | 极大线性无关行(列)的个数；两者对任意矩阵相等（故"秩"定义良好） | 第 04 讲 | 要建立直觉 |
 | 满秩 | full rank | $\mathrm{rank}(A)=\min(m,n)$；方阵满秩即 $\mathrm{rank}=n$（⇔可逆，第 06 讲证） | 第 04 讲 | 要知道有这回事 |
-| 零空间 / 核 | null space / kernel, $N(A)$ | 齐次方程 $A\vec x=\vec 0$ 的全体解集；是 $\mathbb R^n$ 的子空间，维数 $=n-\mathrm{rank}(A)$ | 第 04 讲 | 要建立直觉 |
+| 零空间 / 核 | null space / kernel, $N(A)$ | 齐次方程 $A\vec x=\vec 0$ 的全体解集；是 $\mathbb R^n$ 的子空间，维数 $=n-\mathrm{rank}(A)$；变换语言写作 $\ker(T)$（第 10 讲对账：同一概念两张皮） | 第 04 讲 | 要建立直觉 |
 | 秩-零化度定理 | rank-nullity theorem | $\mathrm{rank}(A)+\dim N(A)=n$，即主元数 + 自由变量数 = 未知数个数 | 第 04 讲 | 要能用+能复述 |
 | 特解 | particular solution | 非齐次方程 $A\vec x=\vec b$ 的任意一个具体解 $\vec p$ | 第 04 讲 | 要会用 |
 | 通解 | general solution | 非齐次方程的全体解，形式为 特解 + 零空间中任意向量 | 第 04 讲 | 要能手算 |
@@ -83,6 +83,46 @@
 | 正交 | orthogonal | 两向量点积为 0，几何上垂直；是对“同一 $\mathbb{R}^d$ 里”两向量说的 | 第 09 讲 | 要建立直觉 |
 | 正交补 | orthogonal complement, $W^{\perp}$ | 与 $W$ 中每个向量都正交的全部向量构成的子空间（与 $W$ 同住 $\mathbb{R}^d$） | 第 09 讲 | 要建立直觉 |
 | 直和 | direct sum, $\oplus$ | $V=W_1\oplus W_2$：$V$ 中每个向量可**唯一**写成 $\vec w_1+\vec w_2$；判据：交为零 + 维数和 = 全维 | 第 09 讲 | 要会用 |
+| 线性变换 | linear transformation / map | 保加法与数乘（$T(\vec u+\vec v)=T(\vec u)+T(\vec v)$、$T(c\vec v)=cT(\vec v)$，合起来即保线性组合）的映射 $T:V\to W$；必把零向量送零向量 | 第 10 讲 | 要能推导/手算 |
+| 仿射变换 | affine map | "线性部分 + 平移"的映射（如 $\vec x\mapsto2\vec x+(1,2)$，即中学 $y=2x+3$ 型）；仿射但**不是**线性变换（平移破坏数乘） | 第 10 讲 | 要知道+防错 |
+| 标准矩阵 | standard matrix | $T:\mathbb R^n\to\mathbb R^m$ 在标准基下的矩阵 $A=\big[T(\vec e_1)\cdots T(\vec e_n)\big]$（**列 = 基向量的像**），满足 $T(\vec x)=A\vec x$ | 第 10 讲 | 要能推导/手算 |
+| 像 / 值域 | image / range, $\mathrm{im}(T)$ | 变换全部输出的集合 $\{T(\vec v)\}$；矩阵版即列空间 $\mathrm{col}(A)$（第 07/09 讲的值域），是输出空间的子空间 | 第 10 讲 | 要建立直觉 |
+| 单射 | one-to-one / injective | 不同输入必到不同输出的变换；判据：$\ker(T)=\{\vec0\}$ | 第 10 讲 | 要会用 |
+| 满射 | onto / surjective | 输出全部被打到的变换（$\mathrm{im}(T)=W$）；$n$ 到 $n$ 维时与单射互锁（06 讲等价表的深层结构） | 第 10 讲 | 要会用 |
+| 双射 / 逆变换 | bijective / inverse map | 又单又满 ⟺ 每点可逐点撤销，存在逆变换 $T^{-1}$；方阵情形即第 06 讲可逆矩阵 | 第 10 讲 | 要知道有这回事 |
+| 换基矩阵 | change-of-basis matrix, $P$ | 列 = 新基向量（旧坐标）的矩阵；$\vec x=P[\vec x]_{\mathcal B}$（拼装）、$[\vec x]_{\mathcal B}=P^{-1}\vec x$（拆卸） | 第 10 讲 | 要会用 |
+| 相似 | similar, $B=P^{-1}AP$ | 同一线性变换在两组基下的矩阵之间的关系；不变量：秩、$\det$、迹（特征值第 11 讲揭晓） | 第 10 讲 | 要能推导/手算 |
+| 迹 | trace, $\mathrm{tr}(A)$ | 方阵对角元之和；相似不变量（由循环律 $\mathrm{tr}(XY)=\mathrm{tr}(YX)$ 保证）；det 或迹不等可一票否决相似 | 第 10 讲 | 要会用 |
+| 行等价 | row equivalent | $B=EA$（$E$ 可逆 = 可经行变换互达）；保的是方程组解集，**不是**换基（不保 det/迹；消元不是换基） | 第 03 讲（第 10 讲命名） | 要知道+防错 |
+| 矩阵等价 | equivalent | $B=PAQ$（$P,Q$ 可逆）：两侧各换各的基的同一台机器；只保秩（不变量最少的关系） | 第 10 讲 | 要知道有这回事 |
+| 合同 | congruent | $B=P^TA P$：二次型换变量（第 16 讲正式登场），保正负惯性 | 第 10 讲（预告） | 要知道有这回事 |
+| 特征值 | eigenvalue | 满足 $A\vec v=\lambda\vec v$（存在非零 $\vec v$）的数 $\lambda$；“变换自己的数”——某方向上机器退化成一个乘法；可为 $0$/负/复 | 第 11 讲 | 要能推导/手算 |
+| 特征向量 | eigenvector | 满足 $A\vec v=\lambda\vec v$ 的非零向量；方向不变只伸缩；可任意缩放（同一方向皆可），零向量不算 | 第 11 讲 | 要能推导/手算 |
+| 特征方程 / 特征多项式 | characteristic equation / polynomial | $\det(A-\lambda I)=0$；展开为 $n$ 次多项式 $p(\lambda)$；来历：$(A-\lambda I)\vec v=\vec0$ 要非零解 ⟺ 奇异 | 第 11 讲 | 要能推导/手算 |
+| 特征空间 | eigenspace, $E_\lambda$ | 属于 $\lambda$ 的全部特征向量加零向量：$E_\lambda=N(A-\lambda I)$（就是零空间，第 09 讲机器直接复用）；维数 = 几何重数 | 第 11 讲 | 要能手算 |
+| 谱 | spectrum, $\sigma(A)$ | $A$ 的全体特征值（不计重数的集合）；相似不变量（本体的属性，换名片不变） | 第 11 讲 | 要知道有这回事 |
+| 代数重数 | algebraic multiplicity | $\lambda$ 作为特征多项式根的重次（多项式里数的配额） | 第 11 讲 | 要会算 |
+| 几何重数 | geometric multiplicity | $\dim E_\lambda=n-\mathrm{rank}(A-\lambda I)$（实际领到的无关方向数）；恒 ≤ 代数重数；缺口 ⟹ 凑不齐特征基 | 第 11 讲 | 要会算 |
+| 幂法 | power iteration | 迭代 $\vec x\leftarrow A\vec x/\|A\vec x\|$ 收敛到主特征方向的方法；要求 $|\lambda_1|>|\lambda_2|$ 严格占优；大矩阵求最大特征值的工业级方法 | 第 11 讲 | 要知道+会跑 |
+| 可对角化 | diagonalizable | 存在可逆 $P$ 使 $P^{-1}AP=\Lambda$ 对角（即相似于对角阵）；三等价：可对角化 ⟺ $n$ 个无关特征向量 ⟺ 每个 $\lambda$ 几何重数=代数重数；互异 $n$ 根自动可 | 第 12 讲 | 要能推导/手算 |
+| 马尔可夫矩阵 | Markov / stochastic matrix | 每列元素和为 1 的方阵；$1$ 必是特征值（稳态存在），稳态 = $\lambda=1$ 的特征向量归一化到分量和 1；涨落分量按 $|\lambda_2|^k$ 退场 | 第 12 讲 | 要会用 |
+| 若尔当块 | Jordan block | 形如 $\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$ 的“几乎对角”块；重数缺口矩阵的幂长出“乘方×多项式”因子；完备理论第 18 讲 | 第 12 讲（预告） | 要知道有这回事 |
+| 内积 | inner product | 满足对称、线性、正定三公理的“吃两向量吐一数”运算；三款：$\mathbb R^n$ 点积、$P_n$ 积分款 $\int_0^1fg$、加权款；公理=合格度量衡的打勾清单 | 第 13 讲 | 要能手算 |
+| 范数 | norm | $\|\vec v\|=\sqrt{\langle\vec v,\vec v\rangle}$（长度）；正定性保证非负且零向量唯一零长；先有内积后有长度 | 第 13 讲 | 要能手算 |
+| 柯西-施瓦茨不等式 | Cauchy–Schwarz inequality | $|\langle\vec u,\vec v\rangle|\le\|\vec u\|\,\|\vec v\|$（等号⟺共线）；夹角定义 $\cos\theta$ 落在 $[-1,1]$ 的合法性证书；证法：正定性+二次函数判别式 | 第 13 讲 | 要能推导 |
+| 正交（正式版） | orthogonal | $\langle\vec u,\vec v\rangle=0$；对任意内积空间成立（第 09 讲简版升格）；只对同一空间里的向量说 | 第 13 讲 | 要建立直觉 |
+| 正交向量组 / 单位正交组 | orthogonal / orthonormal set | 两两正交的向量组（再加各长 1 即单位正交）；天然线性无关；坐标=内积，无需求解 | 第 13 讲 | 要会算 |
+| 投影 / 垂线脚 | projection | 把 $\vec b$ 拆成 $\vec p+\vec e$（$\vec p\in W$、$\vec e\perp W$）；垂线脚（几何）、最近点（用途）、正规方程（算法）、$P$ 矩阵（机器）四张皮 | 第 13 讲 | 要能推导/手算 |
+| 投影矩阵 | projection matrix | $P=A(A^TA)^{-1}A^T$（列满秩）；对称+幂等是充要身份证；$I-P$ 投到 $W^\perp$；误差永远落 $W^\perp$ | 第 13 讲 | 要能推导/手算 |
+| 正交矩阵 | orthogonal matrix | 列为单位正交组的方阵；$Q^TQ=I$、$Q^{-1}=Q^T$（求逆免费）；保内积/长度/夹角（刚体运动：旋转与反射）；旋转矩阵是真身 | 第 13 讲 | 要会用 |
+| Gram-Schmidt 正交化 | Gram-Schmidt process | 输入斜基、输出两两正交基，每步地盘不变（$\mathrm{span}\{e_1..e_j\}=\mathrm{span}\{a_1..a_j\}$）；投影当减法器：减掉新向量在已承认正交方向上的全部投影 | 第 14 讲 | 要能推导/手算 |
+| QR 分解 | QR factorization | $A=QR$（$Q$ 列单位正交、$R$ 上三角）；$R$ 是 GS 的内积账本；上三角性=新方向垂直全部旧地盘（时间脚印）；列相关时 $R$ 对角出零元 | 第 14 讲 | 要能推导/手算 |
+| 经典 / 修正 Gram-Schmidt | classical / modified GS | 数学上恒等；浮点上修正版（逐步减、用更新中的残差）稳得多；工业标准是 LAPACK 的 Householder（第 20 讲） | 第 14 讲 | 要知道+会选 |
+| 希尔伯特矩阵 | Hilbert matrix | $H_{ij}=1/(i+j-1)$；著名病态矩阵（误差剧烈放大），病态/条件数第 20 讲正式定义；本课数值稳定性对照的试验田 | 第 14 讲（预告） | 要知道有这回事 |
+| 超定方程组 | overdetermined system | 方程多于未知数（拟合场景常态）；$\vec b$ 通常不在 $\mathrm{col}(A)$——无精确解是常态而非事故 | 第 15 讲 | 要建立直觉 |
+| 最小二乘 | least squares | 无解时换好问题：$\min_{\vec x}\|\vec b-A\vec x\|^2$（平方三理由：同序/二次好解/高斯下最大似然）；最优 $\hat{\vec x}$ 恒存在（投影存在） | 第 15 讲 | 要能推导/手算 |
+| 残差 | residual | $\vec e=\vec b-A\hat{\vec x}$；最优时垂直列空间；回归性质 $\sum e_i=0$、$\sum t_ie_i=0$（均值零、与自变量不相关）——最快的验算器 | 第 15 讲 | 要会算 |
+| 伪逆（预告） | pseudoinverse, $A^+$ | $A^TA$ 奇异时挑长度最短的代表性解；正式定义与构造第 17 讲（SVD） | 第 15 讲（预告） | 要知道有这回事 |
 
 ## 二、公式
 
@@ -111,3 +151,45 @@
 | 正交补给出等号 | 同上 | $N(A)=\mathrm{col}(A^T)^{\perp}$；$\mathrm{col}(A)=N(A^T)^{\perp}$（两个包含方向互夹，不用维数） | 第 09 讲 |
 | 正交分解（直和） | 同上 | $\mathbb{R}^n=\mathrm{col}(A^T)\oplus N(A)$；$\mathbb{R}^m=\mathrm{col}(A)\oplus N(A^T)$ | 第 09 讲 |
 | 维数公式（预告） | $W$ 为 $\mathbb{R}^d$ 的子空间 | $\dim W^{\perp}=d-\dim W$；完整证明留第 13 讲 | 第 09 讲 |
+| $T(\vec x)=A\vec x$，$A=\big[T(\vec e_1)\cdots T(\vec e_n)\big]$ | $A$ 为 $m\times n$ 标准矩阵，列 = 各基向量的像 | $T$ 线性、两端用标准基 | 第 10 讲 |
+| $R(\alpha)=\begin{pmatrix}\cos\alpha&-\sin\alpha\\\sin\alpha&\cos\alpha\end{pmatrix}$ | 平面逆时针旋转 $\alpha$ 的矩阵（基像法现场拼出，第 02 讲预告、第 10 讲兑现） | 2 维平面 | 第 10 讲 |
+| $\vec x=P[\vec x]_{\mathcal B}$，$[\vec x]_{\mathcal B}=P^{-1}\vec x$ | $P$ 列 = 新基向量，$[\cdot]_{\mathcal B}$ 为 $\mathcal B$ 坐标 | $P$ 可逆（列是基必无关） | 第 10 讲 |
+| $B=P^{-1}AP$（相似） | $A/B$ 为同一变换在标准基/新基 $\mathcal B$ 下的矩阵，$P$ 为换基矩阵 | 方阵、同一空间换基 | 第 10 讲 |
+| $\dim\ker(T)+\dim\mathrm{im}(T)=\dim V$ | 变换版秩-零化度；矩阵版见第 04/09 讲 | $T:V\to W$ 有限维线性变换 | 第 10 讲 |
+| $\mathrm{tr}(XY)=\mathrm{tr}(YX)$ | 迹的循环律；$X$ 为 $m\times n$、$Y$ 为 $n\times m$ | 尺寸相容时 | 第 10 讲 |
+| 相似不变量：$\mathrm{rank}$、$\det$、$\mathrm{tr}$ 换基不变 | $B=P^{-1}AP$ 时三者与 $A$ 相同 | 用于一票否决"相似" | 第 10 讲 |
+| $A\vec v=\lambda\vec v$（定义式） | $\lambda$ 是数，$\vec v\neq\vec0$；$\lambda<0$ 表示反向共线（翻折也算方向不变） | 方阵；$\lambda$ 可为 $0$/负/复 | 第 11 讲 |
+| $\det(A-\lambda I)=0$ | 特征方程；$\lambda I$ 护矩阵外衣后移项，非零解 ⟺ 奇异；另一约定 $\det(\lambda I-A)$ 差 $(-1)^n$ 同方程 | 方阵 | 第 11 讲 |
+| $\det A=\prod\lambda_i$，$\mathrm{tr}(A)=\sum\lambda_i$ | 特征值计重数；代 $\lambda=0$ 与比对系数得 | 猜根后验算两笔账 | 第 11 讲 |
+| $E_\lambda=N(A-\lambda I)$，$\dim E_\lambda=n-\mathrm{rank}(A-\lambda I)$ | 特征空间 = 零空间；求特征向量 = 第 03 讲消元流程 | 每个 $\lambda$ 分别求 | 第 11 讲 |
+| 相似 ⟹ 特征多项式逐系数相同 | $\det(P^{-1}AP-\lambda I)=\det(A-\lambda I)$；必要不充分（剪切与 $I$ 同多项式不相似） | 相似判定/反判定 | 第 11 讲 |
+| 上三角 ⟹ 特征值 = 对角元 | $\det(A-\lambda I)=\prod(a_{ii}-\lambda)$；仅对与 $A$ 相似的三角化有效，RREF 不算 | 三角阵直读 | 第 11 讲 |
+| $\lambda=0$ 是特征值 $\iff$ $A$ 奇异 | 可逆等价表 +1：可逆 $\iff$ 0 非特征值；$\lambda=0$ 的特征空间 = $N(A)$ | 方阵 | 第 11 讲 |
+| 不同 $\lambda$ 的特征向量必无关 | $\lambda_1\neq\lambda_2$ 时 $\vec v_1,\vec v_2$ 无关（消去法）；$n$ 个互异 $\lambda$ ⟹ 特征基 | 凑对角化原料 | 第 11 讲 |
+| 幂法收敛条件 $|\lambda_1|>|\lambda_2|$ | $A^k\vec x=c_1\lambda_1^k\vec v_1+c_2\lambda_2^k\vec v_2$，次项按 $(\lambda_2/\lambda_1)^k$ 退场；模相等则打转 | 主特征方向逼近 | 第 11 讲 |
+| $A=P\Lambda P^{-1}$（对角化） | $P$ 列 = 特征向量，$\Lambda$ 对角 = 配对特征值（顺序跟列序走）；恒等式 $AP=P\Lambda$ 逐列读出 | $A$ 可对角化；每题验算 $AP=P\Lambda$ | 第 12 讲 |
+| $A^k=P\Lambda^kP^{-1}$ | 中间 $P^{-1}P=I$ 相消；对角阵幂 = 逐元素乘方；赠品 $A^{-1}=P\Lambda^{-1}P^{-1}$、$f(A)=Pf(\Lambda)P^{-1}$（$e^A$ 预告 22 讲） | $A$ 可对角化；$k$ 任意 | 第 12 讲 |
+| 判据：可对角化 ⟺ $n$ 个无关特征向量 ⟺ 几何=代数全领满 | 判定流程：解 $\lambda$ → 每个 $\dim E_\lambda=n-\mathrm{rank}(A-\lambda I)$ → 对账；互异 $n$ 根自动可；重根要查账 | 方阵 | 第 12 讲 |
+| Binet 公式 $f_k=(\varphi^k-\psi^k)/\sqrt5$ | $\varphi,\psi$ 为 $\lambda^2-\lambda-1=0$ 的根；递推先化为 $\vec u_{k+1}=F\vec u_k$，$F=[[1,1],[1,0]]$ | 二阶线性递推通项 | 第 12 讲 |
+| 列和 1 ⟹ $1$ 是特征值 | $\vec{\mathbb 1}^TM=\vec{\mathbb 1}^T$ + 转置不改行列式 ⟹ $M$ 与 $M^T$ 同特征多项式 | 马尔可夫稳态存在的代数根 | 第 12 讲 |
+| 不可对角化者的幂 | $S^k=[[1,k],[0,1]]$；$J^k=[[\lambda^k, k\lambda^{k-1}],[0,\lambda^k]]$（乘方×多项式 = 缺口的形状） | 重数缺口矩阵 | 第 12 讲 |
+| $\cos\theta=\langle\vec u,\vec v\rangle/(\|\vec u\|\|\vec v\|)$ | 夹角定义；合法性由 C-S 保证（$|\cos|\le1$） | 任意内积空间、非零向量 | 第 13 讲 |
+| 勾股定理（内积版） | $\vec u\perp\vec v\Rightarrow\|\vec u+\vec v\|^2=\|\vec u\|^2+\|\vec v\|^2$（交叉项归零） | 正交对 | 第 13 讲 |
+| 线投影 $\vec p=\dfrac{\vec a\cdot\vec b}{\vec a\cdot\vec a}\vec a$ | 解"误差$\perp\vec a$"所得；分母是解方程自然长出的系数；矩阵版 $P=\vec a\vec a^T/(\vec a^T\vec a)$ | $\vec a\neq\vec0$；$\|\vec e\|=$最近距离 | 第 13 讲 |
+| 正规方程 $A^TA\hat{\vec x}=A^T\vec b$ | "误差垂直每列"逐列翻译而成；解出 $\hat{\vec x}$ 后 $\vec p=A\hat{\vec x}$；15 讲最小二乘主菜 | $A$ 列满秩时唯一解 | 第 13 讲 |
+| $A^TA$ 可逆 $\iff$ $A$ 列线性无关 | 零空间链条：$A^TA\vec x=0\Rightarrow\|A\vec x\|^2=0\Rightarrow A\vec x=0$ | 判定器（列相关时公式失效，先 GS 剔冗余） | 第 13 讲 |
+| 投影矩阵三性质 | $P^T=P$（转置链）、$P^2=P$（中间相消）、$(I-P)\vec b=\vec e$ 投 $W^\perp$ | 列满秩；对称+幂等=充要身份证 | 第 13 讲 |
+| $\dim W^\perp=d-\dim W$ | $W$ 基排成矩阵 $W_{mat}$：$W^\perp=N(W_{mat}^T)$，四件套一行销账；$\mathbb R^d=W\oplus W^\perp$（分解存在+唯一） | $W\subseteq\mathbb R^d$ 子空间；09 讲预告在此兑现 | 第 13 讲 |
+| $Q^TQ=I\Rightarrow$ 保内积保长度 | $(Q\vec u)^T(Q\vec v)=\vec u^T\vec u$；$Q^{-1}=Q^T$；旋转矩阵手验 $\cos^2+\sin^2=1$ | 方阵、列单位正交 | 第 13 讲 |
+| GS 公式 $\vec e_j=\vec a_j-\sum_{i<j}\frac{\vec a_j\cdot\vec e_i}{\vec e_i\cdot\vec e_i}\vec e_i$ | 单模板：新向量减掉在每个已承认正交方向上的投影；分母是产出 $\vec e_i$ 的长度平方；$\vec e_j=\vec0$ 即检几余 | 任意内积空间的一组基 | 第 14 讲 |
+| 正交基下坐标 $=$ 内积 | $\vec v=\sum c_i\vec q_i\Rightarrow c_j=\langle\vec v,\vec q_j\rangle$（交叉项全零）；斜基要解方程，正交基免费 | 单位正交基 | 第 14 讲 |
+| $A=QR$：$r_{ij}=\vec q_i\cdot\vec a_j$，$r_{jj}=\|\vec e_j\|$ | $R$ 第 $j$ 列 $=\vec a_j$ 的正交坐标；$i>j$ 时 $\vec q_i\perp\vec a_j$ 所在地盘（上三角性）；$Q$ 可整体列变号（$R$ 同行变号） | $A$ 列满秩（不满足则 $R$ 对角出零） | 第 14 讲 |
+| $P=QQ^T$ | 与 $A(A^TA)^{-1}A^T$ 恒等（$A^TA=R^TR$ 相消链）；投影“各取一次内积”；实测与 13 讲公式零差 | 列满秩 | 第 14 讲 |
+| $QR$ 求解与稳定性 | $R\vec x=Q^T\vec b$ 回代；病态阵上比正规方程稳（希尔伯特 4x4 实测 $6.2\times10^{-13}$ vs $1.9\times10^{-9}$：正规方程把病自乘，$Q$ 保长度不放大） | 列满秩方程；条件数 20 讲 | 第 14 讲 |
+| 最小二乘问题定义 $\min\|\vec b-A\vec x\|^2$ | 平方与长度同序（不改变最小点）、展开是二次好解、高斯噪声下等价最大似然（21 讲）；最优 $\hat{\vec x}$ 恒存在 | 任意 $A$；答案只用已教概念 | 第 15 讲 |
+| 正规方程 $A^TA\hat{\vec x}=A^T\vec b$ | 最优 $\iff$ 误差垂直列空间 $\iff A^T(\vec b-A\hat{\vec x})=0$；与 13 讲投影同方程两面孔；元素 $=$ 列内积 $=$ 数据求和 | 任意 $A$（恒有解） | 第 15 讲 |
+| $\hat{\vec x}=(A^TA)^{-1}A^T\vec b$ | $A$ 列满秩时唯一（$A^TA$ 可逆判定器 13 讲）；奇异时解集 $=\hat{\vec x}_0+N(A^TA)$ 但 $A\hat{\vec x}$、残差、SSE 恒唯一（零空间链条） | 列满秩时直接套；否则勿硬求逆 | 第 15 讲 |
+| 残差回归性质 | $\sum e_i=0$（均值零）、$\sum t_ie_i=0$（与自变量不相关）；来自 $A^T\vec e=0$ 逐列翻译（B2） | 直线拟合 $A=[\vec1\ \vec t]$；每题必验 | 第 15 讲 |
+| SSE 最小性（勾股版） | $\|\vec b-A\vec x\|^2=\|\vec e\|^2+\|\vec p-A\vec x\|^2\ge\|\vec e\|^2$，等号 $\iff A\vec x=\vec p$；两分解项正交 | 最优性完整证明 | 第 15 讲 |
+| 嵌套定律 | $W_1\subseteq W_2\Rightarrow$ 投影距离不增；模型升次 SSE 只降不升（等号也可能成立）；阴暗面 $=$ 过拟合（21 讲） | 子空间嵌套 | 第 15 讲 |
+| QR 路线 $R\hat{\vec x}=Q^T\vec b$ | 垂直条件左乘 $Q^T$ 消 $Q$；与 14 讲精确解公式同型；病态拟合实测差 3 个数量级（$2.7\times10^{1}$ vs $2.3\times10^{-2}$） | 上代码/高次/大数据一律此路线 | 第 15 讲 |
