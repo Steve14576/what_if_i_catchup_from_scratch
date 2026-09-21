@@ -95,7 +95,7 @@
 | 迹 | trace, $\mathrm{tr}(A)$ | 方阵对角元之和；相似不变量（由循环律 $\mathrm{tr}(XY)=\mathrm{tr}(YX)$ 保证）；det 或迹不等可一票否决相似 | 第 10 讲 | 要会用 |
 | 行等价 | row equivalent | $B=EA$（$E$ 可逆 = 可经行变换互达）；保的是方程组解集，**不是**换基（不保 det/迹；消元不是换基） | 第 03 讲（第 10 讲命名） | 要知道+防错 |
 | 矩阵等价 | equivalent | $B=PAQ$（$P,Q$ 可逆）：两侧各换各的基的同一台机器；只保秩（不变量最少的关系） | 第 10 讲 | 要知道有这回事 |
-| 合同 | congruent | $B=P^TA P$：二次型换变量（第 16 讲正式登场），保正负惯性 | 第 10 讲（预告） | 要知道有这回事 |
+| 合同 | congruent | $B=P^TA P$：二次型换变量下的矩阵关系（第 16 讲正式登场）；保对称性、秩、正负惯性（$p,q$）——**不保**特征值/迹；$P$ 正交时与相似合一（$Q^{-1}=Q^T$） | 第 10 讲（预告）；第 16 讲补齐 | 要会认+防混 |
 | 特征值 | eigenvalue | 满足 $A\vec v=\lambda\vec v$（存在非零 $\vec v$）的数 $\lambda$；“变换自己的数”——某方向上机器退化成一个乘法；可为 $0$/负/复 | 第 11 讲 | 要能推导/手算 |
 | 特征向量 | eigenvector | 满足 $A\vec v=\lambda\vec v$ 的非零向量；方向不变只伸缩；可任意缩放（同一方向皆可），零向量不算 | 第 11 讲 | 要能推导/手算 |
 | 特征方程 / 特征多项式 | characteristic equation / polynomial | $\det(A-\lambda I)=0$；展开为 $n$ 次多项式 $p(\lambda)$；来历：$(A-\lambda I)\vec v=\vec0$ 要非零解 ⟺ 奇异 | 第 11 讲 | 要能推导/手算 |
@@ -106,7 +106,7 @@
 | 幂法 | power iteration | 迭代 $\vec x\leftarrow A\vec x/\|A\vec x\|$ 收敛到主特征方向的方法；要求 $|\lambda_1|>|\lambda_2|$ 严格占优；大矩阵求最大特征值的工业级方法 | 第 11 讲 | 要知道+会跑 |
 | 可对角化 | diagonalizable | 存在可逆 $P$ 使 $P^{-1}AP=\Lambda$ 对角（即相似于对角阵）；三等价：可对角化 ⟺ $n$ 个无关特征向量 ⟺ 每个 $\lambda$ 几何重数=代数重数；互异 $n$ 根自动可 | 第 12 讲 | 要能推导/手算 |
 | 马尔可夫矩阵 | Markov / stochastic matrix | 每列元素和为 1 的方阵；$1$ 必是特征值（稳态存在），稳态 = $\lambda=1$ 的特征向量归一化到分量和 1；涨落分量按 $|\lambda_2|^k$ 退场 | 第 12 讲 | 要会用 |
-| 若尔当块 | Jordan block | 形如 $\begin{pmatrix}\lambda&1\\0&\lambda\end{pmatrix}$ 的“几乎对角”块；重数缺口矩阵的幂长出“乘方×多项式”因子；完备理论第 18 讲 | 第 12 讲（预告） | 要知道有这回事 |
+| 若尔当块 | Jordan block | $J_m(\lambda)=\lambda I_m+N_m$（$\lambda I$ + 移位器）：一条广义特征向量链的矩阵外衣；"几乎对角"——非对角只允许肩膀位置最少的 1（每块尺寸 $-1$ 个、搬不走） | 第 12 讲（预告）；第 18 讲补齐 | 要能推导/手算 |
 | 内积 | inner product | 满足对称、线性、正定三公理的“吃两向量吐一数”运算；三款：$\mathbb R^n$ 点积、$P_n$ 积分款 $\int_0^1fg$、加权款；公理=合格度量衡的打勾清单 | 第 13 讲 | 要能手算 |
 | 范数 | norm | $\|\vec v\|=\sqrt{\langle\vec v,\vec v\rangle}$（长度）；正定性保证非负且零向量唯一零长；先有内积后有长度 | 第 13 讲 | 要能手算 |
 | 柯西-施瓦茨不等式 | Cauchy–Schwarz inequality | $|\langle\vec u,\vec v\rangle|\le\|\vec u\|\,\|\vec v\|$（等号⟺共线）；夹角定义 $\cos\theta$ 落在 $[-1,1]$ 的合法性证书；证法：正定性+二次函数判别式 | 第 13 讲 | 要能推导 |
@@ -122,7 +122,25 @@
 | 超定方程组 | overdetermined system | 方程多于未知数（拟合场景常态）；$\vec b$ 通常不在 $\mathrm{col}(A)$——无精确解是常态而非事故 | 第 15 讲 | 要建立直觉 |
 | 最小二乘 | least squares | 无解时换好问题：$\min_{\vec x}\|\vec b-A\vec x\|^2$（平方三理由：同序/二次好解/高斯下最大似然）；最优 $\hat{\vec x}$ 恒存在（投影存在） | 第 15 讲 | 要能推导/手算 |
 | 残差 | residual | $\vec e=\vec b-A\hat{\vec x}$；最优时垂直列空间；回归性质 $\sum e_i=0$、$\sum t_ie_i=0$（均值零、与自变量不相关）——最快的验算器 | 第 15 讲 | 要会算 |
-| 伪逆（预告） | pseudoinverse, $A^+$ | $A^TA$ 奇异时挑长度最短的代表性解；正式定义与构造第 17 讲（SVD） | 第 15 讲（预告） | 要知道有这回事 |
+| 伪逆 | pseudoinverse, $A^+$ | $A^+=V\Sigma^+U^T$：非零奇异值取倒数、零保持零的广义逆；四条 Moore-Penrose 性质唯一刻画；满秩方阵退化回 $A^{-1}$；一般时给最小二乘最短解、$AA^+$ = 列空间正交投影 | 第 15 讲（预告）；第 17 讲补齐 | 要会算+知道性质 |
+| 二次型 | quadratic form | 每项总次数为 2 的齐次多项式；写 $\vec x^TA\vec x$ 且约定 $A$ 对称（反对称部分被 $\vec x$ 杀死）；交叉项系数对半分记入矩阵 | 第 16 讲 | 要能手算 |
+| 标准形 / 规范形 | (normal / canonical) form | 只含平方项的等价二次型（可逆换元所得）；系数缩为 $\pm1$ 即规范形；标准形不唯一，但正负号个数（惯性）唯一 | 第 16 讲 | 要会用 |
+| 正定 / 负定 / 不定 | positive definite / negative definite / indefinite | 对称矩阵按 $\vec x^TA\vec x$ 对一切非零 $\vec x$ 的符号分类：恒正/恒负/有正有负（半正定＝恒非负）；正定矩阵＝合格内积矩阵（第 13 讲公理③答案）；几何＝碗/倒碗/鞍 | 第 16 讲 | 要能推导/手算 |
+| 顺序主子式 | leading principal minors | $D_k$＝左上角 $k\times k$ 子阵的行列式（$k=1..n$ 从左上角逐级扩大，"顺序"是要害）；Sylvester 判据的原料 | 第 16 讲 | 要会算 |
+| Sylvester 判据 | Sylvester's criterion | 对称 $A$ 正定 $\iff D_1..D_n$ 全正；负定 $\iff$ 符号交替（$(-1)^kD_k>0$）；必要性证＋充分性骨架（块消元+归纳） | 第 16 讲 | 要能用+能复述 |
+| 惯性定理 | law of inertia | 二次型无论怎么换元化标准形，正项个数 $p$、负项个数 $q$ 不变；$p+q=\mathrm{rank}$；完整证明超主干（本课押结论+实测） | 第 16 讲 | 要知道有这回事 |
+| 谱定理 | spectral theorem | 实对称矩阵四件事：特征值全实、不同 $\lambda$ 的特征向量自动正交、可凑齐 $n$ 个正交单位特征向量、$A=Q\Lambda Q^T$；证明三段"实-正交-齐" | 第 16 讲 | 要能推导/手算 |
+| 奇异值 | singular value, $\sigma_i$ | $\sigma_i=\sqrt{\lambda_i(A^TA)}$（降序、非负）；= 单位球被 $A$ 映成椭球的半轴；非零个数 $=$ rank；= 变换在"第 $i$ 重要方向"的真实拉伸倍数（对照特征值的三条局限） | 第 17 讲 | 要能推导/手算 |
+| 右奇异向量 / 左奇异向量 | right / left singular vector | $\vec v_i$ = $A^TA$ 的单位特征向量（住输入空间 $\mathbb{R}^n$）；$\vec u_i=A\vec v_i/\sigma_i$（住输出空间 $\mathbb{R}^m$）；配对关系 $A\vec v_i=\sigma_i\vec u_i$（不是特征向量关系！） | 第 17 讲 | 要能推导/手算 |
+| SVD 奇异值分解 | singular value decomposition | $A=U\Sigma V^T=\sum\sigma_i\vec u_i\vec v_i^T$：两套正交基夹一个对角账本；任何矩阵（任何尺寸/秩）都存在；几何 = 旋转-缩放-旋转；$U,V$ 不唯一（符号成对翻转/重根时自由），$\sigma$ 序列唯一 | 第 17 讲 | 要能推导/手算 |
+| 低秩逼近 | low-rank approximation | 截断 $A_k=\sum_{i\le k}\sigma_i\vec u_i\vec v_i^T$；谱断崖 = 信号/噪声分界；第 08 讲"数据瘦身"升级为"截谱"（最优性由 Eckart-Young 保证） | 第 17 讲 | 要会用 |
+| Eckart-Young 定理 | Eckart-Young theorem | 一切秩 $\le k$ 矩阵中 $A_k$ 离 $A$ 最近：谱范数误差 $=\sigma_{k+1}$、Frobenius 误差 $=\sqrt{\sum_{i>k}\sigma_i^2}$（均被截断达到）；谱范数版本课给了完整证明（一发维数计数） | 第 17 讲 | 要知道+能复述骨架 |
+| 谱范数 / Frobenius 范数 | spectral / Frobenius norm | $\|M\|_2=\max_{\|\vec x\|=1}\|M\vec x\|=\sigma_1(M)$（最大拉伸）；$\|M\|_F=\sqrt{\sum_{ij}m_{ij}^2}$ 且 $\|M\|_F^2=\mathrm{tr}(M^TM)=\sum\sigma_i^2$ | 第 17 讲 | 要知道有这回事 |
+| Moore-Penrose 性质 | Moore-Penrose conditions | 唯一刻画伪逆的四条：$AA^+A=A$、$A^+AA^+=A^+$、$(AA^+)^T=AA^+$、$(A^+A)^T=A^+A$；后两条说明 $AA^+$、$A^+A$ 都是正交投影 | 第 17 讲 | 要知道有这回事 |
+| 广义特征向量 | generalized eigenvector | 非零 $\vec v$ 使 $(A-\lambda I)^m\vec v=\vec 0$ 对某正整数 $m$ 成立（最小的 $m$ 为高度，"几击才死"）；高度 $\ge2$ 时不是特征向量：$A\vec v=\lambda\vec v+\vec v_{上一级}$（"多挨一鞭"） | 第 18 讲 | 要能推导/手算 |
+| 广义特征向量链 | chain | 一串 $\vec v_1,\dots,\vec v_m$：$N\vec v_1=\vec 0$、$N\vec v_{i+1}=\vec v_i$（$N=A-\lambda I$）；链头是特征向量、尾部是高度 $m$ 的广义特征向量；成员线性无关（"从上往下打"证明）；每个缺口对应一条链 | 第 18 讲 | 要能推导/手算 |
+| 若尔当标准形 | Jordan canonical form | 若尔当块拼成的块对角阵："最接近对角"的规范终点；定理：任何复方阵相似于它、不计块序结构唯一；全是 $1\times1$ 块 $\iff$ 可对角化（对角阵是其特例） | 第 18 讲 | 要知道+能复述 |
+| 幂零矩阵 | nilpotent matrix | 存在正整数 $m$ 使 $N^m=0$；缺口情形的 $N=A-\lambda I$ 即幂零（"逐级扫空"：$2\times2$ 缺口时 $N^2=0$）；若尔当"链总能补齐"的引擎 | 第 18 讲 | 要能推导/手算 |
 
 ## 二、公式
 
@@ -193,3 +211,20 @@
 | SSE 最小性（勾股版） | $\|\vec b-A\vec x\|^2=\|\vec e\|^2+\|\vec p-A\vec x\|^2\ge\|\vec e\|^2$，等号 $\iff A\vec x=\vec p$；两分解项正交 | 最优性完整证明 | 第 15 讲 |
 | 嵌套定律 | $W_1\subseteq W_2\Rightarrow$ 投影距离不增；模型升次 SSE 只降不升（等号也可能成立）；阴暗面 $=$ 过拟合（21 讲） | 子空间嵌套 | 第 15 讲 |
 | QR 路线 $R\hat{\vec x}=Q^T\vec b$ | 垂直条件左乘 $Q^T$ 消 $Q$；与 14 讲精确解公式同型；病态拟合实测差 3 个数量级（$2.7\times10^{1}$ vs $2.3\times10^{-2}$） | 上代码/高次/大数据一律此路线 | 第 15 讲 |
+| 二次型与对称化 | $\vec x^TA\vec x=\vec x^T\big(\tfrac{A+A^T}{2}\big)\vec x$；反对称部分贡献恒零（$\vec x^TS\vec x=0$） | 任意 $A$；写作规范＝取对称，且对称矩阵与二次型一一对应 | 第 16 讲 |
+| 配方／合同（主例） | $2x^2+4xy+5y^2=2(x+y)^2+3y^2$；$P^TAP=\mathrm{diag}(2,3)$，$P=\begin{pmatrix}1&-1\\0&1\end{pmatrix}$（上三角） | 配方＝逐变量收完全平方；换元保惯性不保谱 | 第 16 讲 |
+| Sylvester | $D_1,\dots,D_n>0\iff$ 正定；负定 $\iff(-1)^kD_k>0$ | $D_k$ 为左上 $k\times k$ 行列式（顺序！）；$\det>0$ 不充分（反例已测）；半正定要用全体主子式 | 第 16 讲 |
+| 谱判据 | $\lambda_i$ 全正 $\iff$ 正定 | 正/负/半正/不定按 $\lambda$ 符号分类；两方向证明走 $\vec x=Q\vec y$ | 第 16 讲 |
+| 谱分解 | $Q^TAQ=\Lambda$，$A=Q\Lambda Q^T$ | $Q$ 列＝单位特征向量（配对 $\lambda$）；正交合同＝相似合一；半轴 $=1/\sqrt{\lambda_i}$；$\sqrt{A}=Q\sqrt{\Lambda}Q^T$（17 讲用） | 第 16 讲 |
+| Rayleigh 区间 | $\lambda_{\min}\le\vec x^TA\vec x\le\lambda_{\max}$（$\|\vec x\|=1$） | 球面最值论证的直接推论；第 11 讲幂法的理论依据 | 第 16 讲 |
+| $A^TA$ 与范数平方 | $\vec x^T(A^TA)\vec x=\|A\vec x\|^2$ | 恒半正定；列无关 $\iff$ 正定；第 15 讲正规方程"碗底唯一"的形状学解释 | 第 16 讲 |
+| SVD 构造三件套 | $\sigma_i=\sqrt{\lambda_i(A^TA)}$（降序）；$\vec v_i$ = $A^TA$ 单位特征向量；$\vec u_i=A\vec v_i/\sigma_i$（前 $r$ 个自动正交，其余补全） | 任何 $m\times n$ 矩阵；$A=U\Sigma V^T=\sum_{i\le r}\sigma_i\vec u_i\vec v_i^T$；full/economy 两版本 | 第 17 讲 |
+| 四子空间正交基（SVD 版） | $U$ 前 $r$ 列 = $\mathrm{col}(A)$ 正交基、后 $m-r$ 列 = $N(A^T)$；$V$ 前 $r$ 列 = $\mathrm{col}(A^T)$、后 $n-r$ 列 = $N(A)$ | 一次配齐四组正交基（09 讲四子空间的正交升级） | 第 17 讲 |
+| 截断误差（Eckart-Young） | $\|A-A_k\|_F=\sqrt{\sum_{i>k}\sigma_i^2}$；$\|A-A_k\|_2=\sigma_{k+1}$；任何秩 $\le k$ 的 $B$ 都不更近 | 低秩逼近的最优性证书；谱范数版证明 = 维数计数 + 核里有向量 | 第 17 讲 |
+| 伪逆 $A^+=V\Sigma^+U^T$ | 非零 $\sigma$ 取倒数、零保持零；列满秩时 $=(A^TA)^{-1}A^T$（左逆）；$AA^+=U_rU_r^T$ = 列空间正交投影 | $\hat{\vec x}=A^+\vec b$ = 最短最小二乘解；满秩方阵时 $A^+=A^{-1}$；15 讲坑例 $(0.5,0.5)$ 闭环 | 第 17 讲 |
+| $\sigma$ 对账四笔 | 对称时 $\sigma=|\lambda|$；方阵 $|\det|=\prod\sigma_i$；$\|A\|_F^2=\sum\sigma_i^2$；$\kappa(A)=\sigma_1/\sigma_{\min}$ | 05 讲体积账 / 11 讲谱账 / 13-15 讲范数账 / 20 讲条件数的统一面孔 | 第 17 讲 |
+| 缺口 $=$ 代数重数 $-$ 几何重数（逐 $\lambda$） | 缺口 $\ge1$ 才有若尔当故事；全零 $\iff$ 可对角化；全场 1 的个数 $=\sum$ 缺口 $=n-\sum$ 几何重数 | 诊断"缺几个"；读块对账 | 第 18 讲 |
+| $N\vec v_{i+1}=\vec v_i$；$A\vec v_{i+1}=\lambda\vec v_{i+1}+\vec v_i$ | $N=A-\lambda I$；链方程（$N$ 把每级打回上一级、链头被杀死）；移项版是广义特征向量的"多挨一鞭" | 造链/验收；装配后 $AP=PJ$ 逐列读 | 第 18 讲 |
+| 读块：块数 $=$ 几何重数；尺寸和 $=$ 代数重数 | 对每个 $\lambda$ 读若尔当形；推出几何 $\le$ 代数（第 11 讲欠账结清）；可对角化 $\iff$ 全 $1\times1$ 块 | 读若尔当形/对账 | 第 18 讲 |
+| $J^k=\sum_{j=0}^{k}\binom{k}{j}\lambda^{k-j}N^j$（$N^j=0$ 截断） | $J=\lambda I+N$、$\lambda I$ 与 $N$ 交换；$2\times2$：$=\lambda^kI+k\lambda^{k-1}N$；"乘方 × 多项式"出处；$A^k=PJ^kP^{-1}$ | 算缺口矩阵的幂（任何方阵） | 第 18 讲 |
+| $e^{Jt}=e^{\lambda t}\left(I+Nt+\frac{N^2t^2}{2!}+\cdots\right)$；$f(A)=Pf(J)P^{-1}$ | 级数 + 幂零截断；"指数 × 多项式"；两张通行证（可对角化版 $f(A)=Pf(\Lambda)P^{-1}$ 是特例） | 矩阵函数手算/理论口径；微分方程 $e^{At}$ | 第 18 讲 |
