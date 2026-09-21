@@ -1,0 +1,32 @@
+# Python 虚拟环境（uv 创建）
+.venv/
+venv/
+
+# Python 字节码与缓存
+__pycache__/
+*.py[cod]
+
+# 包构建产物
+*.egg-info/
+build/
+dist/
+
+# 工具缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# LaTeX 编译中间产物（Tectonic）
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
