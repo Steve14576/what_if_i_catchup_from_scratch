@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10_公共物品、公共资源与税制设计.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*
+
+Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+.hljs,
+.hljs-subst {
+  color: #434f54;
+}
+
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-name {
+  color: #00979D;
+}
+
+.hljs-built_in,
+.hljs-literal,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #D35400;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #00979D;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #005C5F;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: rgba(149,165,166,.8);
+}
+
+.hljs-meta-keyword {
+  color: #728E00;
+}
+
+.hljs-meta {
+  color: #434f54;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-function {
+  color: #728E00;
+}
+
+.hljs-number {
+  color: #8A7B52;  
+}
+
+</style>
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family:   "HelveticaNeue-Light", sans-serif, "宋体","Segoe WPC", "Segoe UI", "SFUIText-Light","Droid Sans Fallback";
+	font-size: 18px;
+	padding: 0 12px;
+	line-height: 1.6;
+	word-wrap: break-word;
+	color: #333333;
+}
+
+.content-wrapper{
+	max-width: 860px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+
+h2{
+	padding-bottom: .3em;
+    font-size: 2em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3{
+	font-size: 1.75em;
+    line-height: 1.225;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Obsidian syntax defaults for legacy export (PDF / HTML / DOCX) */
+
+.callout {
+	--callout-accent: #0969da;
+	margin: 12px 0;
+	border-radius: 6px;
+	border-left: 4px solid var(--callout-accent);
+	background: rgba(9, 105, 218, 0.08);
+	color: #333333;
+	overflow: hidden;
+}
+
+.callout[data-callout="note"],
+.callout[data-callout="abstract"],
+.callout[data-callout="info"],
+.callout[data-callout="todo"],
+.callout[data-subtype="note"],
+.callout[data-subtype="abstract"],
+.callout[data-subtype="info"],
+.callout[data-subtype="todo"],
+.callout[data-callout="note" i],
+.callout[data-callout="abstract" i],
+.callout[data-callout="info" i],
+.callout[data-callout="todo" i],
+.callout[data-subtype="note" i],
+.callout[data-subtype="abstract" i],
+.callout[data-subtype="info" i],
+.callout[data-subtype="todo" i] {
+	--callout-accent: #0969da;
+	border-left-color: #0969da;
+	background: rgba(9, 105, 218, 0.08);
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-subtype="tip"],
+.callout[data-subtype="hint"],
+.callout[data-callout="tip" i],
+.callout[data-callout="hint" i],
+.callout[data-subtype="tip" i],
+.callout[data-subtype="hint" i] {
+	--callout-accent: #116329;
+	border-left-color: #116329;
+	background: rgba(17, 99, 41, 0.08);
+}
+
+.callout[data-callout="important"],
+.callout[data-subtype="important"],
+.callout[data-callout="important" i],
+.callout[data-subtype="important" i] {
+	--callout-accent: #8250df;
+	border-left-color: #8250df;
+	background: rgba(130, 80, 223, 0.08);
+}
+
+.callout[data-callout="warning"],
+.callout[data-subtype="warning"],
+.callout[data-callout="warning" i],
+.callout[data-subtype="warning" i] {
+	--callout-accent: #bc4c00;
+	border-left-color: #bc4c00;
+	background: rgba(188, 76, 0, 0.08);
+}
+
+.callout[data-callout="caution"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="fail"],
+.callout[data-subtype="caution"],
+.callout[data-subtype="danger"],
+.callout[data-subtype="error"],
+.callout[data-subtype="bug"],
+.callout[data-subtype="fail"],
+.callout[data-callout="caution" i],
+.callout[data-callout="danger" i],
+.callout[data-callout="error" i],
+.callout[data-callout="bug" i],
+.callout[data-callout="fail" i],
+.callout[data-subtype="caution" i],
+.callout[data-subtype="danger" i],
+.callout[data-subtype="error" i],
+.callout[data-subtype="bug" i],
+.callout[data-subtype="fail" i] {
+	--callout-accent: #cf222e;
+	border-left-color: #cf222e;
+	background: rgba(207, 34, 46, 0.08);
+}
+
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"],
+.callout[data-subtype="question"],
+.callout[data-subtype="help"],
+.callout[data-subtype="faq"],
+.callout[data-callout="question" i],
+.callout[data-callout="help" i],
+.callout[data-callout="faq" i],
+.callout[data-subtype="question" i],
+.callout[data-subtype="help" i],
+.callout[data-subtype="faq" i] {
+	--callout-accent: #9a6700;
+	border-left-color: #9a6700;
+	background: rgba(154, 103, 0, 0.08);
+}
+
+.callout .callout-title,
+.callout .callout-info {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 14px 0;
+	margin-bottom: 10px;
+	color: var(--callout-accent);
+}
+
+.callout .callout-title-icon,
+.callout .callout-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 16px;
+	flex-shrink: 0;
+	color: var(--callout-accent);
+}
+
+.callout .callout-title-icon svg {
+	width: 16px;
+	height: 16px;
+}
+
+.callout .callout-title-inner,
+.callout .callout-info > .callout-title {
+	font-weight: 700;
+	font-size: 0.95em;
+	line-height: 1.35;
+	color: var(--callout-accent);
+}
+
+.callout .callout-content {
+	padding: 6px 14px 12px;
+	color: #333333;
+}
+
+.callout .callout-content > :first-child {
+	margin-top: 0;
+}
+
+.callout .callout-content > :last-child {
+	margin-bottom: 0;
+}
+
+.obsidian-wikilink {
+	color: #7c3aed;
+	text-decoration: underline;
+}
+
+.obsidian-wikilink-embed {
+	display: inline-block;
+	padding: 2px 8px;
+	border: 1px dashed #d0d7de;
+	border-radius: 4px;
+	color: #7c3aed;
+}
+
+.obsidian-tag {
+	color: #7c3aed;
+	background: rgba(124, 58, 237, 0.12);
+	border-radius: 4px;
+	padding: 0 4px;
+}
+
+mark {
+	background: rgba(154, 103, 0, 0.35);
+	color: inherit;
+	padding: 0 2px;
+	border-radius: 2px;
+}
+
+[data-type="yaml-front-matter"] {
+	margin: 0 0 16px;
+}
+
+.vditor-properties {
+	border: 1px solid #d0d7de;
+	border-radius: 8px;
+	background: #f6f8fa;
+	overflow: hidden;
+}
+
+.vditor-properties__heading {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 12px;
+	border-bottom: 1px solid #d0d7de;
+	background: #f3f4f6;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #6b7280;
+}
+
+.vditor-properties__heading-icon::before {
+	content: "☰";
+	opacity: 0.75;
+}
+
+.vditor-properties__table {
+	display: flex;
+	flex-direction: column;
+}
+
+.vditor-properties__row {
+	display: grid;
+	grid-template-columns: minmax(120px, 34%) 1fr;
+	gap: 8px 12px;
+	align-items: start;
+	padding: 8px 12px;
+	border-top: 1px solid rgba(208, 215, 222, 0.45);
+}
+
+.vditor-properties__row:first-child {
+	border-top: none;
+}
+
+.vditor-properties__key {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	min-width: 0;
+	color: #6b7280;
+	font-size: 0.85rem;
+}
+
+.vditor-properties__key-icon {
+	flex-shrink: 0;
+	width: 14px;
+	height: 14px;
+	opacity: 0.72;
+	text-align: center;
+}
+
+.vditor-properties__key-icon[data-icon="tag"]::before { content: "#"; }
+.vditor-properties__key-icon[data-icon="alias"]::before { content: "⛓"; }
+.vditor-properties__key-icon[data-icon="date"]::before { content: "📅"; }
+.vditor-properties__key-icon[data-icon="toggle"]::before { content: "◉"; }
+.vditor-properties__key-icon[data-icon="number"]::before { content: "#"; }
+.vditor-properties__key-icon[data-icon="list"]::before { content: "≡"; }
+.vditor-properties__key-icon[data-icon="text"]::before { content: "T"; }
+
+.vditor-properties__key-label {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.vditor-properties__value {
+	min-width: 0;
+	font-size: 0.92rem;
+	color: #333333;
+	word-break: break-word;
+}
+
+.vditor-properties__value--tags,
+.vditor-properties__value--aliases {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.vditor-properties__value--aliases {
+	gap: 6px;
+}
+
+.vditor-properties__list {
+	margin: 0;
+	padding-left: 1.1rem;
+}
+
+.vditor-properties__checkbox {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 6px;
+	border: 1px solid #d0d7de;
+	border-radius: 3px;
+	vertical-align: -2px;
+	background: #ffffff;
+}
+
+.vditor-properties__checkbox[is-checked="true"] {
+	background: #7c3aed;
+	border-color: #7c3aed;
+	box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.vditor-properties__empty {
+	opacity: 0.45;
+}
+
+</style>
+
+<style>
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+.table-of-contents li{
+	list-style-type: initial;
+}
+
+</style>
+
+<style>
+@font-face{font-display:block;font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_AMS-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_AMS-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_AMS-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-BoldItalic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-BoldItalic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-BoldItalic.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Italic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Italic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Italic.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-BoldItalic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-BoldItalic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-BoldItalic.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-Italic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-Italic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-Italic.ttf") format("truetype")}@font-face{font-display:block;font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Italic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Italic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Italic.ttf") format("truetype")}@font-face{font-display:block;font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Script-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Script-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Script-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size1-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size1-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size1-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size2-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size2-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size2-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size3-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size3-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size3-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size4-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size4-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size4-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Typewriter-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Typewriter-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Typewriter-Regular.ttf") format("truetype")}.katex{font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;position:relative;text-indent:0;text-rendering:auto}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.16.47"}.katex .katex-mathml{border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathboldfrak,.katex .textboldfrak{font-family:KaTeX_Fraktur;font-weight:700}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .mathsfit,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .smash{display:inline;line-height:0}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.2777777778em;margin-right:-.5555555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.1666666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.3333333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.6666666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.4566666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.1466666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.7142857143em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.8571428571em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.1428571429em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.2857142857em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.4285714286em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.7142857143em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.0571428571em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.4685714286em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.9628571429em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.5542857143em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.5555555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.6666666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.7777777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.8888888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.1111111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.3333333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.3044444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.7644444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.4166666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.5833333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.6666666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.7283333333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.0733333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.3472222222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.4166666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.4861111111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.5555555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.6944444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.4402777778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.7277777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.2893518519em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.3472222222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.4050925926em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.462962963em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.5208333333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.6944444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.2002314815em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.4398148148em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.2410800386em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.2892960463em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.337512054em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.3857280617em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.4339440694em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.4821600771em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.5785920926em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.6943105111em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.8331726133em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.1996142719em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.2009646302em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.2411575563em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.2813504823em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.3215434084em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.3617363344em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.4019292605em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.4823151125em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.578778135em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.6945337621em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.8336012862em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex svg{fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+</style>
+<style>
+body {
+    padding-top: 25px;
+}
+</style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1 id="%E7%AC%AC-10-%E8%AE%B2%EF%BC%9A%E5%85%AC%E5%85%B1%E7%89%A9%E5%93%81%E3%80%81%E5%85%AC%E5%85%B1%E8%B5%84%E6%BA%90%E4%B8%8E%E7%A8%8E%E5%88%B6%E8%AE%BE%E8%AE%A1" tabindex="-1">第 10 讲：公共物品、公共资源与税制设计</h1>
+<blockquote>
+<p><strong>前置</strong>：第 09 讲（外部性）、第 05–07 讲（税收与账本）。
+<strong>预计时间</strong>：约 2.5 小时（含作业）。</p>
+<p><strong>一句话定位</strong>：市场失灵三兄弟的第二、三位（公共物品、公共资源）在本讲与&quot;税制设计&quot;合并收官——这是<strong>前半场（市场与政策）的最后一讲</strong>。学完它，你会拿到一张&quot;什么该交给市场、什么该交给集体&quot;的分类棋盘，以及评价&quot;税好不好&quot;的两把尺子。</p>
+<p><strong>本讲回答什么</strong>：</p>
+<ol>
+<li>怎么给物品分类？哪些该市场给、哪些该政府给？</li>
+<li>搭便车为什么导致公共物品供给不足？</li>
+<li>公地悲剧的机制到底是什么？&quot;私有化&quot;能包治吗？</li>
+<li>什么叫&quot;好税&quot;？&quot;累进税更公平&quot;和&quot;定额税更高效&quot;的争吵有没有答案？</li>
+</ol>
+<p><strong>这一讲有真实验证</strong>：三人路灯的公共物品账（脚本 <code>scripts/lec10-01_verify_public_goods_tax.py</code> 实验 1）；渔场公地的自由进入 vs 社会最优（实验 2）；三种税制的税率结构对照（实验 3）。配图 3 张。</p>
+</blockquote>
+<h2 id="%E6%9C%AC%E8%AE%B2%E6%80%8E%E4%B9%88%E8%B5%B0%EF%BC%88%E8%84%89%E7%BB%9C%E5%9B%BE%EF%BC%89" tabindex="-1">本讲怎么走（脉络图）</h2>
+<pre class='hljs'><code><div>引子：业主大会的三个议程（路灯、小河、物业费）
+  │
+  ├─ 1. 物品的四格棋盘：排他性 × 竞用性（图 1）
+  ├─ 2. 公共物品：搭便车的世界
+  ├─ 3. 公共资源：公地悲剧（图 2）
+  ├─ 4. 税制设计：什么叫&quot;好税&quot;（图 3）
+  ├─ 5. 边界与纪律
+  └─ 常见误区 → 本讲小结 → 掌握度自测 → 作业
+</div></code></pre>
+<blockquote>
+<p>下一站：§引子。一场业主大会，正好把本讲的四件事全碰齐了。</p>
+</blockquote>
+<hr>
+<h2 id="%E5%BC%95%E5%AD%90%EF%BC%9A%E4%B8%9A%E4%B8%BB%E5%A4%A7%E4%BC%9A%E7%9A%84%E4%B8%89%E4%B8%AA%E8%AE%AE%E7%A8%8B" tabindex="-1">引子：业主大会的三个议程</h2>
+<p>某小区开业主大会，议程表上有三件事：</p>
+<ol>
+<li><strong>装一批路灯</strong>（门口那条黑巷子）：大家都说该装。可真到凑钱——&quot;我少走那条巷子&quot;&quot;装好了反正大家都能用&quot;——每个人都等着别人掏钱；</li>
+<li><strong>小区旁的小河&quot;鱼快被钓光了&quot;</strong>：河不属于谁家，谁都能钓；&quot;我少钓两条，明天也被别人钓走&quot;——于是人人都&quot;趁还有的时候多钓点&quot;；</li>
+<li><strong>物业费怎么收</strong>：按人头？按面积？按收入？第一种，穷住户负担最重；第三种，高收入者最疼。吵了一晚上没有结论。</li>
+</ol>
+<p>三件事的共同点：<strong>它们都发生在&quot;没有价格的地方&quot;</strong>——路灯没法单独卖给你、河水没法按杯收费、物业费的&quot;公平&quot;根本没有统一标尺。本讲把这三件事一一拆开：先给&quot;没有价格的东西&quot;分类（§1）、再看两场著名的失灵怎么发生（§2 搭便车、§3 公地悲剧）、最后研究那笔&quot;收上来的钱&quot;该怎么设计才叫好（§4）。</p>
+<hr>
+<h2 id="1.-%E7%89%A9%E5%93%81%E7%9A%84%E5%9B%9B%E6%A0%BC%E6%A3%8B%E7%9B%98%EF%BC%9A%E6%8E%92%E4%BB%96%E6%80%A7-%C3%97-%E7%AB%9E%E7%94%A8%E6%80%A7" tabindex="-1">1. 物品的四格棋盘：排他性 × 竞用性</h2>
+<h3 id="1.1-%E4%B8%A4%E4%B8%AA%E5%88%A4%E6%8D%AE" tabindex="-1">1.1 两个判据</h3>
+<p>给物品分类，不用看它&quot;重不重要&quot;，只看它带哪两条属性：</p>
+<ul>
+<li><strong>排他性（excludability）</strong>：<strong>付费才能用</strong>——能不能把不付钱的人挡在外面？（一块地能围起来，一首空气挡不住）；</li>
+<li><strong>竞用性（rivalry）</strong>：<strong>一个人用了，别人的份额就少一点</strong>。（你吃掉的苹果别人吃不到；防空警报响了，全城都在听，谁也不妨碍谁。）</li>
+</ul>
+<p>两条属性一交叉，就是本讲的<strong>四格棋盘</strong>：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>竞用</strong>（多一份就少一份）</th>
+<th><strong>非竞用</strong>（多人共用不打架）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>排他</strong>（收得了费）</td>
+<td><strong>私人物品</strong>（苹果、理发）</td>
+<td><strong>俱乐部物品</strong>（收费桥、有线电视）</td>
+</tr>
+<tr>
+<td><strong>非排他</strong>（拦不住人）</td>
+<td><strong>公共资源</strong>（渔场、拥堵道路）</td>
+<td><strong>公共物品</strong>（国防、路灯）</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figures/lec10_fig1_four_quadrants.svg" alt="图 1：排他性 × 竞用性的四格棋盘"></p>
+<blockquote>
+<p><strong>图 1 怎么读</strong>：横轴是竞用性（左：竞用；右：非竞用），纵轴是排他性（上：排他；下：非排他）。<strong>私人物品</strong>格：市场运转最顺（两个条件都齐）；<strong>俱乐部物品</strong>格：市场能收费提供（但可能长成&quot;自然垄断&quot;，第 13 讲回访）；<strong>公共资源</strong>格：拦不住人、又会用光——公地悲剧的温床（§3）；<strong>公共物品</strong>格：拦不住人、又人人想要——搭便车的温床（§2）。</p>
+</blockquote>
+<p><strong>一个边界先声明</strong>：四格是&quot;光谱的四个极点&quot;，不是铁笼子——现实物品的落点可以&quot;搬家&quot;：办个围墙收票，公园就从公共资源挪向俱乐部；加密技术一上来，电视信号从&quot;公共物品&quot;变成&quot;俱乐部物品&quot;。<strong>分类是为了选对工具，不是给物品钉终身标签。</strong></p>
+<hr>
+<h2 id="2.-%E5%85%AC%E5%85%B1%E7%89%A9%E5%93%81%EF%BC%9A%E6%90%AD%E4%BE%BF%E8%BD%A6%E7%9A%84%E4%B8%96%E7%95%8C" tabindex="-1">2. 公共物品：搭便车的世界</h2>
+<h3 id="2.1-%E5%AE%9A%E4%B9%89%E4%B8%8E%22%E9%9B%B6%E8%BE%B9%E9%99%85%E6%88%90%E6%9C%AC%22" tabindex="-1">2.1 定义与&quot;零边际成本&quot;</h3>
+<blockquote>
+<p><strong>公共物品（public goods）：既非排他、又非竞用的物品。</strong> 两个特征各有一个直接推论：</p>
+<ul>
+<li><strong>非排他 → 收不了费</strong>（拦不住没付钱的人）→ 私人企业没有生意可做；</li>
+<li><strong>非竞用 → 多服务一个人的边际成本为零</strong>（多一盏路灯照亮一条新路过的行人，成本不增加）→ 从效率看，应该让所有人免费享用。</li>
+</ul>
+</blockquote>
+<h3 id="2.2-%E6%90%AD%E4%BE%BF%E8%BD%A6%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%22%E4%BA%BA%E4%BA%BA%E6%83%B3%E8%A6%81%E3%80%81%E6%97%A0%E4%BA%BA%E6%84%BF%E4%B9%B0%22" tabindex="-1">2.2 搭便车：为什么&quot;人人想要、无人愿买&quot;</h3>
+<blockquote>
+<p><strong>搭便车者（free rider）：享受了物品的好处，却没有为之付费的人。</strong></p>
+</blockquote>
+<p>不是什么人品问题——是<strong>激励结构</strong>的直接结果：既然&quot;拦不住我没付钱&quot;，那么&quot;等别人买单，我白用&quot;对每个人都是理性的。看一个三人小社区的路灯账（脚本 <code>lec10-01</code> 实验 1 实测）：</p>
+<ul>
+<li>装一盏路灯成本 <strong>300 元</strong>；三人各自的支付意愿：甲 150、乙 120、丙 80——<strong>合计 350</strong>；</li>
+<li><strong>社会判断</strong>：350 &gt; 300，净益 <strong>+50</strong>——该装；</li>
+<li><strong>各自独担</strong>：每人的意愿都低于 300——<strong>没有人愿意自己全掏</strong>；</li>
+<li>结果：<strong>路灯不装</strong>——尽管三个人合起来明明想要它。</li>
+</ul>
+<p>如果强制平摊呢（每家 100 元）：甲净赚 50、乙净赚 20、丙<strong>净亏 20</strong>——总盈余还是 +50，但<strong>丙会被&quot;多数&quot;按着头买单</strong>。这两个坑（供给不足 + 少数被强制）就是公共物品供给的两难：<strong>&quot;市场给不够，强制供给又绕不开'凭什么'&quot;</strong>。</p>
+<h3 id="2.3-%E6%94%BF%E5%BA%9C%E7%9A%84%E8%A7%92%E8%89%B2%E4%B8%8E%22%E6%88%90%E6%9C%AC-%E6%94%B6%E7%9B%8A%E5%88%86%E6%9E%90%22%E7%9A%84%E9%9A%BE%E9%A2%98" tabindex="-1">2.3 政府的角色与&quot;成本-收益分析&quot;的难题</h3>
+<p>公共物品的主流解法是<strong>政府用税收提供</strong>（国防、路灯、基础研究、公共卫生）：税收解决&quot;搭便车&quot;（不缴也得缴），强制解决&quot;收不齐钱&quot;。但两个提醒别丢：</p>
+<ol>
+<li><strong>政府提供 ≠ 政府生产</strong>：路灯可以政府出钱、企业安装——&quot;谁出钱&quot;和&quot;谁来干&quot;是两码事（第 12–14 讲的企业世界照样适用）；</li>
+<li><strong>&quot;该提供多少&quot;极难估</strong>：私人市场至少有价格信号；公共物品没有价格，只能靠<strong>成本-收益分析</strong>去估&quot;全社会值多少&quot;——而问卷里说&quot;我愿意出 500&quot;的人可能只是想让政府掏钱（策略性回答）——估值是公共物品经济学里公认的老大难。</li>
+</ol>
+<blockquote>
+<p>下一站：棋盘左下角——拦不住人、又会用光的那一格。</p>
+</blockquote>
+<hr>
+<h2 id="3.-%E5%85%AC%E5%85%B1%E8%B5%84%E6%BA%90%EF%BC%9A%E5%85%AC%E5%9C%B0%E6%82%B2%E5%89%A7" tabindex="-1">3. 公共资源：公地悲剧</h2>
+<h3 id="3.1-%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9C%BA%E5%88%B6" tabindex="-1">3.1 定义与机制</h3>
+<blockquote>
+<p><strong>公共资源（common resources）：非排他、但竞用的物品</strong>——谁都能来用（不收门票），但多一个人用，别人的那份就薄一分。</p>
+</blockquote>
+<p>&quot;公地悲剧（tragedy of the commons）&quot;这个名字来自一个古老的寓言：一片人人可用的公共牧场，每个牧人都想&quot;多放一头牛&quot;——多放的那头牛的收入归自己，草场退化的代价却摊给所有人。<strong>结果：人人加牛，直到草场废掉。</strong></p>
+<p>把第 09 讲的语言搬出来，机制一句话就清楚：<strong>你多放一头牛，对&quot;其他所有牧人&quot;施加了一份负外部性</strong>（挤占草场）——而这份外部成本不经价格、也不进你的账。于是：</p>
+<ul>
+<li>每个人的私人账里，&quot;多放一头&quot;只看<strong>自己的</strong>收入 vs <strong>自己的</strong>成本；</li>
+<li>每个人的最优选择都是&quot;能放就放&quot;；</li>
+<li>合起来：<strong>资源被用到&quot;每头牛的收入等于成本&quot;为止——超额利润被吃干净</strong>。</li>
+</ul>
+<h3 id="3.2-%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81%EF%BC%9A%E6%B8%94%E5%9C%BA%EF%BC%88%E5%AE%9E%E9%AA%8C-2%EF%BC%89" tabindex="-1">3.2 数字验证：渔场（实验 2）</h3>
+<p>村里一片渔场（不属于任何人）：每艘船的收入 = <strong>120 − n</strong>（n 是总船数——船越多，每人捕得越少），每艘船的私人成本 = <strong>60</strong>。看自由进入会发生什么（脚本 <code>lec10-01</code> 实验 2 实测）：</p>
+<ul>
+<li><strong>自由进入</strong>：只要有赚头就有人进——直到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>120</mn><mo>−</mo><mi>n</mi><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">120 - n = 60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">120</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">60</span></span></span></span>，即 <strong>n = 60 艘</strong>。此时每船净收益为 0，<strong>全村的捕鱼总净利 = 0</strong>；</li>
+<li><strong>社会最优</strong>：最大化&quot;每船净收益 × 船数&quot;：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>max</mi><mo>⁡</mo><mtext>  </mtext><mn>60</mn><mi>n</mi><mo>−</mo><msup><mi>n</mi><mn>2</mn></msup><mo>⇒</mo><mi>n</mi><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">\max\; 60n - n^2 \Rightarrow n = 30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mop">max</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">60</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">30</span></span></span></span> 艘，总净利 <strong>900</strong>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>船数 n</th>
+<th>30（社会最优）</th>
+<th>40</th>
+<th>50</th>
+<th>60（自由进入）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全渔场总净利</td>
+<td><strong>900</strong></td>
+<td>800</td>
+<td>500</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img src="figures/lec10_fig2_commons.svg" alt="图 2：公地悲剧——不属于任何人的东西，最先被掏空"></p>
+<blockquote>
+<p><strong>图 2 怎么读</strong>：左图从&quot;单船视角&quot;看自由进入的逻辑——收入线（120 − n）随船数下降，降到与成本线 60 相交处（n = 60），&quot;赚头&quot;消失，船就停了。绿点是社会最优 n = 30（多出的船其实在互相挤瘦腰包）。右图是&quot;全村视角&quot;：总净利曲线是一条先升后降的山坡，峰在 30（900）；自由进入的终点在 60——<strong>坡底，利润全部被吃光（0）</strong>。上一讲的&quot;外部性&quot;在这里换了个数字，机制一模一样：个体不算对别人的挤占，一步到位地&quot;各扫门前雪&quot;，合起来就开到了坡底。</p>
+</blockquote>
+<h3 id="3.3-%E4%BE%8B%E5%AD%90%E4%B8%80%E4%B8%B2" tabindex="-1">3.3 例子一串</h3>
+<p>牧场（原版）、渔场、<strong>拥堵的道路</strong>（你上路，让别人更堵——&quot;拥堵费&quot;就是为它设计的庇古税）、地下水层（抽水竞赛）、公海、&quot;空中的垃圾场&quot;（大气）。共同特征：<strong>便宜甚至免费进入 + 竞用</strong>。</p>
+<h3 id="3.4-%E8%A7%A3%E6%B3%95%E5%9B%9B%E4%BB%B6%E5%A5%97%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%9A%E6%B2%A1%E6%9C%89%E5%93%AA%E4%B8%80%E4%BB%B6%E5%8C%85%E6%B2%BB%E7%99%BE%E7%97%85%EF%BC%89" tabindex="-1">3.4 解法四件套（重点：没有哪一件包治百病）</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>做法</th>
+<th>逻辑</th>
+<th>局限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>管制</strong></td>
+<td>限量（船数、天数、限号）</td>
+<td>直接掐住总量</td>
+<td>一杆子定数，不知道谁更值得用；执行成本</td>
+</tr>
+<tr>
+<td><strong>税/收费</strong></td>
+<td>每船收 30 → 进入门槛抬到 90 → n 回到 30</td>
+<td>把&quot;挤占的外部成本&quot;塞回个体账（庇古税同胞）</td>
+<td>税率要估准；对穷使用者可能过重</td>
+</tr>
+<tr>
+<td><strong>可交易配额</strong></td>
+<td>发 30 张捕捞证、允许互卖</td>
+<td>总量封顶 + 让&quot;留在场上的人&quot;是最有效率的 30 个</td>
+<td>初始分配（免费发给谁？）的公平争议</td>
+</tr>
+<tr>
+<td><strong>私有化/规则自治</strong></td>
+<td>渔场承包给一户/社区自订轮捕规则</td>
+<td>让&quot;所有者&quot;把挤占内化（他会自己算总账）</td>
+<td><strong>不是万能</strong>：公海、大气划不了界；划给谁本身就是分配问题；监管成本高</td>
+</tr>
+</tbody>
+</table>
+<p>四件套和上一讲的三工具是同一批工具的&quot;限量版&quot;再组合——<strong>核心动作永远是同一个：让使用者面对的账，等于社会的账。</strong></p>
+<blockquote>
+<p>下一站：三个议程办完了两个。最后那个&quot;吵不完&quot;的——物业费到底怎么收才对？这要在税制设计里找答案。</p>
+</blockquote>
+<hr>
+<h2 id="4.-%E7%A8%8E%E5%88%B6%E8%AE%BE%E8%AE%A1%EF%BC%9A%E4%BB%80%E4%B9%88%E5%8F%AB%22%E5%A5%BD%E7%A8%8E%22" tabindex="-1">4. 税制设计：什么叫&quot;好税&quot;</h2>
+<h3 id="4.1-%E5%85%88%E5%9B%9E%E6%94%B6%E4%B8%A4%E7%AC%94%E6%97%A7%E8%B4%A6" tabindex="-1">4.1 先回收两笔旧账</h3>
+<p>到这一讲，&quot;税&quot;已经见过三个身份：筹资工具（05 讲楔子）、抑价工具（07 讲 DWL 与拉弗）、纠偏工具（09 讲庇古税）。本节处理<strong>第一个身份的验收</strong>：作为&quot;收钱的机器&quot;，什么样的设计才算好？先记住两个要点：</p>
+<ul>
+<li>评价税制有<strong>两个轴</strong>：<strong>效率</strong>与<strong>公平</strong>——两个轴都要过，缺一个都不叫&quot;好税&quot;；</li>
+<li>两个轴的性质不同：<strong>效率有可算的口径（DWL、行政成本），公平则是&quot;采用哪条原则&quot;的分歧</strong>——这一点决定了下一节那个著名争吵有没有答案。</li>
+</ul>
+<h3 id="4.2-%E6%95%88%E7%8E%87%E8%BD%B4%EF%BC%9A%E5%B0%91%E6%89%AD%E6%9B%B2%E3%80%81%E5%B0%91%E9%BA%BB%E7%83%A6" tabindex="-1">4.2 效率轴：少扭曲、少麻烦</h3>
+<ul>
+<li><strong>少扭曲</strong>：所有筹资税都可能制造 DWL（05/07 讲），设计口诀就一句——<strong>宽税基、低税率</strong>（07 讲平方律的直接推论）：与其对少数东西征重税，不如把税摊薄到更宽的税基上；</li>
+<li><strong>少麻烦</strong>：<strong>行政负担</strong>——征税机关的征收成本 + 纳税人的遵从成本（记账、申报、请会计）。一项税即使理论 DWL 很小，如果征收起来鸡飞狗跳，同样不及格（&quot;简单&quot;是效率轴的一部分）。</li>
+</ul>
+<h3 id="4.3-%E5%85%AC%E5%B9%B3%E8%BD%B4%EF%BC%9A%E4%B8%A4%E6%9D%A1%E5%8E%9F%E5%88%99%E3%80%81%E4%B8%A4%E4%B8%AA%E7%BB%B4%E5%BA%A6" tabindex="-1">4.3 公平轴：两条原则、两个维度</h3>
+<blockquote>
+<p><strong>受益原则（benefit principle）：谁受益谁付钱。</strong>（&quot;燃油税修路&quot;——开车多的人修路受益多，多付。）</p>
+<p><strong>支付能力原则（ability-to-pay principle）：能力强的人多付钱。</strong>（收入高的人多缴税——税收作为再分配工具。）</p>
+</blockquote>
+<p>再加两个维度：</p>
+<ul>
+<li><strong>横向公平</strong>：境况相同的人，缴一样的税；</li>
+<li><strong>纵向公平</strong>：境况不同的人，缴不同的税（<strong>&quot;怎么个不同法&quot;就是上面两条原则的分叉口</strong>）。</li>
+</ul>
+<h3 id="4.4-%E5%B9%B3%E5%9D%87%E7%A8%8E%E7%8E%87-vs-%E8%BE%B9%E9%99%85%E7%A8%8E%E7%8E%87%EF%BC%9A%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98%E3%80%81%E4%B8%A4%E4%B8%AA%E7%AD%94%E6%A1%88" tabindex="-1">4.4 平均税率 vs 边际税率：两个问题、两个答案</h3>
+<ul>
+<li><strong>平均税率</strong> = 总税额 ÷ 总收入——它回答&quot;<strong>账单有多重</strong>&quot;；</li>
+<li><strong>边际税率</strong> = 收入再增加一元，要多缴几毛——它回答&quot;<strong>下一个小时/下一笔生意，划不划算</strong>&quot;（行为在它手里）。</li>
+</ul>
+<p>看三人社区（收入 10000 / 20000 / 50000）在三套税制下的画像（脚本 <code>lec10-01</code> 实验 3 实测）：</p>
+<table>
+<thead>
+<tr>
+<th>税制</th>
+<th>税额（甲/乙/丙）</th>
+<th><strong>平均税率</strong></th>
+<th><strong>边际税率</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>人头税</strong>（每人 1500）</td>
+<td>1500 / 1500 / 1500</td>
+<td>15.0% / 7.5% / 3.0%（<strong>累退</strong>）</td>
+<td><strong>0%</strong></td>
+</tr>
+<tr>
+<td><strong>比例税</strong>（10%）</td>
+<td>1000 / 2000 / 5000</td>
+<td>10% / 10% / 10%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td><strong>累进税</strong>（免 8000；12%；24%）</td>
+<td>240 / 1440 / <strong>7440</strong></td>
+<td>2.4% / 7.2% / <strong>14.9%</strong>（递增）</td>
+<td>12% / 12% / 24%</td>
+</tr>
+</tbody>
+</table>
+<p><img src="figures/lec10_fig3_tax_rates.svg" alt="图 3：三种税制的&quot;平均税率画像&quot;"></p>
+<blockquote>
+<p><strong>图 3 怎么读</strong>：横轴收入、纵轴平均税率。红线（人头税）<strong>随收入下降</strong>——累退；蓝线（比例税）水平；绿线（累进税）<strong>随收入上升</strong>。（&quot;累退&quot;不等于&quot;税额减少&quot;——是&quot;负担占比随收入变轻&quot;。）三线在图中相交、纠缠——这就是&quot;税制结构&quot;的样子。</p>
+</blockquote>
+<h3 id="4.5-%E5%AE%9A%E9%A2%9D%E7%A8%8E%E7%9A%84%E6%9E%81%E7%AB%AF%EF%BC%9A%E6%95%88%E7%8E%87%E5%A4%A9%E8%8A%B1%E6%9D%BF%E3%80%81%E5%85%AC%E5%B9%B3%E5%9C%B0%E6%9D%BF" tabindex="-1">4.5 定额税的极端：效率天花板、公平地板</h3>
+<p><strong>定额税（lump-sum tax）</strong>：不论收入高低，每人一个固定数（人头税就是它的粗版）。它的理论地位很特殊：</p>
+<ul>
+<li><strong>效率侧几乎完美</strong>：边际税率为 0——你多赚的钱<strong>分文不会被多征</strong>，&quot;下一个小时干不干&quot;完全不受它影响 → 它是&quot;不扭曲行为&quot;的天花板；</li>
+<li><strong>公平侧极为粗糙</strong>：它对低收入者最重（平均税率随收入下降的极端累退）→ 是&quot;公平&quot;的地板。</li>
+</ul>
+<p>用一个加班决策看清楚&quot;边际税率为什么是行为的朋友或敌人&quot;（实验 3 下半，工资 100/小时、休闲的边际价值 75）：</p>
+<table>
+<thead>
+<tr>
+<th>边际税率</th>
+<th>加班到手的净收入</th>
+<th>vs 休闲价值 75</th>
+<th>决定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0%</td>
+<td>100</td>
+<td>高于</td>
+<td><strong>加班</strong></td>
+</tr>
+<tr>
+<td>25%</td>
+<td>75</td>
+<td>持平</td>
+<td>无所谓</td>
+</tr>
+<tr>
+<td>40%</td>
+<td>60</td>
+<td>低于</td>
+<td><strong>不加班（回家）</strong></td>
+</tr>
+</tbody>
+</table>
+<p>一句话记住分工：<strong>边际税率决定&quot;行为&quot;，平均税率决定&quot;账单&quot;</strong>。</p>
+<h3 id="4.6-%E9%82%A3%E4%B8%AA%E8%91%97%E5%90%8D%E4%BA%89%E5%90%B5%E6%9C%89%E6%B2%A1%E6%9C%89%E7%AD%94%E6%A1%88" tabindex="-1">4.6 那个著名争吵有没有答案</h3>
+<p>&quot;累进税最公平！&quot;&quot;定额税最高效！&quot;——两句话其实各说了一个轴，<strong>没有唯一答案，但有清晰的分歧地图</strong>：</p>
+<ul>
+<li><strong>效率侧有客观口径</strong>：定额税 &gt; 比例税 &gt; 高累进（DWL 可算），这是事实层；</li>
+<li><strong>公平侧是规范分歧</strong>：<strong>按&quot;支付能力原则&quot;看，累进税更公平（能力强的多担）；按&quot;受益原则&quot;看，累进未必公平（公园里富人穷人用同样多，为什么富人要多付？）</strong>——两条原则都站得住，选哪条是价值观。</li>
+<li>所以考试的正解是：<strong>&quot;要看采用哪条公平原则；效率上定额税占优、公平上取决于原则立场&quot;</strong>——而不是抢答&quot;累进一定好/一定坏&quot;。</li>
+</ul>
+<p>（现实税制的素描：现代税制普遍是<strong>混合体</strong>——增值税/消费税类偏&quot;宽税基&quot;（效率思路），个人所得税偏累进（支付能力思路），社保偏专项受益——再叠加 05 讲的&quot;名义归宿不等于实际归宿&quot;警报，没有一个国家的税制是教科书单件工具。）</p>
+<blockquote>
+<p>下一站：本讲的边界清单——也是前半场（市场与政策）的收尾提醒。</p>
+</blockquote>
+<hr>
+<h2 id="5.-%E8%BE%B9%E7%95%8C%E4%B8%8E%E7%BA%AA%E5%BE%8B" tabindex="-1">5. 边界与纪律</h2>
+<ol>
+<li><strong>四格是光谱</strong>：物品可以随技术、制度&quot;搬家&quot;（围墙、加密）；分类是为了选工具，不是贴终身标签。</li>
+<li><strong>政府提供 ≠ 政府生产</strong>：公共物品可以&quot;政府出钱、市场干活&quot;——别把&quot;谁买单&quot;和&quot;谁干活&quot;混为一谈。</li>
+<li><strong>公共物品的估值难题</strong>：成本-收益分析里，支付意愿没有市场价格来校准——分析结论要带&quot;误差声明&quot;。</li>
+<li><strong>公地治理没有万能药</strong>：市场（私有化）、政府（税/管制）、社区（自订规则）各有适用区——大型公共资源（公海、大气）通常只能靠政府间协议与上述工具组合。</li>
+<li><strong>税制评价的两个轴不能互相代言</strong>：效率问题用效率工具答（DWL、行政成本），公平问题要先亮明&quot;采用哪条原则&quot;——这是全课程&quot;实证 vs 规范&quot;（01 讲）在税收话题上的最大应用场。</li>
+</ol>
+<hr>
+<h2 id="%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA%EF%BC%88%E6%9C%AC%E8%8A%82%E9%9B%B6%E6%96%B0%E7%9F%A5%E8%AF%86%EF%BC%8C%E5%8F%AA%E7%A0%B4%E8%AF%AF%EF%BC%89" tabindex="-1">常见误区（本节零新知识，只破误）</h2>
+<ol>
+<li><strong>&quot;公共物品 = 政府生产的东西&quot;</strong>（§2.1–2.3）。错。公共物品由<strong>非排他 + 非竞用</strong>两条属性定义；政府生产的东西可以是私人物品，公共物品也完全可以由私人生产、政府买单。</li>
+<li><strong>&quot;免费的东西都是公共物品&quot;</strong>（§1）。错。要看属性不看价格：免费公园只要围得起来、挤得动，就是公共资源；收费的数字电视（加密）反倒是俱乐部物品。</li>
+<li><strong>&quot;搭便车是人品问题&quot;</strong>（§2.2）。不是。它是&quot;拦不住不付费者&quot;的激励结构产物——换个制度（比如封闭小区内部集资），同一个人可能立刻变得&quot;慷慨&quot;。</li>
+<li><strong>&quot;公地悲剧是因为人太多&quot;</strong>（§3.1）。错。是<strong>产权与激励结构</strong>问题：人再多，把地划给谁、让谁自己算总账，悲剧也能停（私有草场不悲剧）；人再少，没有归属的资源照样被吃光。</li>
+<li><strong>&quot;私有化能治好一切公地&quot;</strong>（§3.4）。不一定。公海、大气无法划界；划给谁的公平问题、监管与执行成本都要另算——私有化是四件套之一，不是万能钥匙。</li>
+<li><strong>&quot;定额税零 DWL，所以应该全面推广&quot;</strong>（§4.5–4.6）。不成立。定额税在<strong>效率轴</strong>上确实近乎满分，但在<strong>公平轴</strong>上是极端累退——&quot;好税&quot;要两轴都过；单轴最优方案不等于综合最优方案。</li>
+</ol>
+<h2 id="%E6%9C%AC%E8%AE%B2%E5%B0%8F%E7%BB%93" tabindex="-1">本讲小结</h2>
+<p>一页纸的骨架：</p>
+<ul>
+<li><strong>四格棋盘</strong>（排他性 × 竞用性）：私人物品（市场顺畅）、俱乐部物品（可收费）、<strong>公共资源</strong>（公地悲剧）、<strong>公共物品</strong>（搭便车）。四格是光谱、可搬家。</li>
+<li><strong>公共物品</strong>：非排他 → 收不了费；非竞用 → 边际成本为零。<strong>搭便车</strong> → 私人供给不足（三人路灯：合计 350 &gt; 成本 300，却无人独担）；政府以税收提供，但&quot;提供 ≠ 生产&quot;，且估值难。</li>
+<li><strong>公共资源</strong>：非排他 + 竞用 → 每个使用者对他人施加负外部性 → <strong>用到利润耗尽</strong>（n = 60、净利 0 vs 最优 n = 30、净利 900）。解法四件套：管制、收费/税（30）、可交易配额、私有化/社区规则——各有边界。</li>
+<li><strong>税制设计</strong>：两个轴——效率（宽税基低税率、行政负担小）与公平（受益原则 vs 支付能力原则；横向/纵向公平）。</li>
+<li><strong>平均税率管账单、边际税率管行为</strong>；三种结构：累退（人头税）、比例、累进（三曲线、三张画像）。</li>
+<li><strong>定额税</strong>：效率天花板、公平地板；<strong>&quot;累进 vs 定额&quot;之争没有唯一答案——效率有口径、公平是原则分歧</strong>。</li>
+<li><strong>收尾</strong>：市场失灵三兄弟（市场势力 13 讲 / 外部性 09 讲 / 公共品与公地 10 讲）已到齐两位半；前半场收官，下半场走进企业（11 讲起）。</li>
+</ul>
+<h2 id="%E6%8E%8C%E6%8F%A1%E5%BA%A6%E8%87%AA%E6%B5%8B" tabindex="-1">掌握度自测</h2>
+<ul>
+<li><input type="checkbox" id="checkbox0"><label for="checkbox0">我能用&quot;排他性 × 竞用性&quot;给任意物品定位，并写出四格各自的两个例子。</label></li>
+<li><input type="checkbox" id="checkbox1"><label for="checkbox1">我能解释&quot;非排他 → 收不了费&quot;&quot;非竞用 → 边际成本为零&quot;两个推论。</label></li>
+<li><input type="checkbox" id="checkbox2"><label for="checkbox2">我能复述三人路灯的全部数字（350/300、独担无人、平摊 +50/+20/−20），并说清&quot;两难&quot;的两个侧面。</label></li>
+<li><input type="checkbox" id="checkbox3"><label for="checkbox3">我能解释公地悲剧的机制（负外部性 + 私人账），并复算渔场 n=60 vs n=30 的净利（0 vs 900）。</label></li>
+<li><input type="checkbox" id="checkbox4"><label for="checkbox4">我能说出公地解法四件套，并指出私有化的至少两条边界。</label></li>
+<li><input type="checkbox" id="checkbox5"><label for="checkbox5">我能写出税制评价的两个轴，并分别举出构成要素（DWL/行政负担；受益/支付能力、横向/纵向）。</label></li>
+<li><input type="checkbox" id="checkbox6"><label for="checkbox6">我能区分平均税率与边际税率，并解释&quot;边际税率管行为&quot;的加班演示。</label></li>
+<li><input type="checkbox" id="checkbox7"><label for="checkbox7">我能对三种税制结构（累退/比例/累进）各举一例并画出平均税率的大致走势。</label></li>
+<li><input type="checkbox" id="checkbox8"><label for="checkbox8">我能说清&quot;累进 vs 定额&quot;之争的分歧地图（效率有口径、公平是原则），并按此组织答案。</label></li>
+<li><input type="checkbox" id="checkbox9"><label for="checkbox9">我能复跑 </label><code>scripts/lec10-01</code>，解释输出里每一个数字（350、60、900、1500、7440、0%/25%/40%……）。</li>
+</ul>
+<h2 id="%E4%BD%9C%E4%B8%9A" tabindex="-1">作业</h2>
+<blockquote>
+<p>答案只能用<strong>已教概念</strong>（本讲范围：四格分类、公共物品与搭便车、公共资源与公地悲剧、四件套解法、税制两轴、平均/边际税率、三种结构、定额税；可复用外部性与税工具）。先独立做，再对答案。</p>
+</blockquote>
+<h3 id="%E5%9F%BA%E7%A1%80" tabindex="-1">基础</h3>
+<p><strong>Q1. 分类题</strong>：把下列八项放进四格棋盘：国防、公海渔业、苹果、收费高速公路、无线广播、拥堵的市中心道路、有线电视、演唱会门票。</p>
+<p><strong>参考答案</strong>：</p>
+<ul>
+<li>私人物品：<strong>苹果</strong>、<strong>演唱会门票</strong>（排他 + 竞用）；</li>
+<li>俱乐部物品：<strong>收费高速公路</strong>、<strong>有线电视</strong>（排他 + 非竞用）；</li>
+<li>公共资源：<strong>公海渔业</strong>、<strong>拥堵的市中心道路</strong>（非排他 + 竞用）；</li>
+<li>公共物品：<strong>国防</strong>、<strong>无线广播</strong>（非排他 + 非竞用）。</li>
+</ul>
+<p><strong>Q2. 计算·公共物品</strong>：四人社区考虑装一台净水设备：成本 1000 元；四人支付意愿分别为 400、300、200、150。</p>
+<p>(1) 社会意义上该不该装？
+(2) 若要求任何一个人单独出资，会怎样？
+(3) 若平摊（每人 250），谁愿意、谁反对？
+(4) 用一句话概括这个结局揭示的难题。</p>
+<p><strong>参考答案</strong>：
+(1) 合计意愿 1050 &gt; 成本 1000——<strong>该装</strong>（净益 +50）。
+(2) 每人的意愿都低于 1000——<strong>无人愿独担</strong>（搭便车：等别人出钱）。
+(3) 平摊 250：甲（+150）、乙（+50）愿意；丙（−50）、丁（−100）<strong>反对</strong>。
+(4) 公共物品的两难：市场（自愿）供给不足；强制供给能成事，但要面对&quot;少数反对者凭什么买单&quot;的问题。</p>
+<p><strong>Q3. 计算·公地</strong>：某渔场：每船收入 = 100 − n（n 为总船数）；每船成本 40。</p>
+<p>(1) 自由进入的船数是多少？总净利多少？
+(2) 社会最优船数是多少？总净利多少？
+(3) 若要收费矫正到社会最优，每船应收多少？</p>
+<p><strong>参考答案</strong>：
+(1) 只要 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>−</mo><mi>n</mi><mo>&gt;</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">100-n &gt; 40</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">40</span></span></span></span> 就有人进：均衡在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>−</mo><mi>n</mi><mo>=</mo><mn>40</mn><mo>⇒</mo></mrow><annotation encoding="application/x-tex">100-n = 40 \Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">40</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span></span></span></span> <strong>n = 60</strong>；总净利 60×60 − 60² = <strong>0</strong>。
+(2) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>max</mi><mo>⁡</mo><mtext>  </mtext><mo stretchy="false">(</mo><mn>100</mn><mi>n</mi><mo>−</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo>−</mo><mn>40</mn><mi>n</mi><mo>=</mo><mn>60</mn><mi>n</mi><mo>−</mo><msup><mi>n</mi><mn>2</mn></msup><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\max\; (100n - n^2) - 40n = 60n - n^2 \Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">max</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord">100</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">40</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">60</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span></span></span></span> <strong>n = 30</strong>；总净利 60×30 − 900 = <strong>900</strong>。
+(3) 进入门槛抬到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mo>+</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">40 + t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">40</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>−</mo><mi>n</mi><mo>=</mo><mn>40</mn><mo>+</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">100-n = 40+t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">40</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span> 且 n = 30 → <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">t =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span></span></span></span> <strong>30</strong>。
+（对照本讲实验：结构相同、数字平移——机制是&quot;把外部挤占成本塞回个体账&quot;。）</p>
+<h3 id="%E6%8F%90%E9%AB%98" tabindex="-1">提高</h3>
+<p><strong>Q4. 计算·税率结构</strong>：某地个税：免征额 6000；6000–25000 部分税率为 10%；25000–50000 部分 20%；50000 以上部分 30%。计算四位纳税人（收入 5000、15000、40000、80000）的：应纳税额、平均税率、边际税率。</p>
+<p><strong>参考答案</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>收入</th>
+<th>应纳税额</th>
+<th>平均税率</th>
+<th>边际税率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5000</td>
+<td><strong>0</strong></td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>15000</td>
+<td>(15000−6000)×10% = <strong>900</strong></td>
+<td>6%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>40000</td>
+<td>19000×10% + 15000×20% = <strong>4900</strong></td>
+<td><strong>12.25%</strong></td>
+<td>20%</td>
+</tr>
+<tr>
+<td>80000</td>
+<td>1900 + 25000×20% + 30000×30% = <strong>15900</strong></td>
+<td><strong>19.875%</strong></td>
+<td>30%</td>
+</tr>
+</tbody>
+</table>
+<p>验算：40000 的税额 = 1900 + 3000 = 4900 ✓；80000 = 1900 + 5000 + 9000 = 15900 ✓。</p>
+<p><strong>Q5. 辨析题</strong>：判断对错并简说理由。</p>
+<p>(a) &quot;公共物品就是政府生产的东西。&quot;
+(b) &quot;搭便车是人的道德问题。&quot;
+(c) &quot;定额税没有无谓损失，所以应该全面推广。&quot;
+(d) &quot;累进税一定比比例税更公平。&quot;</p>
+<p><strong>参考答案</strong>：
+(a) 错。定义看两特征（非排他 + 非竞用）；政府生产 ≠ 政府提供，反之亦然（§2.1–2.3）。
+(b) 错。它是&quot;拦不住不付费者&quot;的激励结构产物；制度一变，行为会变（§2.2、误区 3）。
+(c) 不成立。定额税在效率轴近乎满分，但公平轴极端累退——两轴都要过（§4.5–4.6）。
+(d) 不一定。按支付能力原则，累进更公平；按受益原则，累进未必公平——这是规范分歧，没有唯一答案（§4.6）。</p>
+<p><strong>Q6. 简答·公地机制与解法</strong>：用&quot;负外部性&quot;的语言解释公地悲剧的机制（要求出现&quot;私人成本 vs 社会成本&quot;），并列出两种解法及其一句话逻辑。</p>
+<p><strong>参考答案</strong>：
+机制：每个使用者多用一个单位资源，其<strong>私人成本</strong>只包含自己付出的部分，而<strong>社会成本</strong>还要加上&quot;对他人份额的挤占&quot;——这份差额（负外部性）不被个体考虑，于是每个人&quot;能多用就多用&quot;，总量一路冲到&quot;平均收益 = 私人成本&quot;处，超额利润被吃光。
+解法（任选两种）：
+① 收费/税（如每船 30）：把外部挤占成本塞回个体账，进入门槛抬到社会最优；
+② 可交易配额（如 30 张证）：总量封顶，让留在场上的使用者最有效率；
+（③ 私有化/社区自订规则：让&quot;所有者&quot;自己算总账——但有划界与公平的边界。）</p>
+<h3 id="%E7%BB%BC%E5%90%88%EF%BC%88%E5%9B%9E%E6%89%A3%E6%9C%AC%E8%AE%B2%E4%B8%BB%E4%BB%BB%E5%8A%A1%EF%BC%89" tabindex="-1">综合（回扣本讲主任务）</h3>
+<p><strong>Q7. 综合·业主大会收官</strong>：回到引子，三件事各给一个&quot;裁决&quot;：</p>
+<p>(1) <strong>路灯</strong>：这一批成本 900 元；三户的意愿：甲 400、乙 300、丙 250。该不该装？若平摊（每户 300），谁支持谁反对？净益账各是多少？
+(2) <strong>小河</strong>：定性分析&quot;鱼被钓光&quot;的机制，并给一个&quot;既治标又有逻辑&quot;的方案（任选一件工具）。
+(3) <strong>物业费</strong>：三个候选方案——按人头、按建筑面积、按收入——各对应哪条公平原则（受益 / 支付能力）？为什么&quot;吵不完&quot;？</p>
+<p><strong>参考答案</strong>：
+(1) 合计意愿 950 &gt; 900——<strong>该装</strong>。平摊 300：甲净益 +100、乙 0、丙 <strong>−50</strong>——甲、乙支持、<strong>丙反对</strong>（与 §2.2 三人路灯同构）。
+(2) 机制：小河无人拥有 → 每个垂钓者&quot;我少钓也被别人钓走&quot; → 多钓的私人账里不含对他人机会的挤占（负外部性）→ 过度捕捞。方案示例：办理付费垂钓证（把外部成本塞回个体账）；或把河段承包给一户/合作社管护（私有化/自治，划清权属与责任）。
+(3) 按建筑面积≈<strong>受益原则</strong>（房子大多用公共设施、多担）；按收入≈<strong>支付能力原则</strong>（能力强的多担）；按人头≈近似定额（简洁但累退）。&quot;吵不完&quot;因为……<strong>公平时两条原则的选择是规范分歧</strong>，没有效率口径那样的客观裁判——只能通过业主大会这种集体选择机制来定规则（这也正是&quot;公共选择&quot;的现实版）。
+验证：(1) 与实验 1 结构一致；(3) 与 §4.6 的&quot;分歧地图&quot;一致。</p>
+<p><strong>Q8. 简答·开放：公共物品该由谁提供？</strong>：政府、市场、社区——三方各能在什么条件下提供公共物品/管理公共资源？请各给一个例子或原理，并指出各自的软肋。</p>
+<p><strong>参考答案</strong>：</p>
+<ul>
+<li><strong>政府</strong>：以税收强制筹资，解决搭便车（国防、路灯、基础研究）；软肋：估值难（成本-收益分析）、可能低效或被俘获。</li>
+<li><strong>市场</strong>：多数公共物品无法直接收费，但市场有&quot;绕道&quot;供给的巧法——用广告/数据/增值服务间接变现（免费电视、搜索、开源软件的商业支持），或纯慈善捐赠；软肋：只覆盖&quot;能连带变现&quot;的部分，无法保证该供给的都供给。</li>
+<li><strong>社区（自治）</strong>：小规模、长期互动、可自订并执行规则（村社轮牧、小区共治——奥斯特罗姆式的&quot;第三条道路&quot;）；软肋：规模一大、陌生人一多，&quot;自订规则&quot;就难以自我执行。
+结论：公共物品与公共资源的治理是<strong>多元混合</strong>——按规模、技术、社群条件&quot;拼装&quot;政府、市场、社区三种机制，这正是本讲四件套与三轨工具站在一起的原因。</li>
+</ul>
+<hr>
+<p><em>下一讲预告：第 11 讲《生产成本》——前半场（市场与政策）收官，后半场（企业与产业）开工。第一站是企业的&quot;底账&quot;：成本到底是什么（机会成本 vs 会计成本）、经济利润为什么总和会计利润打架、从生产函数到整套成本曲线、以及那条&quot;边际成本必然穿过平均总成本最低点&quot;的铁律。</em></p>
+
+    </div>
+</body>
+</html>
