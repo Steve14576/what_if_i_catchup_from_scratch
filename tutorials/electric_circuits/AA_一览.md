@@ -88,6 +88,24 @@
 | 有效值 | RMS (effective value) | 与交流"发热等效"的直流值（平方→平均→开根）；正弦 $U = U_m/\sqrt{2}$；工程仪表读数均为此 | 第 13 讲 | 能推导、经典数字要背 |
 | 相量 | phasor | 代表同频正弦量"两信息"的复数：$\dot U = U\angle\psi$（模=有效值、辐角=初相；$\omega$ 为全场约定省略） | 第 13 讲 | 能互转、口径纪律 |
 | 相量图 | phasor diagram | 把同一电路的各相量按公共复平面画出的矢量图；用于几何相加与视觉核对（14 讲展开） | 第 13 讲（首提） | 认得、会画简单三角 |
+| 阻抗 | impedance | $Z = \dot U/\dot I = R + \mathrm{j}X$（单位 Ω）——模=电压电流有效值之比（比例器）、角=电压超前电流角（移相器）；含电阻分量与电抗 | 第 14 讲 | 能算、能解释两副面孔 |
+| 电抗 | reactance | 阻抗的虚部 $X$：感抗 $X_L = \omega L > 0$、容抗 $X_C = -1/(\omega C) < 0$；与储能元件吞吐挂钩、不耗能 | 第 14 讲 | 能算、判方向 |
+| 导纳 | admittance | $Y = 1/Z = G + \mathrm{j}B$（单位 S）；并联电路直接相加；注意 $G \ne 1/R$（一般情形） | 第 14 讲 | 能算、防坑 |
+| 相量模型 | phasor model | 把原电路的源换成相量、元件换成阻抗而得到的分析图；拓扑一字不改（图同构），直流课方法论原样重演 | 第 14 讲 | 能翻译、会使用 |
+| 瞬时功率 | instantaneous power | $p(t) = u(t)i(t)$；正弦稳态下以 $2\omega$ 波动、可为负（能量回流） | 第 15 讲 | 能看波形说话 |
+| 有功功率（平均功率） | average power (active power) | $P = UI\cos\varphi$（单位 W）——一个周期平均真正"做掉"的功率；只由电阻吸收 | 第 15 讲 | 能推导、会算 |
+| 无功功率 | reactive power | $Q = UI\sin\varphi$（单位 var）——能量在网络与电源间往返搬运的规模；感性为正、容性为负 | 第 15 讲 | 能算、能判符号、能解释意义 |
+| 视在功率 | apparent power | $S = UI$（单位 VA）——电压电流的总规模、设备容量账；不守恒（模不可加） | 第 15 讲 | 能算、知道不可加 |
+| 功率因数 | power factor | $\cos\varphi = P/S$（标注滞后/超前）——有功占视在的比例 | 第 15 讲 | 能算、能解释工程含义 |
+| 复功率 | complex power | $\dot S = \dot U\dot I^* = P + \mathrm{j}Q$——三只账本一次打包（实部 P、虚部 Q、模 S、角 φ） | 第 15 讲 | 能默写（共轭星号）、会算 |
+| 共轭匹配 | conjugate matching | $Z_L = Z_{eq}^*$ 时负载获最大平均功率 $P_{\max} = U_{oc}^2/(4R_{eq})$；与效率是两本账 | 第 15 讲 | 能推导、会设计 |
+| 对称三相电源 | symmetrical three-phase source | 三只同频、同幅、相位互差 $120^\circ$ 的正弦电压（相序 A→B→C）；相量三矢之和为零 | 第 16 讲 | 能默写定义 |
+| 相序 | phase sequence | 三相到达峰值的先后次序（正序 A→B→C）；工程上决定三相电机的转向 | 第 16 讲 | 能判断 |
+| 相电压 / 线电压 | phase voltage / line voltage | 相电压 $U_p$：任一相对中性点的电压；线电压 $U_l$：两根相线之间；Y 接 $U_l = \sqrt{3}U_p$（超前 30°）、Δ 接 $U_l = U_p$ | 第 16 讲 | 能默写、能换算 |
+| 相电流 / 线电流 | phase current / line current | 流过每相的电流 vs 流过相线的电流；Y 接 $I_l = I_p$；Δ 接 $I_l = \sqrt{3}I_p$（滞后 30°） | 第 16 讲 | 能默写、能换算 |
+| 一相法 | per-phase method | 对称三相电路的化简：算一相、其余两相按 $\mp 120^\circ$ 轮换；合法性来自对称解耦（中线电流为零、中性点不漂） | 第 16 讲 | 能闭眼执行 |
+| 中性点位移 | neutral point displacement | 不对称负载无中线时负载中性点电位相对源中性点的漂移；导致一相欠压、两相过压（10/20/20 例漂 25 V） | 第 16 讲 | 能算、能解释后果 |
+| 三相功率 | three-phase power | 对称时 $P = 3U_pI_p\cos\varphi = \sqrt{3}U_lI_l\cos\varphi$（Q、S 同理）；不对称须逐相算再加 | 第 16 讲 | 能默写、知道限制 |
 
 ## 二、公式
 
@@ -145,3 +163,16 @@
 | $\dfrac{\mathrm{d}}{\mathrm{d}t} \leftrightarrow \times\mathrm{j}\omega$；$\int \leftrightarrow \div\mathrm{j}\omega$ | 微分/积分性质；积分常数丢弃 | 相量域"微积分变代数" | 第 13 讲 |
 | $\dot U = R\dot I$；$\dot U = \mathrm{j}\omega L\,\dot I$；$\dot U = \dfrac{\dot I}{\mathrm{j}\omega C}$ | 三种元件的相量档案（同相 / 超前 90° / 滞后 90°） | 元件伏安关系的相量形式（14 讲打包为阻抗） | 第 13 讲 |
 | $\sum\dot I = 0$；$\sum\dot U = 0$ | KCL/KVL 相量形式 | 同频前提下成立 | 第 13 讲 |
+| 三元件阻抗：$Z_R = R$；$Z_L = \mathrm{j}\omega L$；$Z_C = \dfrac{1}{\mathrm{j}\omega C}$ | — | 13 讲元件相量档案的打包 | 第 14 讲 |
+| $Z_{串} = \sum Z$；$Y_{并} = \sum Y$；分压 $\dot U_k = \dot U\dfrac{Z_k}{\sum Z}$；分流"看对面" | 复数版串并联与分压分流 | 线性 + 同频前提下照搬（推导只用 KCL/KVL + 代数比例） | 第 14 讲 |
+| $Y = \dfrac{R - \mathrm{j}X}{R^2 + X^2}$（即 $G = \dfrac{R}{R^2+X^2}$，一般 $\ne 1/R$） | 阻抗与导纳的换算 | 防"$G=1/R$"误用 | 第 14 讲 |
+| $p(t) = UI\cos\varphi + UI\cos(2\omega t + \psi_u + \psi_i)$ | 瞬时功率的"平均 + 波动"分解 | 正弦稳态（单口） | 第 15 讲 |
+| $P = UI\cos\varphi$；$Q = UI\sin\varphi$；$S = UI$；$P^2 + Q^2 = S^2$ | $\varphi = \psi_u - \psi_i$；三者构成直角三角形 | 正弦稳态三只账本 | 第 15 讲 |
+| $\dot S = \dot U\dot I^* = P + \mathrm{j}Q$（守恒：$\sum\dot S = 0$） | 电流取共轭；实部 P、虚部 Q | 复功率 | 第 15 讲 |
+| $P = I^2R$；$Q_L = I^2\omega L$；$Q_C = -I^2/(\omega C)$ | 元件级账本 | 元件功率分工（R 吃有功、L/C 倒腾无功） | 第 15 讲 |
+| $Z_L = Z_{eq}^*$；$P_{\max} = U_{oc}^2/(4R_{eq})$ | 共轭匹配（虚部反号 + 实部相等） | 交流最大功率传输 | 第 15 讲 |
+| $Q_C = P(\tan\varphi_1 - \tan\varphi_2)$；$C = Q_C/(\omega U^2)$ | 补偿量公式 | 功率因数提高（并联电容） | 第 15 讲 |
+| $U_l = \sqrt{3}U_p$（$\dot U_{AB}$ 超前 30°，Y）；$I_l = \sqrt{3}I_p$（滞后 30°，Δ） | 线相换算（对偶） | 对称三相：Y 的电压、Δ 的电流 | 第 16 讲 |
+| $P = \sqrt{3}U_lI_l\cos\varphi$；$Q = \sqrt{3}U_lI_l\sin\varphi$；$S = \sqrt{3}U_lI_l$ | $\varphi$ 为每相负载的相位差（非线量夹角） | 对称三相专属；不对称逐相算 | 第 16 讲 |
+| $p_A + p_B + p_C = 3P_p = $ 常数 | 瞬时功率恒定（三个 $2\omega$ 波动互差 120° 对消） | 对称三相 | 第 16 讲 |
+| 无中线漂移：$\dot U_n = \dfrac{\sum_k Y_k\dot U_k}{\sum_k Y_k}$ | $Y_k$ 为各相负载导纳 | 不对称无中线的结点法解 | 第 16 讲 |
