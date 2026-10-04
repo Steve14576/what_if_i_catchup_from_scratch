@@ -66,6 +66,28 @@
 | 换路定则 | switching rule | $u_C(0^+)=u_C(0^-)$、$i_L(0^+)=i_L(0^-)$（有限性前提）；操作="保两条命"；配套 $0^+$ 等效电路（C→电压源、L→电流源） | 第 10 讲 | 能默写、会四步流程 |
 | 零输入响应 | zero-input response | 激励为零、仅由初始储能驱动的响应；$u_C = u_C(0^+)e^{-t/\tau}$（RL 对偶） | 第 10 讲 | 能推导、会计算 |
 | 时间常数 | time constant | $\tau = RC$（电容）/ $L/R$（电感）；残值每 τ ×0.368、初始切线交横轴于 τ、快慢刻度；与初始值无关 | 第 10 讲 | 能读曲线、能算 |
+| 零状态响应 | zero-state response | 初始储能为零（$u_C(0^+)=0$ 或 $i_L(0^+)=0$）时、由外加激励驱动的响应；$u_C = u_C(\infty)(1-e^{-t/\tau})$ | 第 11 讲 | 能推导、会计算 |
+| 全响应 | complete response | 初始储能与外加激励同时作用（都在场）的响应；直流一阶时结构式为 $f(t) = f(\infty) + [f(0^+)-f(\infty)]e^{-t/\tau}$ | 第 11 讲 | 能默写、会计算 |
+| 三要素法 | three-element method | 直流激励一阶电路中对任意电压/电流直接用 $f(0^+)$、$f(\infty)$、$\tau$ 三个数写出全响应；依据是所有变量共享同一 τ 与同一解结构 | 第 11 讲 | 能默写模板、会用 |
+| 稳态分量与暂态分量 | steady-state / transient component | 按"等久后剩下的部分"（稳态）与"随时间消亡的过渡部分"（暂态）分解响应；直流激励下暂态为负指数 | 第 11 讲 | 能对应运行例数字 |
+| 强制分量与自由分量 | forced / free component | 按微分方程解的结构分解：激励强迫出的特解（强制）+ 按电路自身 τ 衰减的齐次通解（自由）；直流激励下与"稳态+暂态"重合 | 第 11 讲 | 能讲清与稳态/暂态的关系 |
+| 单位阶跃函数 | unit step function | $\varepsilon(t)$：$t<0$ 为 0、$t>0$ 为 1——"t=0 接入"的标准激励写法；有延迟版 $\varepsilon(t-t_0)$ | 第 11 讲 | 能默写定义 |
+| 阶跃响应 | step response | 电路对单位阶跃的零状态响应 $s(t)$；幅度 A 的阶跃响应 = $A\,s(t)$（线性缩放） | 第 11 讲 | 能复述、会用缩放 |
+| 单位冲激函数 | unit impulse function | $\delta(t)$：宽度趋零、面积恒为 1 的窄脉冲的极限；只在"乘上再积分"（面积语言）里使用 | 第 11 讲 | 能讲清面积语言 |
+| 冲激响应 | impulse response | 电路对单位冲激的零状态响应 $h(t)$；是电路的"性格指纹"（任意激励的响应可由它卷积拼出，22 讲展开） | 第 11 讲 | 能算面积账、知道伏笔 |
+| 二阶电路 | second-order circuit | 含两个储能元件、方程呈二阶的电路；能量可在 C 与 L 之间交换（振荡的根源） | 第 12 讲 | 能识别、能立方程 |
+| 特征方程与特征根 | characteristic equation / characteristic root | 设解 $u = Ae^{st}$ 代入所得二次代数方程 $s^2+2\alpha s+\omega_0^2=0$ 及其根 $s_{1,2}=-\alpha\pm\sqrt{\alpha^2-\omega_0^2}$；根型决定响应形态 | 第 12 讲 | 能默写、会求根 |
+| 衰减系数 | damping coefficient (alpha) | $\alpha = R/(2L)$（串联 RLC；并联 $1/(2RC)$）——电阻耗散强度的度量（$1/\mathrm{s}$） | 第 12 讲 | 能算、能解释 |
+| 固有角频率 | natural angular frequency (omega_0) | $\omega_0 = 1/\sqrt{LC}$——只由 L、C 决定的回路固有节奏（rad/s） | 第 12 讲 | 能算、能解释 |
+| 阻尼比 | damping ratio (zeta) | $\zeta = \alpha/\omega_0$——把判别打包成一个数：$\zeta>1$ 过阻尼、$=1$ 临界、$<1$ 欠阻尼 | 第 12 讲 | 认识层用语：能分类、能定性 |
+| 阻尼振荡频率 | damped oscillation frequency (omega_d) | $\omega_d = \sqrt{\omega_0^2-\alpha^2} = \omega_0\sqrt{1-\zeta^2}$——欠阻尼实际摆动快慢（rad/s） | 第 12 讲 | 能算、能读周期 |
+| 过阻尼/临界阻尼/欠阻尼 | overdamped / critically damped / underdamped | 按判别式 $\alpha^2-\omega_0^2$ 的三种符号划分的三类响应形态：不振荡（两根）/无超调最快（重根）/振荡衰减（复根） | 第 12 讲 | 能判、能写对应解形式 |
+| 临界电阻 | critical resistance | $R_{crit} = 2\sqrt{L/C}$（串联；并联为 $\frac{1}{2}\sqrt{L/C}$）——不振荡的电阻分界（$R>R_{crit}$ 过阻尼、$R<R_{crit}$ 欠阻尼） | 第 12 讲 | 能推、会用 |
+| 正弦量 | sinusoid | 随时间按余弦规律变化的电压/电流，由三要素决定：振幅 $U_m$、角频率 $\omega$、初相 $\psi$——$u = U_m\cos(\omega t+\psi)$ | 第 13 讲 | 能默写、能读三要素 |
+| 相位差 | phase difference | 两只**同频**正弦量的初相之差 $\varphi = \psi_u-\psi_i$；正=超前、负=滞后；不同频则无意义 | 第 13 讲 | 能算、能判方向 |
+| 有效值 | RMS (effective value) | 与交流"发热等效"的直流值（平方→平均→开根）；正弦 $U = U_m/\sqrt{2}$；工程仪表读数均为此 | 第 13 讲 | 能推导、经典数字要背 |
+| 相量 | phasor | 代表同频正弦量"两信息"的复数：$\dot U = U\angle\psi$（模=有效值、辐角=初相；$\omega$ 为全场约定省略） | 第 13 讲 | 能互转、口径纪律 |
+| 相量图 | phasor diagram | 把同一电路的各相量按公共复平面画出的矢量图；用于几何相加与视觉核对（14 讲展开） | 第 13 讲（首提） | 认得、会画简单三角 |
 
 ## 二、公式
 
@@ -106,3 +128,20 @@
 | $C$：并=Σ、串=Σ倒数；$L$：串=Σ、并=Σ倒数 | 电容按电阻的"并串联"抄；电感串同并反；串并联是对偶表的一行 | C/L 串并联 | 第 09 讲 |
 | $u_C(t) = u_C(0^+)\,e^{-t/\tau}$；$i_L(t) = i_L(0^+)\,e^{-t/\tau}$ | $\tau = RC$（电容）/ $\tau = L/R$（电感，R 取放电回路等效电阻） | 一阶零输入响应 | 第 10 讲 |
 | 残值表：$e^{-k}$（1τ 36.8%、2τ 13.5%、3τ 4.98%、5τ 0.67%） | 工程约定 3~5τ 算过渡结束（指数只趋近不抵达） | 一阶电路过渡时间约定 | 第 10 讲 |
+| $u_C(t) = u_C(\infty)\left(1-e^{-t/\tau}\right)$（RL 对偶 $i_L = i_L(\infty)(1-e^{-t/\tau})$） | $u_C(\infty)$ 为换路后新稳态值；$\tau$ 取法同前 | 一阶零状态响应（直流） | 第 11 讲 |
+| $f(t) = f(\infty) + [f(0^+)-f(\infty)]e^{-t/\tau}$（三要素公式/全响应结构式） | $f$ 为任一电压/电流；三个数：初值 $f(0^+)$、终值 $f(\infty)$、时间常数 $\tau$ | 直流激励一阶电路全响应；要求换路后存在直流稳态；不适用于功率等乘积量 | 第 11 讲 |
+| $\varepsilon(t)=0\ (t<0)$、$\varepsilon(t)=1\ (t>0)$ | 单位阶跃；缩放 $A\varepsilon(t)$ 表示幅度 A 的阶跃 | "t=0 接入"的标准写法 | 第 11 讲 |
+| $\Delta u_C = q/C$；$\Delta i_L = \psi/L$ | $q = \int i\,\mathrm{d}t$ 为冲激电荷；$\psi = \int u\,\mathrm{d}t$ 为冲激磁通链 | 冲激瞬间状态量的跳变量（面积账） | 第 11 讲 |
+| $u'' + 2\alpha u' + \omega_0^2 u = 0$；$\alpha = \frac{R}{2L}$、$\omega_0 = \frac{1}{\sqrt{LC}}$ | $u$ 为响应变量（$u_C$ 或 $i_L$ 均可） | 二阶电路标准形（串联 RLC 零输入；并联则 $\alpha = 1/(2RC)$） | 第 12 讲 |
+| $s_{1,2} = -\alpha \pm \sqrt{\alpha^2 - \omega_0^2}$ | 特征根；自检 $s_1+s_2 = -2\alpha$、$s_1s_2 = \omega_0^2$ | 二阶特征方程求根 | 第 12 讲 |
+| 过阻尼：$u = A_1e^{s_1t} + A_2e^{s_2t}$ | $s_1,s_2$ 为两个负实根；$A_1,A_2$ 由两个初值定 | $\alpha > \omega_0$ 的解形式 | 第 12 讲 |
+| 临界：$u = (A_1 + A_2t)e^{-\alpha t}$ | 重根 $-\alpha$ | $\alpha = \omega_0$ 的解形式 | 第 12 讲 |
+| 欠阻尼：$u = e^{-\alpha t}(A_1\cos\omega_dt + A_2\sin\omega_dt)$ | $\omega_d = \sqrt{\omega_0^2-\alpha^2}$；包络 $\pm K e^{-\alpha t}$、$K = \sqrt{A_1^2+A_2^2}$ | $\alpha < \omega_0$ 的解形式 | 第 12 讲 |
+| $\zeta = \frac{\alpha}{\omega_0}$；$\omega_d = \omega_0\sqrt{1-\zeta^2}$ | 阻尼比与阻尼振荡频率 | 分类与定性（认识层） | 第 12 讲 |
+| $R_{crit} = 2\sqrt{L/C}$（串联）；并联 $R_{crit} = \frac{1}{2}\sqrt{L/C}$ | 令 $\alpha = \omega_0$ 解出 | 不振荡（临界）的电阻分界 | 第 12 讲 |
+| $u = U_m\cos(\omega t+\psi)$ | 三要素：振幅 $U_m$、角频率 $\omega$、初相 $\psi$ | 正弦量的标准形式（余弦基准） | 第 13 讲 |
+| $U = U_m/\sqrt{2}$ | $U$ 为有效值 | 正弦量的有效值（其余波形不同：方波 $U_m$、三角 $U_m/\sqrt{3}$） | 第 13 讲 |
+| $\dot U = U\angle\psi$（互转：$u = \sqrt{2}U\cos(\omega t+\psi)$） | 相量（有效值口径）；$\omega$ 在写回时补 | 同频正弦量与相量的双向转换 | 第 13 讲 |
+| $\dfrac{\mathrm{d}}{\mathrm{d}t} \leftrightarrow \times\mathrm{j}\omega$；$\int \leftrightarrow \div\mathrm{j}\omega$ | 微分/积分性质；积分常数丢弃 | 相量域"微积分变代数" | 第 13 讲 |
+| $\dot U = R\dot I$；$\dot U = \mathrm{j}\omega L\,\dot I$；$\dot U = \dfrac{\dot I}{\mathrm{j}\omega C}$ | 三种元件的相量档案（同相 / 超前 90° / 滞后 90°） | 元件伏安关系的相量形式（14 讲打包为阻抗） | 第 13 讲 |
+| $\sum\dot I = 0$；$\sum\dot U = 0$ | KCL/KVL 相量形式 | 同频前提下成立 | 第 13 讲 |
