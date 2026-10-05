@@ -11,7 +11,7 @@
 | 集总参数假设 | lumped-parameter assumption | 把元件的电气行为集中到端子上处理、导线只当连接（不当传输线）的假设；成立要求电路尺寸远小于信号波长 | 第 01 讲 | 知道适用条件与失效场景 |
 | 理想导线 | ideal wire | 电阻为零、电压处处为零、只起连接作用的导线模型；必要时可"升级"为电阻元件 | 第 01 讲 | 识别 |
 | 电流 | current | 电荷的定向移动；大小等于单位时间内通过某横截面的电荷量（$i = \mathrm{d}q/\mathrm{d}t$） | 第 01 讲 | 要能复述与辨析 |
-| 参考方向 | reference direction | 分析前对每段电流先假设的方向（图上小箭头），是记账约定而非物理断言；结果符号用于读真实方向 | 第 01 讲 | 焊成直觉 |
+| 参考方向 | reference direction | 分析前对每段电流先假设的方向（图上小箭头），是符号约定而非物理断言；结果符号用于读真实方向 | 第 01 讲 | 焊成直觉 |
 | 直流 | direct current (DC) | 大小与方向都不随时间变化的电流 | 第 01 讲 | 识别 |
 | 电压 | voltage | 电路中 a、b 两点间的电压，数值上等于把单位正电荷从 a 端移到 b 端所转移的能量（$U_{ab} = W_{ab}/q$） | 第 01 讲 | 要能复述 |
 | 参考极性 | reference polarity | 分析前对电压先假设的"高端"（"+"/"-"标注或双下标），逻辑与参考方向同构 | 第 01 讲 | 焊成直觉 |
@@ -21,7 +21,7 @@
 | 关联参考方向 | associated reference direction | 电流参考方向从电压参考"+"端流入元件；此约定下 $p = ui$ 直读吸收功率（正吸负发），非关联则 $p = -ui$ | 第 01 讲 | 焊成直觉 |
 | 功率平衡 | power balance | 任何电路中全部元件发出功率之和等于吸收功率之和（能量守恒的电路形式）；全课程的验算尺 | 第 01 讲 | 焊成验算纪律 |
 | 千瓦时 | kilowatt-hour (kWh) | 能量单位，$1\,\mathrm{kWh} = 3.6\times10^6\,\mathrm{J}$；日常计量用电的"度" | 第 01 讲 | 会换算 |
-| 伏安关系 | volt-ampere relationship | 元件两端电压与流过电流之间的约束关系（每个元件的"电气性格"） | 第 01 讲（首提） | 知道有这回事；第 02 讲正式展开 |
+| 伏安关系 | volt-ampere relationship | 元件两端电压与流过电流之间的约束关系（每个元件的固有约束） | 第 01 讲（首提） | 知道有这回事；第 02 讲正式展开 |
 | 基尔霍夫电流定律 | Kirchhoff's Current Law (KCL) | 流入任一结点的电流之和等于流出之和（任意"结点块"皆然）；电荷守恒的电路形式 | 第 01 讲（首提）、第 02 讲（正式） | 能复述、能写方程 |
 | 欧姆定律 | Ohm's law | 线性电阻的伏安关系：关联参考方向下 $u = Ri$ | 第 02 讲 | 焊成直觉 |
 | 线性电阻 | linear resistor | 伏安关系为过原点直线的电阻元件（$R$ 为常数） | 第 02 讲 | 识别 |
@@ -52,9 +52,9 @@
 | 观察法 | inspection method | 用"自导纳、互导纳、注入电流"三步直接写出结点方程（回路法标准方程同源）；矩阵对称可自检 | 第 05 讲 | 能默写、闭眼执行 |
 | 叠加定理 | superposition theorem | 线性电路中任一响应 = 各独立源单独作用响应的代数和；置零时压源→短路、流源→开路，受控源保留 | 第 06 讲 | 能默写、会判用 |
 | 替代定理 | substitution theorem | 已知支路（或单口）的 $u_k$ 或 $i_k$，可用同值电压源/电流源替换，其余各处解不变（解须唯一；对非线性亦成立） | 第 06 讲 | 能复述论证、会用 |
-| 戴维南定理 | Thevenin's theorem | 线性含源二端网络对外等效为 $U_{oc}$ 串 $R_{eq}$；证明 = 替代（换口）+ 叠加（拆账）；对外等效、内部不保 | 第 07 讲 | 能复述、会用 |
+| 戴维南定理 | Thevenin's theorem | 线性含源二端网络对外等效为 $U_{oc}$ 串 $R_{eq}$；证明 = 替代（换口）+ 叠加（分项）；对外等效、内部不保 | 第 07 讲 | 能复述、会用 |
 | 诺顿定理 | Norton's theorem | 同一网络对外等效为 $I_{sc}$ 并 $R_{eq}$；与戴维南由电源互换互相转换（$U_{oc} = I_{sc}R_{eq}$） | 第 07 讲 | 能复述、会用 |
-| 最大功率传输 | maximum power transfer | 匹配 $R_L = R_{eq}$ 时负载功率最大；功率账与效率账分开（匹配效率仅 50%） | 第 07 讲 | 能推导、会判断 |
+| 最大功率传输 | maximum power transfer | 匹配 $R_L = R_{eq}$ 时负载功率最大；功率与效率分开计（匹配效率仅 50%） | 第 07 讲 | 能推导、会判断 |
 | 运算放大器（理想模型） | ideal op-amp | 差动放大器理想化：$u_o = A(u_+-u_-)$，$A\to\infty$、输入电阻 $\to\infty$、输出电阻 $\to 0$；属受控源亲戚 | 第 08 讲 | 能复述、会用 |
 | 虚短 | virtual short | 负反馈未饱和时 $u_+ \approx u_-$（残余 µV 级）；"虚"= 电位相等而不走电流 | 第 08 讲 | 能默写、知道签证条件 |
 | 虚断 | virtual open | 理想运放输入端不取电流 $i_+ = i_- = 0$；外部电阻回路照常导通 | 第 08 讲 | 能默写 |
@@ -74,7 +74,7 @@
 | 单位阶跃函数 | unit step function | $\varepsilon(t)$：$t<0$ 为 0、$t>0$ 为 1——"t=0 接入"的标准激励写法；有延迟版 $\varepsilon(t-t_0)$ | 第 11 讲 | 能默写定义 |
 | 阶跃响应 | step response | 电路对单位阶跃的零状态响应 $s(t)$；幅度 A 的阶跃响应 = $A\,s(t)$（线性缩放） | 第 11 讲 | 能复述、会用缩放 |
 | 单位冲激函数 | unit impulse function | $\delta(t)$：宽度趋零、面积恒为 1 的窄脉冲的极限；只在"乘上再积分"（面积语言）里使用 | 第 11 讲 | 能讲清面积语言 |
-| 冲激响应 | impulse response | 电路对单位冲激的零状态响应 $h(t)$；是电路的"性格指纹"（任意激励的响应可由它卷积拼出，22 讲展开） | 第 11 讲 | 能算面积账、知道伏笔 |
+| 冲激响应 | impulse response | 电路对单位冲激的零状态响应 $h(t)$；是电路对全部输入行为的最小刻画（任意激励的响应可由它卷积拼出，22 讲展开） | 第 11 讲 | 能算、知道伏笔 |
 | 二阶电路 | second-order circuit | 含两个储能元件、方程呈二阶的电路；能量可在 C 与 L 之间交换（振荡的根源） | 第 12 讲 | 能识别、能立方程 |
 | 特征方程与特征根 | characteristic equation / characteristic root | 设解 $u = Ae^{st}$ 代入所得二次代数方程 $s^2+2\alpha s+\omega_0^2=0$ 及其根 $s_{1,2}=-\alpha\pm\sqrt{\alpha^2-\omega_0^2}$；根型决定响应形态 | 第 12 讲 | 能默写、会求根 |
 | 衰减系数 | damping coefficient (alpha) | $\alpha = R/(2L)$（串联 RLC；并联 $1/(2RC)$）——电阻耗散强度的度量（$1/\mathrm{s}$） | 第 12 讲 | 能算、能解释 |
@@ -88,17 +88,17 @@
 | 有效值 | RMS (effective value) | 与交流"发热等效"的直流值（平方→平均→开根）；正弦 $U = U_m/\sqrt{2}$；工程仪表读数均为此 | 第 13 讲 | 能推导、经典数字要背 |
 | 相量 | phasor | 代表同频正弦量"两信息"的复数：$\dot U = U\angle\psi$（模=有效值、辐角=初相；$\omega$ 为全场约定省略） | 第 13 讲 | 能互转、口径纪律 |
 | 相量图 | phasor diagram | 把同一电路的各相量按公共复平面画出的矢量图；用于几何相加与视觉核对（14 讲展开） | 第 13 讲（首提） | 认得、会画简单三角 |
-| 阻抗 | impedance | $Z = \dot U/\dot I = R + \mathrm{j}X$（单位 Ω）——模=电压电流有效值之比（比例器）、角=电压超前电流角（移相器）；含电阻分量与电抗 | 第 14 讲 | 能算、能解释两副面孔 |
+| 阻抗 | impedance | $Z = \dot U/\dot I = R + \mathrm{j}X$（单位 Ω）——模=电压电流有效值之比（比例器）、角=电压超前电流角（移相器）；含电阻分量与电抗 | 第 14 讲 | 能算、能解释两种读法 |
 | 电抗 | reactance | 阻抗的虚部 $X$：感抗 $X_L = \omega L > 0$、容抗 $X_C = -1/(\omega C) < 0$；与储能元件吞吐挂钩、不耗能 | 第 14 讲 | 能算、判方向 |
 | 导纳 | admittance | $Y = 1/Z = G + \mathrm{j}B$（单位 S）；并联电路直接相加；注意 $G \ne 1/R$（一般情形） | 第 14 讲 | 能算、防坑 |
 | 相量模型 | phasor model | 把原电路的源换成相量、元件换成阻抗而得到的分析图；拓扑一字不改（图同构），直流课方法论原样重演 | 第 14 讲 | 能翻译、会使用 |
 | 瞬时功率 | instantaneous power | $p(t) = u(t)i(t)$；正弦稳态下以 $2\omega$ 波动、可为负（能量回流） | 第 15 讲 | 能看波形说话 |
 | 有功功率（平均功率） | average power (active power) | $P = UI\cos\varphi$（单位 W）——一个周期平均真正"做掉"的功率；只由电阻吸收 | 第 15 讲 | 能推导、会算 |
 | 无功功率 | reactive power | $Q = UI\sin\varphi$（单位 var）——能量在网络与电源间往返搬运的规模；感性为正、容性为负 | 第 15 讲 | 能算、能判符号、能解释意义 |
-| 视在功率 | apparent power | $S = UI$（单位 VA）——电压电流的总规模、设备容量账；不守恒（模不可加） | 第 15 讲 | 能算、知道不可加 |
+| 视在功率 | apparent power | $S = UI$（单位 VA）——电压电流的总规模、设备容量指标；不守恒（模不可加） | 第 15 讲 | 能算、知道不可加 |
 | 功率因数 | power factor | $\cos\varphi = P/S$（标注滞后/超前）——有功占视在的比例 | 第 15 讲 | 能算、能解释工程含义 |
-| 复功率 | complex power | $\dot S = \dot U\dot I^* = P + \mathrm{j}Q$——三只账本一次打包（实部 P、虚部 Q、模 S、角 φ） | 第 15 讲 | 能默写（共轭星号）、会算 |
-| 共轭匹配 | conjugate matching | $Z_L = Z_{eq}^*$ 时负载获最大平均功率 $P_{\max} = U_{oc}^2/(4R_{eq})$；与效率是两本账 | 第 15 讲 | 能推导、会设计 |
+| 复功率 | complex power | $\dot S = \dot U\dot I^* = P + \mathrm{j}Q$——四个量一次打包（实部 P、虚部 Q、模 S、角 φ） | 第 15 讲 | 能默写（共轭星号）、会算 |
+| 共轭匹配 | conjugate matching | $Z_L = Z_{eq}^*$ 时负载获最大平均功率 $P_{\max} = U_{oc}^2/(4R_{eq})$；与效率分开计 | 第 15 讲 | 能推导、会设计 |
 | 对称三相电源 | symmetrical three-phase source | 三只同频、同幅、相位互差 $120^\circ$ 的正弦电压（相序 A→B→C）；相量三矢之和为零 | 第 16 讲 | 能默写定义 |
 | 相序 | phase sequence | 三相到达峰值的先后次序（正序 A→B→C）；工程上决定三相电机的转向 | 第 16 讲 | 能判断 |
 | 相电压 / 线电压 | phase voltage / line voltage | 相电压 $U_p$：任一相对中性点的电压；线电压 $U_l$：两根相线之间；Y 接 $U_l = \sqrt{3}U_p$（超前 30°）、Δ 接 $U_l = U_p$ | 第 16 讲 | 能默写、能换算 |
@@ -124,16 +124,46 @@
 | 引入阻抗 | reflected impedance | 从一次侧看二次回路时，二次回路在耦合中"回敬"的串入一次侧等效阻抗 $Z_{ref} = (\omega M)^2/Z_{22}$（"共轭孪生子"现象：$3+\mathrm{j}4$ 反射为 $3-\mathrm{j}4$） | 第 18 讲 | 能算、能解释 |
 | 空心变压器 | air-core transformer | 无铁心的耦合线圈（无共同磁路、$k$ 很小）：无线电能传输、无线充电的模型；计算与铁心变压器同框架（互感 + 两回路） | 第 18 讲 | 认识层：知道场景与口径 |
 | 理想变压器 | ideal transformer | 三理想化极限（全耦合 $k=1$、无损耗、磁化电感无穷大/励磁电流为零）的变压器模型；由 $U_1/U_2 = N_1/N_2$ 与 $I_1/I_2 = N_2/N_1$ 两方程定义行为，$p = 0$（不耗能不储能） | 第 18 讲 | 能默写两方程、能推导阻抗变换 |
-| 网络函数 | network function (H(jω)) | 正弦稳态下输出相量÷输入相量、写成角频率的函数；一个复函数描述电路对全部频率的行为；模为幅频特性、辐角为相频特性；输出取不同端口得不同面孔；阻抗是一类网络函数 | 第 19 讲 | 能默写、能解释"一个函数管全部频率" |
+| 网络函数 | network function (H(jω)、H(s)) | 正弦稳态下输出相量÷输入相量、写成角频率的函数；模为幅频特性、辐角为相频特性；输出取不同端口得不同网络函数；阻抗是一类网络函数。**s 域推广**（零初值）：$H(s) = Y(s)/X(s)$ 为有理分式，沿虚轴取值 $s=\mathrm{j}\omega$ 即回到 $H(\mathrm{j}\omega)$ | 第 19 讲（22 讲推广） | 能默写、能解释"一个函数管全部频率" |
 | 谐振 | resonance | 感抗与容抗互相抵消（电抗为零）的现象；串联时阻抗最小、并联时阻抗最大；发生频率为谐振角频率 $\omega_0$ | 第 19 讲 | 能默写、能判拓扑 |
 | 谐振角频率 | resonant angular frequency (ω0) | $\omega_0 = 1/\sqrt{LC}$——电抗（串）或电纳（并）过零的频率；与 R 无关 | 第 19 讲 | 能默写、能算 |
-| 串联谐振 | series resonance | $Z$ 最小（$=R$）、电流最大（$U_S/R$）、储能元件上 $U_L = U_C = Q U_S$（过电压）；Q 越大峰越尖 | 第 19 讲 | 能默写三笔账 |
-| 并联谐振 | parallel resonance | 同 $\omega_0$；$Z$ 最大（$=R$）、总电流最小，但支路电流为总电流的 $Q$ 倍（内部环流）；"电流最小"主语是总电流 | 第 19 讲 | 能默写对偶账 |
+| 串联谐振 | series resonance | $Z$ 最小（$=R$）、电流最大（$U_S/R$）、储能元件上 $U_L = U_C = Q U_S$（过电压）；Q 越大峰越尖 | 第 19 讲 | 能默写三个结论 |
+| 并联谐振 | parallel resonance | 同 $\omega_0$；$Z$ 最大（$=R$）、总电流最小，但支路电流为总电流的 $Q$ 倍（内部环流）；"电流最小"主语是总电流 | 第 19 讲 | 能默写对偶结论 |
 | 品质因数 | quality factor (Q) | 三身份的同一个数：能量比（$2\pi\times$储能/每周期耗能）、谐振电压放大倍数（$U_L/U_S$）、选频尖锐度（$BW = \omega_0/Q$）；串联 $Q = \omega_0L/R$，并联 $Q = R/(\omega_0L)$ | 第 19 讲 | 能复述三身份并互证 |
 | 半功率点与通频带 | half-power points & bandwidth | 幅频降到峰值的 $1/\sqrt{2}$（功率减半，-3 dB）的两个频率点及其间频段；$BW = \omega_0/Q$ | 第 19 讲 | 能默写、能算 |
 | 滤波器 | filter | 让某些频率通过、另一些衰减的网络，按幅频图形分为低通/高通/带通/带阻四种；可由 RC 分立元件或谐振电路实现 | 第 19 讲 | 能画四类形状、能识别 |
 | 截止频率 | cutoff frequency (ωc) | RC 低通/高通的转折频率 $\omega_c = 1/RC$：$\lvert H\rvert$ 降到 $1/\sqrt{2}$（-3 dB）处 | 第 19 讲 | 能默写、能手算 |
 | Bode 图与分贝 | Bode plot & decibel (dB) | 工程标准频率响应画法：对数频率轴 + $20\log_{10}\lvert H\rvert$（dB）纵轴；一阶系统标志：-3 dB 点与 -20 dB/十倍频程斜率 | 第 19 讲 | 认识层：能读图说趋势 |
+| 傅里叶级数 | Fourier series | 周期函数展开为直流分量与各次正弦、余弦之和：$f(t) = a_0/2 + \sum[a_n\cos n\omega_1 t + b_n\sin n\omega_1 t]$；系数由与各"正弦基"的正交投影（积分）求得 | 第 20 讲 | 能默写、知道各符号 |
+| 基波与谐波 | fundamental & harmonic | 频率等于周期倒数对应的分量叫基波（$\omega_1$）；频率为整数倍 $n\omega_1$ 的分量叫第 $n$ 次谐波 | 第 20 讲 | 能分辨、能算 |
+| 正交性 | orthogonality | 不同频率的正弦/余弦（含与常值 1）在一个周期上的乘积积分为零；它是"能拆出各系数"与"有效值/功率按平方和汇总"的共同数学依据 | 第 20 讲 | 能复述其角色 |
+| 对称性判定 | symmetry of periodic waveforms | 偶函数→只含直流+余弦；奇函数→只含正弦；半波对称 $f(t+T/2)=-f(t)$→只含奇次谐波（方波、三角波属此类） | 第 20 讲 | **能判、能省项** |
+| 谐波法 | harmonic analysis method | 非正弦周期激励下：逐次谐波各自用相量法求解、各自回时域，再把时域响应相加（依据叠加定理；相量不能跨频相加） | 第 20 讲 | **能闭眼执行五步** |
+| Gibbs 现象 | Gibbs phenomenon | 傅里叶部分和在波形的跳变点附近出现过冲且不随项数消失（仅压缩宽度）的现象 | 第 20 讲 | 认识层 |
+| 总谐波畸变率 | total harmonic distortion（THD） | 谐波有效值平方和开方与基波有效值之比：$\mathrm{THD}=\sqrt{\sum_{n\ge2}U_n^2}/U_1$；衡量波形偏离正弦的程度（方波 48.3%） | 第 20 讲 | 认识层：能算、能读"离正弦多远" |
+| 拉普拉斯变换 | Laplace transform | 单边定义 $F(s)=\int_{0^-}^{\infty}f(t)e^{-st}dt$：把含初值的微分方程化为代数方程；下限取 $0^-$ 使初值自动入方程 | 第 21 讲 | **能默写、能解释 s** |
+| 复频率 | complex frequency（s） | $s=\sigma+\mathrm{j}\omega$：实部管衰减/增长、虚部管振荡；$s=\mathrm{j}\omega$ 时退化为相量频率（相量法是它的特例） | 第 21 讲 | 能解释与相量的关系 |
+| 微分性质 | differentiation property | $\dfrac{\mathrm{d}f}{\mathrm{d}t}\leftrightarrow sF(s)-f(0^-)$：s 域"乘 $s$"并自动带出初值项（二阶则 $s^2F-sf(0^-)-f'(0^-)$） | 第 21 讲 | **能默写、会用** |
+| s 域元件模型 | s-domain element models | $R\to R$；$L\to sL$ 串联 $Li(0^-)$（或并联 $i(0^-)/s$）；$C\to 1/(sC)$ 串联 $u(0^-)/s$（或并联 $Cu(0^-)$）；有初值时的附加源是必写项 | 第 21 讲 | **能默写、能画** |
+| 运算法 | operational method | 用拉氏变换解电路的流程：算初值 → 画 s 域模型 → 解代数方程 → 部分分式 → 逆变换；一次得到完整响应（暂态+稳态） | 第 21 讲 | **能闭眼执行五步** |
+| 部分分式展开 | partial fraction expansion | 把有理分式拆成查表可得形式：单根用掩护法 $K_k=[(s-s_k)F(s)]_{s=s_k}$；复根用配方法；重根认识层；假分式先长除 | 第 21 讲 | **能算**（单根/复根） |
+| 极点与零点 | poles & zeros | 网络函数 $H(s) = N(s)/D(s)$ 的两组根：分母的根为极点（$|H|\to\infty$，管响应形态与稳定）、分子的根为零点（$H=0$，管权重与频率凹陷）；复根共轭成对；它们是电路**固有属性**（与输入无关） | 第 22 讲 | **能求、能画、能解释"决定一切"** |
+| 冲激响应与 H(s) 的对应 | impulse response h(t) ↔ H(s) | $h(t) \leftrightarrow H(s)$：输入为单位冲激时 $Y(s)=H(s)$，故 $h(t)$ 就是 $H(s)$ 的时域身份；部分分式每项 $K/(s-p) \leftrightarrow Ke^{pt}$，极点实部决定每项增/减 | 第 22 讲 | **能推导、能解释** |
+| 稳定性 | stability（BIBO） | 有界输入有界输出（对线性电路等价于零输入响应衰减到零）；判据：极点**全在左半平面**=稳定、含纯虚极点=临界（等幅振荡）、含右半平面极点=不稳定（发散）；**无源电路恒稳定**，不稳定须有源/受控源（负电阻） | 第 22 讲 | **能判三态、能说清根源** |
+| 劳斯判据 | Routh criterion | 不求根即判多项式根分布（左半平面个数）的代数方法；根轨迹、Nyquist 判据同属后续自动控制课程。**本课程不要求**（高阶例子直接求根） | 第 22 讲 | 认识层：知道存在即可 |
+| 二端口网络与端口条件 | two-port network & port condition | 端口 = 一对满足"一进一出"（端子电流成对相等）的端子；二端口 = 两个此类端口（四端子）。不满足端口条件者为四端网络（需更多变量描述）；端口化后仅两个独立约束 | 第 23 讲 | **能复述、能判** |
+| Y 参数（短路导纳） | short-circuit admittance parameters | 以电压为自变量、电流为因变量：$\dot{\mathbf I} = \mathbf Y\dot{\mathbf U}$；$Y_{11} = \dot I_1/\dot U_1|_{U_2=0}$（输出短路），其余同理；无源网络互导纳 $Y_{12}=Y_{21}<0$（与结点法互导纳负一致） | 第 23 讲 | **能默写、能算（短路法）** |
+| Z 参数（开路阻抗） | open-circuit impedance parameters | 以电流为自变量、电压为因变量：$\dot{\mathbf U} = \mathbf Z\dot{\mathbf I}$；$Z_{11} = \dot U_1/\dot I_1|_{I_2=0}$（输出开路）；与 Y 参数对偶（Y 关电压、Z 关电流），$\mathbf Y = \mathbf Z^{-1}$（存在时） | 第 23 讲 | **能默写、能算（开路法）** |
+| 互易网络 | reciprocal network | 转移参数两个方向相等：$Y_{12} = Y_{21}$（或 $Z_{12} = Z_{21}$）；物理含义 = 激励与响应位置可对调；一切线性无源网络恒互易，唯一破坏者是受控源 | 第 23 讲 | **能判定、能解释** |
+| 对称网络 | symmetrical network | 电气对称：端口互换后参数不变——$Y_{11} = Y_{22}$ 且 $Y_{12} = Y_{21}$（或 Z 同式）；互易≠对称（互易只需转移项相等）；结构对称⇒电气对称，反之不然 | 第 23 讲 | **能判定、能区分于互易** |
+| 传输参数 | transmission parameters（T / A 参数） | 以输出端口量为自变量：$\begin{bmatrix}\dot U_1\\ \dot I_1\end{bmatrix} = T\begin{bmatrix}\dot U_2\\ -\dot I_2\end{bmatrix}$（$-\dot I_2$：输出电流以流出为正）；量纲 无量纲/Ω/无量纲/S；级联直接相乘；互易 $\Leftrightarrow AD-BC=1$、对称 $\Leftrightarrow A=D$ 且互易 | 第 24 讲 | **能默写、能算、能判** |
+| 混合参数 | hybrid parameters（H） | 自变量取一个电流加一个电压：$\dot U_1 = h_{11}\dot I_1+h_{12}\dot U_2$、$\dot I_2 = h_{21}\dot I_1+h_{22}\dot U_2$；四个量纲全不同（Ω/—/—/S）；晶体管手册通用（$h_{ie},h_{re},h_{fe},h_{oe}$）；互易 $\Leftrightarrow h_{12}=-h_{21}$、对称再需 $\det H=1$ | 第 24 讲 | **能默写**；h 系符号认识层 |
+| T 型/Π 型等效电路 | T/Π equivalent circuits | 任一**互易**二端口的纯元件等效：T 型臂 $Z_{11}-Z_{12}$、$Z_{12}$、$Z_{22}-Z_{12}$；Π 型臂 $1/(Y_{11}+Y_{12})$、$1/(-Y_{12})$、$1/(Y_{22}+Y_{12})$；非互易需加受控源 | 第 24 讲 | **能搭、能回读** |
+| 有效连接 | valid connection | 连接后端口条件仍成立：串联要求对应端口电流一致、并联要求端口电压一致；破坏时（如串联而公共端已共地）参数相加规则失效，须回整体求解 | 第 24 讲 | **能复述、知后果** |
+| 图论基本概念 | graph-theory basics | 支路（元件/边）、结点（顶点）、路径、**树**（连接所有结点且无回路的支路集）、树支（$=n-1$）、连支（$=b-n+1$）、基本回路（连支+树上路径）；树支数对应独立 KCL 数、连支数对应独立回路数 | 第 25 讲 | **能复述、能数** |
+| 关联矩阵 | incidence matrix (A) | $n\times b$ 矩阵（行=结点、列=支路）：+1 支路离开结点、−1 进入、0 无关；去掉参考行后 $(n-1)\times b$。KCL 写成 $A\mathbf i = \mathbf I_S$（无源支路口径；全支路口径为 $A\mathbf i = 0$）、KVL 写成 $\mathbf u = A^{\top}\mathbf U$（支路电压=两端电位差） | 第 25 讲 | **能写、能解释** |
+| 结点导纳矩阵（矩阵形式来源） | nodal admittance matrix via A·Y·A^T | $\mathbf i = \mathbf Y_b\mathbf u+\mathbf i_S$ 代入 KCL、再用 KVL → $A\mathbf Y_bA^{\top}\mathbf U = \mathbf I_S$；$A\mathbf Y_bA^{\top}$ 就是结点导纳矩阵（解释 05 讲观察法的"自导纳正/互导纳负"） | 第 25 讲 | **能推导、能互证** |
+| 状态方程 | state equation | $\dot{\mathbf x} = \mathbf A_s\mathbf x + \mathbf B\mathbf v$；状态量一般取 $[u_C, i_L]$；状态矩阵特征值 = 固有频率 = 极点；现代控制理论的标准入口 | 第 25 讲 | **能对简单电路列写、能数值积分** |
 
 ## 二、公式
 
@@ -145,7 +175,7 @@
 | $U_{ab} = -U_{ba}$ | — | 恒成立（换边走能量反号） | 第 01 讲 |
 | $U_{ab} = V_a - V_b$ | $V_a$、$V_b$ 为对**同一**参考点的电位 | 恒成立；电压与参考点选择无关 | 第 01 讲 |
 | $p = ui$ | $u$、$i$ 为**同一元件**的端电压与电流 | 关联参考方向下，$p$ 即吸收功率（正吸负发）；非关联时用 $p = -ui$ | 第 01 讲 |
-| $W = Pt$ | $P$ 为不随时间变化的功率 | 直流情形的能量账 | 第 01 讲 |
+| $W = Pt$ | $P$ 为不随时间变化的功率 | 直流情形的能量计算 | 第 01 讲 |
 | $u = Ri$（关联参考方向下） | $R$ 为线性电阻的阻值（Ω） | 线性电阻；求电流时反解 $i = u/R$ | 第 02 讲 |
 | $u = U_S$ | $U_S$ 为给定电压 | 理想电压源（电流由外电路定） | 第 02 讲 |
 | $i = I_S$ | $I_S$ 为给定电流 | 理想电流源（电压由外电路定） | 第 02 讲 |
@@ -166,10 +196,10 @@
 | $\mathbf{G}\,\mathbf{U} = \mathbf{I}_S$（观察法） | $G_{kk}$ 自导纳（正）、$G_{kj}$ 互导纳（负）、右端注入电流和（流入为正；有伴电压源折算 $g\,U_S$） | 结点电压法标准方程（参考结点取 0；矩阵对称） | 第 05 讲 |
 | $x = \sum_k x_k$（各独立源单独作用之和） | 置零规则：电压源→短路、电流源→开路；受控源保留；仅线性量（功率不叠，交叉项被丢） | 叠加定理 | 第 06 讲 |
 | $u = U_{oc} - R_{eq}\,i$；$U_{oc} = I_{sc}R_{eq}$ | 戴维南/诺顿胶囊一对；三件套互验式 $R_{eq} = U_{oc}/I_{sc}$ | 线性含源二端网络的对外伏安关系 | 第 07 讲 |
-| $P_{\max} = \dfrac{U_{oc}^2}{4R_{eq}} = \dfrac{I_{sc}^2 R_{eq}}{4}$；匹配效率 50% | 匹配条件 $R_L = R_{eq}$；效率 $\eta = R_L/(R_L + R_{eq})$ 另账单调升 | 最大功率传输（直流） | 第 07 讲 |
+| $P_{\max} = \dfrac{U_{oc}^2}{4R_{eq}} = \dfrac{I_{sc}^2 R_{eq}}{4}$；匹配效率 50% | 匹配条件 $R_L = R_{eq}$；效率 $\eta = R_L/(R_L + R_{eq})$ 单调上升 | 最大功率传输（直流） | 第 07 讲 |
 | $u_o = -\dfrac{R_f}{R_1}u_i$；$u_o = \left(1+\dfrac{R_f}{R_1}\right)u_i$；$u_o = u_i$ | 反相端为虚地（电阻 $R_1$）；同相输入电阻 $\infty$；跟随器 = 缓冲 | 运放基本电路（一）：反相/同相/跟随 | 第 08 讲 |
 | $u_o = -R_f\sum_k \dfrac{u_k}{R_k}$；$u_o = \dfrac{R_f}{R_1}(u_2-u_1)$（匹配 $R_3/R_2 = R_f/R_1$） | 加法 = 电流求和；减法必须匹配，失配公式作废 | 运放基本电路（二）：加法/减法 | 第 08 讲 |
-| $i = C\dfrac{du}{dt}$；$u = L\dfrac{di}{dt}$；积分账本形式 | 关联参考方向；记忆 = 初值 + 积分史 | 电容/电感伏安关系 | 第 09 讲 |
+| $i = C\dfrac{du}{dt}$；$u = L\dfrac{di}{dt}$；积分形式 | 关联参考方向；记忆 = 初值 + 积分史 | 电容/电感伏安关系 | 第 09 讲 |
 | $w_C = \dfrac{1}{2}Cu^2$；$w_L = \dfrac{1}{2}Li^2$ | 储能是状态量；RC 充电全程对半分（与电阻值无关） | C/L 储能 | 第 09 讲 |
 | $C$：并=Σ、串=Σ倒数；$L$：串=Σ、并=Σ倒数 | 电容按电阻的"并串联"抄；电感串同并反；串并联是对偶表的一行 | C/L 串并联 | 第 09 讲 |
 | $u_C(t) = u_C(0^+)\,e^{-t/\tau}$；$i_L(t) = i_L(0^+)\,e^{-t/\tau}$ | $\tau = RC$（电容）/ $\tau = L/R$（电感，R 取放电回路等效电阻） | 一阶零输入响应 | 第 10 讲 |
@@ -177,7 +207,7 @@
 | $u_C(t) = u_C(\infty)\left(1-e^{-t/\tau}\right)$（RL 对偶 $i_L = i_L(\infty)(1-e^{-t/\tau})$） | $u_C(\infty)$ 为换路后新稳态值；$\tau$ 取法同前 | 一阶零状态响应（直流） | 第 11 讲 |
 | $f(t) = f(\infty) + [f(0^+)-f(\infty)]e^{-t/\tau}$（三要素公式/全响应结构式） | $f$ 为任一电压/电流；三个数：初值 $f(0^+)$、终值 $f(\infty)$、时间常数 $\tau$ | 直流激励一阶电路全响应；要求换路后存在直流稳态；不适用于功率等乘积量 | 第 11 讲 |
 | $\varepsilon(t)=0\ (t<0)$、$\varepsilon(t)=1\ (t>0)$ | 单位阶跃；缩放 $A\varepsilon(t)$ 表示幅度 A 的阶跃 | "t=0 接入"的标准写法 | 第 11 讲 |
-| $\Delta u_C = q/C$；$\Delta i_L = \psi/L$ | $q = \int i\,\mathrm{d}t$ 为冲激电荷；$\psi = \int u\,\mathrm{d}t$ 为冲激磁通链 | 冲激瞬间状态量的跳变量（面积账） | 第 11 讲 |
+| $\Delta u_C = q/C$；$\Delta i_L = \psi/L$ | $q = \int i\,\mathrm{d}t$ 为冲激电荷；$\psi = \int u\,\mathrm{d}t$ 为冲激磁通链 | 冲激瞬间状态量的跳变量（面积法） | 第 11 讲 |
 | $u'' + 2\alpha u' + \omega_0^2 u = 0$；$\alpha = \frac{R}{2L}$、$\omega_0 = \frac{1}{\sqrt{LC}}$ | $u$ 为响应变量（$u_C$ 或 $i_L$ 均可） | 二阶电路标准形（串联 RLC 零输入；并联则 $\alpha = 1/(2RC)$） | 第 12 讲 |
 | $s_{1,2} = -\alpha \pm \sqrt{\alpha^2 - \omega_0^2}$ | 特征根；自检 $s_1+s_2 = -2\alpha$、$s_1s_2 = \omega_0^2$ | 二阶特征方程求根 | 第 12 讲 |
 | 过阻尼：$u = A_1e^{s_1t} + A_2e^{s_2t}$ | $s_1,s_2$ 为两个负实根；$A_1,A_2$ 由两个初值定 | $\alpha > \omega_0$ 的解形式 | 第 12 讲 |
@@ -195,9 +225,9 @@
 | $Z_{串} = \sum Z$；$Y_{并} = \sum Y$；分压 $\dot U_k = \dot U\dfrac{Z_k}{\sum Z}$；分流"看对面" | 复数版串并联与分压分流 | 线性 + 同频前提下照搬（推导只用 KCL/KVL + 代数比例） | 第 14 讲 |
 | $Y = \dfrac{R - \mathrm{j}X}{R^2 + X^2}$（即 $G = \dfrac{R}{R^2+X^2}$，一般 $\ne 1/R$） | 阻抗与导纳的换算 | 防"$G=1/R$"误用 | 第 14 讲 |
 | $p(t) = UI\cos\varphi + UI\cos(2\omega t + \psi_u + \psi_i)$ | 瞬时功率的"平均 + 波动"分解 | 正弦稳态（单口） | 第 15 讲 |
-| $P = UI\cos\varphi$；$Q = UI\sin\varphi$；$S = UI$；$P^2 + Q^2 = S^2$ | $\varphi = \psi_u - \psi_i$；三者构成直角三角形 | 正弦稳态三只账本 | 第 15 讲 |
+| $P = UI\cos\varphi$；$Q = UI\sin\varphi$；$S = UI$；$P^2 + Q^2 = S^2$ | $\varphi = \psi_u - \psi_i$；三者构成直角三角形 | 正弦稳态三个功率 | 第 15 讲 |
 | $\dot S = \dot U\dot I^* = P + \mathrm{j}Q$（守恒：$\sum\dot S = 0$） | 电流取共轭；实部 P、虚部 Q | 复功率 | 第 15 讲 |
-| $P = I^2R$；$Q_L = I^2\omega L$；$Q_C = -I^2/(\omega C)$ | 元件级账本 | 元件功率分工（R 吃有功、L/C 倒腾无功） | 第 15 讲 |
+| $P = I^2R$；$Q_L = I^2\omega L$；$Q_C = -I^2/(\omega C)$ | 元件级功率 | 元件功率分工（R 吃有功、L/C 倒腾无功） | 第 15 讲 |
 | $Z_L = Z_{eq}^*$；$P_{\max} = U_{oc}^2/(4R_{eq})$ | 共轭匹配（虚部反号 + 实部相等） | 交流最大功率传输 | 第 15 讲 |
 | $Q_C = P(\tan\varphi_1 - \tan\varphi_2)$；$C = Q_C/(\omega U^2)$ | 补偿量公式 | 功率因数提高（并联电容） | 第 15 讲 |
 | $U_l = \sqrt{3}U_p$（$\dot U_{AB}$ 超前 30°，Y）；$I_l = \sqrt{3}I_p$（滞后 30°，Δ） | 线相换算（对偶） | 对称三相：Y 的电压、Δ 的电流 | 第 16 讲 |
@@ -223,3 +253,27 @@
 | 主例：$H_R = \dfrac{\mathrm{j}\omega RC}{1 - \omega^2LC + \mathrm{j}\omega RC}$（带通）；$H_C = \dfrac{1}{1 - \omega^2LC + \mathrm{j}\omega RC}$（低通带峰） | $H_X$ 为输出口在网络函数 | 串联 RLC 电路的两个输出口 | 第 19 讲 |
 | RC 低通 $H = \dfrac{1}{1+\mathrm{j}\omega RC}$；高通 $H = \dfrac{\mathrm{j}\omega RC}{1+\mathrm{j}\omega RC}$；$\omega_c = \dfrac{1}{RC}$ | R、C 为一阶滤波元件 | 一阶 RC 滤波 | 第 19 讲 |
 | Bode 锚点：$\lvert H\rvert = 1/\sqrt{2} \Leftrightarrow -3$ dB；一阶斜率 $\pm 20$ dB/十倍频程 | dB = $20\log_{10}\lvert H\rvert$ | 一阶系统（低通 -20、高通 +20） | 第 19 讲 |
+| $f(t) = \dfrac{a_0}{2} + \sum\limits_{n=1}^{\infty}[a_n\cos n\omega_1 t + b_n\sin n\omega_1 t]$ | $\omega_1$ 基波角频率；$a_0/2$ 直流分量；$a_n,b_n$ 由积分求得 | 满足常规条件的周期函数 | 第 20 讲 |
+| 方波：$v = \dfrac{4A}{\pi}\sum\limits_{n\ \text{奇}}\dfrac{1}{n}\sin n\omega_1 t$ | $A$ 方波幅值 | 奇函数、半波对称方波 | 第 20 讲 |
+| $U = \sqrt{U_0^2 + \sum\limits_{n=1}^{\infty}U_n^2}$ | $U_0$ 直流分量有效值；$U_n$ 各次谐波有效值 | 任意周期量（正交性保证） | 第 20 讲 |
+| $P = U_0I_0 + \sum\limits_{n=1}^{\infty}U_nI_n\cos\varphi_n$ | $\varphi_n$ 为**同次**谐波电压与电流的相位差 | 任意周期量；**$P\ne UI$** | 第 20 讲 |
+| $F(s)=\int_{0^-}^{\infty}f(t)e^{-st}\,\mathrm{d}t$ | $s=\sigma+\mathrm{j}\omega$ 复频率 | 单边拉氏变换（因果信号） | 第 21 讲 |
+| $\dfrac{\mathrm{d}f}{\mathrm{d}t}\leftrightarrow sF(s)-f(0^-)$；$\displaystyle\int_{0^-}^{t}f\,\mathrm{d}\tau\leftrightarrow F(s)/s$ | $f(0^-)$ 为换路前初值 | 微分/积分性质（线性性另有） | 第 21 讲 |
+| 变换对最小表：$\delta(t)\leftrightarrow1$、$\varepsilon(t)\leftrightarrow1/s$、$t\leftrightarrow1/s^2$、$e^{-at}\leftrightarrow1/(s+a)$、$te^{-at}\leftrightarrow1/(s+a)^2$、$\cos\omega t\leftrightarrow s/(s^2+\omega^2)$、$\sin\omega t\leftrightarrow\omega/(s^2+\omega^2)$ | 各符号为常规含义 | 本课程全部题目的基础表 | 第 21 讲 |
+| $U(s)=sL\,I(s)-Li(0^-)$；$U(s)=\dfrac{1}{sC}I(s)+\dfrac{u(0^-)}{s}$ | $i(0^-)$、$u(0^-)$ 为电感电流/电容电压初值 | s 域元件模型（串联压源版；另有并联流源版） | 第 21 讲 |
+| 掩护法：$K_k=\big[(s-s_k)F(s)\big]_{s=s_k}$ | $s_k$ 为分母的单实根 | 真分式的单根部分分式 | 第 21 讲 |
+| $H(s) = \dfrac{Y(s)}{X(s)} = \dfrac{N(s)}{D(s)}$ | $X,Y$ 为输入/输出拉氏变换（零初值）；$N,D$ 为多项式 | 线性时不变电路；极点=${D=0}$ 的根、零点=${N=0}$ 的根 | 第 22 讲 |
+| $h(t) = \sum\limits_i K_i e^{p_i t}$ | $p_i$ 为极点、$K_i$ 为部分分式系数 | 单实极点情形；复极点对则为 $e^{\sigma t}\cos/\sin$ 形式 | 第 22 讲 |
+| $\lvert H(\mathrm{j}\omega)\rvert = \lvert K\rvert\dfrac{\prod_i\lvert \mathrm{j}\omega - z_i\rvert}{\prod_j\lvert \mathrm{j}\omega - p_j\rvert}$ | $z_i$ 零点、$p_j$ 极点（几何距离读法） | 各因子均为同一实系数多项式的根（认识层读图用） | 第 22 讲 |
+| $\dot{\mathbf I} = \mathbf Y\dot{\mathbf U}$（$Y_{11},Y_{12},Y_{21},Y_{22}$） | $\dot I_k$ 端口电流（流入为正）、$\dot U_k$ 端口电压 | 线性二端口（短路口径测量）；正弦稳态（纯电阻退化为实数） | 第 23 讲 |
+| $\dot{\mathbf U} = \mathbf Z\dot{\mathbf I}$（$Z_{11},Z_{12},Z_{21},Z_{22}$） | 同上（开路口径测量） | 线性二端口；与 Y 对偶 | 第 23 讲 |
+| $\mathbf Y = \mathbf Z^{-1} = \dfrac{1}{\det Z}\begin{bmatrix}Z_{22}&-Z_{12}\\-Z_{21}&Z_{11}\end{bmatrix}$ | $\det Z = Z_{11}Z_{22}-Z_{12}Z_{21}$ | 两者均存在（非退化）时；纯串联 Y 不存在、纯并联 Z 不存在 | 第 23 讲 |
+| $\begin{bmatrix}\dot U_1\\ \dot I_1\end{bmatrix} = \begin{bmatrix}A&B\\ C&D\end{bmatrix}\begin{bmatrix}\dot U_2\\ -\dot I_2\end{bmatrix}$；级联 $T = T_1T_2$ | $A,B,C,D$ 为 T 参数（量纲 无量纲/Ω/无量纲/S）；顺序不可换 | 线性二端口；互易 $\Leftrightarrow AD-BC=1$ | 第 24 讲 |
+| $\dot U_1 = h_{11}\dot I_1+h_{12}\dot U_2$；$\dot I_2 = h_{21}\dot I_1+h_{22}\dot U_2$ | $h_{11}$ Ω、$h_{12}$ —、$h_{21}$ —、$h_{22}$ S | 线性二端口；互易 $\Leftrightarrow h_{12}=-h_{21}$ | 第 24 讲 |
+| 串联 $Z=Z_1+Z_2$；并联 $Y=Y_1+Y_2$；级联 $T=T_1T_2$ | 连接方式的参数规则（串联/并联需有效连接、级联无此条件） | 各网络对应参数存在且连接有效 | 第 24 讲 |
+| $Z_{in} = \dfrac{AR_L+B}{CR_L+D}$ | $A,B,C,D$ 为 T 参数；$R_L$ 端 2 负载 | 二端口端 2 接负载时的输入阻抗（互易或非互易均适用） | 第 24 讲 |
+| T 型：$Z_{11}-Z_{12},\ Z_{12},\ Z_{22}-Z_{12}$；Π 型：$\dfrac{1}{Y_{11}+Y_{12}},\ \dfrac{1}{-Y_{12}},\ \dfrac{1}{Y_{22}+Y_{12}}$ | 各支路元件值 | 互易二端口的纯元件等效 | 第 24 讲 |
+| $A\mathbf i = \mathbf I_S$（无源支路口径；全支路为 $A\mathbf i = 0$） | $A$ 为关联矩阵、$\mathbf i$ 支路电流向量、$\mathbf I_S$ 注入电流 | 独立 KCL 共 $n-1$ 条（去参考行） | 第 25 讲 |
+| $\mathbf u = A^{\top}\mathbf U$ | $\mathbf U$ 结点电位向量、$\mathbf u$ 支路电压向量 | 支路电压 = 两端结点电位之差（KVL 自动成立） | 第 25 讲 |
+| $A\mathbf Y_bA^{\top}\mathbf U = \mathbf I_S$ | $\mathbf Y_b$ 支路导纳矩阵；$A\mathbf Y_bA^{\top}$ = 结点导纳矩阵 | 无源支路口径；受控源/互感体现为 $\mathbf Y_b$ 的非对角元 | 第 25 讲 |
+| $\dot{\mathbf x} = \mathbf A_s\mathbf x + \mathbf B\mathbf v$；RLC 例 $\mathbf A_s = \begin{bmatrix}0&-1/C\\ 1/L&-R/L\end{bmatrix}$ | $\mathbf x$ 状态向量、$\mathbf v$ 输入；特征值 = 极点 | 线性动态电路；状态量取 $u_C,i_L$ | 第 25 讲 |
