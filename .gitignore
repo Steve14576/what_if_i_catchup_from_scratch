@@ -26,6 +26,7 @@ dist/
 *.fdb_latexmk
 
 # 编辑器与系统
+.kilo
 .vscode/
 .idea/
 .DS_Store
