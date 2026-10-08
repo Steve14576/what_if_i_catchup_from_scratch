@@ -97,15 +97,15 @@ a1.plot([5.0, 5.0], [-0.2, 1.4], color=GREY, ls=":", lw=1.2)
 # M1 输入（左端，逆时针）
 a1.annotate("", xy=(1.0, 1.9), xytext=(2.0, 1.9),
             arrowprops=dict(arrowstyle="-|>", color=RED, lw=2, connectionstyle="arc3,rad=0.7"))
-a1.text(1.5, 2.5, "M1=800（输入）", ha="center", fontsize=9, color=RED)
+a1.text(1.5, 2.5, r"$M_1=800$（输入）", ha="center", fontsize=9, color=RED)
 # M2 输出（中间，顺时针）
 a1.annotate("", xy=(6.0, 1.9), xytext=(4.0, 1.9),
             arrowprops=dict(arrowstyle="-|>", color=GREEN, lw=2, connectionstyle="arc3,rad=-0.7"))
-a1.text(5.0, 2.5, "M2=500（输出）", ha="center", fontsize=9, color=GREEN)
+a1.text(5.0, 2.5, r"$M_2=500$（输出）", ha="center", fontsize=9, color=GREEN)
 # M3 输出（右端，顺时针）
 a1.annotate("", xy=(8.6, 1.9), xytext=(9.6, 1.9),
             arrowprops=dict(arrowstyle="-|>", color=GREEN, lw=2, connectionstyle="arc3,rad=0.7"))
-a1.text(9.1, 2.5, "M3=300（输出）", ha="center", fontsize=9, color=GREEN)
+a1.text(9.1, 2.5, r"$M_3=300$（输出）", ha="center", fontsize=9, color=GREEN)
 a1.text(5.5, -0.9, "(a) 传动轴上的三处外力偶矩（单位 N·m；弯箭头表示力偶矩）", ha="center", fontsize=10, weight="bold")
 
 # (b) 扭矩图
@@ -117,17 +117,17 @@ a2.plot([5, 10], [T_right, T_right], color=RED, lw=2.4)
 a2.plot([5, 5], [T_left, T_right], color=GREY, ls="--", lw=1.4)
 a2.plot([1, 5], [T_left, T_left], "o", color=GREEN, ms=5)
 a2.plot([5, 10], [T_right, T_right], "o", color=RED, ms=5)
-a2.text(3.0, T_left + 40, "T = 800 N·m", ha="center", fontsize=10, color=GREEN)
-a2.text(7.5, T_right - 120, "T = 300 N·m", ha="center", fontsize=10, color=RED)
-a2.annotate("突变 = M2", xy=(5, 550), xytext=(5.6, 640), fontsize=9.5, color=GREY,
+a2.text(3.0, T_left + 40, r"$T = 800$ N·m", ha="center", fontsize=10, color=GREEN)
+a2.text(7.5, T_right - 120, r"$T = 300$ N·m", ha="center", fontsize=10, color=RED)
+a2.annotate(r"突变 = $M_2$", xy=(5, 550), xytext=(5.6, 640), fontsize=9.5, color=GREY,
             arrowprops=dict(arrowstyle="->", color=GREY, lw=1))
 a2.set_xlim(0, 11)
 a2.set_ylim(-100, 950)
 a2.set_xlabel("截面位置 x", fontsize=10)
-a2.set_ylabel("扭矩 T / (N·m)", fontsize=10)
+a2.set_ylabel(r"扭矩 $T$ / (N·m)", fontsize=10)
 a2.set_title("(b) 扭矩图：截面一侧外力偶矩的代数和；集中力偶处跳变", fontsize=10.5, weight="bold")
 a2.set_xticks([1, 5, 10])
-a2.set_xticklabels(["左端", "M2", "右端"], fontsize=9)
+a2.set_xticklabels(["左端", r"$M_2$", "右端"], fontsize=9)
 savefig(fig, "lec05_fig1_torque_diagram")
 
 
@@ -148,7 +148,7 @@ a1.plot([2.2, 2.2], [3.0, 4.3], color=GREEN, lw=2)          # 左端半径（竖
 a1.plot([7.8, 7.8 + 1.3 * np.sin(np.deg2rad(50))], [3.0, 3.0 + 1.3 * np.cos(np.deg2rad(50))],
         color=RED, lw=2)                                     # 右端半径（转 phi）
 a1.add_patch(Arc((7.8, 3.0), 2.0, 2.0, theta1=40, theta2=90, color=ORANGE, lw=1.4))
-a1.text(8.7, 3.6, "phi", fontsize=11, color=ORANGE)
+a1.text(8.7, 3.6, r"$\varphi$", fontsize=11, color=ORANGE)
 a1.text(5.0, 5.4, "(a) 横截面保持平面、半径保持直线", ha="center", fontsize=9.5, weight="bold")
 a1.text(2.2, 1.2, "左端面", ha="center", fontsize=8.5, color=GREY)
 a1.text(7.8, 1.2, "右端面", ha="center", fontsize=8.5, color=GREY)
@@ -161,9 +161,9 @@ a2.add_patch(Rectangle((2.0, 1.3), 6.0, 3.2, fc="#eef2f7", ec=GREY))
 a2.plot([3.5, 3.5], [1.3, 3.2], color=GREY, ls="--", lw=1.4)          # 变形前纵线
 a2.plot([3.5, 5.2], [1.3, 4.5], color=RED, lw=2)                       # 变形后纵线（倾斜）
 a2.add_patch(Arc((3.5, 1.3), 1.0, 1.0, theta1=0, theta2=38, color=GREEN, lw=1.4))
-a2.text(4.2, 1.55, "gamma", fontsize=10, color=GREEN)
-a2.text(5.0, 5.4, "(b) 外表面纵线的倾角 = 切应变 gamma", ha="center", fontsize=9.5, weight="bold")
-a2.text(5.0, 0.6, "gamma = rho * (dphi/dx)", ha="center", fontsize=10, color=BLUE)
+a2.text(4.2, 1.55, r"$\gamma$", fontsize=10, color=GREEN)
+a2.text(5.0, 5.4, r"(b) 外表面纵线的倾角 = 切应变 $\gamma$", ha="center", fontsize=9.5, weight="bold")
+a2.text(5.0, 0.6, r"$\gamma = \rho\,\frac{\mathrm{d}\varphi}{\mathrm{d}x}$", ha="center", fontsize=10, color=BLUE)
 savefig(fig, "lec05_fig2_deformation")
 
 
@@ -193,12 +193,12 @@ rho = np.linspace(0, R, 50)
 tau = T_max * 1e3 * rho / I_p
 a2.plot(rho, tau, color=BLUE, lw=2.4)
 a2.plot([R], [tau_max], "o", color=RED, ms=6)
-a2.text(R * 0.5, tau_max * 0.55, "tau_rho = T*rho/I_p", fontsize=10, color=BLUE)
-a2.text(R * 0.62, tau_max * 1.03, "tau_max (rho=R)", fontsize=9, color=RED)
+a2.text(R * 0.5, tau_max * 0.55, r"$\tau_\rho = \dfrac{T\rho}{I_p}$", fontsize=10, color=BLUE)
+a2.text(R * 0.62, tau_max * 1.03, r"$\tau_{\max}$（$\rho=R$）", fontsize=9, color=RED)
 a2.set_xlim(0, R * 1.15)
 a2.set_ylim(0, tau_max * 1.2)
-a2.set_xlabel("到轴心的距离 rho / mm", fontsize=10)
-a2.set_ylabel("切应力 tau / MPa", fontsize=10)
+a2.set_xlabel(r"到轴心的距离 $\rho$ / mm", fontsize=10)
+a2.set_ylabel(r"切应力 $\tau$ / MPa", fontsize=10)
 a2.set_title("(b) 切应力沿半径线性分布", fontsize=10.5, weight="bold")
 savefig(fig, "lec05_fig3_stress_dist")
 

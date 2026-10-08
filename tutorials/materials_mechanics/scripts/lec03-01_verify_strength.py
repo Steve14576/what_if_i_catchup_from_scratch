@@ -111,15 +111,15 @@ ax.fill_betweenx([0, 200], 0, 1.0, color="#e7f0fb", alpha=0.5)
 pts = {"p": (1.0, 200.0), "e": (1.5, 210.0), "s": (2.0, 240.0), "b": (150.0, 400.0)}
 for key, (xx, yy) in pts.items():
     ax.plot([xx], [yy], "o", color=RED, ms=6)
-ax.annotate("比例极限 sigma_p", xy=(1.0, 200.0), xytext=(20, 150),
+ax.annotate(r"比例极限 $\sigma_p$", xy=(1.0, 200.0), xytext=(20, 150),
             fontsize=9.5, color=RED, arrowprops=dict(arrowstyle="->", color=RED, lw=1))
-ax.annotate("弹性极限 sigma_e", xy=(1.5, 210.0), xytext=(20, 230),
+ax.annotate(r"弹性极限 $\sigma_e$", xy=(1.5, 210.0), xytext=(20, 230),
             fontsize=9.5, color=RED, arrowprops=dict(arrowstyle="->", color=RED, lw=1))
-ax.annotate("屈服极限 sigma_s", xy=(2.0, 240.0), xytext=(30, 90),
+ax.annotate(r"屈服极限 $\sigma_s$", xy=(2.0, 240.0), xytext=(30, 90),
             fontsize=9.5, color=RED, arrowprops=dict(arrowstyle="->", color=RED, lw=1))
-ax.annotate("强度极限 sigma_b", xy=(150.0, 400.0), xytext=(95, 430),
+ax.annotate(r"强度极限 $\sigma_b$", xy=(150.0, 400.0), xytext=(95, 430),
             fontsize=9.5, color=RED, arrowprops=dict(arrowstyle="->", color=RED, lw=1))
-ax.text(6, 185, "(1) 弹性阶段\nsigma = E*eps", fontsize=9, color=BLUE)
+ax.text(6, 185, r"(1) 弹性阶段" + "\n" + r"$\sigma = E\varepsilon$", fontsize=9, color=BLUE)
 ax.text(6, 70, "(2) 屈服阶段\n应力几乎不增、应变猛增", fontsize=9, color=BLUE)
 ax.text(70, 210, "(3) 强化阶段", fontsize=9, color=BLUE)
 ax.text(168, 250, "(4) 颈缩阶段", fontsize=9, color=BLUE)
@@ -127,8 +127,8 @@ ax.annotate("断裂", xy=(210, 340), xytext=(200, 300),
             fontsize=9.5, color=GREY, arrowprops=dict(arrowstyle="->", color=GREY, lw=1))
 ax.set_xlim(0, 230)
 ax.set_ylim(0, 460)
-ax.set_xlabel("线应变 eps（单位 1e-3；断裂处 eps 远大于弹性段）", fontsize=10)
-ax.set_ylabel("应力 sigma / MPa", fontsize=10)
+ax.set_xlabel(r"线应变 $\varepsilon$（单位 1e-3；断裂处 $\varepsilon$ 远大于弹性段）", fontsize=10)
+ax.set_ylabel(r"应力 $\sigma$ / MPa", fontsize=10)
 ax.set_title("低碳钢拉伸时的应力-应变曲线（示意，特征点为理想化值）", fontsize=11, weight="bold")
 savefig(fig, "lec03_fig1_stress_strain_curve")
 
@@ -153,21 +153,21 @@ a1.annotate("", xy=(1.2, 2.75), xytext=(7.2, 2.75),
 a1.text(4.2, 2.85, "原长 L", ha="center", fontsize=10, color=GREY)
 a1.annotate("", xy=(7.2, 1.25), xytext=(8.2, 1.25),
             arrowprops=dict(arrowstyle="<->", color=GREEN, lw=1.2))
-a1.text(8.4, 1.2, "deltaL", ha="left", fontsize=10, color=GREEN)
-a1.text(4.5, 0.5, "(a) 杆受轴力 N：伸长 deltaL = N*L/(E*A)（变形已放大）", ha="center", fontsize=9.5, weight="bold")
+a1.text(8.4, 1.2, r"$\Delta L$", ha="left", fontsize=10, color=GREEN)
+a1.text(4.5, 0.5, r"(a) 杆受轴力 $N$：伸长 $\Delta L = \frac{NL}{EA}$（变形已放大）", ha="center", fontsize=9.5, weight="bold")
 
 # (b) sigma-eps 线性段
 eps2 = np.linspace(0, 1.0, 50)
 a2.plot(eps2, 200.0 * eps2, color=BLUE, lw=2.4)
 a2.fill_between(eps2, 0, 200.0 * eps2, color="#e7f0fb", alpha=0.5)
 a2.plot([1.0], [200.0], "o", color=RED, ms=6)
-a2.text(0.60, 120, "斜率 = E\nsigma = E*eps", fontsize=10, color=BLUE)
-a2.text(1.02, 198, "比例极限 sigma_p", fontsize=9, color=RED)
+a2.text(0.60, 120, "斜率 = " + r"$E$" + "\n" + r"$\sigma = E\varepsilon$", fontsize=10, color=BLUE)
+a2.text(1.02, 198, r"比例极限 $\sigma_p$", fontsize=9, color=RED)
 a2.set_xlim(0, 1.35)
 a2.set_ylim(0, 260)
-a2.set_xlabel("线应变 eps（1e-3）", fontsize=10)
-a2.set_ylabel("应力 sigma / MPa", fontsize=10)
-a2.set_title("(b) 弹性范围内 sigma 与 eps 成正比", fontsize=10, weight="bold")
+a2.set_xlabel(r"线应变 $\varepsilon$（1e-3）", fontsize=10)
+a2.set_ylabel(r"应力 $\sigma$ / MPa", fontsize=10)
+a2.set_title(r"(b) 弹性范围内 $\sigma$ 与 $\varepsilon$ 成正比", fontsize=10, weight="bold")
 savefig(fig, "lec03_fig2_hooke_law")
 
 
@@ -185,8 +185,8 @@ a1.axhline(0, color=GREY, lw=0.8)
 a1.axvline(0, color=GREY, lw=0.8)
 a1.set_xlim(0, 90)
 a1.set_ylim(-420, 420)
-a1.set_xlabel("eps（1e-3）", fontsize=9.5)
-a1.set_ylabel("sigma / MPa", fontsize=9.5)
+a1.set_xlabel(r"$\varepsilon$（1e-3）", fontsize=9.5)
+a1.set_ylabel(r"$\sigma$ / MPa", fontsize=9.5)
 a1.set_title("(a) 塑性材料（低碳钢）：拉、压性能接近", fontsize=10, weight="bold")
 a1.legend(fontsize=9, loc="center right")
 
@@ -201,8 +201,8 @@ a2.axhline(0, color=GREY, lw=0.8)
 a2.axvline(0, color=GREY, lw=0.8)
 a2.set_xlim(0, 20)
 a2.set_ylim(-820, 820)
-a2.set_xlabel("eps（1e-3）", fontsize=9.5)
-a2.set_ylabel("sigma / MPa", fontsize=9.5)
+a2.set_xlabel(r"$\varepsilon$（1e-3）", fontsize=9.5)
+a2.set_ylabel(r"$\sigma$ / MPa", fontsize=9.5)
 a2.set_title("(b) 脆性材料（铸铁）：抗压远强于抗拉", fontsize=10, weight="bold")
 a2.legend(fontsize=9, loc="center right")
 savefig(fig, "lec03_fig3_ductile_vs_brittle")

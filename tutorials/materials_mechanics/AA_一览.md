@@ -84,6 +84,13 @@
 | 极惯性矩 | polar moment of inertia（I_p） | 横截面对形心的 $\int\rho^2\,\mathrm{d}A$；实心圆 $I_p=\pi d^4/32$ | 第 05 讲 | 要会算 |
 | 抗扭截面系数 | torsional section modulus（W_t） | $I_p/(d/2)$；实心圆 $W_t=\pi d^3/16$；$\tau_{\max}=T/W_t$ | 第 05 讲 | 要会算 |
 | 纯剪切应力状态 | pure shear stress state | 只有切应力、没有正应力的应力状态（切应力互等的直接结果） | 第 05 讲（引） | 知道；第 13 讲展开 |
+| 扭转角 | angle of twist（φ） | 圆轴两端面相对转过的角度：$\varphi=TL/(GI_p)$（rad） | 第 06 讲 | 要会算 |
+| 单位长度扭转角 | angle of twist per unit length（θ） | 每单位长度的扭转角：$\theta=\varphi/L=T/(GI_p)$；常用度/米（$^\circ/\mathrm{m}$） | 第 06 讲 | 要会算、会判 |
+| 扭转刚度 | torsional rigidity（GI_p） | 剪切模量与极惯性矩的乘积，抵抗扭转变形的能力（对应拉压刚度 $EA$） | 第 06 讲 | 要能解释 |
+| 刚度条件（扭转） | stiffness condition (torsion) | $\theta_{\max}=T/(GI_p)\le[\theta]$（或 $\varphi\le[\varphi]$） | 第 06 讲 | 要会用 |
+| 空心轴 | hollow shaft | 内径 $d_0$、外径 $D$ 的圆环截面轴；$I_p=\pi(D^4-d_0^4)/32$；把低应力材料移到外缘 | 第 06 讲 | 要会算、会比较 |
+| 内外径比 | ratio of inner to outer diameter（α） | $\alpha=d_0/D$；衡量空心轴的"挖空程度" | 第 06 讲 | 认识 |
+| 翘曲 | warping | 非圆截面扭转后横截面不再保持平面、发生凹凸的现象（非圆不能用圆轴公式的根本原因） | 第 06 讲（认识层） | 知道 |
 
 ## 二、公式
 
@@ -119,3 +126,9 @@
 | $I_p = \dfrac{\pi d^4}{32}$；$W_t = \dfrac{\pi d^3}{16}$ | $d$ 圆轴直径 | 实心圆截面 | 第 05 讲 |
 | $\gamma = \rho\,\dfrac{\mathrm{d}\varphi}{\mathrm{d}x}$ | $\mathrm{d}\varphi/\mathrm{d}x$ 单位长度扭转角 | 圆轴扭转切应变 | 第 05 讲 |
 | $G = \dfrac{E}{2(1+\mu)}$ | $E$ 弹性模量、$\mu$ 泊松比 | 各向同性材料弹性常数关系（第 14 讲推导） | 第 05 讲（引） |
+| $\varphi = \dfrac{T L}{G I_p}$ | $T$ 扭矩、$L$ 轴长、$G$ 剪切模量、$I_p$ 极惯性矩 | 圆轴扭转、线弹性 | 第 06 讲 |
+| $\theta = \dfrac{\varphi}{L} = \dfrac{T}{G I_p}$ | $\theta$ 单位长度扭转角（常用 $^\circ/\mathrm{m}$） | 圆轴扭转刚度计算 | 第 06 讲 |
+| $\theta_{\max} \le [\theta]$（刚度条件） | $[\theta]$ 许用单位长度扭转角 | 扭转刚度校核 / 设计 | 第 06 讲 |
+| 空心圆环：$I_p = \dfrac{\pi(D^4-d_0^4)}{32}$；$W_t = \dfrac{\pi(D^4-d_0^4)}{16D}$ | $D$ 外径、$d_0$ 内径、$\alpha=d_0/D$ | 空心圆轴截面量 | 第 06 讲 |
+| 矩形截面：$\tau_{\max}=\dfrac{T}{\alpha h b^2}$、$\varphi=\dfrac{TL}{G\beta h b^3}$ | $\alpha$、$\beta$ 随高宽比 $h/b$ 查表 | 非圆截面扭转（认识层） | 第 06 讲 |
+| 薄壁管：$\tau = \dfrac{T}{2A_0 t}$ | $A_0$ 中线所围面积、$t$ 壁厚 | 薄壁截面扭转（认识层） | 第 06 讲 |

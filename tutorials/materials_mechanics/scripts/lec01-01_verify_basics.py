@@ -199,8 +199,8 @@ a1.text(5.0, 5.35, "截面", ha="center", fontsize=10, color=BLUE)
 for yy in [1.9, 2.9, 3.9]:
     a1.annotate("", xy=(6.6, yy), xytext=(5.0, yy),
                 arrowprops=dict(arrowstyle="-|>", color=RED, lw=1.8))
-a1.text(6.85, 2.9, "sigma", fontsize=12, color=RED, va="center")
-a1.text(5.0, 0.35, "(a) 正应力 sigma：垂直于截面（沿法线）\nsigma = 法向内力 / 面积",
+a1.text(6.85, 2.9, r"$\sigma$", fontsize=12, color=RED, va="center")
+a1.text(5.0, 0.35, r"(a) 正应力 $\sigma$：垂直于截面（沿法线）" + "\n" + r"$\sigma$ = 法向内力 / 面积",
         ha="center", fontsize=9.5)
 
 # (b) 切应力：平行于截面（沿截面切向，竖直）
@@ -209,8 +209,8 @@ a2.text(5.0, 5.35, "截面", ha="center", fontsize=10, color=BLUE)
 for y0 in [1.7, 3.1]:
     a2.annotate("", xy=(5.0, y0 + 1.05), xytext=(5.0, y0),
                 arrowprops=dict(arrowstyle="-|>", color=GREEN, lw=1.8))
-a2.text(5.5, 2.9, "tau", fontsize=12, color=GREEN, va="center")
-a2.text(5.0, 0.35, "(b) 切应力 tau：平行于截面（沿切向）\ntau = 切向内力 / 面积",
+a2.text(5.5, 2.9, r"$\tau$", fontsize=12, color=GREEN, va="center")
+a2.text(5.0, 0.35, r"(b) 切应力 $\tau$：平行于截面（沿切向）" + "\n" + r"$\tau$ = 切向内力 / 面积",
         ha="center", fontsize=9.5)
 
 savefig(fig, "lec01_fig2_stress")

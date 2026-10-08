@@ -100,15 +100,15 @@ a1.plot([5.0, 5.0], [0.5, 1.5], color=GREY, ls=":", lw=1.6)   # 分段位置
 # P1（左端向右）
 a1.annotate("", xy=(1.9, 1.9), xytext=(0.9, 1.9),
             arrowprops=dict(arrowstyle="-|>", color=RED, lw=2))
-a1.text(1.35, 2.15, "P1 = 30 kN", ha="center", fontsize=10, color=RED)
+a1.text(1.35, 2.15, r"$P_1 = 30$ kN", ha="center", fontsize=10, color=RED)
 # P2（中间向左）
 a1.annotate("", xy=(4.1, -0.7), xytext=(5.9, -0.7),
             arrowprops=dict(arrowstyle="-|>", color=RED, lw=2))
-a1.text(5.0, -1.15, "P2 = 80 kN", ha="center", fontsize=10, color=RED)
+a1.text(5.0, -1.15, r"$P_2 = 80$ kN", ha="center", fontsize=10, color=RED)
 # P3（右端向右）
 a1.annotate("", xy=(9.9, 1.9), xytext=(8.9, 1.9),
             arrowprops=dict(arrowstyle="-|>", color=RED, lw=2))
-a1.text(9.4, 2.15, "P3 = 50 kN", ha="center", fontsize=10, color=RED)
+a1.text(9.4, 2.15, r"$P_3 = 50$ kN", ha="center", fontsize=10, color=RED)
 a1.text(5.0, 1.55, "(a) 等直杆：三个沿轴线的集中力", ha="center", fontsize=10, weight="bold")
 
 # (b) 轴力图
@@ -121,18 +121,18 @@ a2.plot([5, 5], [N_left, N_right], color=GREY, ls="--", lw=1.4)
 a2.plot([1, 5], [N_left, N_left], "o", color=GREEN, ms=5)
 a2.plot([5, 5], [N_left, N_right], "o", color=GREY, ms=4)
 a2.plot([5, 9], [N_right, N_right], "o", color=RED, ms=5)
-a2.text(3.0, N_left + 6, "N = +30 kN（拉）", ha="center", fontsize=10, color=GREEN)
-a2.text(7.0, N_right - 14, "N = -50 kN（压）", ha="center", fontsize=10, color=RED)
-a2.annotate("突变 = P2", xy=(5, 0), xytext=(5.9, 6),
+a2.text(3.0, N_left + 6, r"$N = +30$ kN（拉）", ha="center", fontsize=10, color=GREEN)
+a2.text(7.0, N_right - 14, r"$N = -50$ kN（压）", ha="center", fontsize=10, color=RED)
+a2.annotate(r"突变 = $P_2$", xy=(5, 0), xytext=(5.9, 6),
             fontsize=9.5, color=GREY,
             arrowprops=dict(arrowstyle="->", color=GREY, lw=1))
 a2.set_xlim(0, 10.5)
 a2.set_ylim(-70, 50)
 a2.set_xlabel("截面位置 x", fontsize=10)
-a2.set_ylabel("轴力 N / kN", fontsize=10)
+a2.set_ylabel(r"轴力 $N$ / kN", fontsize=10)
 a2.set_title("(b) 轴力图：内力随截面变化，集中力处跳变", fontsize=10.5, weight="bold")
 a2.set_xticks([1, 5, 9])
-a2.set_xticklabels(["左端", "P2", "右端"], fontsize=9)
+a2.set_xticklabels(["左端", r"$P_2$", "右端"], fontsize=9)
 
 savefig(fig, "lec02_fig1_axial_diagram")
 
@@ -183,32 +183,32 @@ a1.plot([2.6, 3.9], [2.0, 4.0], color=RED, lw=2.0)
 a1.text(3.85, 4.15, "斜截面", ha="left", fontsize=9.5, color=RED)
 # 夹角 arc（两线交点约 (3.2, 2.923)）
 a1.add_patch(Arc((3.2, 2.923), 1.3, 1.3, theta1=57, theta2=90, color=GREEN, lw=1.6))
-a1.text(3.42, 3.12, "alpha", fontsize=10, color=GREEN)
+a1.text(3.42, 3.12, r"$\alpha$", fontsize=10, color=GREEN)
 # 斜截面上的应力方向示意（M 为斜线上一点）
 mx, my = 3.25, 3.0
 a1.annotate("", xy=(mx + 0.84, my - 0.55), xytext=(mx, my),
             arrowprops=dict(arrowstyle="-|>", color=RED, lw=1.8))
-a1.text(mx + 1.0, my - 0.78, "sigma_a", fontsize=10, color=RED)
+a1.text(mx + 1.0, my - 0.78, r"$\sigma_\alpha$", fontsize=10, color=RED)
 a1.annotate("", xy=(mx + 0.44, my + 0.67), xytext=(mx, my),
             arrowprops=dict(arrowstyle="-|>", color=GREEN, lw=1.8))
-a1.text(mx + 0.5, my + 0.8, "tau_a", fontsize=10, color=GREEN)
-a1.text(3.7, 1.15, "(a) 斜截面与横截面成 alpha 角", ha="center", fontsize=10, weight="bold")
+a1.text(mx + 0.5, my + 0.8, r"$\tau_\alpha$", fontsize=10, color=GREEN)
+a1.text(3.7, 1.15, r"(a) 斜截面与横截面成 $\alpha$ 角", ha="center", fontsize=10, weight="bold")
 
 # (b) sigma_a、tau_a 随 alpha 的变化曲线
 deg = np.linspace(0, 180, 361)
 a = np.deg2rad(deg)
-a2.plot(deg, 100 * np.cos(a) ** 2, color=RED, lw=2, label="sigma_a = sigma*cos^2(alpha)")
-a2.plot(deg, 50 * np.sin(2 * a), color=GREEN, lw=2, label="tau_a = (sigma/2)*sin(2 alpha)")
+a2.plot(deg, 100 * np.cos(a) ** 2, color=RED, lw=2, label=r"$\sigma_\alpha = \sigma\cos^2\alpha$")
+a2.plot(deg, 50 * np.sin(2 * a), color=GREEN, lw=2, label=r"$\tau_\alpha = \frac{\sigma}{2}\sin 2\alpha$")
 a2.axhline(0, color=GREY, lw=0.8)
 a2.axvline(45, color=GREY, ls=":", lw=1)
 a2.plot([45], [50], "o", color=GREEN, ms=6)
-a2.text(47, 52, "tau_max = sigma/2\n(alpha = 45 deg)", fontsize=9, color=GREEN)
+a2.text(47, 52, r"$\tau_{\max} = \sigma/2$" + "\n" + r"($\alpha = 45$ deg)", fontsize=9, color=GREEN)
 a2.plot([0], [100], "o", color=RED, ms=6)
-a2.text(3, 92, "sigma_max = sigma\n(alpha = 0)", fontsize=9, color=RED)
+a2.text(3, 92, r"$\sigma_{\max} = \sigma$" + "\n" + r"($\alpha = 0$)", fontsize=9, color=RED)
 a2.set_xlim(0, 180)
 a2.set_ylim(-60, 115)
-a2.set_xlabel("alpha / deg", fontsize=10)
-a2.set_ylabel("应力 / MPa（取 sigma = 100 MPa）", fontsize=10)
+a2.set_xlabel(r"$\alpha$ / deg", fontsize=10)
+a2.set_ylabel(r"应力 / MPa（取 $\sigma = 100$ MPa）", fontsize=10)
 a2.set_title("(b) 斜截面应力随角度变化", fontsize=10.5, weight="bold")
 a2.legend(fontsize=8.5, loc="lower center")
 
