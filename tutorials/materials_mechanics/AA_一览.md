@@ -91,6 +91,54 @@
 | 空心轴 | hollow shaft | 内径 $d_0$、外径 $D$ 的圆环截面轴；$I_p=\pi(D^4-d_0^4)/32$；把低应力材料移到外缘 | 第 06 讲 | 要会算、会比较 |
 | 内外径比 | ratio of inner to outer diameter（α） | $\alpha=d_0/D$；衡量空心轴的"挖空程度" | 第 06 讲 | 认识 |
 | 翘曲 | warping | 非圆截面扭转后横截面不再保持平面、发生凹凸的现象（非圆不能用圆轴公式的根本原因） | 第 06 讲（认识层） | 知道 |
+| 静矩 | first moment of area（S_z） | 面积对某轴的面积矩：$S_z=\int_A y\,\mathrm{d}A$；对形心轴的静矩为零 | 第 07 讲 | 要会算 |
+| 形心 | centroid（C） | 截面的几何中心：$y_c=S_z/A=\int_A y\,\mathrm{d}A/A$；组合截面 $y_c=\sum A_iy_i/\sum A_i$ | 第 07 讲 | 要会求 |
+| 惯性矩 | second moment of area（I_z、I_y） | 面积乘以其到轴距离平方的积分：$I_z=\int_A y^2\,\mathrm{d}A$；恒正，描述抗弯能力 | 第 07 讲 | 要会算 |
+| 惯性半径 | radius of gyration（i） | $i=\sqrt{I/A}$，把惯性矩折算成的一个长度 | 第 07 讲 | 要会算 |
+| 平行移轴定理 | parallel-axis theorem | $I_z=I_{z_c}+a^2 A$（从形心轴移向平行轴）；矩形对底边 $bh^3/3$ | 第 07 讲 | 要会用、会推导 |
+| 惯性积 | product of inertia（I_yz） | $\int_A yz\,\mathrm{d}A$；描述截面相对坐标轴的不对称程度；转轴分析用 | 第 07 讲（认识层） | 认识 |
+| 主惯性轴 | principal axes of inertia | 使惯性积为零的一对正交轴；截面的对称轴即主惯性轴 | 第 07 讲（认识层） | 认识 |
+| 梁 | beam | 以弯曲为主要变形的杆件；常见简支/悬臂/外伸梁 | 第 08 讲 | 识别 |
+| 简支梁 | simply supported beam | 一端铰支、一端滚支的梁（静定） | 第 08 讲 | 识别 |
+| 悬臂梁 | cantilever beam | 一端固定、另一端自由的梁 | 第 08 讲 | 识别 |
+| 剪力 | shear force（Q） | 横截面内垂直于梁轴线的内力；使微元顺时针转动为正（左上右下） | 第 08 讲 | 要会算、会定号 |
+| 弯矩 | bending moment（M） | 横截面内的内力偶；使梁下凸（下部受拉）为正 | 第 08 讲 | 要会算、会定号 |
+| 剪力图 | shear force diagram | 沿梁长表示剪力 $Q(x)$ 的图；集中力处突变 | 第 08 讲 | 要会作 |
+| 弯矩图 | bending moment diagram | 沿梁长表示弯矩 $M(x)$ 的图；$Q=0$ 处取极值 | 第 08 讲 | 要会作 |
+| 分布载荷 | distributed load（q） | 沿梁长连续分布的载荷（如自重），单位 N/m | 第 08 讲 | 识别 |
+| 控制截面法 | control-section method | 用微分关系 + 控制截面快速作内力图的方法 | 第 08 讲 | 要会用 |
+| 纯弯曲 | pure bending | 剪力为零、弯矩为常数的梁段 | 第 09 讲 | 识别 |
+| 横力弯曲 | transverse bending | 横截面上同时有剪力与弯矩的弯曲 | 第 09 讲 | 识别 |
+| 中性轴 | neutral axis | 横截面上正应力为零的轴；过形心；弯曲正应力沿其作线性分布 | 第 09 讲 | 要会定、会用 |
+| 中性层 | neutral surface | 梁内长度不变的一层（含中性轴的纵向面） | 第 09 讲 | 识别 |
+| 弯曲正应力 | bending normal stress | 弯矩引起的横截面正应力：$\sigma=My/I_z$；正负表示拉压 | 第 09 讲 | 要会算、会判拉压 |
+| 抗弯截面系数 | section modulus in bending（W_z） | $W_z=I_z/y_{\max}$；$\sigma_{\max}=M/W_z$ | 第 09 讲 | 要会算 |
+| 弯曲切应力 | bending shear stress（τ） | 剪力引起的横截面切应力：$\tau=Q S_z^*/(I_z b)$；中性轴最大、外缘为零 | 第 10 讲 | 要会算 |
+| 面积静矩 S_z* | first moment of area of the cut-off part | 所求点以外（切到边缘）那部分面积对中性轴的静矩；随所求点位置变化 | 第 10 讲 | 要会算 |
+| 挠度 | deflection（w） | 梁横截面形心沿竖向的位移；本课取向上为正（下挠为负，工程常指其大小） | 第 11 讲 | 要会算 |
+| 转角 | slope / angle of rotation（θ） | 横截面绕自身转过的角：$\theta=\mathrm{d}w/\mathrm{d}x$ | 第 11 讲 | 要会算 |
+| 挠曲线 | deflection curve | 梁变形后轴线弯成的曲线 | 第 11 讲 | 识别 |
+| 挠曲线近似微分方程 | approximate differential equation of the deflection curve | $EI_z\,w''=M(x)$；适用线弹性 + 小变形 | 第 11 讲 | 要会用 |
+| 边界条件 / 连续条件 | boundary / continuity conditions | 定积分常数的物理条件（支座处 $w$、$w'$；分段处 $w$、$w'$ 连续） | 第 11 讲 | 要会用 |
+| 叠加法（求挠度） | method of superposition | 多载荷时分别求挠度再相加（前提：线弹性、小变形） | 第 11 讲 | 要会用 |
+| 静定 | statically determinate | 未知反力数 = 独立平衡方程数的结构，反力可由平衡唯一求出 | 第 12 讲 | 识别 |
+| 超静定 | statically indeterminate | 未知反力数 > 平衡方程数；反力还依赖刚度 | 第 12 讲 | 要能判断 |
+| 多余约束 | redundant constraint | 超出维持平衡所必需的约束 | 第 12 讲 | 要能识别 |
+| 超静定次数 | degree of static indeterminacy | 多余约束数 = 反力数 − 平衡方程数 | 第 12 讲 | 要会数 |
+| 静定基 | primary (determinate) structure | 去掉多余约束后得到的静定结构；变形比较法的分析对象 | 第 12 讲 | 要会取 |
+| 变形比较法 | method of deformation comparison | 用"静力平衡 + 变形协调 + 物理关系"解超静定的方法 | 第 12 讲 | 要会用 |
+| 变形协调条件 | deformation compatibility condition | 多余约束处位移须满足的实际条件（常为"位移为零"） | 第 12 讲 | 要会写 |
+| 温度应力 | thermal stress | 温度变化被约束阻止而产生的应力：$\sigma=-E\alpha\Delta T$ | 第 12 讲 | 要会算 |
+| 装配应力 | assembly stress | 尺寸误差强制装配引起的应力：$\sigma=E\delta/L$ | 第 12 讲 | 要会算 |
+| 线膨胀系数 | coefficient of linear thermal expansion（α） | 单位温升引起的单位长度伸长，单位 $1/^\circ\mathrm{C}$ | 第 12 讲 | 会用 |
+| 一点的应力状态 | stress state at a point | 过一点所有方向截面上应力的总称；由单元体描述 | 第 13 讲 | 要理解 |
+| 单元体 | infinitesimal element | 围绕一点取的无穷小正六面体，用以表示应力状态 | 第 13 讲 | 要会画 |
+| 平面应力状态 | plane stress state | 单元体仅有两个方向正应力与一个切应力（$\sigma_x,\sigma_y,\tau_{xy}$）的状态 | 第 13 讲 | 要会判 |
+| 斜截面应力 σ_α、τ_α | stresses on an inclined plane | 法线与 $x$ 成 $\alpha$ 的截面上的正应力与切应力 | 第 13 讲 | 要会算 |
+| 主平面 | principal plane | 切应力为零的截面 | 第 13 讲 | 要会定 |
+| 主应力 | principal stress | 主平面上的正应力 $\sigma_1$、$\sigma_2$（一点的正应力极值） | 第 13 讲 | 要会算 |
+| 最大切应力 | maximum shear stress（τ_max） | 一点的最大切应力 $\tau_{\max}=R=(\sigma_1-\sigma_2)/2$，与主平面成 45° | 第 13 讲 | 要会算 |
+| 应力圆（莫尔圆） | Mohr's circle | 以 $(C,0)$ 为圆心、$R$ 为半径的圆；点与斜截面一一对应（转 2α） | 第 13 讲 | 要会用 |
 
 ## 二、公式
 
@@ -132,3 +180,33 @@
 | 空心圆环：$I_p = \dfrac{\pi(D^4-d_0^4)}{32}$；$W_t = \dfrac{\pi(D^4-d_0^4)}{16D}$ | $D$ 外径、$d_0$ 内径、$\alpha=d_0/D$ | 空心圆轴截面量 | 第 06 讲 |
 | 矩形截面：$\tau_{\max}=\dfrac{T}{\alpha h b^2}$、$\varphi=\dfrac{TL}{G\beta h b^3}$ | $\alpha$、$\beta$ 随高宽比 $h/b$ 查表 | 非圆截面扭转（认识层） | 第 06 讲 |
 | 薄壁管：$\tau = \dfrac{T}{2A_0 t}$ | $A_0$ 中线所围面积、$t$ 壁厚 | 薄壁截面扭转（认识层） | 第 06 讲 |
+| $S_z = \int_A y\,\mathrm{d}A$；$y_c = S_z/A$ | 面积对轴的一次矩 | 静矩与形心定义 | 第 07 讲 |
+| $y_c = \dfrac{\sum A_i y_i}{\sum A_i}$ | $A_i$ 分块面积、$y_i$ 其形心坐标（到参考轴） | 组合截面形心 | 第 07 讲 |
+| $I_z = \int_A y^2\,\mathrm{d}A$ | 惯性矩定义 | 抗弯能力度量 | 第 07 讲 |
+| $i = \sqrt{I/A}$ | 惯性半径 | 惯性矩折算成长度的关系 | 第 07 讲 |
+| $I_p = I_z + I_y$ | 极惯性矩与两方向惯性矩 | 极惯性矩关系 | 第 07 讲 |
+| 矩形：$I_z=\dfrac{bh^3}{12}$、$W_z=\dfrac{bh^2}{6}$；圆：$I_z=\dfrac{\pi d^4}{64}$、$W_z=\dfrac{\pi d^3}{32}$ | $b,h$ 宽高、$d$ 直径 | 常见截面惯性矩与抗弯截面系数 | 第 07 讲 |
+| 圆环：$I_z=\dfrac{\pi(D^4-d_0^4)}{64}$ | $D$ 外径、$d_0$ 内径 | 圆环截面 | 第 07 讲 |
+| $I_z = I_{z_c} + a^2 A$ | $a$ 两平行轴间距、$I_{z_c}$ 对形心轴 | 平行移轴定理（只从形心轴出发） | 第 07 讲 |
+| $\dfrac{\mathrm{d}Q}{\mathrm{d}x}=q$；$\dfrac{\mathrm{d}M}{\mathrm{d}x}=Q$ | 载荷集度 $q$、剪力 $Q$、弯矩 $M$ | 载荷-剪力-弯矩微分关系 | 第 08 讲 |
+| 简支梁：中点集中力 $M_{\max}=\dfrac{PL}{4}$；任意位置 $\dfrac{Pab}{L}$ | $P$ 集中力、$a,b$ 距两端、$L$ 跨度 | 简支梁受集中力 | 第 08 讲 |
+| 简支梁均布：$M_{\max}=\dfrac{qL^2}{8}$ | $q$ 均布载荷、$L$ 跨度 | 简支梁受均布载荷（跨中） | 第 08 讲 |
+| 悬臂梁端部集中力：$M_{\max}=PL$ | $P$ 端部集中力、$L$ 悬臂长 | 悬臂梁（固定端） | 第 08 讲 |
+| $\sigma = \dfrac{My}{I_z}$ | $M$ 弯矩、$y$ 到中性轴距离、$I_z$ 惯性矩 | 梁弯曲正应力（线弹性、小变形） | 第 09 讲 |
+| $\sigma_{\max} = \dfrac{M}{W_z}$ | $W_z=I_z/y_{\max}$ 抗弯截面系数 | 危险点（离中性轴最远处） | 第 09 讲 |
+| $\dfrac{1}{\rho} = \dfrac{M}{E I_z}$ | $\rho$ 中性层曲率半径 | 纯弯曲（挠曲线曲率，11 讲用） | 第 09 讲 |
+| $\int_A \sigma\,\mathrm{d}A = 0 \Rightarrow$ 中性轴过形心 | 正应力合成的轴力为零 | 纯弯曲静力关系 | 第 09 讲 |
+| $\tau = \dfrac{Q S_z^*}{I_z b}$ | $Q$ 剪力、$S_z^*$ 所求点以外面积的静矩、$b$ 该处宽度 | 弯曲切应力 | 第 10 讲 |
+| 矩形：$\tau_{\max}=\dfrac{3Q}{2A}$；圆：$\tau_{\max}=\dfrac{4Q}{3A}$ | $A$ 截面面积 | 最大弯曲切应力（中性轴处） | 第 10 讲 |
+| $\tau_{\max} \le [\tau]$ | $[\tau]$ 许用切应力 | 弯曲切应力强度条件 | 第 10 讲 |
+| $EI_z\,w'' = M(x)$ | $w$ 挠度（本课向上为正）、$M$ 弯矩 | 挠曲线近似微分方程（线弹性、小变形） | 第 11 讲 |
+| 简支跨中 $w_{\max}=\dfrac{PL^3}{48EI_z}$；简支均布 $\dfrac{5qL^4}{384EI_z}$；悬臂端 $\dfrac{PL^3}{3EI_z}$ | 记其大小 $\lvert w\rvert$ | 常见梁最大挠度 | 第 11 讲 |
+| $w_{\max}\le[w]$；$\theta_{\max}\le[\theta]$ | $[w]$、$[\theta]$ 许用挠度与转角 | 弯曲刚度条件 | 第 11 讲 |
+| 一次超静定梁（固支+简支，均布 $q$）：$R_B=\dfrac{3qL}{8}$；$M_{\text{固定}}=-\dfrac{qL^2}{8}$ | $R_B$ 多余约束反力、$M$ 固定端弯矩 | 变形比较法典型结果 | 第 12 讲 |
+| 拉压超静定（两端固定杆受 $P$）：$R_1=\dfrac{Pb}{L}$、$R_2=\dfrac{Pa}{L}$ | $a,b$ 加载点到两端距离 | 两端固定杆轴向载荷 | 第 12 讲 |
+| $\sigma = -E\alpha\,\Delta T$ | $\alpha$ 线膨胀系数、$\Delta T$ 温升 | 温度应力（两端固定） | 第 12 讲 |
+| $\sigma = E\dfrac{\delta}{L}$ | $\delta$ 装配误差、$L$ 原长 | 装配应力 | 第 12 讲 |
+| $\sigma_\alpha = C + A\cos 2\alpha - B\sin 2\alpha$；$\tau_\alpha = A\sin 2\alpha + B\cos 2\alpha$ | $C=\dfrac{\sigma_x+\sigma_y}{2}$、$A=\dfrac{\sigma_x-\sigma_y}{2}$、$B=\tau_{xy}$ | 平面应力斜截面应力 | 第 13 讲 |
+| $\sigma_{1,2} = \dfrac{\sigma_x+\sigma_y}{2} \pm \sqrt{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2 + \tau_{xy}^2}$ | 写为 $C\pm R$，$R$ 即应力圆半径 | 主应力 | 第 13 讲 |
+| $\tau_{\max} = R = \dfrac{\sigma_1-\sigma_2}{2}$ | — | 最大切应力 | 第 13 讲 |
+| $\tan 2\alpha_p = -\dfrac{2\tau_{xy}}{\sigma_x-\sigma_y}$ | $\alpha_p$ 主平面方向 | 主平面方位 | 第 13 讲 |
