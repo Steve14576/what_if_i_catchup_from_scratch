@@ -84,6 +84,18 @@ print("        (设计截面) N=%.0f kN -> A >= N/[sigma] = %.1f mm^2" % (N2 / 1
 A3 = 200.0
 print("        (求许用载荷) A=%.0f mm^2 -> N <= [sigma]*A = %.1f kN" % (A3, sg_allow * A3 / 1e3))
 
+# EXP5 变截面（多段）杆的变形 deltaL = sum(N_i*L_i/(E_i*A_i))
+E5 = 2.0e5
+segs = [(30.0e3, 300.0, 200.0), (50.0e3, 200.0, 100.0)]   # (N_i, L_i, A_i)
+print("  EXP5 变截面杆变形（E = %.0f MPa）：" % E5)
+dL_sum = 0.0
+for k, (Ni, Li, Ai) in enumerate(segs, 1):
+    dli = Ni * Li / (E5 * Ai)
+    dL_sum += dli
+    print("        第 %d 段：N=%.0f kN, L=%.0f mm, A=%.0f mm^2 -> deltaL = %.4f mm"
+          % (k, Ni / 1e3, Li, Ai, dli))
+print("        总伸长 deltaL = sum = %.4f mm" % dL_sum)
+
 
 # ---------------------------------------------------------------------
 print()

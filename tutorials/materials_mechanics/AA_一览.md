@@ -53,6 +53,7 @@
 | 弹性模量 | elastic modulus（Young's modulus, E） | $\sigma=E\varepsilon$ 中的比例常数；材料的"硬"度指标，越大越难变形；单位 MPa | 第 03 讲 | 要能复述、会用 |
 | 拉压刚度 | tensile stiffness（EA） | 弹性模量与横截面积的乘积，衡量杆抵抗拉压变形的能力；越大越难拉长 | 第 03 讲 | 要能解释 |
 | 泊松比 | Poisson's ratio（μ） | 横向线应变与轴向线应变之比取正：$\varepsilon'=-\mu\varepsilon$；各向同性材料 $0<\mu<0.5$，金属约 0.25~0.35 | 第 03 讲 | 要会算横向变形 |
+| 体积应变 | volumetric strain（θ） | 单位体积的相对变化（三向线应变之和）；单向拉伸 $\theta=\frac{1-2\mu}{E}\sigma$，$\mu=0.5$（不可压缩）时 $\theta=0$ | 第 03 讲（引）、第 14 讲（正式） | 第 03 讲知道上界来历；第 14 讲展开 |
 | 比例极限 | proportional limit（σ_p） | $\sigma$ 与 $\varepsilon$ 保持正比（胡克定律成立）的上限应力 | 第 03 讲 | 要能识别 |
 | 弹性极限 | elastic limit（σ_e） | 卸载后变形完全恢复的上限应力；与 $\sigma_p$ 相近 | 第 03 讲 | 识别 |
 | 屈服极限 | yield limit（yield strength, σ_s） | 屈服阶段对应的应力（应力不增、应变猛增）；塑性材料的强度指标 | 第 03 讲 | 要能识别、会取值 |
@@ -64,6 +65,25 @@
 | 极限应力 | ultimate stress（σ_u） | 材料能承受的极限应力取值：塑性材料取 $\sigma_s$、脆性材料取 $\sigma_b$ | 第 03 讲 | 要能取值 |
 | 许用应力 | allowable stress（[σ]） | 极限应力折减安全系数后的允许应力：$[\sigma]=\sigma_u/n$ | 第 03 讲 | 要会算 |
 | 安全系数 | factor of safety（n） | 大于 1 的折减系数，覆盖载荷估计误差、材料不均匀、计算简化等不确定因素 | 第 03 讲 | 要能复述作用 |
+| 连接件 | connector / fastener | 用来连接两个零件的构件（铆钉、螺栓、键、销）；主要发生剪切与挤压破坏 | 第 04 讲 | 识别 |
+| 剪切 | shear | 一对相距很近、方向相反的外力使构件相邻截面相互错动的受力形式 | 第 04 讲 | 要能复述 |
+| 剪切面 | shear plane | 连接件内部被剪开的横截面（单剪 1 个、双剪 2 个） | 第 04 讲 | 要会辨认、数清 |
+| 名义切应力 | nominal shear stress（τ） | 剪力除以剪切面面积的平均切应力：$\tau=Q/A_s$ | 第 04 讲 | 要会算 |
+| 挤压 | bearing | 连接件与孔壁（或被连接件）接触面上被局部压溃的现象 | 第 04 讲 | 要能复述 |
+| 挤压面 | bearing surface | 连接件与被连接件的接触面（圆铆钉为半圆柱面） | 第 04 讲 | 要会辨认 |
+| 名义挤压应力 | nominal bearing stress（σ_bs） | 挤压力除以投影面积的平均挤压应力：$\sigma_{bs}=F/(d\,t)$ | 第 04 讲 | 要会算 |
+| 实用计算 | engineering / practical calculation | 用简单统一的名义口径（平均应力、投影面积）替代复杂精确分析的工程方法 | 第 04 讲 | 要能解释其含义与边界 |
+| 单剪 / 双剪 | single / double shear | 连接件受剪截面数为 1 / 2 的接头形式 | 第 04 讲 | 要会区分 |
+| 平键 | parallel key（flat key） | 嵌在轴与轮毂键槽间、靠侧面传递扭矩的连接件；受剪切与挤压 | 第 04 讲 | 要会算 |
+| 外力偶矩 | applied torque（M） | 作用在轴上、绕轴线方向的力偶矩；与功率、转速由 $M=9550P/n$ 联系 | 第 05 讲 | 要会换算 |
+| 扭矩 | torque（T） | 横截面上的内力偶矩（绕轴线的内力偶矩）；符号用右手螺旋定 | 第 05 讲 | 要会求、会定号 |
+| 扭矩图 | torque diagram | 沿轴长表示各截面扭矩 $T$ 的图；集中外力偶矩处突变，跳跃量等于该处外力偶矩 | 第 05 讲 | 要会作 |
+| 圆轴扭转 | torsion of a circular shaft | 外力偶矩绕轴线使圆轴各横截面绕轴相对转动的变形 | 第 05 讲 | 识别 |
+| 剪切胡克定律 | Hooke's law in shear | 线弹性范围内切应力与切应变成正比：$\tau=G\gamma$ | 第 05 讲 | 要能复述、会用 |
+| 剪切模量 | shear modulus（G） | $\tau=G\gamma$ 中的比例常数（材料常数）；$G=E/[2(1+\mu)]$ | 第 05 讲 | 要能复述 |
+| 极惯性矩 | polar moment of inertia（I_p） | 横截面对形心的 $\int\rho^2\,\mathrm{d}A$；实心圆 $I_p=\pi d^4/32$ | 第 05 讲 | 要会算 |
+| 抗扭截面系数 | torsional section modulus（W_t） | $I_p/(d/2)$；实心圆 $W_t=\pi d^3/16$；$\tau_{\max}=T/W_t$ | 第 05 讲 | 要会算 |
+| 纯剪切应力状态 | pure shear stress state | 只有切应力、没有正应力的应力状态（切应力互等的直接结果） | 第 05 讲（引） | 知道；第 13 讲展开 |
 
 ## 二、公式
 
@@ -80,9 +100,22 @@
 | $\left(\sigma_\alpha-\dfrac{\sigma}{2}\right)^2+\tau_\alpha^2=\left(\dfrac{\sigma}{2}\right)^2$ | 斜截面上的应力分量 $(\sigma_\alpha,\tau_\alpha)$ | 恒成立；几何意义是第 13 讲应力圆的雏形 | 第 02 讲 |
 | $K = \dfrac{\sigma_{\max}}{\sigma_{\text{名义}}}$ | $\sigma_{\max}$ 为峰值应力，$\sigma_{\text{名义}}$ 为净截面平均应力 | 应力集中度量；通常 $K>1$ | 第 02 讲（认识层） |
 | $\sigma = E\varepsilon$ | $E$ 为弹性模量（MPa） | 线弹性范围（$\sigma\le\sigma_p$） | 第 03 讲 |
-| $\Delta L = \dfrac{N L}{E A}$（**模板**：先定轴力 $N$，再代 $E$、$A$、$L$） | $N$ 轴力、$L$ 原长、$E$ 弹性模量、$A$ 横截面积（$EA$ 为拉压刚度） | 线弹性范围 | 第 03 讲 |
+| $\Delta L = \dfrac{N L}{E A}$（**模板**：先定轴力 $N$，再代 $E$、$A$、$L$） | $N$ 轴力、$L$ 原长、$E$ 弹性模量、$A$ 横截面积（$EA$ 为拉压刚度） | 线弹性范围；等截面、单一轴力 | 第 03 讲 |
+| $\Delta L = \sum_i \dfrac{N_i L_i}{E_i A_i}$（连续变力时 $\Delta L=\int_0^L\frac{N(x)}{EA(x)}\mathrm{d}x$） | 第 $i$ 段轴力 $N_i$、长度 $L_i$、面积 $A_i$ | 线弹性范围；变截面/多段杆（各段带符号相加） | 第 03 讲 |
 | $\varepsilon' = -\mu\,\varepsilon$ | $\mu$ 泊松比，$\varepsilon'$ 横向线应变 | 线弹性、各向同性 | 第 03 讲 |
 | $[\sigma] = \dfrac{\sigma_u}{n}$ | $\sigma_u$ 极限应力（塑性取 $\sigma_s$、脆性取 $\sigma_b$），$n$ 安全系数 | 许用应力的定义 | 第 03 讲 |
 | $\sigma_{\max} = \dfrac{N}{A} \le [\sigma]$（**模板**：算工作应力，与许用应力比大小） | $N$ 为危险截面轴力 | 轴向拉压强度条件 | 第 03 讲 |
 | $A \ge \dfrac{N}{[\sigma]}$ | 设计截面时所需最小面积 | 轴向拉压、已知 $N$ 与 $[\sigma]$ | 第 03 讲 |
 | $N \le [\sigma]\,A$ | 已知 $A$ 与 $[\sigma]$ 时的最大允许轴力 | 轴向拉压、求许用载荷 | 第 03 讲 |
+| $\tau = \dfrac{Q}{A_s} \le [\tau]$（**模板**：先定剪切面与剪切面数，再算名义切应力与许用值比较） | $Q$ 为剪力、$A_s$ 为剪切面面积 | 剪切实用计算 | 第 04 讲 |
+| $A_s = \dfrac{\pi d^2}{4}$（单剪）；双剪 $A_s = 2\cdot\dfrac{\pi d^2}{4}$ | $d$ 为圆截面连接件直径 | 圆截面连接件的剪切面面积 | 第 04 讲 |
+| $\sigma_{bs} = \dfrac{F}{A_{bs}} = \dfrac{F}{d\,t} \le [\sigma_{bs}]$ | $F$ 为挤压力、$d$ 直径、$t$ 被挤压件厚度 | 挤压实用计算（投影面积口径） | 第 04 讲 |
+| $F = \dfrac{2T}{D}$ | $T$ 为扭矩、$D$ 为轴径（键传递的圆周力） | 平键受力 | 第 04 讲 |
+| 键：$A_s = b\,l$；$A_{bs} = l\,\dfrac{h}{2}$ | $b$ 键宽、$h$ 键高、$l$ 键长 | 平键的剪切面与挤压面 | 第 04 讲 |
+| $M = 9550\,\dfrac{P}{n}$ | $P$ 功率（kW）、$n$ 转速（r/min） | 功率、转速换算外力偶矩 | 第 05 讲 |
+| $\tau = G\gamma$ | $G$ 剪切模量、$\gamma$ 切应变 | 剪切胡克定律（线弹性） | 第 05 讲 |
+| $\tau_\rho = \dfrac{T\rho}{I_p}$ | $T$ 扭矩、$\rho$ 到轴心距离、$I_p$ 极惯性矩 | 圆轴扭转切应力（沿半径线性分布） | 第 05 讲 |
+| $\tau_{\max} = \dfrac{T}{W_t}$ | $W_t$ 抗扭截面系数 | 圆轴表面最大切应力 | 第 05 讲 |
+| $I_p = \dfrac{\pi d^4}{32}$；$W_t = \dfrac{\pi d^3}{16}$ | $d$ 圆轴直径 | 实心圆截面 | 第 05 讲 |
+| $\gamma = \rho\,\dfrac{\mathrm{d}\varphi}{\mathrm{d}x}$ | $\mathrm{d}\varphi/\mathrm{d}x$ 单位长度扭转角 | 圆轴扭转切应变 | 第 05 讲 |
+| $G = \dfrac{E}{2(1+\mu)}$ | $E$ 弹性模量、$\mu$ 泊松比 | 各向同性材料弹性常数关系（第 14 讲推导） | 第 05 讲（引） |
