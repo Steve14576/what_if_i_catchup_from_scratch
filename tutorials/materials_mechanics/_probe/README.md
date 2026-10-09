@@ -5,7 +5,7 @@
 > 复跑：`uv run --with numpy --with matplotlib python _probe/mathtext_probe.py`（秒级）。
 > 环境：2026-10-08，Windows，Python stdout 编码 = **gbk**，matplotlib **Agg** 后端，`svg.fonttype = "path"`。
 
-## 结论（六条）
+## 结论（八条）
 
 | # | 断言 | 症状 / 依据 | 规则 |
 |---|---|---|---|
@@ -15,6 +15,8 @@
 | 4 | **`$` 未配对（多/少一个）→ 不报错**，整串按字面显示 | `_unmatched_dollar.png` 把 `坏串 $ \sigma` 原样显示（`\sigma` 未解析）——**静默错误，比报错更坑** | 交付前数 `$`，必须成对（偶数） |
 | 5 | SVG（`fonttype=path`）**零字体依赖** | 探针 E：输出 SVG 里 `font-family` 出现 **0** 次、`<path` 143 个（含 mathtext 也转路径） | SVG 可直接分发，查看方无需装字体 |
 | 6 | GBK 控制台能打印的符号有限 | `stdout=gbk`：希腊字母 σ τ α Δ φ、`°`、`≤`、`→` **可编码**；但 `₁ ²` 等**上下标 unicode 不可编码**（`UnicodeEncodeError`） | `print` 保持 ASCII 转写，尤其**不要打印上下标 unicode** |
+| 7 | **mathtext 不支持 `\le` / `\ge` 简写 → 硬报错** | 第 16 讲绘图实测：mathtext 里用 `\le` 构造"绝对值不等式"时，savefig 渲染抛 `ValueError: ParseFatalException: Unknown symbol: \le`（图完全出不来）；改用 `\leq` / `\geq` 后正常 | mathtext 内不等式**一律写 `\leq` / `\geq`**（md 正文可用 `\le`，matplotlib 图内不可） |
+| 8 | **mathtext 不支持 `\displaystyle` → 硬报错** | 第 18 讲绘图实测：`$\displaystyle\int...$` 在 savefig 渲染时抛 `ParseFatalException: Unknown symbol: \displaystyle`；去掉后正常 | mathtext 内不要写 `\displaystyle`（`\dfrac`、`\int` 本身可用，积分号大小由字体自身决定） |
 
 ## 最该记住的两条
 

@@ -139,6 +139,63 @@
 | 主应力 | principal stress | 主平面上的正应力 $\sigma_1$、$\sigma_2$（一点的正应力极值） | 第 13 讲 | 要会算 |
 | 最大切应力 | maximum shear stress（τ_max） | 一点的最大切应力 $\tau_{\max}=R=(\sigma_1-\sigma_2)/2$，与主平面成 45° | 第 13 讲 | 要会算 |
 | 应力圆（莫尔圆） | Mohr's circle | 以 $(C,0)$ 为圆心、$R$ 为半径的圆；点与斜截面一一对应（转 2α） | 第 13 讲 | 要会用 |
+| 三向应力状态 | triaxial stress state | 三个方向都有应力（主应力 $\sigma_1\ge\sigma_2\ge\sigma_3$）的应力状态 | 第 14 讲 | 要会判 |
+| 广义胡克定律 | generalized Hooke's law | 三向应力下应变与应力的关系：$\varepsilon_x=[\sigma_x-\mu(\sigma_y+\sigma_z)]/E$ 等 | 第 14 讲 | 要会用 |
+| 体积应变 | volumetric strain（θ） | 单位体积的体积改变：$\theta=\varepsilon_x+\varepsilon_y+\varepsilon_z$ | 第 14 讲 | 要会算 |
+| 弹性常数关系 E-G-μ | relation among elastic constants | 各向同性材料只有两个独立弹性常数：$G=E/[2(1+\mu)]$ | 第 14 讲 | 要会用 |
+| 平面应变 | plane strain | $\varepsilon_z=0$ 的状态（区别于平面应力） | 第 14 讲 | 识别 |
+| 体积模量 | bulk modulus | 体积应力与体积应变之比，$K=E/[3(1-2\mu)]$ | 第 14 讲 | 认识 |
+| 强度理论 | strength theory | 用破坏原因假设把复杂应力折算为相当应力的判据体系 | 第 15 讲 | 要理解 |
+| 相当应力 | equivalent stress（σ_r） | 按强度理论折算出的等效单向应力；判据 $\sigma_r\le[\sigma]$ | 第 15 讲 | 要会算 |
+| 第一强度理论 | maximum normal stress theory | 最大拉应力理论：$\sigma_{r1}=\sigma_1$（脆性断裂） | 第 15 讲 | 要会算 |
+| 第二强度理论 | maximum normal strain theory | 最大伸长线应变理论：$\sigma_{r2}=\sigma_1-\mu(\sigma_2+\sigma_3)$（脆性） | 第 15 讲 | 要会算 |
+| 第三强度理论 | maximum shear stress theory | 最大切应力理论：$\sigma_{r3}=\sigma_1-\sigma_3$（塑性屈服；最保守） | 第 15 讲 | 要会算 |
+| 第四强度理论 | distortion energy theory | 畸变能密度理论：$\sigma_{r4}=\sqrt{\frac{1}{2}\sum(\sigma_i-\sigma_j)^2}$（塑性；更精确） | 第 15 讲 | 要会算 |
+| 薄壁圆筒 | thin-walled cylinder | 受内压的薄壁容器：$\sigma_\theta=\dfrac{pD}{2t}$、$\sigma_z=\dfrac{pD}{4t}$（二向应力状态） | 第 15 讲 | 要会算 |
+| 组合变形 | combined loading | 两种以上基本变形同时出现的变形形式 | 第 16 讲 | 要会处理 |
+| 偏心拉压 | eccentric axial loading | 轴力偏离形心的拉压；等效为轴力 + 弯矩 | 第 16 讲 | 要会算 |
+| 截面核心 | core of a section | 偏心力作用点落于其中时全截面不出现拉应力的区域 | 第 16 讲 | 要会定 |
+| 斜弯曲 | unsymmetrical (skew) bending | 载荷不过形心主轴时的两个平面弯曲叠加（认识层，取角点） | 第 16 讲 | 认识 |
+| 压杆稳定 | column stability | 压杆保持直线平衡形式的能力；失效形式为失稳 | 第 17 讲 | 要理解 |
+| 失稳 | buckling | 压力超过临界力时压杆突然侧向弯折 | 第 17 讲 | 要理解 |
+| 临界力 | critical load（P_cr） | 压杆由稳定转为不稳定的压力上限 | 第 17 讲 | 要会算 |
+| 长度系数 | effective length factor（μ） | 反映支座约束对临界力的影响（1 / 2 / 0.5 / 0.7） | 第 17 讲 | 要会取 |
+| 柔度 | slenderness ratio（λ） | $\lambda=\mu L/i$（长细比）；压杆稳定问题的唯一无量纲参数 | 第 17 讲 | 要会算 |
+| 大柔度 / 中柔度 / 小柔度杆 | long / intermediate / short column | 按 $\lambda$ 分类，分别用欧拉公式 / 直线公式 / 强度条件 | 第 17 讲 | 要会判 |
+| 折减系数 | reduction factor（φ） | 稳定校核的简化系数：$\sigma\le\varphi[\sigma]$ | 第 17 讲 | 会用 |
+| 应变能 | strain energy（V_ε） | 弹性体因变形储存的能量：$V_\varepsilon=\frac{1}{2}F\Delta$（缓慢加载） | 第 18 讲 | 要会算 |
+| 外力功 | work of external forces（W） | 载荷缓慢加载所做的功 $W=\frac{1}{2}F\Delta$ | 第 18 讲 | 要会算 |
+| 功的互等定理 | reciprocal work theorem | $F_1\delta_{12}=F_2\delta_{21}$ | 第 18 讲 | 要理解 |
+| 位移互等定理 | reciprocal displacement theorem | $\delta_{12}=\delta_{21}$（单位力下） | 第 18 讲 | 要会用 |
+| 单位载荷法 | unit load method | 在所求位移处加单位力，用内力图积分求位移 | 第 18 讲 | 要会用 |
+| 莫尔积分 | Mohr's integral | $\Delta=\int M\bar{M}/(EI)\,\mathrm{d}x$（梁） | 第 18 讲 | 要会算 |
+| 图形互乘法 | graphical multiplication | 莫尔积分的速算：$\Delta=\Omega\bar{M}_C/EI$（直线图形） | 第 18 讲 | 要会用 |
+| 卡氏定理 | Castigliano's theorem | $\Delta_i=\partial V_\varepsilon/\partial F_i$ | 第 18 讲 | 会用 |
+| 力法 | force method | 以多余未知力为基本未知量解超静定的方法 | 第 19 讲 | 要会用 |
+| 基本体系 | primary system | 去掉多余约束后得到的静定结构（同第 12 讲静定基） | 第 19 讲 | 要会取 |
+| 多余未知力 | redundant force（X_i） | 多余约束的作用，力法的基本未知量 | 第 19 讲 | 要会选 |
+| 柔度系数 | flexibility coefficient（δ_ij） | $X_j=1$ 时在 $i$ 方向引起的位移 | 第 19 讲 | 要会算 |
+| 自由项 | free term（Δ_iP） | 实际载荷在 $i$ 方向引起的位移 | 第 19 讲 | 要会算 |
+| 正则方程 | canonical equations | $\sum_j\delta_{ij}X_j+\Delta_{iP}=0$ 的线性方程组 | 第 19 讲 | 要会写 |
+| 半结构 | half structure | 利用对称性只取结构的一半（认识层） | 第 19 讲 | 认识 |
+| 动载荷 | dynamic load | 加载过程产生加速度或速度突变的载荷（须计入惯性） | 第 20 讲 | 要理解 |
+| 动荷系数 | dynamic factor（k_d） | 动效应与静效应之比：$\sigma_d=k_d\sigma_{st}$、$\Delta_d=k_d\Delta_{st}$ | 第 20 讲 | 要会算 |
+| 惯性力 | inertia force | 加速度引起的附加力（$ma$） | 第 20 讲 | 要理解 |
+| 突加载荷 | suddenly applied load | $h=0$ 的冲击；$k_d=2$ | 第 20 讲 | 要会算 |
+| 交变应力 | alternating stress | 随时间周期性变化的应力 | 第 21 讲 | 要理解 |
+| 应力循环 | stress cycle | 应力从最大到最小再回到最大的一个周期 | 第 21 讲 | 要会描述 |
+| 循环特征 | stress ratio（r） | $r=\sigma_{\min}/\sigma_{\max}$；对称 $-1$、脉动 $0$、静载 $+1$ | 第 21 讲 | 要会算 |
+| 平均应力 / 应力幅 | mean stress / stress amplitude | $\sigma_m=(\sigma_{\max}+\sigma_{\min})/2$；$\sigma_a=(\sigma_{\max}-\sigma_{\min})/2$ | 第 21 讲 | 要会算 |
+| 疲劳破坏 | fatigue failure | 交变应力长期作用下、应力远低于 $\sigma_b$ 的突然断裂（断口分光滑区与粗糙区） | 第 21 讲 | 要理解 |
+| S-N 曲线 | S-N curve | 应力水平与疲劳寿命的关系曲线（约 $10^6$ 次后变水平） | 第 21 讲 | 要会用 |
+| 持久极限 | endurance limit（σ_−1） | 对称循环下材料不发生疲劳破坏的最高应力 | 第 21 讲 | 要会查用 |
+| 有效应力集中系数 | effective stress concentration factor（k_σ） | $>1$，在构件持久极限公式的**分母**（最不利） | 第 21 讲 | 要会查用 |
+| 尺寸系数 / 表面质量系数 | size factor（ε）/ surface finish factor（β） | 均 $\le1$，在分子 | 第 21 讲 | 要会查用 |
+| 细长梁界限 | slender beam limit | $L/h\ge10$ 时剪切变形占比小于 3%，Euler-Bernoulli 梁理论适用 | 第 22 讲 | 认识 |
+| 应力集中系数 | stress concentration factor（k_t） | 峰值应力与名义应力之比；圆孔 $k_t=2+(1-d/W)^3$ | 第 22 讲 | 认识 |
+| 纵横弯曲 | beam-column | 轴向压力与横向弯曲耦合，挠度被放大（本课不展开的下游问题） | 第 22 讲 | 认识 |
+| 有限元法 | finite element method | 把连续体离散为单元求解；以第 18 讲能量原理为数学基础 | 第 22 讲 | 认识 |
+| 三项基本关系 / 两类判据 / 两种工具 | — | 全课三根支柱：平衡·几何·物理；强度·刚度（+稳定·疲劳）；解析法·能量法 | 第 22 讲 | 要理解 |
 
 ## 二、公式
 
@@ -210,3 +267,44 @@
 | $\sigma_{1,2} = \dfrac{\sigma_x+\sigma_y}{2} \pm \sqrt{\left(\dfrac{\sigma_x-\sigma_y}{2}\right)^2 + \tau_{xy}^2}$ | 写为 $C\pm R$，$R$ 即应力圆半径 | 主应力 | 第 13 讲 |
 | $\tau_{\max} = R = \dfrac{\sigma_1-\sigma_2}{2}$ | — | 最大切应力 | 第 13 讲 |
 | $\tan 2\alpha_p = -\dfrac{2\tau_{xy}}{\sigma_x-\sigma_y}$ | $\alpha_p$ 主平面方向 | 主平面方位 | 第 13 讲 |
+| $\varepsilon_x = \dfrac{1}{E}[\sigma_x-\mu(\sigma_y+\sigma_z)]$（$\varepsilon_y,\varepsilon_z$ 三式对称） | $E$、$\mu$；$\sigma_x,\sigma_y,\sigma_z$ | 广义胡克定律（正应力部分） | 第 14 讲 |
+| $\tau_{\max} = \dfrac{\sigma_1-\sigma_3}{2}$ | $\sigma_1$、$\sigma_3$ 最大/最小主应力 | 三向最大切应力 | 第 14 讲 |
+| $\theta = \dfrac{1-2\mu}{E}(\sigma_1+\sigma_2+\sigma_3)$ | $\theta=\varepsilon_x+\varepsilon_y+\varepsilon_z$ | 体积应变（只与主应力之和有关） | 第 14 讲 |
+| $G = \dfrac{E}{2(1+\mu)}$ | — | 三弹性常数关系（各向同性） | 第 14 讲 |
+| $\sigma_{r1}=\sigma_1$；$\sigma_{r2}=\sigma_1-\mu(\sigma_2+\sigma_3)$；$\sigma_{r3}=\sigma_1-\sigma_3$；$\sigma_{r4}=\sqrt{\frac{1}{2}[(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2]}$ | $\sigma_1\ge\sigma_2\ge\sigma_3$ 主应力 | 四个强度理论的相当应力 | 第 15 讲 |
+| $\sigma_r \le [\sigma]$ | $[\sigma]$ 许用应力 | 统一强度条件 | 第 15 讲 |
+| $\sigma_\theta=\dfrac{pD}{2t}$；$\sigma_z=\dfrac{pD}{4t}$ | $D$ 中面直径、$t$ 壁厚、$p$ 内压 | 薄壁圆筒应力（二向） | 第 15 讲 |
+| 二向状态（$\sigma_3=0$）：$\sigma_{r4}=\sqrt{\sigma_1^2+\sigma_2^2-\sigma_1\sigma_2}$ | $\sigma_1,\sigma_2$ 二向主应力 | 第四理论的二向化简 | 第 15 讲 |
+| 纯剪切 $\sigma_{r3}=2\tau$、$\sigma_{r4}=\sqrt3\tau$；弯扭组合 $\sigma_{r3}=\sqrt{\sigma^2+4\tau^2}$、$\sigma_{r4}=\sqrt{\sigma^2+3\tau^2}$ | $\tau$ 切应力、$\sigma$ 弯曲正应力 | 经典情形核对 | 第 15 讲 |
+| $\sigma = \dfrac{N}{A} \pm \dfrac{M}{W}$ | $N$ 轴力、$M$ 弯矩、$A$ 面积、$W$ 抗弯截面系数 | 拉（压）弯组合正应力 | 第 16 讲 |
+| $\sigma = -\dfrac{F}{A} \pm \dfrac{Fe}{W}$ | $F$ 偏心压力、$e$ 偏心距 | 偏心拉压 | 第 16 讲 |
+| 截面核心：矩形 $\lvert e\rvert\leq h/6$（或 $b/6$）；圆 $e\leq d/8$ | $e$ 偏心距、$h,b$ 截面尺寸、$d$ 直径 | 截面核心边界 | 第 16 讲 |
+| $\sigma_{r3}=\sqrt{\sigma^2+4\tau^2}$；$\sigma_{r4}=\sqrt{\sigma^2+3\tau^2}$ | $\sigma$ 弯曲正应力、$\tau$ 扭转切应力 | 圆轴弯扭组合（第三/第四） | 第 16 讲 |
+| $P_{cr} = \dfrac{\pi^2 E I_{\min}}{(\mu L)^2}$ | $I_{\min}$ 最小惯性矩、$\mu$ 长度系数、$L$ 杆长 | 欧拉临界力 | 第 17 讲 |
+| $\lambda = \dfrac{\mu L}{i}$ | $i=\sqrt{I/A}$ 惯性半径 | 柔度（长细比） | 第 17 讲 |
+| $\sigma_{cr} = \dfrac{\pi^2 E}{\lambda^2}$ | — | 欧拉临界应力（大柔度） | 第 17 讲 |
+| $\lambda_p = \pi\sqrt{E/\sigma_p}$ | $\sigma_p$ 比例极限 | 大/中柔度分界 | 第 17 讲 |
+| 中柔度：$\sigma_{cr}=a-b\lambda$；$\lambda_s=\dfrac{a-\sigma_s}{b}$ | $a,b$ 材料常数、$\sigma_s$ 屈服极限 | 直线公式与中/小柔度分界 | 第 17 讲 |
+| $n_{st}=\dfrac{P_{cr}}{P}\ge[n_{st}]$；$\sigma\le\varphi[\sigma]$ | $[n_{st}]$ 稳定安全系数（3~5）、$\varphi$ 折减系数 | 压杆稳定校核 | 第 17 讲 |
+| 拉压 $V_\varepsilon=\dfrac{N^2L}{2EA}$；扭转 $\dfrac{T^2L}{2GI_p}$；弯曲 $\displaystyle\int\dfrac{M^2}{2EI}\mathrm{d}x$ | $N,T,M$ 内力、$EA,GI_p,EI$ 刚度 | 三种基本变形的应变能 | 第 18 讲 |
+| $\Delta=\displaystyle\int\dfrac{M(x)\bar{M}(x)}{EI}\mathrm{d}x$ | $M$ 实际载荷、$\bar{M}$ 单位载荷的弯矩图 | 莫尔积分（梁，单位载荷法） | 第 18 讲 |
+| 直线×直线：$\Delta=\dfrac{\Omega\bar{M}_C}{EI}$；标准抛物线×直线：$\Delta=\dfrac{1}{EI}\cdot\dfrac{5}{8}\Omega\bar{M}_{\text{中点}}$ | $\Omega$ 图形面积、$\bar{M}_C$ 形心处竖标 | 图形互乘规则 | 第 18 讲 |
+| $\delta_{12}=\delta_{21}$；$F_1\delta_{12}=F_2\delta_{21}$ | — | 位移互等 / 功的互等定理 | 第 18 讲 |
+| $\Delta_i=\dfrac{\partial V_\varepsilon}{\partial F_i}$ | — | 卡氏定理 | 第 18 讲 |
+| $\delta_{ij}=\displaystyle\int\dfrac{\bar{M}_i\bar{M}_j}{EI}\mathrm{d}x$；$\Delta_{iP}=\displaystyle\int\dfrac{M_P\bar{M}_i}{EI}\mathrm{d}x$ | $\bar{M}_i$ 为 $X_i=1$ 的弯矩图、$M_P$ 为实际载荷弯矩图 | 柔度系数与自由项（梁） | 第 19 讲 |
+| $\displaystyle\sum_j\delta_{ij}X_j+\Delta_{iP}=0$ | — | 正则方程（$n$ 次 $n$ 个） | 第 19 讲 |
+| 一次超静定：$X_1=-\dfrac{\Delta_{1P}}{\delta_{11}}$ | — | 一次超静定的解 | 第 19 讲 |
+| $\delta_{ij}=\delta_{ji}$ | — | 系数对称性（位移互等） | 第 19 讲 |
+| 两端固定梁：$M_{\text{固}}=-\dfrac{qL^2}{12}$、$M_{\text{跨中}}=\dfrac{qL^2}{24}$ | — | 对称性利用的典型结果 | 第 19 讲 |
+| 静载法：$\sigma_d=k_d\sigma_{st}$；$\Delta_d=k_d\Delta_{st}$ | $k_d$ 动荷系数 | 动载荷的通用处理 | 第 20 讲 |
+| 等加速：$k_d=1+\dfrac{a}{g}$ | $a$ 加速度、$g$ 重力加速度 | 等加速运动构件 | 第 20 讲 |
+| 自由落体冲击：$k_d=1+\sqrt{1+\dfrac{2h}{\Delta_{st}}}$ | $h$ 落差、$\Delta_{st}$ 静变形 | 冲击动荷系数 | 第 20 讲 |
+| $h=0$ 时 $k_d=2$；$h$ 大时 $k_d\approx\sqrt{\dfrac{2h}{\Delta_{st}}}$ | — | 冲击的两个特例 | 第 20 讲 |
+| $r=\dfrac{\sigma_{\min}}{\sigma_{\max}}$；$\sigma_m=\dfrac{\sigma_{\max}+\sigma_{\min}}{2}$；$\sigma_a=\dfrac{\sigma_{\max}-\sigma_{\min}}{2}$ | — | 交变应力的描述 | 第 21 讲 |
+| $N\sigma^m=C$ | $m$、$C$ 材料常数（钢材 $m\approx9$） | S-N 曲线幂律 | 第 21 讲 |
+| $(\sigma_{-1})_{\text{构件}}=\sigma_{-1}\dfrac{\varepsilon\beta}{k_\sigma}$ | $k_\sigma$、$\varepsilon$、$\beta$ 三个修正系数 | 构件持久极限 | 第 21 讲 |
+| $n=\dfrac{(\sigma_{-1})_{\text{构件}}}{\sigma_a}\ge[n]$ | $[n]=1.4\sim1.8$ | 对称循环疲劳强度校核 | 第 21 讲 |
+| $\dfrac{w_s}{w_b}\approx 11.52\,\dfrac{I}{AL^2}\cdot\dfrac{E}{G}$（矩形） | — | 剪切变形占比（Timoshenko，认识层） | 第 22 讲 |
+| $k_t = 2+\left(1-\dfrac{d}{W}\right)^3$ | $d/W$ 孔径比 | 有限宽板圆孔应力集中 | 第 22 讲 |
+| $w = \dfrac{w_0}{1-P/P_{cr}}$ | $P_{cr}$ 欧拉临界力 | 纵横弯曲挠度放大（下游问题） | 第 22 讲 |
+| 离散误差 $\propto h^2$（$O(h^2)$） | $h$ 单元尺寸 | 有限元收敛阶 | 第 22 讲 |
