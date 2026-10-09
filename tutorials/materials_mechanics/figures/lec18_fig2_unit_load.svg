@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-08T18:47:53.922767</dc:date>
+    <dc:date>2026-10-09T23:16:48.595538</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -34,12 +34,12 @@ z
 L 147.6 54.09 
 L 243.36 124.02 
 z
-" clip-path="url(#p9324ac79c8)" style="fill: #e7f0fb; stroke: #c0392b; stroke-width: 1.8; stroke-linejoin: miter"/>
+" clip-path="url(#pf83a601d52)" style="fill: #e7f0fb; stroke: #c0392b; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="line2d_1">
     <path d="M 51.84 124.02 
 L 243.36 124.02 
-" clip-path="url(#p9324ac79c8)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
+" clip-path="url(#pf83a601d52)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="text_1">
     <!-- $M(x)$ -->
@@ -586,12 +586,12 @@ z
 L 432 80.73 
 L 527.76 124.02 
 z
-" clip-path="url(#pde68e8a864)" style="fill: #e7f0fb; stroke: #2f855a; stroke-width: 1.8; stroke-linejoin: miter"/>
+" clip-path="url(#pda41747e95)" style="fill: #e7f0fb; stroke: #2f855a; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="line2d_2">
     <path d="M 336.24 124.02 
 L 527.76 124.02 
-" clip-path="url(#pde68e8a864)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
+" clip-path="url(#pda41747e95)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="text_4">
     <!-- $\bar{M}(x)$ -->
@@ -1333,10 +1333,10 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p9324ac79c8">
+  <clipPath id="pf83a601d52">
    <rect x="10.8" y="10.8" width="273.6" height="266.4"/>
   </clipPath>
-  <clipPath id="pde68e8a864">
+  <clipPath id="pda41747e95">
    <rect x="295.2" y="10.8" width="273.6" height="266.4"/>
   </clipPath>
  </defs>

@@ -1,0 +1,20 @@
+﻿=== 数字核对：第 18 讲（P=20 kN, L=4000 mm, EI=1.000e+12）===
+  EXP1 弯曲应变能：V=P^2 L^3/(96EI)=266666.67 N·mm=266.67 J
+        互证：(1/2)*P*w_max=266666.67 N·mm（应一致）
+  EXP2 单位载荷法（莫尔积分数值积分）：w=26.6667 mm（查表 PL^3/(48EI)=26.6667）
+  EXP3 图形互乘：(L/3)*M_max*Mbar_max/EI=26.6667 mm（与上一致）
+  EXP4 位移互等：delta_12=9.218106e-04 mm/N, delta_21=9.218106e-04 mm/N（应相等，差 0.00e+00）
+  EXP5 卡氏定理：w=dV/dP=26.6667 mm（与查表一致）
+  EXP6 抛物线特例（q=10 N/mm）：Omega=5.3333e+10, Mbar_中点=1000.0
+        (5/8)*Omega*Mbar/EI=33.3333 mm；查表 5qL^4/(384EI)=33.3333 mm（应一致）
+
+=== 图 1：三种基本变形的应变能 ===
+[OK] figures/lec18_fig1_strain_energy.svg 与 .png 已生成。
+
+=== 图 2：单位载荷法与莫尔积分 ===
+[OK] figures/lec18_fig2_unit_load.svg 与 .png 已生成。
+
+=== 图 3：图形互乘法 ===
+[OK] figures/lec18_fig3_graph_mult.svg 与 .png 已生成。
+
+[DONE] 第 18 讲数字核对与三张图全部完成。

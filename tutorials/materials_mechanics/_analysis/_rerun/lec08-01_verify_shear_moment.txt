@@ -1,0 +1,22 @@
+﻿=== 数字核对：第 08 讲 ===
+  EXP1 简支梁 L=4 m, P=20 kN @ a=1 m：
+        反力 R_A = Pb/L = 15.0 kN；R_B = Pa/L = 5.0 kN（和 = 20.0 应等于 P）
+        剪力：AC 段 Q=+15.0 kN；CB 段 Q=-5.0 kN（突变 -P=-20.0）
+        弯矩最大值 M_max = Pab/L = 15.0 kN·m（在集中力处）
+  EXP2 简支梁 L=4 m, q=10 kN/m：
+        反力 R = qL/2 = 20.0 kN；弯矩最大 M_max = qL^2/8 = 20.0 kN·m（跨中）
+  EXP3 悬臂梁（固定端 x=0，自由端 x=L）端部 P=20 kN：
+        剪力 Q = -20.0 kN（常量）；弯矩 M = -P x，固定端 M_max = -PL = 80.0 kN·m
+  EXP4 微分关系（AC 段）：dM/dx = Q 数值差分均值 = 15.0000（应为 Q=+15.0）
+        均布段核对：M=Rx-qx^2/2 -> dM/dx=R-qx；dQ/dx=-q 对应 dQ/dx 的约定
+
+=== 图 1：梁与支座/载荷类型 ===
+[OK] figures/lec08_fig1_beam_types.svg 与 .png 已生成。
+
+=== 图 2：剪力与弯矩的正负约定 ===
+[OK] figures/lec08_fig2_sign_conv.svg 与 .png 已生成。
+
+=== 图 3：剪力图与弯矩图（简支梁受集中力）===
+[OK] figures/lec08_fig3_qm_diagram.svg 与 .png 已生成。
+
+[DONE] 第 08 讲数字核对与三张图全部完成。

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-08T16:03:56.079956</dc:date>
+    <dc:date>2026-10-09T23:16:43.661175</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 169.2 198
 L 169.2 104.4 
 L 63.6 104.4 
 z
-" clip-path="url(#pb5e70ef919)" style="fill: #e7f0fb; stroke: #2b6cb0; stroke-linejoin: miter"/>
+" clip-path="url(#p5ae65135f9)" style="fill: #e7f0fb; stroke: #2b6cb0; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 47.76 198 
@@ -43,7 +43,7 @@ L 185.04 198
 L 185.04 216.72 
 L 47.76 216.72 
 z
-" clip-path="url(#pb5e70ef919)" style="fill: #718096"/>
+" clip-path="url(#p5ae65135f9)" style="fill: #718096"/>
    </g>
    <g id="patch_4">
     <path d="M 169.2 102.401631 
@@ -547,7 +547,7 @@ L 444 198
 L 444 104.4 
 L 338.4 104.4 
 z
-" clip-path="url(#p8fcdfa0e71)" style="fill: #fde9d9; stroke: #c05621; stroke-linejoin: miter"/>
+" clip-path="url(#p0fad66e3ef)" style="fill: #fde9d9; stroke: #c05621; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 444 102.401631 
@@ -1089,17 +1089,17 @@ z
    <g id="line2d_1">
     <path d="M 613.2 151.2 
 L 771.6 151.2 
-" clip-path="url(#p2811f9b776)" style="fill: none; stroke-dasharray: 1,1.65; stroke-dashoffset: 0; stroke: #718096"/>
+" clip-path="url(#p070e2e312c)" style="fill: none; stroke-dasharray: 1,1.65; stroke-dashoffset: 0; stroke: #718096"/>
    </g>
    <g id="line2d_2">
     <path d="M 655.44 226.08 
 L 655.44 76.32 
-" clip-path="url(#p2811f9b776)" style="fill: none; stroke: #2b6cb0; stroke-width: 1.4; stroke-linecap: square"/>
+" clip-path="url(#p070e2e312c)" style="fill: none; stroke: #2b6cb0; stroke-width: 1.4; stroke-linecap: square"/>
    </g>
    <g id="line2d_3">
     <path d="M 729.36 226.08 
 L 729.36 76.32 
-" clip-path="url(#p2811f9b776)" style="fill: none; stroke: #2b6cb0; stroke-width: 1.4; stroke-linecap: square"/>
+" clip-path="url(#p070e2e312c)" style="fill: none; stroke: #2b6cb0; stroke-width: 1.4; stroke-linecap: square"/>
    </g>
    <g id="text_6">
     <!-- $\sigma=\dfrac{N}{A}\pm\dfrac{M}{W}$ -->
@@ -1663,13 +1663,13 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pb5e70ef919">
+  <clipPath id="p5ae65135f9">
    <rect x="10.8" y="10.8" width="264" height="280.8"/>
   </clipPath>
-  <clipPath id="p8fcdfa0e71">
+  <clipPath id="p0fad66e3ef">
    <rect x="285.6" y="10.8" width="264" height="280.8"/>
   </clipPath>
-  <clipPath id="p2811f9b776">
+  <clipPath id="p070e2e312c">
    <rect x="560.4" y="10.8" width="264" height="280.8"/>
   </clipPath>
  </defs>

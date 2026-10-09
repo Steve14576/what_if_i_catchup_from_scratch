@@ -1,0 +1,21 @@
+﻿=== 数字核对：第 01 讲的核心量 ===
+  EXP1 截面法：取左段列平衡，N - F = 0.000e+00（应为 0；即 N = F）
+  EXP2 平均正应力 sigma = N / A（同一轴力 20 kN、不同截面）：
+        A =  100.0 mm^2  ->  sigma =  200.0 N/mm^2 =  200.0 MPa
+        A =  200.0 mm^2  ->  sigma =  100.0 N/mm^2 =  100.0 MPa
+        A =  400.0 mm^2  ->  sigma =   50.0 N/mm^2 =   50.0 MPa
+  EXP3 单位核对：1 MPa = 1 N/mm^2 = 1e6 Pa
+        sigma = 100.0 MPa = 100.0 N/mm^2 = 1.000e+08 Pa
+  EXP4 平均线应变：eps = dL/L = 0.25 mm / 500 mm = 5.000e-04（无量纲）
+        对照：钢材弹性范围的应变常在 1e-3 以下，本例 5.0e-04 量级一致。
+
+=== 图 3：杆件的四种基本变形 ===
+[OK] figures/lec01_fig3_four_deformations.svg 与 .png 已生成。
+
+=== 图 1：截面法四步 ===
+[OK] figures/lec01_fig1_section_method.svg 与 .png 已生成。
+
+=== 图 2：正应力与切应力 ===
+[OK] figures/lec01_fig2_stress.svg 与 .png 已生成。
+
+[DONE] 第 01 讲数字核对与三张图全部完成。

@@ -1,0 +1,21 @@
+﻿=== 数字核对：第 16 讲 ===
+  EXP1 拉弯组合（b=100, h=150, N=100 kN, M=10 kN·m）：
+        A=15000 mm^2, W=3.7500e+05 mm^3 -> sigma_N=6.667, sigma_M=26.667 MPa
+        sigma_max=33.33 MPa（拉侧）, sigma_min=-20.00 MPa（压侧）
+  EXP2 偏心压力（b=200,h=300, N=200 kN 压, e=50 mm）：
+        sigma=-N/A +/- N*e/W = -3.333 +/- 3.333 -> -6.667 / 0.000 MPa（零线在边缘=核心边界 h/6=50）
+  EXP3 圆截面核心：e_core=d/8=25.0 mm；核边处边缘应力=-N/A+N*e/W=0.0000 MPa（应约为 0）
+  EXP4 弯扭组合（d=60, M=1.50 kN·m, T=1.20 kN·m）：
+        W=21205.8, Wp=42411.5 -> sigma=70.74 MPa, tau=28.29 MPa
+        sigma_r3=sqrt(s^2+4t^2)=90.59 MPa; sigma_r4=sqrt(s^2+3t^2)=86.05 MPa
+
+=== 图 1：组合变形的分解与叠加 ===
+[OK] figures/lec16_fig1_decompose.svg 与 .png 已生成。
+
+=== 图 2：偏心拉压与截面核心 ===
+[OK] figures/lec16_fig2_eccentric_core.svg 与 .png 已生成。
+
+=== 图 3：弯扭组合与危险点 ===
+[OK] figures/lec16_fig3_bend_twist.svg 与 .png 已生成。
+
+[DONE] 第 16 讲数字核对与三张图全部完成。

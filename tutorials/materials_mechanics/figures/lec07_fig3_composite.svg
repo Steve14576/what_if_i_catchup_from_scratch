@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-08T11:59:15.126492</dc:date>
+    <dc:date>2026-10-09T23:16:22.850221</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 426.991304 107.947826
 L 426.991304 56.817391 
 L 120.208696 56.817391 
 z
-" clip-path="url(#pfa45e6ae1e)" style="fill: #fde9d9; stroke: #c05621; stroke-linejoin: miter"/>
+" clip-path="url(#p3c081355cb)" style="fill: #fde9d9; stroke: #c05621; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 248.034783 312.469565 
@@ -43,13 +43,13 @@ L 299.165217 312.469565
 L 299.165217 107.947826 
 L 248.034783 107.947826 
 z
-" clip-path="url(#pfa45e6ae1e)" style="fill: #e7f0fb; stroke: #2b6cb0; stroke-linejoin: miter"/>
+" clip-path="url(#p3c081355cb)" style="fill: #e7f0fb; stroke: #2b6cb0; stroke-linejoin: miter"/>
    </g>
    <g id="line2d_1">
     <path d="M 273.6 133.513043 
-" clip-path="url(#pfa45e6ae1e)" style="fill: none; stroke: #c0392b; stroke-width: 1.5; stroke-linecap: square"/>
+" clip-path="url(#p3c081355cb)" style="fill: none; stroke: #c0392b; stroke-width: 1.5; stroke-linecap: square"/>
     <defs>
-     <path id="m7cb9217164" d="M 0 3.5 
+     <path id="mbc6c2d7d97" d="M 0 3.5 
 C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874 
 C 3.131218 1.81853 3.5 0.928211 3.5 0 
 C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874 
@@ -61,14 +61,14 @@ C -1.81853 3.131218 -0.928211 3.5 0 3.5
 z
 " style="stroke: #c0392b"/>
     </defs>
-    <g clip-path="url(#pfa45e6ae1e)">
-     <use xlink:href="#m7cb9217164" x="273.6" y="133.513043" style="fill: #c0392b; stroke: #c0392b"/>
+    <g clip-path="url(#p3c081355cb)">
+     <use xlink:href="#mbc6c2d7d97" x="273.6" y="133.513043" style="fill: #c0392b; stroke: #c0392b"/>
     </g>
    </g>
    <g id="line2d_2">
     <path d="M 94.643478 133.513043 
 L 452.556522 133.513043 
-" clip-path="url(#pfa45e6ae1e)" style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #2f855a; stroke-width: 1.2"/>
+" clip-path="url(#p3c081355cb)" style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #2f855a; stroke-width: 1.2"/>
    </g>
    <g id="text_1">
     <!-- 分块2：翼缘 $120\times20$ -->
@@ -1366,7 +1366,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pfa45e6ae1e">
+  <clipPath id="p3c081355cb">
    <rect x="81.86087" y="10.8" width="383.478261" height="352.8"/>
   </clipPath>
  </defs>

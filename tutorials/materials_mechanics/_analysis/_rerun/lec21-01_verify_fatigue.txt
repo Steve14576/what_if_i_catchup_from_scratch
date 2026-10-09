@@ -1,0 +1,24 @@
+﻿=== 数字核对：第 21 讲 ===
+  EXP1 对称循环：sigma_max=100, sigma_min=-100 -> r=sigma_min/sigma_max=-1.00
+  EXP1 脉动循环：sigma_max=100, sigma_min=0 -> r=sigma_min/sigma_max=0.00
+  EXP1 一般循环：sigma_max=100, sigma_min=50 -> r=sigma_min/sigma_max=0.50
+  EXP1 静载荷：sigma_max=100, sigma_min=100 -> r=sigma_min/sigma_max=1.00
+  EXP2 一般循环分解：sigma_max=120, sigma_min=-40 -> sigma_m=40.0, sigma_a=80.0
+        回代互证：sigma_m+sigma_a=120.0（=sigma_max）；sigma_m-sigma_a=-40.0（=sigma_min）
+  EXP3 S-N 幂律 N*sigma^m=C（m=9）：(sigma=300 MPa, N=1e+04) -> N=1e+06 时 sigma=179.85 MPa
+        互证：C=sigma1^m*N1=1.9683e+26；用 C 反算 sigma2=179.85 MPa
+  EXP4 构件持久极限：sigma_-1=250, k_sigma=2.0, eps=0.80, beta=0.85
+        (sigma_-1)_构件 = 250*0.80*0.85/2.0 = 85.00 MPa
+  EXP5 疲劳校核（sigma_a=50 MPa, [n]=1.5）：n=1.700 -> 安全
+  EXP5 疲劳校核（sigma_a=70 MPa, [n]=1.5）：n=1.214 -> 不合格
+
+=== 图 1：三种典型应力循环 ===
+[OK] figures/lec21_fig1_cycles.svg 与 .png 已生成。
+
+=== 图 2：S-N 曲线与持久极限 ===
+[OK] figures/lec21_fig2_sn_curve.svg 与 .png 已生成。
+
+=== 图 3：影响持久极限的三个系数 ===
+[OK] figures/lec21_fig3_factors.svg 与 .png 已生成。
+
+[DONE] 第 21 讲数字核对与三张图全部完成。

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-08T16:03:56.631834</dc:date>
+    <dc:date>2026-10-09T23:16:44.253714</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,18 +35,18 @@ L 333.63 188.784
 L 333.63 128.016 
 L 67.77 128.016 
 z
-" clip-path="url(#p234ba9f1db)" style="fill: #e7f0fb; stroke: #2b6cb0; stroke-linejoin: miter"/>
+" clip-path="url(#p966c7dfd6b)" style="fill: #e7f0fb; stroke: #2b6cb0; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 67.77 188.784 
 L 67.77 128.016 
 L 48.78 158.4 
 z
-" clip-path="url(#p234ba9f1db)" style="fill: #718096"/>
+" clip-path="url(#p966c7dfd6b)" style="fill: #718096"/>
    </g>
    <g id="line2d_1">
     <defs>
-     <path id="m60e4276804" d="M 0 3.5 
+     <path id="m0e933c0342" d="M 0 3.5 
 C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874 
 C 3.131218 1.81853 3.5 0.928211 3.5 0 
 C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874 
@@ -58,8 +58,8 @@ C -1.81853 3.131218 -0.928211 3.5 0 3.5
 z
 " style="stroke: #c05621"/>
     </defs>
-    <g clip-path="url(#p234ba9f1db)">
-     <use xlink:href="#m60e4276804" x="269.064" y="158.4" style="fill: #c05621; stroke: #c05621"/>
+    <g clip-path="url(#p966c7dfd6b)">
+     <use xlink:href="#m0e933c0342" x="269.064" y="158.4" style="fill: #c05621; stroke: #c05621"/>
     </g>
    </g>
    <g id="patch_4">
@@ -729,7 +729,7 @@ L 644.472 196.38
 L 644.472 90.036 
 L 538.128 90.036 
 z
-" clip-path="url(#pb0aac3738c)" style="fill: #fde9d9; stroke: #c05621; stroke-linejoin: miter"/>
+" clip-path="url(#pef59fc7e16)" style="fill: #fde9d9; stroke: #c05621; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
     <path d="M 650.269374 143.208 
@@ -1462,10 +1462,10 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p234ba9f1db">
+  <clipPath id="p966c7dfd6b">
    <rect x="10.8" y="44.46" width="379.8" height="227.88"/>
   </clipPath>
-  <clipPath id="pb0aac3738c">
+  <clipPath id="pef59fc7e16">
    <rect x="401.4" y="44.46" width="379.8" height="227.88"/>
   </clipPath>
  </defs>

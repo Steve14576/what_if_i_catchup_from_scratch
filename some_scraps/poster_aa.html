@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>击剑社团｜Fencing Club</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: #090909; }
+  body { display: flex; justify-content: center; }
+  .poster {
+    width: min(100%, 996px);
+    position: relative;
+    overflow: hidden;
+    background: #101010;
+  }
+  svg { display: block; width: 100%; height: auto; }
+  .type {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    fill: #c8c8c6;
+  }
+  .cn {
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC",
+                 "Noto Sans CJK SC", sans-serif;
+    font-weight: 300;
+  }
+  .small { font-size: 21px; letter-spacing: 2.1px; }
+  .label { font-size: 18px; letter-spacing: 4px; fill: #a6a6a3; }
+  .detail { font-size: 26px; letter-spacing: 3px; fill: #cececa; }
+  .feature { font-size: 21px; letter-spacing: 2.5px; fill: #cececa; }
+  .feature-sub { font-size: 16px; letter-spacing: 1.7px; fill: #969794; }
+  .icon {
+    fill: none;
+    stroke: #d1d1cf;
+    stroke-width: 2.1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>
+</head>
+<body>
+<main class="poster" aria-label="击剑社团海报：每周三17:00至18:30，B03一楼跆拳道馆，大连理工大学盘锦校区">
+<svg viewBox="0 0 996 2241" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="title desc">
+<title id="title">FOCUS PRECISE THRIVE · 击剑社团</title>
+<desc id="desc">黑色背景上的红色木质击剑剑柄和银色圆形护手，下方展示训练时间、地点、六项活动特色及二维码区域。</desc>
+
+<defs>
+  <!-- 背景 -->
+  <linearGradient id="background" x1="0" y1="0" x2="1" y2=".12">
+    <stop stop-color="#101010"/>
+    <stop offset=".46" stop-color="#101011"/>
+    <stop offset=".76" stop-color="#111112"/>
+    <stop offset="1" stop-color="#181819"/>
+  </linearGradient>
+  <radialGradient id="ambient">
+    <stop stop-color="#333337" stop-opacity=".17"/>
+    <stop offset="1" stop-color="#080809" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- 弧形剑身 -->
+  <linearGradient id="arcBody" x1="0" y1="0" x2="1" y2=".65">
+    <stop stop-color="#151517"/>
+    <stop offset=".23" stop-color="#252528"/>
+    <stop offset=".33" stop-color="#111113"/>
+    <stop offset=".7" stop-color="#0e0e10"/>
+    <stop offset="1" stop-color="#111112"/>
+  </linearGradient>
+  <linearGradient id="arcEdge" x1="290" y1="470" x2="652" y2="-12"
+                  gradientUnits="userSpaceOnUse">
+    <stop stop-color="#424246" stop-opacity=".08"/>
+    <stop offset=".5" stop-color="#868689" stop-opacity=".25"/>
+    <stop offset=".78" stop-color="#c0c1c3" stop-opacity=".65"/>
+    <stop offset=".95" stop-color="#ffffff"/>
+    <stop offset="1" stop-color="#a4a5a8"/>
+  </linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="glow"><feGaussianBlur stdDeviation="1.1"/></filter>
+
+  <!-- 木质握柄：更浓的红，更深的暗部 -->
+  <linearGradient id="woodBase" x1="0" y1=".15" x2="1" y2=".3">
+    <stop stop-color="#160805"/>
+    <stop offset=".16" stop-color="#641a07"/>
+    <stop offset=".37" stop-color="#180906"/>
+    <stop offset=".61" stop-color="#290c06"/>
+    <stop offset=".8" stop-color="#93220b"/>
+    <stop offset=".93" stop-color="#e0401a"/>
+    <stop offset="1" stop-color="#ffb894"/>
+  </linearGradient>
+  <linearGradient id="woodVertical" x1="0" y1="0" x2=".2" y2="1">
+    <stop stop-color="#0d0503" stop-opacity=".24"/>
+    <stop offset=".32" stop-color="#000" stop-opacity="0"/>
+    <stop offset=".46" stop-color="#0a0300" stop-opacity=".6"/>
+    <stop offset=".59" stop-color="#000" stop-opacity=".74"/>
+    <stop offset=".79" stop-color="#120502" stop-opacity=".06"/>
+    <stop offset="1" stop-color="#000" stop-opacity=".78"/>
+  </linearGradient>
+  <linearGradient id="warmRidge" x1="0" y1="0" x2=".1" y2="1">
+    <stop stop-color="#ff6a35"/>
+    <stop offset=".24" stop-color="#f2461d"/>
+    <stop offset=".6" stop-color="#9a1e0a"/>
+    <stop offset="1" stop-color="#1c0906" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="woodLight" cx="69%" cy="41%" r="43%">
+    <stop stop-color="#ff4519" stop-opacity=".92"/>
+    <stop offset=".32" stop-color="#da3013" stop-opacity=".48"/>
+    <stop offset=".74" stop-color="#8c1c0a" stop-opacity=".08"/>
+    <stop offset="1" stop-color="#2a0b03" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="edgeFire" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#a42a12"/>
+    <stop offset=".55" stop-color="#ff5c30"/>
+    <stop offset=".84" stop-color="#ffa682"/>
+    <stop offset="1" stop-color="#fff4e2"/>
+  </linearGradient>
+  <linearGradient id="holeLip" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#fff0d1"/>
+    <stop offset=".3" stop-color="#f06a40"/>
+    <stop offset=".6" stop-color="#6a1d10"/>
+    <stop offset="1" stop-color="#ffd1ad"/>
+  </linearGradient>
+
+  <path id="gripShape" d="
+    M752,-35 L811,-35
+    C812,40 820,129 814,216
+    C810,252 813,282 817,311
+    C821,349 838,386 851,423
+    C861,456 866,480 870,510
+    C876,548 888,561 915,559
+    C945,558 974,541 1014,523
+    L1018,571
+    C979,599 938,611 891,627
+    C866,636 854,648 851,674
+    C849,722 850,768 846,819
+    L841,969 L764,969
+    C763,904 764,838 763,780
+    L759,660
+    C758,632 748,613 729,607
+    C710,602 711,590 720,574
+    C732,552 745,533 731,511
+    C713,482 690,480 644,478
+    C622,478 618,476 614,466
+    C607,443 591,429 569,428
+    C541,426 523,435 500,450
+    C485,461 477,464 472,456
+    C464,448 471,429 477,413
+    C482,397 488,379 499,366
+    C508,354 525,344 539,336
+    C556,337 575,349 600,357
+    C630,368 668,375 696,376
+    C720,376 738,367 749,346
+    C762,322 766,298 764,266
+    C761,190 752,108 752,-35 Z"/>
+  <clipPath id="gripClip"><use href="#gripShape"/></clipPath>
+
+  <filter id="woodTexture" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency=".095 .006"
+                  numOctaves="3" seed="17"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope=".62" intercept=".14"/>
+      <feFuncG type="linear" slope=".2" intercept=".01"/>
+      <feFuncB type="linear" slope=".09" intercept="0"/>
+      <feFuncA type="linear" slope=".42"/>
+    </feComponentTransfer>
+    <feBlend in="SourceGraphic" mode="soft-light"/>
+  </filter>
+  <filter id="gripBlur5"><feGaussianBlur stdDeviation="5"/></filter>
+
+  <!-- 金属护手 -->
+  <linearGradient id="bowl" x1="0" y1="0" x2=".18" y2="1">
+    <stop stop-color="#090a0b"/>
+    <stop offset=".37" stop-color="#18191b"/>
+    <stop offset=".7" stop-color="#0b0c0e"/>
+    <stop offset="1" stop-color="#303132"/>
+  </linearGradient>
+  <linearGradient id="rim" x1="510" y1="0" x2="1070" y2="0"
+                  gradientUnits="userSpaceOnUse">
+    <stop stop-color="#535557"/>
+    <stop offset=".05" stop-color="#eeeef0"/>
+    <stop offset=".12" stop-color="#77797a"/>
+    <stop offset=".3" stop-color="#222426"/>
+    <stop offset=".48" stop-color="#5f6163"/>
+    <stop offset=".68" stop-color="#e1e2e2"/>
+    <stop offset=".81" stop-color="#f7f8f8"/>
+    <stop offset=".93" stop-color="#6b6e70"/>
+    <stop offset="1" stop-color="#202224"/>
+  </linearGradient>
+  <linearGradient id="rimTop" x1="514" y1="780" x2="1000" y2="935"
+                  gradientUnits="userSpaceOnUse">
+    <stop stop-color="#fbfbfb"/>
+    <stop offset=".24" stop-color="#b9bbbd"/>
+    <stop offset=".48" stop-color="#343638"/>
+    <stop offset=".74" stop-color="#a5a5a6"/>
+    <stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <linearGradient id="blade" x1="779" y1="0" x2="831" y2="0"
+                  gradientUnits="userSpaceOnUse">
+    <stop stop-color="#111214"/>
+    <stop offset=".35" stop-color="#303234"/>
+    <stop offset=".55" stop-color="#96999a"/>
+    <stop offset=".69" stop-color="#424546"/>
+    <stop offset=".83" stop-color="#c3c4c4"/>
+    <stop offset="1" stop-color="#141618"/>
+  </linearGradient>
+  <linearGradient id="bladeFade" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="white"/>
+    <stop offset=".48" stop-color="#cccccc"/>
+    <stop offset="1" stop-color="black"/>
+  </linearGradient>
+  <mask id="bladeMask">
+    <rect x="774" y="960" width="60" height="700" fill="url(#bladeFade)"/>
+  </mask>
+
+  <linearGradient id="panel" x1="0" y1="0" x2=".6" y2="1">
+    <stop stop-color="#252526" stop-opacity=".5"/>
+    <stop offset=".3" stop-color="#111112" stop-opacity=".86"/>
+    <stop offset="1" stop-color="#111112" stop-opacity=".97"/>
+  </linearGradient>
+  <linearGradient id="panelBorder" x1="0" y1="0" x2="1" y2=".7">
+    <stop stop-color="#dddddb"/>
+    <stop offset=".26" stop-color="#777776"/>
+    <stop offset=".53" stop-color="#3a3a3b"/>
+    <stop offset="1" stop-color="#424244"/>
+  </linearGradient>
+
+  <!-- 引导线 -->
+  <linearGradient id="leadLine" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#c8c8c6" stop-opacity="0"/>
+    <stop offset="1" stop-color="#c8c8c6" stop-opacity=".6"/>
+  </linearGradient>
+
+  <!-- 小图标 -->
+  <g id="people" class="icon">
+    <path d="M28 5 C17 5 16 15 19 24 C21 32 33 33 37 24 C41 15 38 5 28 5Z"/>
+    <path d="M11 51 C11 36 17 33 28 33 C40 33 46 39 46 51"/>
+    <path d="M11 13 C2 11 1 25 9 28 M6 34 C0 37 -2 43 -2 47"/>
+    <path d="M46 13 C54 11 56 25 47 28 M50 34 C57 37 58 43 58 47"/>
+  </g>
+  <g id="coach" class="icon">
+    <path d="M25 5 C13 5 14 21 17 26 C22 33 30 31 34 24 C39 14 35 5 25 5Z"/>
+    <path d="M5 51 C7 36 14 33 20 34 L25 43 L31 34 C40 35 45 41 47 51Z"/>
+    <path d="M16 15 Q25 19 35 13"/>
+  </g>
+  <g id="swords" class="icon">
+    <path d="M7 7 Q19 9 29 22 L49 45 L44 49 L22 28 Q8 18 7 7Z"/>
+    <path d="M54 7 Q42 10 31 23 L10 46 L15 50 L37 28 Q51 18 54 7Z"/>
+    <path d="M8 35 L24 51 M37 36 L53 51"/>
+    <path d="M13 44 L7 51 Q5 55 9 55 L18 48 M45 45 L53 53 Q57 57 58 53 L49 45"/>
+  </g>
+  <g id="weapons" class="icon">
+    <path d="M7 6 Q4 7 2 34 Q7 39 12 34 Q10 8 7 6Z M7 37 V54"/>
+    <path d="M28 6 Q24 9 23 34 Q28 38 33 34 Q32 9 28 6Z M28 37 V54"/>
+    <path d="M49 6 Q45 9 44 34 Q49 39 54 34 Q52 8 49 6Z M49 37 V54"/>
+  </g>
+  <g id="target" class="icon">
+    <circle cx="28" cy="29" r="20"/>
+    <path d="M28 3 V20 M28 38 V54 M2 29 H19 M37 29 H54"/>
+    <path d="M23 29 H33 M28 24 V34"/>
+    <circle cx="28" cy="29" r="2" fill="#dededb" stroke="none"/>
+  </g>
+</defs>
+
+<!-- 第一层：背景环境 -->
+<rect width="996" height="2241" fill="url(#background)"/>
+<ellipse cx="833" cy="166" rx="365" ry="510" fill="url(#ambient)"/>
+<ellipse cx="300" cy="1900" rx="520" ry="420" fill="url(#ambient)" opacity=".7"/>
+<path d="M33 0 V2241 M56 0 V2241 M447 0 V1230 M482 0 V1220"
+      stroke="#252526" stroke-opacity=".08" stroke-width="9"/>
+
+<!-- 第二层：弧形剑身 -->
+<path d="M204 611
+         C274 417 351 267 441 139
+         C492 65 558 6 623 -24
+         L764 -25 L768 63
+         C663 43 568 111 492 188
+         C368 314 276 471 204 611Z"
+      fill="url(#arcBody)"/>
+<path d="M205 606 C281 397 363 244 449 127 C501 57 568 5 636 -18"
+      fill="none" stroke="url(#arcEdge)" stroke-width="5" filter="url(#soft)"/>
+<path d="M241 507 C318 325 388 203 469 97 C519 34 574 -8 625 -26"
+      fill="none" stroke="url(#arcEdge)" stroke-width="1.7"/>
+<path d="M455 133 C499 58 550 10 588 -5"
+      fill="none" stroke="#d0d2d3" stroke-opacity=".45" stroke-width="2"
+      filter="url(#glow)"/>
+<circle cx="718" cy="94" r=".9" fill="#aaa" opacity=".5"/>
+<circle cx="698" cy="100" r=".6" fill="#bbb" opacity=".25"/>
+
+<!-- 第三层：护手后半部分 -->
+<ellipse cx="816" cy="869" rx="307" ry="109" fill="#0b0c0d"/>
+<ellipse cx="816" cy="869" rx="303" ry="105"
+         fill="url(#bowl)" stroke="url(#rimTop)" stroke-width="3"/>
+<ellipse cx="817" cy="873" rx="289" ry="88"
+         fill="#0c0d0f" stroke="#727476" stroke-opacity=".4" stroke-width="2"/>
+<path d="M535 841 C563 801 651 782 760 779
+         M866 780 C950 786 1021 804 1065 835"
+      fill="none" stroke="#fff" stroke-opacity=".65" stroke-width="2"/>
+<path d="M558 879 C595 850 651 856 695 839 C724 827 744 832 768 839"
+      fill="none" stroke="#565964" stroke-opacity=".17" stroke-width="8"
+      filter="url(#soft)"/>
+<path d="M610 857 Q683 851 728 828 Q717 847 667 850"
+      fill="#777b85" opacity=".09"/>
+<ellipse cx="827" cy="911" rx="220" ry="37" fill="#000" opacity=".3"/>
+
+<!-- 第四层：木质握柄 -->
+<g clip-path="url(#gripClip)">
+  <use href="#gripShape" fill="url(#woodBase)" filter="url(#woodTexture)"/>
+</g>
+
+<g clip-path="url(#gripClip)">
+  <rect x="460" y="-40" width="575" height="1040" fill="url(#woodVertical)"/>
+  <rect x="460" y="-40" width="575" height="1040" fill="url(#woodLight)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M765 -15 C772 88 766 144 779 248 C785 308 773 348 754 369"
+          stroke="#f0552a" stroke-width="1.1" opacity=".24"/>
+    <path d="M773 -20 C776 84 789 164 784 260 C782 313 789 346 811 376"
+          stroke="#050201" stroke-width="2.4" opacity=".38"/>
+    <path d="M784 -20 C789 103 798 155 793 253 C790 304 806 353 826 391"
+          stroke="#ff7a45" stroke-width=".8" opacity=".22"/>
+    <path d="M799 -20 C798 103 807 165 804 243 C801 302 809 352 834 400"
+          stroke="#0b0403" stroke-width="2" opacity=".42"/>
+    <path d="M760 26 C772 105 768 217 779 285"
+          stroke="#d24622" stroke-width="1" opacity=".24"/>
+    <path d="M487 416 C519 369 543 359 579 381
+             C628 410 704 408 755 398 C798 390 811 411 828 451"
+          stroke="#c23a1a" stroke-width="1.4" opacity=".45"/>
+    <path d="M481 432 C520 389 554 380 583 399
+             C628 425 697 419 748 418 C788 416 803 440 824 479"
+          stroke="#060302" stroke-width="3" opacity=".36"/>
+    <path d="M496 386 C529 354 546 368 582 383
+             C632 404 708 393 744 383 C783 372 797 397 814 417"
+          stroke="#f5562a" stroke-width="1" opacity=".45"/>
+    <path d="M526 365 C558 370 577 385 621 393 C687 406 736 400 770 393"
+          stroke="#ff7a45" stroke-width=".7" opacity=".34"/>
+    <path d="M631 436 C685 437 747 429 782 470
+             C807 501 807 547 792 592 C771 650 802 781 792 941"
+          stroke="#0c0402" stroke-width="3" opacity=".42"/>
+    <path d="M724 456 C763 470 779 496 778 529
+             C775 559 755 585 773 617 C791 650 784 739 796 959"
+          stroke="#bc3818" stroke-width=".9" opacity=".3"/>
+    <path d="M819 468 C842 535 824 576 836 613 C845 643 825 780 830 965"
+          stroke="#ef4c22" stroke-width="1.2" opacity=".42"/>
+    <path d="M818 622 C808 691 821 808 811 956"
+          stroke="#070302" stroke-width="3" opacity=".5"/>
+    <path d="M840 614 C844 580 863 574 886 586 C928 602 959 579 1002 558"
+          stroke="#f5552a" stroke-width="1.4" opacity=".45"/>
+  </g>
+
+  <path d="M481 395 C495 368 522 347 539 340
+           C569 348 584 358 614 367
+           C674 387 720 388 750 363
+           C723 401 680 406 620 390
+           C569 380 535 360 514 369Z"
+        fill="url(#warmRidge)" opacity=".93"/>
+  <path d="M494 373 C510 361 515 355 519 354 L508 376Z"
+        fill="#ff7a45" opacity=".75"/>
+  <path d="M802 265 C808 314 817 355 837 395
+           C847 423 854 450 859 483
+           C863 529 878 568 907 570
+           C944 574 981 548 1012 536
+           L1017 548
+           C973 573 932 594 904 590
+           C862 586 849 554 845 514
+           C842 478 830 447 818 413
+           C801 364 796 310 802 265Z"
+        fill="url(#edgeFire)" opacity=".82" filter="url(#gripBlur5)"/>
+  <path d="M771 634 C780 677 770 841 777 964
+           L804 964 C804 851 811 738 800 675Z"
+        fill="#040303" opacity=".30"/>
+</g>
+
+<!-- 握柄轮廓光 -->
+<path d="M811 -6 C814 92 819 161 814 222
+         C810 257 814 286 818 313
+         C823 354 843 397 852 427
+         C863 462 865 487 872 519
+         C880 550 891 564 919 560
+         C951 558 978 541 1004 532"
+      fill="none" stroke="url(#edgeFire)" stroke-width="2.8"/>
+<path d="M752 0 C752 116 762 199 764 265 C767 312 753 349 739 361"
+      fill="none" stroke="#b09e8a" stroke-width="1.6" opacity=".5"/>
+<path d="M539 336 C555 339 577 350 600 357 C645 373 680 379 708 375"
+      fill="none" stroke="#ff5426" stroke-width="2.5" opacity=".9"/>
+<path d="M481 404 C470 430 464 451 474 459 C480 465 490 457 500 450"
+      fill="none" stroke="#dc4f26" stroke-width="1.8" opacity=".7"/>
+<path d="M720 577 C710 594 715 601 729 607"
+      fill="none" stroke="#785045" stroke-width="1.2" opacity=".5"/>
+<path d="M851 678 C851 653 863 637 887 628 C942 610 973 596 1008 575"
+      fill="none" stroke="#ff9068" stroke-width="2" opacity=".85"/>
+
+<!-- 握柄孔洞 -->
+<path d="M775 413 C781 399 795 394 812 402
+         C831 410 851 422 854 434
+         C857 447 836 448 817 442
+         C798 437 780 426 775 413Z"
+      fill="#0c0806" stroke="url(#holeLip)" stroke-width="2"/>
+<path d="M780 412 C780 405 789 400 798 400 C804 406 801 419 795 425Z"
+      fill="#cc4a2a"/>
+<path d="M792 403 L803 405 L800 416 L795 424 L788 420Z"
+      fill="#7e2a15"/>
+<path d="M803 401 L811 405 L809 413 L805 415Z"
+      fill="#f7a57a" opacity=".85"/>
+<path d="M815 408 C831 416 848 425 852 435
+         C845 444 825 443 806 435 L801 426Z"
+      fill="#040606"/>
+<path d="M776 413 C788 431 826 448 848 444"
+      fill="none" stroke="#ffab80" stroke-width="1.2" opacity=".85"/>
+
+<!-- 握柄磨损 -->
+<g fill="none" stroke-linecap="round">
+  <path d="M851 670 Q846 678 851 682" stroke="#100806" stroke-width="2"/>
+  <path d="M850 681 L853 683" stroke="#f08a65" stroke-width="1"/>
+  <path d="M849 713 Q842 721 848 726" stroke="#120705" stroke-width="2.1"/>
+  <path d="M845 720 L849 722" stroke="#f5a07a" stroke-width="1"/>
+  <path d="M848 753 Q841 761 847 767" stroke="#130806" stroke-width="2.2"/>
+  <path d="M843 762 L847 761" stroke="#ee7c55" stroke-width="1"/>
+  <path d="M846 791 Q839 800 844 805" stroke="#110806" stroke-width="2"/>
+  <path d="M841 802 L845 801" stroke="#cc6040" stroke-width="1"/>
+  <path d="M844 830 Q837 837 842 842
+           M842 858 Q835 865 840 868
+           M841 890 Q834 895 839 901
+           M840 921 Q834 926 838 932"
+        stroke="#0f0805" stroke-width="2"/>
+  <path d="M838 836 L843 836 M836 865 L841 864 M835 896 L840 895"
+        stroke="#da6a45" stroke-width=".9" opacity=".6"/>
+</g>
+
+<!-- 第五层：直剑身 -->
+<path d="M780 980 L828 980 L817 1590 L805 1650 L793 1585Z"
+      fill="url(#blade)" mask="url(#bladeMask)"/>
+<path d="M814 1000 L812 1480"
+      stroke="#d5d8d8" stroke-width="1" opacity=".27"/>
+
+<!-- 第六层：护手前缘 -->
+<path d="M510 864
+         C512 924 648 968 812 969
+         C966 968 1079 925 1119 881
+         L1118 905
+         C1086 956 963 1004 811 1003
+         C649 1002 520 951 513 896Z"
+      fill="url(#rim)"/>
+<path d="M511 864 C513 924 649 970 812 969
+         C970 968 1086 923 1119 881"
+      fill="none" stroke="#eeeeed" stroke-width="3.3"/>
+<path d="M514 895 C526 950 663 1004 813 1002
+         C962 1001 1085 957 1118 905"
+      fill="none" stroke="#7d8082" stroke-width="2" opacity=".75"/>
+<path d="M528 903 C568 951 681 983 776 984"
+      fill="none" stroke="#dedfe0" stroke-opacity=".18" stroke-width="1"/>
+<path d="M884 982 Q952 974 998 954"
+      fill="none" stroke="white" stroke-opacity=".5" stroke-width="4"
+      filter="url(#soft)"/>
+
+<!-- 背景反光星点 -->
+<g transform="translate(922 125)">
+  <circle r="8" fill="#fff" opacity=".09" filter="url(#soft)"/>
+  <path d="M-5 0 H5 M0 -6 V6" stroke="#fff" opacity=".45" filter="url(#glow)"/>
+  <circle r="1.6" fill="#fff"/>
+</g>
+
+<!-- 第七层：主标题 -->
+<g class="type" font-size="44" letter-spacing="6">
+  <text x="90" y="375" textLength="236" lengthAdjust="spacingAndGlyphs">FOCUS</text>
+  <text x="90" y="435" textLength="288" lengthAdjust="spacingAndGlyphs">PRECISE</text>
+  <text x="90" y="496" textLength="247" lengthAdjust="spacingAndGlyphs">THRIVE</text>
+</g>
+
+<!-- 社团名：英文 + 中文 -->
+<g class="type">
+  <text class="small" x="91" y="614"
+        textLength="235" lengthAdjust="spacingAndGlyphs">FENCING CLUB</text>
+  <text class="cn" x="90" y="656" font-size="28" letter-spacing="14"
+        fill="#d0d0ce">击剑社团</text>
+</g>
+
+<!-- 训练时间 -->
+<g class="type">
+  <text class="cn label" x="91" y="870">训练时间</text>
+  <text class="cn detail" x="91" y="910">每周三</text>
+  <text x="90" y="954" font-size="28" letter-spacing="2.2">17:00 — 18:30</text>
+
+  <!-- 训练地点 -->
+  <text class="cn label" x="91" y="1082">训练地点</text>
+  <text class="cn detail" x="91" y="1124">B03 · 一楼</text>
+  <text class="cn detail" x="91" y="1164">跆拳道馆</text>
+  <text class="cn" x="89" y="1217" font-size="21" letter-spacing="5"
+        fill="#bcbcb8">大连理工大学盘锦校区</text>
+</g>
+
+<!-- 第八层：信息板 -->
+<g transform="translate(0 91)">
+  <rect x="79" y="1229" width="892" height="290" rx="29"
+        fill="url(#panel)" stroke="url(#panelBorder)" stroke-width="1.8"/>
+  <path d="M108 1230 H940" stroke="#d9d9d6" stroke-opacity=".12"/>
+  <path d="M142 1371 H913" stroke="#505052" stroke-opacity=".45" stroke-width="1"/>
+
+  <!-- 上排 -->
+  <use href="#people" transform="translate(143 1275)"/>
+  <use href="#coach" transform="translate(421 1275)"/>
+  <use href="#people" transform="translate(690 1275)"/>
+
+  <g class="type cn">
+    <text class="feature" x="227" y="1298">零基础友好</text>
+    <text class="feature-sub" x="227" y="1327">轻松开启第一剑</text>
+
+    <text class="feature" x="497" y="1298">教练指导</text>
+    <text class="feature-sub" x="497" y="1327">循序掌握动作</text>
+
+    <text class="feature" x="764" y="1298">学长领练</text>
+    <text class="feature-sub" x="764" y="1327">同行交流成长</text>
+  </g>
+
+  <!-- 下排 -->
+  <use href="#swords" transform="translate(141 1406)"/>
+  <use href="#weapons" transform="translate(419 1407)"/>
+  <use href="#target" transform="translate(687 1408)"/>
+
+  <g class="type cn">
+    <text class="feature" x="227" y="1430">提供器材</text>
+    <text class="feature-sub" x="227" y="1459">执剑即可出发</text>
+
+    <text x="497" y="1418" font-size="18" letter-spacing="3" fill="#cececa">花剑</text>
+    <text x="497" y="1445" font-size="18" letter-spacing="3" fill="#cececa">重剑</text>
+    <text x="497" y="1472" font-size="18" letter-spacing="3" fill="#cececa">佩剑</text>
+
+    <text class="feature" x="764" y="1430" letter-spacing="1.6">从基础到实战</text>
+    <text class="feature-sub" x="764" y="1459">在交锋中进阶</text>
+  </g>
+</g>
+
+<!-- 第九层：二维码区 -->
+<g class="type">
+  <text x="91" y="1745" font-size="20" letter-spacing="2">JOIN US</text>
+  <text x="90" y="1800" font-size="34" letter-spacing="4"
+        textLength="300" lengthAdjust="spacingAndGlyphs">SCAN TO JOIN</text>
+  <text x="91" y="1842" font-size="21" letter-spacing="1.9"
+        textLength="262" lengthAdjust="spacingAndGlyphs">EN GARDE · PRÊT · ALLEZ</text>
+  <text class="cn" x="89" y="1905" font-size="23" letter-spacing="7"
+        fill="#d0d0ce">扫码加入活动群</text>
+</g>
+<path d="M420 1815 H648" stroke="url(#leadLine)" stroke-width="1.2"/>
+<circle cx="652" cy="1815" r="2.4" fill="#c8c8c6" opacity=".7"/>
+
+<!-- 二维码空框：在此 <g> 内放入 <image href="qr.png" x="691" y="1705" width="220" height="220"/> -->
+<g id="qr-slot">
+  <rect x="676" y="1690" width="250" height="250" rx="18"
+        fill="#0c0c0d" stroke="url(#panelBorder)" stroke-width="1.8"/>
+  <path d="M700 1690 H902" stroke="#d9d9d6" stroke-opacity=".12"/>
+  <g fill="none" stroke="#d1d1cf" stroke-width="2.1"
+     stroke-linecap="round" opacity=".75">
+    <path d="M692 1726 V1706 H712"/>
+    <path d="M890 1706 H910 V1726"/>
+    <path d="M910 1904 V1924 H890"/>
+    <path d="M712 1924 H692 V1904"/>
+  </g>
+</g>
+
+<!-- 第十层：页脚 -->
+<path d="M91 2110 H905" stroke="#505052" stroke-opacity=".45" stroke-width="1"/>
+<g class="type" font-size="15" letter-spacing="4">
+  <text x="91" y="2152">FOCUS · PRECISE · THRIVE</text>
+  <text x="905" y="2152" text-anchor="end">FENCING</text>
+</g>
+</svg>
+</main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿=== 数字核对：第 03 讲 ===
+  EXP1 胡克定律（钢杆 N=20 kN, L=500 mm, A=200 mm^2, E=200000 MPa）：
+        deltaL = N*L/(E*A) = 0.2500 mm；eps = deltaL/L = 5.000e-04
+        互证：sigma = N/A = 100.0 MPa；E*eps = 100.0 MPa（应相等）
+  EXP2 横向变形（泊松比 mu = 0.30）：eps' = -mu*eps = -1.500e-04；直径改变 -0.00300 mm
+  EXP3 低碳钢特征应力（理想化值）：比例极限 200、弹性极限 210、屈服极限 240、强度极限 400 MPa
+        安全系数 n = 1.5 -> 许用应力 [sigma] = sigma_s/n = 160.0 MPa
+        安全系数 n = 2.0 -> 许用应力 [sigma] = sigma_s/n = 120.0 MPa
+  EXP4 强度条件 sigma_max = N/A <= [sigma]（取 [sigma] = 160 MPa）：
+        (校核)   N=30 kN, A=200 mm^2 -> sigma = 150.0 MPa <= 160 ? 安全
+        (设计截面) N=40 kN -> A >= N/[sigma] = 250.0 mm^2
+        (求许用载荷) A=200 mm^2 -> N <= [sigma]*A = 32.0 kN
+  EXP5 变截面杆变形（E = 200000 MPa）：
+        第 1 段：N=30 kN, L=300 mm, A=200 mm^2 -> deltaL = 0.2250 mm
+        第 2 段：N=50 kN, L=200 mm, A=100 mm^2 -> deltaL = 0.5000 mm
+        总伸长 deltaL = sum = 0.7250 mm
+
+=== 图 1：低碳钢拉伸曲线 ===
+[OK] figures/lec03_fig1_stress_strain_curve.svg 与 .png 已生成。
+
+=== 图 2：胡克定律 ===
+[OK] figures/lec03_fig2_hooke_law.svg 与 .png 已生成。
+
+=== 图 3：塑性材料与脆性材料对比 ===
+[OK] figures/lec03_fig3_ductile_vs_brittle.svg 与 .png 已生成。
+
+[DONE] 第 03 讲数字核对与三张图全部完成。

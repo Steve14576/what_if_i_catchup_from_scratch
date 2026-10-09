@@ -1,0 +1,24 @@
+﻿=== 数字核对：第 17 讲 ===
+  EXP1 圆截面 d=30, L=800, E=200000, 两端铰支（mu=1）：
+        I=39760.8 mm^4, A=706.9 mm^2, i=d/4=7.50 mm -> lambda=106.67
+        P_cr=122.63 kN, sigma_cr=173.5 MPa（=P_cr/A）
+  EXP2 长度系数 mu 的影响（P_cr 与 mu^2 成反比）：
+        mu=1.0 -> P_cr=122.63 kN
+        mu=2.0 -> P_cr=30.66 kN
+        mu=0.5 -> P_cr=490.53 kN
+        mu=0.7 -> P_cr=250.27 kN
+  EXP3 柔度分界：lambda_p=pi*sqrt(E/sigma_p)=99.35（大/中柔度分界）；lambda_s=(a-sigma_s)/b=61.61（中/小柔度分界）
+  EXP4 中柔度（lambda=80，直线公式）：sigma_cr=a-b*lambda=214.4 MPa -> P_cr=151.55 kN
+  EXP5 稳定校核（P=100 kN，要求 n_st=3.0）：n_st=1.226 -> 不安全（需加强约束或加大截面）
+        （若改为一端固定一端铰支 mu=0.7：P_cr=250.27 kN -> n_st=2.50）
+
+=== 图 1：稳定 / 临界 / 不稳定平衡 ===
+[OK] figures/lec17_fig1_equilibrium.svg 与 .png 已生成。
+
+=== 图 2：四种约束下的长度系数 ===
+[OK] figures/lec17_fig2_mu_cases.svg 与 .png 已生成。
+
+=== 图 3：临界应力总图 ===
+[OK] figures/lec17_fig3_sigma_cr_total.svg 与 .png 已生成。
+
+[DONE] 第 17 讲数字核对与三张图全部完成。

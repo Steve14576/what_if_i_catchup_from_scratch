@@ -1,0 +1,18 @@
+﻿=== 数字核对：第 11 讲 ===
+  EXP1 简支梁跨中集中力 P=20 kN,L=4000 mm：w_max = PL^3/(48EI) = 26.67 mm
+        端部转角 theta = PL^2/(16EI) = 0.0200 rad = 1.1459 deg
+  EXP2 简支梁均布 q=10 kN/m：w_max = 5qL^4/(384EI) = 33.33 mm
+  EXP3 悬臂梁（L=1000 mm）端部 P：w_max = PL^3/(3EI) = 6.67 mm
+  EXP4 叠加（跨中集中力 + 均布，简支梁）：w_max = 26.67 + 33.33 = 60.00 mm
+  EXP5 积分法互证：w(跨中) = 33.3333 mm（应为 5qL^4/384EI = 33.3333）；w(L)=0.000e+00（边界应为 0）
+
+=== 图 1：挠度与转角 ===
+[OK] figures/lec11_fig1_deflect_slope.svg 与 .png 已生成。
+
+=== 图 2：挠曲线近似微分方程与积分法 ===
+[OK] figures/lec11_fig2_integration.svg 与 .png 已生成。
+
+=== 图 3：叠加法求挠度 ===
+[OK] figures/lec11_fig3_superposition.svg 与 .png 已生成。
+
+[DONE] 第 11 讲数字核对与三张图全部完成。

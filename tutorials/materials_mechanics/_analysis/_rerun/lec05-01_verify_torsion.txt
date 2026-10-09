@@ -1,0 +1,24 @@
+﻿=== 数字核对：第 05 讲 ===
+  EXP1 外力偶矩：P=15 kW, n=300 r/min -> M = 9550P/n = 477.5 N·m
+  EXP2 外力偶矩平衡：输入 - 输出 = 800.0 - 500.0 - 300.0 = 0.0（应为 0）
+        扭矩：左段 T = 800.0 N·m；右段 T = 300.0 N·m
+        突变 = T左 - T右 = 500.0 N·m = 该处外力偶矩 500.0 N·m
+  EXP3 圆轴 d=50 mm：I_p = pi*d^4/32 = 613592 mm^4；W_t = pi*d^3/16 = 24543.7 mm^3
+        tau_max = T/W_t = 800.0 N·m / 24543.7 mm^3 = 32.6 MPa
+  EXP4 剪切胡克定律 tau=G*gamma（G=80000 MPa）：
+        表面切应变 gamma_max = tau_max/G = 4.074e-04
+        rho =  0.00 mm -> tau_rho = T*rho/I_p =   0.00 MPa
+        rho = 12.50 mm -> tau_rho = T*rho/I_p =  16.30 MPa
+        rho = 25.00 mm -> tau_rho = T*rho/I_p =  32.59 MPa
+        核对：rho=R 处 tau_rho = 32.59 MPa，与 tau_max = 32.59 MPa 一致
+
+=== 图 1：外扭矩与扭矩图 ===
+[OK] figures/lec05_fig1_torque_diagram.svg 与 .png 已生成。
+
+=== 图 2：圆轴扭转变形假设 ===
+[OK] figures/lec05_fig2_deformation.svg 与 .png 已生成。
+
+=== 图 3：切应力沿半径线性分布 ===
+[OK] figures/lec05_fig3_stress_dist.svg 与 .png 已生成。
+
+[DONE] 第 05 讲数字核对与三张图全部完成。

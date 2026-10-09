@@ -1,0 +1,25 @@
+﻿=== 数字核对：第 02 讲 ===
+  EXP0 整体平衡：P1+P2+P3 = 0.0 kN（应为 0）
+  EXP1 轴力：左段 N = 30.0 kN（拉）；右段 N = -50.0 kN（压）
+        突变 = N右 - N左 = -80.0 kN，恰等于该处集中力 P2 = -80.0 kN
+  EXP2 正应力 sigma = N / A（A = 250 mm^2）：
+        左段 sigma = 120.0 MPa；右段 sigma = -200.0 MPa（危险截面在右段）
+  EXP3 斜截面应力（取 sigma = 100 MPa）：
+        alpha =  0 deg : sigma_a =  100.0 MPa , tau_a =    0.0 MPa
+        alpha = 30 deg : sigma_a =   75.0 MPa , tau_a =   43.3 MPa
+        alpha = 45 deg : sigma_a =   50.0 MPa , tau_a =   50.0 MPa
+        alpha = 60 deg : sigma_a =   25.0 MPa , tau_a =   43.3 MPa
+        alpha = 90 deg : sigma_a =    0.0 MPa , tau_a =    0.0 MPa
+        极值：sigma_a 最大 = 100.0 MPa（alpha = 0）；tau_a 最大 = 50.0 MPa（alpha = 45 deg）
+  EXP4 应力圆不变式：(sigma_a - sigma/2)^2 + tau_a^2 = (sigma/2)^2，最大偏差 = 2.27e-12（应为 0）
+
+=== 图 1：轴力与轴力图 ===
+[OK] figures/lec02_fig1_axial_diagram.svg 与 .png 已生成。
+
+=== 图 2：平面假设 ===
+[OK] figures/lec02_fig2_plane_assumption.svg 与 .png 已生成。
+
+=== 图 3：斜截面应力 ===
+[OK] figures/lec02_fig3_inclined_stress.svg 与 .png 已生成。
+
+[DONE] 第 02 讲数字核对与三张图全部完成。

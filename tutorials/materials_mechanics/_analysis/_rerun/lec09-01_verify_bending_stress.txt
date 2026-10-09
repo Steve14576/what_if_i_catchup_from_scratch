@@ -1,0 +1,27 @@
+﻿=== 数字核对：第 09 讲 ===
+  EXP1 矩形 b=60, h=100：I=5.0000e+06 mm^4；W=I/(h/2)=1.0000e+05 mm^3
+        M=10 kN·m -> sigma_max = M/W = 100.0 MPa
+  EXP2 圆 d=50：I=3.0680e+05；W=pi d^3/32=1.2272e+04
+        M=2 kN·m -> sigma_max = M/W = 163.0 MPa
+  EXP3 不对称 T 形（y_c=70, I=3.3333e+06）：
+        W_下=I/y_c=4.7619e+04 -> sigma_下 = M/W_下 = 210.0 MPa（受拉，危险）
+        W_上=I/(H-y_c)=1.1111e+05 -> sigma_上 = M/W_上 = 90.0 MPa（受压）
+  EXP4 线性分布 sigma(y)=My/I（矩形，M=10 kN·m）：
+        y=+50.0 mm -> sigma = 100.0 MPa
+        y=+25.0 mm -> sigma = 50.0 MPa
+        y= +0.0 mm -> sigma = 0.0 MPa
+        y=-25.0 mm -> sigma = -50.0 MPa
+        y=-50.0 mm -> sigma = -100.0 MPa
+  EXP5 强度设计：M=12 kN·m, [sigma]=160 MPa -> W>=M/[sigma]=7.5000e+04 mm^3
+        矩形 h=2b：W=2b^3/3 >= 75000 -> b >= 48.3 mm, 取 h=2b=96.5 mm
+
+=== 图 1：纯弯曲与梁的变形 ===
+[OK] figures/lec09_fig1_pure_bending.svg 与 .png 已生成。
+
+=== 图 2：三步推导（几何-物理-静力）===
+[OK] figures/lec09_fig2_three_steps.svg 与 .png 已生成。
+
+=== 图 3：横截面正应力线性分布 ===
+[OK] figures/lec09_fig3_stress_dist.svg 与 .png 已生成。
+
+[DONE] 第 09 讲数字核对与三张图全部完成。

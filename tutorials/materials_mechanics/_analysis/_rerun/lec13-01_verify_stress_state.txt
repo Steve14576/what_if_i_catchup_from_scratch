@@ -1,0 +1,22 @@
+﻿=== 数字核对：第 13 讲（sigma_x=100, sigma_y=50, tau_xy=40 MPa）===
+  EXP2 主应力：C=(sx+sy)/2=75.0；R=sqrt(A^2+B^2)=47.17 -> sigma_1=122.17, sigma_2=27.83 MPa
+  EXP3 最大切应力：tau_max = R = 47.17 MPa（=(sigma_1-sigma_2)/2 = 47.17）
+        主方向：alpha_p = -29.0 deg（该面上 tau=0）
+  EXP1 解析法（各角度斜截面，单位：deg / MPa）：
+        alpha=  0 : sigma_a=100.00 , tau_a= 40.00
+        alpha= 30 : sigma_a= 52.86 , tau_a= 41.65
+        alpha= 45 : sigma_a= 35.00 , tau_a= 25.00
+        alpha= 60 : sigma_a= 27.86 , tau_a=  1.65
+        alpha= 90 : sigma_a= 50.00 , tau_a=-40.00
+  EXP4 圆不变式核对：max|(sigma_a-C)^2+tau_a^2 - R^2| = 1.82e-12（应为 0）
+
+=== 图 1：一点应力状态的单元体 ===
+[OK] figures/lec13_fig1_element.svg 与 .png 已生成。
+
+=== 图 2：斜截面上的应力（解析法）===
+[OK] figures/lec13_fig2_inclined.svg 与 .png 已生成。
+
+=== 图 3：应力圆（莫尔圆）===
+[OK] figures/lec13_fig3_mohr_circle.svg 与 .png 已生成。
+
+[DONE] 第 13 讲数字核对与三张图全部完成。

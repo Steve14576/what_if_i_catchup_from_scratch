@@ -1,0 +1,22 @@
+﻿=== 数字核对：第 04 讲 ===
+  EXP1 铆钉剪切（单剪）：d=16 mm -> A_s = pi*d^2/4 = 201.06 mm^2
+        tau = F/A_s = 20000 N / 201.06 mm^2 = 99.5 MPa
+  EXP2 铆钉挤压：A_bs = d*t = 16*10 = 160 mm^2
+        sigma_bs = F/A_bs = 125.0 MPa
+  EXP3 双剪（双盖板）：剪切面 2 个 -> A_s = 2*201.06 = 402.12 mm^2
+        tau = 40000 N / 402.12 mm^2 = 99.5 MPa（与单剪同量级：Q 与面数同步翻倍）
+  EXP4 平键（b=12, h=8, l=50 mm；轴径 D=40 mm；T=400 N·m）：
+        键受力 F = T/(D/2) = 20000 N
+        剪切面 A = b*l = 600 mm^2 -> tau = 33.3 MPa
+        挤压面 A = l*(h/2) = 200 mm^2 -> sigma_bs = 100.0 MPa
+
+=== 图 1：搭接铆钉的剪切面与挤压面 ===
+[OK] figures/lec04_fig1_shear_bearing.svg 与 .png 已生成。
+
+=== 图 2：单剪与双剪 ===
+[OK] figures/lec04_fig2_single_double.svg 与 .png 已生成。
+
+=== 图 3：平键连接 ===
+[OK] figures/lec04_fig3_key.svg 与 .png 已生成。
+
+[DONE] 第 04 讲数字核对与三张图全部完成。

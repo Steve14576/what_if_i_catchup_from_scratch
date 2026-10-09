@@ -1,0 +1,21 @@
+﻿=== 数字核对：第 20 讲 ===
+  EXP1 等加速构件（a=2.0 m/s^2, g=9.8）：k_d=1+a/g=1.2041
+        静应力 sigma_st=100.0 MPa -> 动应力 sigma_d=k_d*sigma_st=120.41 MPa
+  EXP2 自由落体冲击（h=100 mm, Delta_st=2.0 mm）：k_d=1+sqrt(1+2h/Delta_st)=11.0499
+        动变形 Delta_d=k_d*Delta_st=22.10 mm；h=0（突加载荷）时 k_d=2.0
+  EXP3 冲击动应力：sigma_st=30.0 MPa -> sigma_d=11.0499*30.0=331.50 MPa
+  EXP4 反直觉核对（同一落差 h=100）：
+        刚性件 Delta_st=1.0 mm -> k_d=15.1774；柔性件 Delta_st=4.0 mm -> k_d=8.1414
+        结论：Delta_st 越小（越刚）-> k_d 越大 -> 动应力越大
+  EXP5 能量方程核对：mg(h+Delta_d)=122099.8 N·mm；0.5*k*Delta_d^2=122099.8 N·mm（应相等）
+
+=== 图 1：动载荷的两类 ===
+[OK] figures/lec20_fig1_two_types.svg 与 .png 已生成。
+
+=== 图 2：冲击动荷系数曲线 ===
+[OK] figures/lec20_fig2_kd_curve.svg 与 .png 已生成。
+
+=== 图 3：提高抗冲击能力的措施 ===
+[OK] figures/lec20_fig3_measures.svg 与 .png 已生成。
+
+[DONE] 第 20 讲数字核对与三张图全部完成。

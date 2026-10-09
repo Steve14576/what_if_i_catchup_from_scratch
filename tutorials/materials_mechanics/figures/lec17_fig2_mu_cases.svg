@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-08T16:30:16.668513</dc:date>
+    <dc:date>2026-10-09T23:16:46.083775</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -90,17 +90,17 @@ L 117.484559 70.291525
 L 116.875936 66.841017 
 L 116.263838 63.390508 
 L 115.65 59.94 
-" clip-path="url(#pcfc289acac)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p523ae3db86)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 103.068 263.52 
 L 128.232 263.52 
-" clip-path="url(#pcfc289acac)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
+" clip-path="url(#p523ae3db86)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="line2d_3">
     <path d="M 103.068 59.94 
 L 128.232 59.94 
-" clip-path="url(#pcfc289acac)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
+" clip-path="url(#p523ae3db86)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="text_1">
     <!-- $\mu=1$ -->
@@ -468,12 +468,12 @@ L 313.22984 70.291525
 L 313.14834 66.841017 
 L 313.099346 63.390508 
 L 313.083 59.94 
-" clip-path="url(#pc210b1eca0)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p266d698161)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="line2d_5">
     <path d="M 319.374 263.52 
 L 352.926 263.52 
-" clip-path="url(#pc210b1eca0)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p266d698161)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="text_3">
     <!-- $\mu=2$ -->
@@ -775,17 +775,17 @@ L 554.419736 67.670886
 L 555.155277 65.093924 
 L 555.900268 62.516962 
 L 556.65 59.94 
-" clip-path="url(#p74b231a2d6)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p64b4e71a4f)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="line2d_7">
     <path d="M 539.874 263.52 
 L 573.426 263.52 
-" clip-path="url(#p74b231a2d6)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p64b4e71a4f)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="line2d_8">
     <path d="M 539.874 59.94 
 L 573.426 59.94 
-" clip-path="url(#p74b231a2d6)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p64b4e71a4f)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="text_5">
     <!-- $\mu=0.5$ -->
@@ -944,17 +944,17 @@ L 780.882259 67.670886
 L 779.704082 65.093924 
 L 778.460426 62.516962 
 L 777.15 59.94 
-" clip-path="url(#p4e63eb0332)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p73cc3b437a)" style="fill: none; stroke: #2b6cb0; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="line2d_10">
     <path d="M 760.374 263.52 
 L 793.926 263.52 
-" clip-path="url(#p4e63eb0332)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p73cc3b437a)" style="fill: none; stroke: #718096; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="line2d_11">
     <path d="M 766.665 59.94 
 L 787.635 59.94 
-" clip-path="url(#p4e63eb0332)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
+" clip-path="url(#p73cc3b437a)" style="fill: none; stroke: #718096; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="text_7">
     <!-- $\mu=0.7$ -->
@@ -997,16 +997,16 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pcfc289acac">
+  <clipPath id="p523ae3db86">
    <rect x="10.8" y="10.8" width="209.7" height="280.8"/>
   </clipPath>
-  <clipPath id="pc210b1eca0">
+  <clipPath id="p266d698161">
    <rect x="231.3" y="10.8" width="209.7" height="280.8"/>
   </clipPath>
-  <clipPath id="p74b231a2d6">
+  <clipPath id="p64b4e71a4f">
    <rect x="451.8" y="10.8" width="209.7" height="280.8"/>
   </clipPath>
-  <clipPath id="p4e63eb0332">
+  <clipPath id="p73cc3b437a">
    <rect x="672.3" y="10.8" width="209.7" height="280.8"/>
   </clipPath>
  </defs>

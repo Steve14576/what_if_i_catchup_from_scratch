@@ -1,0 +1,25 @@
+﻿=== 数字核对：第 06 讲 ===
+  EXP1 扭转变形（G=80000 MPa, d=50 mm, T=800.0 N·m, L=1000 mm）：
+        I_p = 613592 mm^4；phi = T*L/(G*I_p) = 0.01630 rad = 0.9338 deg
+        单位长度扭转角 theta = 0.9338 deg/m
+  EXP2 强度条件（[tau]=40 MPa）：W_t >= T/[tau] = 20000.0 mm^3 -> d >= 46.7 mm
+  EXP3 刚度条件（[theta]=0.5 deg/m）：I_p >= T/(G*[theta]) = 1145916 mm^4 -> d >= 58.5 mm
+        控制条件 = 刚度（58.5 vs 46.7 mm，取大者）
+  EXP4 空心 vs 实心（同外径 D=50, 空心内径 d0=40, alpha=0.8）：
+        实心：A=1963 mm^2, W_t=24544 mm^3, W_t/A=12.50
+        空心：A=707 mm^2, W_t=14491 mm^3, W_t/A=20.50
+        单位面积抗扭：空心/实心 = 1.64（空心更省料）
+        同 W_t=24544：空心需 D=59.6 mm，用料 1004 mm^2，为实心的 51.2%（省 48.8%）
+  EXP5 非圆截面（认识层）：同面积 A=1963 mm^2 下，圆 W_t=24544；方(边长44.3) W_t~18097
+        圆形抗扭能力约为方形 1.36 倍（圆形截面抗扭最优）
+
+=== 图 1：扭转变形与扭转角 ===
+[OK] figures/lec06_fig1_twist_deformation.svg 与 .png 已生成。
+
+=== 图 2：空心轴 vs 实心轴 ===
+[OK] figures/lec06_fig2_hollow_vs_solid.svg 与 .png 已生成。
+
+=== 图 3：非圆截面扭转（认识层）===
+[OK] figures/lec06_fig3_noncircular.svg 与 .png 已生成。
+
+[DONE] 第 06 讲数字核对与三张图全部完成。

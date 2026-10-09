@@ -1,0 +1,20 @@
+﻿=== 数字核对：第 12 讲 ===
+  EXP1 拉压超静定（两端固定，P=30 kN @ a=1 m, b=2 m）：
+        平衡：R1+R2 = 30.0 kN（= P）；变形协调 -> R1=Pb/L=20.0 kN, R2=Pa/L=10.0 kN
+  EXP2 一次超静定梁（固支+简支，q=10 kN/m, L=4000 mm）：
+        多余约束反力 R_B = 3qL/8 = 15.0 kN；固定端弯矩 M = -qL^2/8 = -20.0 kN·m
+  EXP3 温度应力（两端固定，E=200000 MPa, alpha=1.2e-05 /deg, dT=30 deg）：
+        sigma = -E*alpha*dT = -72.0 MPa（受压）
+  EXP4 装配应力（杆略长 delta=0.2 mm，L=2000 mm）：
+        sigma = E*delta/L = 20.0 MPa
+
+=== 图 1：静定与超静定 ===
+[OK] figures/lec12_fig1_static_indet.svg 与 .png 已生成。
+
+=== 图 2：变形比较法（一次超静定梁）===
+[OK] figures/lec12_fig2_deformation_compat.svg 与 .png 已生成。
+
+=== 图 3：温度应力与装配应力 ===
+[OK] figures/lec12_fig3_temp_assembly.svg 与 .png 已生成。
+
+[DONE] 第 12 讲数字核对与三张图全部完成。

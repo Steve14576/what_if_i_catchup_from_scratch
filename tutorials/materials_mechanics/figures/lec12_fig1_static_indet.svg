@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-08T13:20:55.286060</dc:date>
+    <dc:date>2026-10-09T23:16:33.881369</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -34,19 +34,19 @@ z
 L 56.664 126.675 
 L 95.976 126.675 
 z
-" clip-path="url(#p060f926f9e)" style="fill: #718096"/>
+" clip-path="url(#p68532d53b8)" style="fill: #718096"/>
    </g>
    <g id="patch_3">
     <path d="M 600.48 103.5 
 L 580.824 126.675 
 L 620.136 126.675 
 z
-" clip-path="url(#p060f926f9e)" style="fill: #718096"/>
+" clip-path="url(#p68532d53b8)" style="fill: #718096"/>
    </g>
    <g id="line2d_1">
     <path d="M 76.32 103.5 
 L 600.48 103.5 
-" clip-path="url(#p060f926f9e)" style="fill: none; stroke: #2b6cb0; stroke-width: 4; stroke-linecap: square"/>
+" clip-path="url(#p68532d53b8)" style="fill: none; stroke: #2b6cb0; stroke-width: 4; stroke-linecap: square"/>
    </g>
    <g id="text_1">
     <!-- 静定梁：2 个竖向反力，2 个平衡方程 -&gt; 可解 -->
@@ -1092,26 +1092,26 @@ z
 L 56.664 322.875 
 L 95.976 322.875 
 z
-" clip-path="url(#p9bfff7df8d)" style="fill: #718096"/>
+" clip-path="url(#pbee95df5a7)" style="fill: #718096"/>
    </g>
    <g id="patch_5">
     <path d="M 338.4 299.7 
 L 318.744 322.875 
 L 358.056 322.875 
 z
-" clip-path="url(#p9bfff7df8d)" style="fill: #c05621"/>
+" clip-path="url(#pbee95df5a7)" style="fill: #c05621"/>
    </g>
    <g id="patch_6">
     <path d="M 600.48 299.7 
 L 580.824 322.875 
 L 620.136 322.875 
 z
-" clip-path="url(#p9bfff7df8d)" style="fill: #718096"/>
+" clip-path="url(#pbee95df5a7)" style="fill: #718096"/>
    </g>
    <g id="line2d_2">
     <path d="M 76.32 299.7 
 L 600.48 299.7 
-" clip-path="url(#p9bfff7df8d)" style="fill: none; stroke: #2b6cb0; stroke-width: 4; stroke-linecap: square"/>
+" clip-path="url(#pbee95df5a7)" style="fill: none; stroke: #2b6cb0; stroke-width: 4; stroke-linecap: square"/>
    </g>
    <g id="text_3">
     <!-- 超静定梁：3 个竖向反力 &gt; 2 个方程 -&gt; 有 1 个多余约束 -->
@@ -1627,10 +1627,10 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p060f926f9e">
+  <clipPath id="p68532d53b8">
    <rect x="10.8" y="10.8" width="655.2" height="185.4"/>
   </clipPath>
-  <clipPath id="p9bfff7df8d">
+  <clipPath id="pbee95df5a7">
    <rect x="10.8" y="207" width="655.2" height="185.4"/>
   </clipPath>
  </defs>

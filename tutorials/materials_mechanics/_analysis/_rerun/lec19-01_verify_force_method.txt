@@ -1,0 +1,18 @@
+﻿=== 数字核对：第 19 讲（一次超静定梁 q=10 N/mm, L=4000 mm, EI=1.000e+12）===
+  EXP1 柔度系数与自由项：delta_11=L^3/(3EI)=0.021333 mm/N；Delta_1P=qL^4/(8EI)=320.00 mm
+  EXP2 解正则方程：X1=Delta_1P/delta_11=15000.0 N=15.00 kN；3qL/8=15.00 kN（与第 12 讲一致）
+  EXP3 残差检查：delta_11*X1-Delta_1P=0.000e+00 mm（应约为 0）
+  EXP4 对称性（两端固定梁受均布）：M_固定=-qL^2/12=-13333333.3333 N·mm=-13.33 kN·m；M_跨中=qL^2/24=6666666.6667 N·mm=6.67 kN·m
+        核对：由弯矩方程算 M(L/2)=6666666.67 N·mm（应等于 M_跨中）
+  EXP5 柔度矩阵对称：delta_12=-2.178000e-10, delta_21=-2.178000e-10 rad/(N·mm)（差 0.00e+00）
+
+=== 图 1：力法与基本体系 ===
+[OK] figures/lec19_fig1_primary_system.svg 与 .png 已生成。
+
+=== 图 2：柔度系数与自由项的物理意义 ===
+[OK] figures/lec19_fig2_flexibility.svg 与 .png 已生成。
+
+=== 图 3：正则方程与对称性的利用 ===
+[OK] figures/lec19_fig3_canonical_eq.svg 与 .png 已生成。
+
+[DONE] 第 19 讲数字核对与三张图全部完成。

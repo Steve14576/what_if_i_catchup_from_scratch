@@ -1,0 +1,20 @@
+﻿=== 数字核对：第 10 讲 ===
+  EXP1 矩形 b=60,h=100,Q=20 kN：A=6000 mm^2
+        tau_max = 3Q/(2A) = 5.00 MPa（中性轴处）
+  EXP2 互证：S_z*(中性轴)=75000 mm^3；tau=Q*S_z*/(I b)=5.00 MPa（应与 3Q/2A 一致）
+  EXP3 工字形（总高 80, I=2.3333e+06, 腹板面积占比 43%）：
+        腹板内最大切应力（中性轴）tau_max = 15.86 MPa（远大于翼缘）
+        结论：剪力主要由腹板承担
+  EXP4 圆 d=50：A=1963 mm^2；tau_max = 4Q/(3A) = 13.58 MPa
+  EXP5 切应力强度条件：矩形 tau_max=5.00 MPa 是否 <= [tau]=60.0 MPa ? 安全
+
+=== 图 1：弯曲切应力的来源 ===
+[OK] figures/lec10_fig1_shear_origin.svg 与 .png 已生成。
+
+=== 图 2：矩形截面切应力抛物线分布 ===
+[OK] figures/lec10_fig2_rect_parabola.svg 与 .png 已生成。
+
+=== 图 3：工字形切应力分布 + 圆形 ===
+[OK] figures/lec10_fig3_i_circle.svg 与 .png 已生成。
+
+[DONE] 第 10 讲数字核对与三张图全部完成。

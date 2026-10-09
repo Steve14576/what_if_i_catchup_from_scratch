@@ -1,0 +1,20 @@
+﻿=== 数字核对：第 15 讲 ===
+  EXP1 一般三向（s1=100,s2=50,s3=-20, mu=0.3）：
+        sigma_r1=100.0, sigma_r2=91.0, sigma_r3=120.0, sigma_r4=104.4 MPa
+  EXP2 薄壁圆筒（D=1000, t=10, p=1.0 MPa）：sigma_theta=50.0, sigma_z=25.0 MPa
+        主应力 (50.0, 25.0, 0) -> sigma_r3=50.0, sigma_r4=43.3 MPa
+  EXP3 纯剪切（tau=100）：sigma_r3=2tau=200.0；sigma_r4=sqrt(3)tau=173.21
+        （互证：sqrt(3)*tau = 173.2051）
+  EXP4 弯扭组合（sigma=100, tau=40）：主应力 (114.03, 0.00, -14.03)
+        sigma_r3=sqrt(s^2+4t^2)=128.06（主应力法 128.06）；sigma_r4=sqrt(s^2+3t^2)=121.66（主应力法 121.66）
+
+=== 图 1：四个强度理论的控制因素 ===
+[OK] figures/lec15_fig1_four_theories.svg 与 .png 已生成。
+
+=== 图 2：四个相当应力对比 ===
+[OK] figures/lec15_fig2_sigma_r_compare.svg 与 .png 已生成。
+
+=== 图 3：薄壁圆筒的应力 ===
+[OK] figures/lec15_fig3_thin_cylinder.svg 与 .png 已生成。
+
+[DONE] 第 15 讲数字核对与三张图全部完成。
