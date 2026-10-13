@@ -13,7 +13,7 @@
 | 稳定性 | stability | 受压细长构件保持原有平衡形式、不突然失稳（侧向弯折）的能力 | 第 01 讲 | 要能复述 |
 | 杆件 | bar / rod / member | 一个方向尺寸（长度）远大于另外两个方向（横截面尺寸）的构件；本课程主要研究对象 | 第 01 讲 | 识别 |
 | 板壳 | plate & shell | 两个方向尺寸大、一个方向（厚度）小的构件，如楼板、压力容器壁 | 第 01 讲 | 识别 |
-| 块体 | block / body | 三个方向尺寸相差不多、无长度优势的构件，如地基、水坝 | 第 01 讲 | 识别 |
+| 块体 | block / body | 三个方向尺寸相差不多、无长度优势的构件，如桥墩、水坝 | 第 01 讲 | 识别 |
 | 变形固体 | deformable solid | 受力后会发生变形的物体；与"受力不变形的刚体"相对，是材料力学的研究对象 | 第 01 讲 | 要能辨析 |
 | 刚体 | rigid body | 受力后形状与尺寸完全不变的理想物体（理论力学的研究对象）；材料力学不采用 | 第 01 讲 | 识别 |
 | 连续性假设 | assumption of continuity | 假设材料毫无空隙地充满构件；使力与变形可用连续函数描述、微积分可用 | 第 01 讲 | 知道为何需要 |
@@ -134,7 +134,7 @@
 | 一点的应力状态 | stress state at a point | 过一点所有方向截面上应力的总称；由单元体描述 | 第 13 讲 | 要理解 |
 | 单元体 | infinitesimal element | 围绕一点取的无穷小正六面体，用以表示应力状态 | 第 13 讲 | 要会画 |
 | 平面应力状态 | plane stress state | 单元体仅有两个方向正应力与一个切应力（$\sigma_x,\sigma_y,\tau_{xy}$）的状态 | 第 13 讲 | 要会判 |
-| 斜截面应力 σ_α、τ_α | stresses on an inclined plane | 法线与 $x$ 成 $\alpha$ 的截面上的正应力与切应力 | 第 13 讲 | 要会算 |
+| 斜截面上的应力（σ_α、τ_α） | stresses on an inclined plane | 法线与 $x$ 成 $\alpha$ 的截面上的正应力与切应力 | 第 13 讲 | 要会算 |
 | 主平面 | principal plane | 切应力为零的截面 | 第 13 讲 | 要会定 |
 | 主应力 | principal stress | 主平面上的正应力 $\sigma_1$、$\sigma_2$（一点的正应力极值） | 第 13 讲 | 要会算 |
 | 最大切应力 | maximum shear stress（τ_max） | 一点的最大切应力 $\tau_{\max}=R=(\sigma_1-\sigma_2)/2$，与主平面成 45° | 第 13 讲 | 要会算 |
@@ -142,7 +142,7 @@
 | 三向应力状态 | triaxial stress state | 三个方向都有应力（主应力 $\sigma_1\ge\sigma_2\ge\sigma_3$）的应力状态 | 第 14 讲 | 要会判 |
 | 广义胡克定律 | generalized Hooke's law | 三向应力下应变与应力的关系：$\varepsilon_x=[\sigma_x-\mu(\sigma_y+\sigma_z)]/E$ 等 | 第 14 讲 | 要会用 |
 | 体积应变 | volumetric strain（θ） | 单位体积的体积改变：$\theta=\varepsilon_x+\varepsilon_y+\varepsilon_z$ | 第 14 讲 | 要会算 |
-| 弹性常数关系 E-G-μ | relation among elastic constants | 各向同性材料只有两个独立弹性常数：$G=E/[2(1+\mu)]$ | 第 14 讲 | 要会用 |
+| 三个弹性常数（E、G、μ） | relation among elastic constants | 各向同性材料只有两个独立弹性常数：$G=E/[2(1+\mu)]$ | 第 14 讲 | 要会用 |
 | 平面应变 | plane strain | $\varepsilon_z=0$ 的状态（区别于平面应力） | 第 14 讲 | 识别 |
 | 体积模量 | bulk modulus | 体积应力与体积应变之比，$K=E/[3(1-2\mu)]$ | 第 14 讲 | 认识 |
 | 强度理论 | strength theory | 用破坏原因假设把复杂应力折算为相当应力的判据体系 | 第 15 讲 | 要理解 |
@@ -191,7 +191,7 @@
 | 持久极限 | endurance limit（σ_−1） | 对称循环下材料不发生疲劳破坏的最高应力 | 第 21 讲 | 要会查用 |
 | 有效应力集中系数 | effective stress concentration factor（k_σ） | $>1$，在构件持久极限公式的**分母**（最不利） | 第 21 讲 | 要会查用 |
 | 尺寸系数 / 表面质量系数 | size factor（ε）/ surface finish factor（β） | 均 $\le1$，在分子 | 第 21 讲 | 要会查用 |
-| 细长梁界限 | slender beam limit | $L/h\ge10$ 时剪切变形占比小于 3%，Euler-Bernoulli 梁理论适用 | 第 22 讲 | 认识 |
+| 细长梁（经验界限） | slender beam limit | $L/h\ge10$ 时剪切变形占比小于 3%，Euler-Bernoulli 梁理论适用 | 第 22 讲 | 认识 |
 | 应力集中系数 | stress concentration factor（k_t） | 峰值应力与名义应力之比；圆孔 $k_t=2+(1-d/W)^3$ | 第 22 讲 | 认识 |
 | 纵横弯曲 | beam-column | 轴向压力与横向弯曲耦合，挠度被放大（本课不展开的下游问题） | 第 22 讲 | 认识 |
 | 有限元法 | finite element method | 把连续体离散为单元求解；以第 18 讲能量原理为数学基础 | 第 22 讲 | 认识 |
