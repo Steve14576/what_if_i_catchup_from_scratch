@@ -14,6 +14,10 @@
         第 1 段：N=30 kN, L=300 mm, A=200 mm^2 -> deltaL = 0.2250 mm
         第 2 段：N=50 kN, L=200 mm, A=100 mm^2 -> deltaL = 0.5000 mm
         总伸长 deltaL = sum = 0.7250 mm
+  EXP6 工程应力 vs 真应力（颈缩后 A/A0 = 0.6）：
+        L/L0 = A0/A = 1.6667 -> eps = 0.6667；sigma = 350.0 MPa -> sigma_t = sigma*(1+eps) = 583.3 MPa
+        互证：sigma_t = sigma*(A0/A) = 583.3 MPa（应与上式一致）
+        （作业 Q9 数据：A/A0=0.5, sigma=300 MPa -> sigma_t=600.0 MPa）
 
 === 图 1：低碳钢拉伸曲线 ===
 [OK] figures/lec03_fig1_stress_strain_curve.svg 与 .png 已生成。

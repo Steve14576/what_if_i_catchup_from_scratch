@@ -62,6 +62,8 @@
 | 脆性材料 | brittle material | 塑性变形很小就脆断的材料，如铸铁、混凝土；抗压远强于抗拉、对应力集中敏感 | 第 03 讲 | 要能判别 |
 | 延伸率 | elongation（δ） | 断裂时试件标距内的残余伸长率；判塑性/脆性的指标 | 第 03 讲 | 认识层 |
 | 冷作硬化 | cold working | 预塑性变形后材料比例极限升高、塑性下降的现象 | 第 03 讲（认识层） | 认识 |
+| 工程应力 / 工程应变 | engineering stress / strain | 按试件**原始尺寸**计算：$\sigma=N/A_0$、$\varepsilon=\Delta L/L_0$；也叫名义应力/应变 | 第 03 讲 | 要能辨析 |
+| 真应力 / 真应变 | true stress / strain | 按**当时**尺寸计算：$\sigma_t=N/A$、$\varepsilon_t=\ln(1+\varepsilon)$；塑性变形体积不变下 $\sigma_t=\sigma(1+\varepsilon)$ | 第 03 讲 | 要能辨析、会换算 |
 | 极限应力 | ultimate stress（σ_u） | 材料能承受的极限应力取值：塑性材料取 $\sigma_s$、脆性材料取 $\sigma_b$ | 第 03 讲 | 要能取值 |
 | 许用应力 | allowable stress（[σ]） | 极限应力折减安全系数后的允许应力：$[\sigma]=\sigma_u/n$ | 第 03 讲 | 要会算 |
 | 安全系数 | factor of safety（n） | 大于 1 的折减系数，覆盖载荷估计误差、材料不均匀、计算简化等不确定因素 | 第 03 讲 | 要能复述作用 |
@@ -170,7 +172,7 @@
 | 单位载荷法 | unit load method | 在所求位移处加单位力，用内力图积分求位移 | 第 18 讲 | 要会用 |
 | 莫尔积分 | Mohr's integral | $\Delta=\int M\bar{M}/(EI)\,\mathrm{d}x$（梁） | 第 18 讲 | 要会算 |
 | 图形互乘法 | graphical multiplication | 莫尔积分的速算：$\Delta=\Omega\bar{M}_C/EI$（直线图形） | 第 18 讲 | 要会用 |
-| 卡氏定理 | Castigliano's theorem | $\Delta_i=\partial V_\varepsilon/\partial F_i$ | 第 18 讲 | 会用 |
+| 卡氏定理 | Castigliano's theorem | 第二定理：$\Delta_i=\partial V_\varepsilon/\partial F_i$、$\theta_i=\partial V_\varepsilon/\partial M_i$（无对应广义力时加虚载荷） | 第 18 讲 | 会用 |
 | 力法 | force method | 以多余未知力为基本未知量解超静定的方法 | 第 19 讲 | 要会用 |
 | 基本体系 | primary system | 去掉多余约束后得到的静定结构（同第 12 讲静定基） | 第 19 讲 | 要会取 |
 | 多余未知力 | redundant force（X_i） | 多余约束的作用，力法的基本未知量 | 第 19 讲 | 要会选 |
@@ -215,6 +217,7 @@
 | $\Delta L = \dfrac{N L}{E A}$（**模板**：先定轴力 $N$，再代 $E$、$A$、$L$） | $N$ 轴力、$L$ 原长、$E$ 弹性模量、$A$ 横截面积（$EA$ 为拉压刚度） | 线弹性范围；等截面、单一轴力 | 第 03 讲 |
 | $\Delta L = \sum_i \dfrac{N_i L_i}{E_i A_i}$（连续变力时 $\Delta L=\int_0^L\frac{N(x)}{EA(x)}\mathrm{d}x$） | 第 $i$ 段轴力 $N_i$、长度 $L_i$、面积 $A_i$ | 线弹性范围；变截面/多段杆（各段带符号相加） | 第 03 讲 |
 | $\varepsilon' = -\mu\,\varepsilon$ | $\mu$ 泊松比，$\varepsilon'$ 横向线应变 | 线弹性、各向同性 | 第 03 讲 |
+| $\sigma_t=\sigma(1+\varepsilon)$；$\varepsilon_t=\ln(1+\varepsilon)$ | 塑性变形体积不变（$A_0L_0=AL$） | 工程值 → 真值换算（颈缩后差异显著） | 第 03 讲 |
 | $[\sigma] = \dfrac{\sigma_u}{n}$ | $\sigma_u$ 极限应力（塑性取 $\sigma_s$、脆性取 $\sigma_b$），$n$ 安全系数 | 许用应力的定义 | 第 03 讲 |
 | $\sigma_{\max} = \dfrac{N}{A} \le [\sigma]$（**模板**：算工作应力，与许用应力比大小） | $N$ 为危险截面轴力 | 轴向拉压强度条件 | 第 03 讲 |
 | $A \ge \dfrac{N}{[\sigma]}$ | 设计截面时所需最小面积 | 轴向拉压、已知 $N$ 与 $[\sigma]$ | 第 03 讲 |
@@ -290,7 +293,7 @@
 | $\Delta=\displaystyle\int\dfrac{M(x)\bar{M}(x)}{EI}\mathrm{d}x$ | $M$ 实际载荷、$\bar{M}$ 单位载荷的弯矩图 | 莫尔积分（梁，单位载荷法） | 第 18 讲 |
 | 直线×直线：$\Delta=\dfrac{\Omega\bar{M}_C}{EI}$；标准抛物线×直线：$\Delta=\dfrac{1}{EI}\cdot\dfrac{5}{8}\Omega\bar{M}_{\text{中点}}$ | $\Omega$ 图形面积、$\bar{M}_C$ 形心处竖标 | 图形互乘规则 | 第 18 讲 |
 | $\delta_{12}=\delta_{21}$；$F_1\delta_{12}=F_2\delta_{21}$ | — | 位移互等 / 功的互等定理 | 第 18 讲 |
-| $\Delta_i=\dfrac{\partial V_\varepsilon}{\partial F_i}$ | — | 卡氏定理 | 第 18 讲 |
+| $\Delta_i=\dfrac{\partial V_\varepsilon}{\partial F_i}$；$\theta_i=\dfrac{\partial V_\varepsilon}{\partial M_i}$ | — | 卡氏定理（第二定理）；无对应广义力时加虚载荷 | 第 18 讲 |
 | $\delta_{ij}=\displaystyle\int\dfrac{\bar{M}_i\bar{M}_j}{EI}\mathrm{d}x$；$\Delta_{iP}=\displaystyle\int\dfrac{M_P\bar{M}_i}{EI}\mathrm{d}x$ | $\bar{M}_i$ 为 $X_i=1$ 的弯矩图、$M_P$ 为实际载荷弯矩图 | 柔度系数与自由项（梁） | 第 19 讲 |
 | $\displaystyle\sum_j\delta_{ij}X_j+\Delta_{iP}=0$ | — | 正则方程（$n$ 次 $n$ 个） | 第 19 讲 |
 | 一次超静定：$X_1=-\dfrac{\Delta_{1P}}{\delta_{11}}$ | — | 一次超静定的解 | 第 19 讲 |

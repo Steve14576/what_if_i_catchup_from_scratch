@@ -7,6 +7,9 @@
   EXP5 卡氏定理：w=dV/dP=26.6667 mm（与查表一致）
   EXP6 抛物线特例（q=10 N/mm）：Omega=5.3333e+10, Mbar_中点=1000.0
         (5/8)*Omega*Mbar/EI=33.3333 mm；查表 5qL^4/(384EI)=33.3333 mm（应一致）
+  EXP7 卡氏定理求转角（悬臂端部 P=10 kN, L=1000 mm）：
+        解析：theta = PL^2/(2EI) = 0.005000 rad = 0.2865 deg
+        数值求导：dV/dM0 = 0.005000 rad（与解析差 8.00e-13）
 
 === 图 1：三种基本变形的应变能 ===
 [OK] figures/lec18_fig1_strain_energy.svg 与 .png 已生成。

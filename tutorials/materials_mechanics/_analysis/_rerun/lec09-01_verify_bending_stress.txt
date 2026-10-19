@@ -13,7 +13,7 @@
         y=-25.0 mm -> sigma = -50.0 MPa
         y=-50.0 mm -> sigma = -100.0 MPa
   EXP5 强度设计：M=12 kN·m, [sigma]=160 MPa -> W>=M/[sigma]=7.5000e+04 mm^3
-        矩形 h=2b：W=2b^3/3 >= 75000 -> b >= 48.3 mm, 取 h=2b=96.5 mm
+        矩形 h=2b：W=2b^3/3 >= 75000 -> b >= 48.3 mm（工程取整 b=49、h=98）
 
 === 图 1：纯弯曲与梁的变形 ===
 [OK] figures/lec09_fig1_pure_bending.svg 与 .png 已生成。

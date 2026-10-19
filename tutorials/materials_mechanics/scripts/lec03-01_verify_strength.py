@@ -6,6 +6,8 @@
 #   EXP2 横向变形与泊松比：eps' = -mu*eps，直径改变量
 #   EXP3 理想化低碳钢拉伸曲线的特征点与许用应力
 #   EXP4 强度条件三类问题（校核、设计截面、求许用载荷）
+#   EXP5 变截面（多段）杆的变形 deltaL = sum(N_i*L_i/(E_i*A_i))
+#   EXP6 工程应力 vs 真应力（体积不变下 sigma_t = sigma*(1+eps) = sigma*(A0/A)）
 # 出图（编号按正文出现顺序）：
 #   lec03_fig1_stress_strain_curve   低碳钢拉伸 sigma-eps 曲线（四阶段 + 特征点）
 #   lec03_fig2_hooke_law             胡克定律：杆件伸长与 sigma-eps 线性段
@@ -95,6 +97,16 @@ for k, (Ni, Li, Ai) in enumerate(segs, 1):
     print("        第 %d 段：N=%.0f kN, L=%.0f mm, A=%.0f mm^2 -> deltaL = %.4f mm"
           % (k, Ni / 1e3, Li, Ai, dli))
 print("        总伸长 deltaL = sum = %.4f mm" % dL_sum)
+
+# EXP6 工程应力 vs 真应力（体积不变假设：A0*L0 = A*L）
+sig_eng, A_ratio = 350.0, 0.6          # MPa, A/A0
+eps_true = 1.0 / A_ratio - 1.0         # L/L0 - 1
+sig_true = sig_eng * (1.0 + eps_true)
+print("  EXP6 工程应力 vs 真应力（颈缩后 A/A0 = %.1f）：" % A_ratio)
+print("        L/L0 = A0/A = %.4f -> eps = %.4f；sigma = %.1f MPa -> sigma_t = sigma*(1+eps) = %.1f MPa"
+      % (1.0 / A_ratio, eps_true, sig_eng, sig_true))
+print("        互证：sigma_t = sigma*(A0/A) = %.1f MPa（应与上式一致）" % (sig_eng / A_ratio))
+print("        （作业 Q9 数据：A/A0=0.5, sigma=300 MPa -> sigma_t=%.1f MPa）" % (300.0 * 2.0))
 
 
 # ---------------------------------------------------------------------

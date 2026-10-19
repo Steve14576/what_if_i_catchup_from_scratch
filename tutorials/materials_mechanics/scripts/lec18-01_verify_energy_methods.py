@@ -7,6 +7,8 @@
 #   EXP3 图形互乘法 (L/3)*M_max*Mbar_max/EI，与 EXP2 一致（三法互证）
 #   EXP4 位移互等定理 delta_12 = delta_21 数值验证
 #   EXP5 卡氏定理 w = dV/dP = PL^3/(48EI)，与查表一致
+#   EXP6 抛物线特例 (5/8)*Omega*Mbar/EI = 5qL^4/(384EI)
+#   EXP7 卡氏定理求转角（对力偶求偏导 + 数值求导复核）theta = PL^2/(2EI)
 # 出图（编号按正文出现顺序）：
 #   lec18_fig1_strain_energy    三种基本变形的应变能
 #   lec18_fig2_unit_load        单位载荷法与莫尔积分
@@ -106,6 +108,22 @@ w_par_true = 5.0 * q * L ** 4 / (384.0 * EI)
 print("  EXP6 抛物线特例（q=%.0f N/mm）：Omega=%.4e, Mbar_中点=%.1f" % (q, Omega_par, Mbar_max))
 print("        (5/8)*Omega*Mbar/EI=%.4f mm；查表 5qL^4/(384EI)=%.4f mm（应一致）"
       % (w_par_58, w_par_true))
+
+# EXP7 卡氏定理求转角（悬臂端部集中力；对虚力偶 M0 求偏导）
+P7, L7, EI7 = 10.0e3, 1000.0, 1.0e12
+
+
+def V_with_M0(M0):
+    xs7 = np.linspace(0, L7, 4001)
+    return np.trapezoid((P7 * xs7 + M0) ** 2 / (2.0 * EI7), xs7)
+
+
+theta_ana = P7 * L7 ** 2 / (2.0 * EI7)
+h7 = 1.0
+theta_num = (V_with_M0(h7) - V_with_M0(-h7)) / (2.0 * h7)
+print("  EXP7 卡氏定理求转角（悬臂端部 P=%.0f kN, L=%.0f mm）：" % (P7 / 1e3, L7))
+print("        解析：theta = PL^2/(2EI) = %.6f rad = %.4f deg" % (theta_ana, np.rad2deg(theta_ana)))
+print("        数值求导：dV/dM0 = %.6f rad（与解析差 %.2e）" % (theta_num, abs(theta_num - theta_ana)))
 
 
 # ---------------------------------------------------------------------

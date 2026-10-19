@@ -28,6 +28,40 @@
 | 几何概型 | geometric probability model | 样本空间为可度量区域且均匀随机时，$P(A)=A$ 的度量（长度/面积/体积）÷ $\Omega$ 的度量 | 第 01 讲 | 要能推导/手算 |
 | 均匀随机的 | uniformly random | 几何版的"等可能"：每个等面积的子区域得到相等概率 | 第 01 讲 | 要建立直觉 |
 | 蒙特卡洛方法 | Monte Carlo method | 用大量随机样本的统计量（频率/均值）去估计想算的量；本课作为验证手段贯穿各讲，不设独立讲 | 第 01 讲 | 要建立直觉 |
+| 加法原理 | addition principle | 完成一件事有若干类**互不相容**的办法，总办法数 = 各类办法数之和（分类计数） | 第 02 讲 | 要能推导/手算 |
+| 乘法原理 | multiplication principle | 完成一件事需依次经过 $k$ 步，各步选择数相乘（分步计数）；每步选择数不依赖前面具体选了什么 | 第 02 讲 | 要能推导/手算 |
+| 阶乘 | factorial, $n!$ | $n\times(n-1)\times\cdots\times1$；规定 $0!=1$ | 第 02 讲 | 要会用 |
+| 排列数 | arrangements, $A_n^k$ | 从 $n$ 个不同元素中**有序**取 $k$ 个（不放回）的排法数，$=n(n-1)\cdots(n-k+1)=n!/(n-k)!$ | 第 02 讲 | 要能推导/手算 |
+| 全排列 | full permutation | $A_n^n=n!$，把 $n$ 个元素全部排列 | 第 02 讲 | 要会用 |
+| 组合数 | combinations, $C_n^k=\binom{n}{k}$ | 从 $n$ 个不同元素中**无序**取 $k$ 个的组数，$=A_n^k/k!=n!/(k!(n-k)!)$；也读作"n 选 k" | 第 02 讲 | 要能推导/手算 |
+| 组合对称性 | $C_n^k=C_n^{n-k}$ | 挑 $k$ 个留下，等价于淘汰 $n-k$ 个，组数相同 | 第 02 讲 | 要会用 |
+| 放回 / 不放回 | with / without replacement | 取出后是否放回去；决定同一元素能否被重复取到，是计数题必先辨明的一维 | 第 02 讲 | 要建立直觉 |
+| 隔板法 | stars and bars | 把 $k$ 个**相同**物体分给 $n$ 个对象（允许空）的方案数 $=C_{n+k-1}^k$，即方程 $x_1+\cdots+x_n=k$ 的非负整数解数 | 第 02 讲 | 要能推导/手算 |
+| 补集计数 | complementary counting | 数"至少一个"时改数补集"一个都没有"，用总数减掉 | 第 02 讲 | 要会用 |
+| 分组去重 | grouping | 把 $n$ 个不同元素分成若干**无编号**的堆，需除以堆数的阶乘；分给有区别的对象则不用除 | 第 02 讲 | 要会用 |
+| 有重复元素的排列 | permutation with repetition | $n$ 个元素中含重复（同类各 $n_1,n_2,\dots$ 个）时，排列数 $=n!/(n_1!n_2!\cdots)$ | 第 02 讲 | 要会用 |
+| 条件概率 | conditional probability, $P(B\mid A)$ | 在 A 发生的条件下 B 发生的概率，$=P(AB)/P(A)$（$P(A)>0$）；等价于把样本空间缩到 A 再归一 | 第 03 讲 | 要能推导/手算 |
+| 乘法公式 | multiplication rule | $P(AB)=P(A)P(B\mid A)=P(B)P(A\mid B)$；多事件链式 $P(ABC)=P(A)P(B\mid A)P(C\mid AB)$ | 第 03 讲 | 要能推导/手算 |
+| 相互独立 | mutually independent | 两事件满足 $P(AB)=P(A)P(B)$；含义是"一个发生不改变另一个的概率" | 第 03 讲 | 要能推导/手算 |
+| 两两独立 | pairwise independent | 任意两个都满足乘积式；**不等于**相互独立（掷两枚硬币反例：$P(ABC)=0\ne1/8$） | 第 03 讲 | 要能推导/手算 |
+| 划分 / 完备事件组 | partition | 一组事件两两互斥、并起来是整个 $\Omega$、每个概率大于 0 | 第 03 讲 | 要会用 |
+| 先验概率 | prior probability | $P(B_i)$：看到结果前对起因 $B_i$ 的相信程度 | 第 03 讲 | 要建立直觉 |
+| 似然 | likelihood | $P(A\mid B_i)$：若起因是 $B_i$，观察到结果 $A$ 的可能有多大 | 第 03 讲 | 要建立直觉 |
+| 后验概率 | posterior probability | $P(B_i\mid A)$：看到结果 $A$ 后更新的相信程度 | 第 03 讲 | 要建立直觉 |
+| 基础比率谬误 | base rate fallacy | 忽略先验（基础比率）、只看检测准确率，导致把阳性者患病率估得过高 | 第 03 讲 | 要建立直觉 |
+| 随机变量 | random variable, $X$ | 定义在样本空间上的实值函数 $X:\Omega\to\mathbb R$，给每个试验结果贴一个数 | 第 04 讲 | 要建立直觉 |
+| 离散型随机变量 | discrete random variable | 取值是有限个或可数无穷个孤立点的随机变量 | 第 04 讲 | 要建立直觉 |
+| 连续型随机变量 | continuous random variable | 取值铺满一个区间的随机变量 | 第 04 讲 | 要建立直觉 |
+| 分布律 / 概率质量函数 | probability mass function, PMF | 离散型的取值概率列表 $P(X=x_k)=p_k$；满足 $p_k\ge 0$ 且 $\sum_k p_k=1$ | 第 04 讲 | 要能推导/手算 |
+| 分布函数 / 累积分布函数 | cumulative distribution function, CDF | $F(x)=P(X\le x)$，对一切实数有定义；统一离散与连续 | 第 04 讲 | 要能推导/手算 |
+| 概率密度函数 | probability density function, PDF | 连续型的密度 $f$：$F(x)=\int_{-\infty}^{x}f(t)\,dt$，$f\ge 0$、$\int_{-\infty}^{\infty}f=1$；**不是概率**，可大于 1 | 第 04 讲 | 要能推导/手算 |
+| 0-1 分布 / 伯努利分布 | Bernoulli distribution | 一次试验只取 0/1：$P(1)=p$、$P(0)=1-p$；后面分布的基本零件 | 第 05 讲 | 要会用 |
+| 二项分布 | binomial distribution, $B(n,p)$ | $n$ 次独立重复试验中成功次数；$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$ | 第 05 讲 | 要能推导/手算 |
+| 泊松分布 | Poisson distribution, $P(\lambda)$ | 固定时间/面积里稀有事件发生次数；$P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda}$；是二项的稀有事件极限 | 第 05 讲 | 要能推导/手算 |
+| 几何分布 | geometric distribution, $G(p)$ | 首次成功所需的试验次数；$P(X=k)=(1-p)^{k-1}p$；具无记忆性 | 第 05 讲 | 要能推导/手算 |
+| 超几何分布 | hypergeometric distribution | 有限总体不放回抽取的成功数；$P(X=k)=\frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}$ | 第 05 讲 | 要能推导/手算 |
+| 无记忆性 | memoryless property | $P(X>m+n\mid X>m)=P(X>n)$；几何分布与指数分布具有 | 第 05 讲 | 要建立直觉 |
+| 稀有事件近似 | Poisson approximation | $n$ 大、$p$ 小、$np=\lambda$ 固定时二项分布 $\approx$ 泊松分布 | 第 05 讲 | 要会用 |
 
 ## 二、关键公式
 
@@ -42,3 +76,23 @@
 | $P(A)=\dfrac{|A|}{|\Omega|}$ | $|A|$=事件含结果个数，$|\Omega|$=样本空间总个数 | 古典概型：有限 + 等可能 | 第 01 讲 §4 |
 | $P(A)=\dfrac{\mathrm{度量}(A)}{\mathrm{度量}(\Omega)}$ | 度量=长度/面积/体积 | 几何概型：可度量区域 + 均匀随机 | 第 01 讲 §5 |
 | $f_n(A)=\dfrac{n_A}{n}$ | $n$=试验次数，$n_A$=A 发生的次数 | 频率的定义，$n$ 大时贴向 $P(A)$ | 第 01 讲 §3.1 |
+| $A_n^k=n(n-1)\cdots(n-k+1)=\dfrac{n!}{(n-k)!}$ | $n$=元素总数，$k$=取出个数 | 有序、不放回 | 第 02 讲 §2 |
+| $C_n^k=\dfrac{A_n^k}{k!}=\dfrac{n!}{k!(n-k)!}$ | 同上；分母 $k!$ 除掉同一组内 $k!$ 种重复顺序 | 无序、不放回 | 第 02 讲 §3 |
+| $C_n^k=C_n^{n-k}$ | 组合对称性 | 一切 $0\le k\le n$ | 第 02 讲 §3.3 |
+| $n^k$ | $n$=每次可选项数，$k$=取几次 | 有序、放回 | 第 02 讲 §4 |
+| $C_{n+k-1}^{k}$ | 隔板法/无序放回 | 分 $k$ 个相同物体给 $n$ 个对象（可空） | 第 02 讲 §4.3 |
+| $\dfrac{n!}{n_1!\,n_2!\cdots}$ | $n_i$=第 $i$ 类重复元素的个数 | 有重复元素的全排列 | 第 02 讲 §5.3 |
+| $P(B\mid A)=\dfrac{P(AB)}{P(A)}$ | 条件概率定义 | $P(A)>0$ | 第 03 讲 §1 |
+| $P(AB)=P(A)P(B\mid A)=P(B)P(A\mid B)$ | 乘法公式 | $P(A),P(B)>0$ | 第 03 讲 §2 |
+| $P(ABC)=P(A)P(B\mid A)P(C\mid AB)$ | 链式乘法 | 各条件概率有意义 | 第 03 讲 §2.2 |
+| $P(AB)=P(A)P(B)$ | 独立定义 | 两事件 | 第 03 讲 §3.1 |
+| $P(A)=\sum_i P(B_i)P(A\mid B_i)$ | 全概率公式 | $\{B_i\}$ 是划分 | 第 03 讲 §4 |
+| $P(B_i\mid A)=\dfrac{P(B_i)P(A\mid B_i)}{\sum_j P(B_j)P(A\mid B_j)}$ | 贝叶斯公式 | $\{B_i\}$ 是划分且 $P(A)>0$ | 第 03 讲 §5 |
+| $F(x)=P(X\le x)$ | 分布函数定义 | 一切随机变量（离散/连续/混合） | 第 04 讲 §3 |
+| $P(a<X\le b)=F(b)-F(a)$ | 区间概率 | 一切随机变量 | 第 04 讲 §3.3 |
+| $F(x)=\sum_{x_k\le x}p_k$ | 离散型 CDF=分布律累加 | 离散型 | 第 04 讲 §5 |
+| $F(x)=\int_{-\infty}^{x}f(t)\,dt$ | 连续型 CDF=密度积分 | 连续型 | 第 04 讲 §4.2 |
+| $P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}$ | 二项分布分布律 | $n$ 次独立重复、每次成功率 $p$ | 第 05 讲 §2.1 |
+| $P(X=k)=\frac{\lambda^{k}}{k!}e^{-\lambda}$ | 泊松分布分布律 | 稀有事件计数，$\lambda$ 为平均次数 | 第 05 讲 §3.1 |
+| $P(X=k)=(1-p)^{k-1}p$ | 几何分布分布律（$k\ge1$） | 数到首次成功（试验次数口径） | 第 05 讲 §4.1 |
+| $P(X=k)=\frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}$ | 超几何分布分布律 | 有限总体 $N$，成功类 $K$，抽 $n$ 不放回 | 第 05 讲 §5.1 |
