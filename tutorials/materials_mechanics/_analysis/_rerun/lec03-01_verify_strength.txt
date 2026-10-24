@@ -18,6 +18,9 @@
         L/L0 = A0/A = 1.6667 -> eps = 0.6667；sigma = 350.0 MPa -> sigma_t = sigma*(1+eps) = 583.3 MPa
         互证：sigma_t = sigma*(A0/A) = 583.3 MPa（应与上式一致）
         （作业 Q9 数据：A/A0=0.5, sigma=300 MPa -> sigma_t=600.0 MPa）
+  EXP7 E 与 k 的关系（E=200000 MPa, A=200 mm^2, L=500 mm）：
+        k = EA/L = 80000 N/mm（量纲 N/mm）；E 的量纲是 MPa = N/mm^2
+        三路 deltaL：公式 0.250000 / N/k 0.250000 / eps*L 0.250000 mm（应一致）
 
 === 图 1：低碳钢拉伸曲线 ===
 [OK] figures/lec03_fig1_stress_strain_curve.svg 与 .png 已生成。

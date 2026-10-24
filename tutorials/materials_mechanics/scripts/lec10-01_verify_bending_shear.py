@@ -9,8 +9,9 @@
 #   EXP5 切应力强度条件校核
 # 出图（编号按正文出现顺序）：
 #   lec10_fig1_shear_origin    弯曲切应力的来源（微段切应力互等）
-#   lec10_fig2_rect_parabola   矩形截面切应力抛物线分布
-#   lec10_fig3_i_circle        工字形切应力分布 + 圆形（认识层）
+#   lec10_fig2_derivation      推导：微段取上块，两端正应力差由底面切应力平衡
+#   lec10_fig3_rect_parabola   矩形截面切应力抛物线分布
+#   lec10_fig4_i_circle        工字形切应力分布 + 圆形（认识层）
 # 输出用 GBK 安全字符（无 ✓ 无 ² 无 ° 无 →，用 [OK] / -> / deg / ^2）。
 # =====================================================================
 import os
@@ -112,7 +113,72 @@ savefig(fig, "lec10_fig1_shear_origin")
 
 # ---------------------------------------------------------------------
 print()
-print("=== 图 2：矩形截面切应力抛物线分布 ===")
+print("=== 图 2：弯曲切应力公式的推导 ===")
+fig, (a1, a2) = plt.subplots(1, 2, figsize=(10.8, 4.6))
+
+# (a) 微段 + 上块 A*
+a1.set_xlim(0, 12)
+a1.set_ylim(0, 7)
+a1.axis("off")
+a1.add_patch(Rectangle((1.8, 1.8), 7.2, 3.4, fc="#eef2f7", ec=GREY, lw=1.2))
+a1.plot([1.4, 9.6], [3.5, 3.5], color=GREY, ls="--", lw=0.9)
+a1.text(9.7, 3.5, "中性轴", fontsize=9, color=GREY, va="center")
+a1.plot([1.8, 9.0], [4.35, 4.35], color=RED, lw=1.8)
+a1.add_patch(Rectangle((1.8, 4.35), 7.2, 0.85, fc="#fbd5d5", ec="none"))
+a1.text(5.4, 4.72, r"上块 $A^*$", ha="center", fontsize=9.5, color=RED)
+a1.annotate("", xy=(2.55, 4.35), xytext=(2.55, 3.5),
+            arrowprops=dict(arrowstyle="<->", color=BLUE, lw=1.1))
+a1.text(2.75, 3.92, r"$y$", fontsize=11, color=BLUE, ha="left")
+a1.text(1.95, 5.85, r"$M$", fontsize=11, color=ORANGE, ha="left")
+a1.text(9.0, 5.85, r"$M+\mathrm{d}M$", fontsize=11, color=ORANGE, ha="right")
+a1.annotate("", xy=(1.8, 1.25), xytext=(9.0, 1.25),
+            arrowprops=dict(arrowstyle="<->", color=GREY, lw=1.0))
+a1.text(5.4, 0.78, r"$\mathrm{d}x$", ha="center", fontsize=10, color=GREY)
+a1.set_title(r"(a) 取微段，水平切开于 $y$，留下上块 $A^*$", fontsize=10, weight="bold")
+
+# (b) 上块放大：两侧压应力分布不等，底面切应力平衡
+x0, x1, y0, y1 = 3.4, 6.6, 2.4, 5.2
+a2.set_xlim(0, 10)
+a2.set_ylim(0, 7)
+a2.axis("off")
+a2.add_patch(Rectangle((x0, y0), x1 - x0, y1 - y0, fc="#fde2e1", ec=RED, lw=1.2))
+a2.text((x0 + x1) / 2, y0 + 0.35, r"上块 $A^*$", ha="center", fontsize=9.5, color=RED)
+
+# 左面：压应力分布画在块外，箭头指向块内（受压）
+a2.add_patch(plt.Polygon([(x0, y0), (x0, y1), (x0 - 0.55, y1)], closed=True,
+                          fc="none", ec=BLUE, lw=1.2))
+for yy in np.linspace(y0 + 0.15, y1 - 0.1, 5):
+    L = 0.55 * (yy - y0) / (y1 - y0)
+    a2.annotate("", xy=(x0, yy), xytext=(x0 - L, yy),
+                arrowprops=dict(arrowstyle="-|>", color=BLUE, lw=1.0))
+a2.text(x0 - 0.85, y1 + 0.3, r"$\sigma_1$", fontsize=11, color=BLUE, ha="center")
+
+# 右面：同形状但更大
+a2.add_patch(plt.Polygon([(x1, y0), (x1, y1), (x1 + 0.8, y1)], closed=True,
+                          fc="none", ec=ORANGE, lw=1.2))
+for yy in np.linspace(y0 + 0.15, y1 - 0.1, 5):
+    L = 0.8 * (yy - y0) / (y1 - y0)
+    a2.annotate("", xy=(x1, yy), xytext=(x1 + L, yy),
+                arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=1.0))
+a2.text(x1 + 1.05, y1 + 0.3, r"$\sigma_2$", fontsize=11, color=ORANGE, ha="center")
+
+# 底面 tau'：向右（两端合力差朝左，靠它反向平衡），面积 b dx
+a2.annotate("", xy=(x1 + 0.6, y0 - 0.45), xytext=(x0, y0 - 0.45),
+            arrowprops=dict(arrowstyle="-|>", color=GREEN, lw=2.0))
+a2.text((x0 + x1) / 2, y0 - 1.0, r"底面切应力 $\tau'$，面积 $b\,\mathrm{d}x$（$b$ 垂直于纸面）",
+        ha="center", fontsize=9.5, color=GREEN)
+
+a2.text(5.0, 6.35, r"$\tau'\,b\,\mathrm{d}x=\mathrm{d}F=\frac{\mathrm{d}M}{I_z}S_z^*$",
+        ha="center", fontsize=10.5, color=RED)
+a2.text(5.0, 0.85, r"$\sigma_2>\sigma_1$：两端合力不等，靠底面切应力平衡",
+        ha="center", fontsize=9.5, color=GREY)
+a2.set_title(r"(b) 上块两端压应力不等，差值由底面切应力平衡", fontsize=10, weight="bold")
+savefig(fig, "lec10_fig2_derivation")
+
+
+# ---------------------------------------------------------------------
+print()
+print("=== 图 3：矩形截面切应力抛物线分布 ===")
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(10.2, 4.4))
 # (a) 截面箭头
 a1.set_xlim(-2.4, 2.4)
@@ -143,12 +209,12 @@ a2.text(tau_max_rect, 6, r"$\tau_{\max}=3Q/(2A)$", ha="left", fontsize=9, color=
 a2.set_xlabel(r"切应力 $\tau$ / MPa", fontsize=10)
 a2.set_ylabel(r"到中性轴距离 $y$ / mm", fontsize=10)
 a2.set_title(r"(b) 抛物线：中性轴处最大", fontsize=10, weight="bold")
-savefig(fig, "lec10_fig2_rect_parabola")
+savefig(fig, "lec10_fig3_rect_parabola")
 
 
 # ---------------------------------------------------------------------
 print()
-print("=== 图 3：工字形切应力分布 + 圆形 ===")
+print("=== 图 4：工字形切应力分布 + 圆形 ===")
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(10.4, 4.6))
 
 # (a) 工字形：腹板 tau 大、翼缘 tau 小（交界跳变）
@@ -183,7 +249,7 @@ for yv in [-25, -12, 0, 12, 25]:
         a2.annotate("", xy=(L, yv), xytext=(0, yv), arrowprops=dict(arrowstyle="-|>", color=RED, lw=1.5))
 a2.text(0, -33, r"圆形：$\tau_{\max}=4Q/(3A)$（认识层）", ha="center", fontsize=9.5)
 a2.text(0, 31, "(b) 圆形截面切应力", ha="center", fontsize=10, weight="bold")
-savefig(fig, "lec10_fig3_i_circle")
+savefig(fig, "lec10_fig4_i_circle")
 
 print()
-print("[DONE] 第 10 讲数字核对与三张图全部完成。")
+print("[DONE] 第 10 讲数字核对与四张图全部完成。")

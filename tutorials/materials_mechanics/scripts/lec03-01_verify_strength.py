@@ -8,6 +8,7 @@
 #   EXP4 强度条件三类问题（校核、设计截面、求许用载荷）
 #   EXP5 变截面（多段）杆的变形 deltaL = sum(N_i*L_i/(E_i*A_i))
 #   EXP6 工程应力 vs 真应力（体积不变下 sigma_t = sigma*(1+eps) = sigma*(A0/A)）
+#   EXP7 弹性模量 E 与弹簧常数 k 的关系 k = EA/L，三路求 deltaL
 # 出图（编号按正文出现顺序）：
 #   lec03_fig1_stress_strain_curve   低碳钢拉伸 sigma-eps 曲线（四阶段 + 特征点）
 #   lec03_fig2_hooke_law             胡克定律：杆件伸长与 sigma-eps 线性段
@@ -107,6 +108,18 @@ print("        L/L0 = A0/A = %.4f -> eps = %.4f；sigma = %.1f MPa -> sigma_t = 
       % (1.0 / A_ratio, eps_true, sig_eng, sig_true))
 print("        互证：sigma_t = sigma*(A0/A) = %.1f MPa（应与上式一致）" % (sig_eng / A_ratio))
 print("        （作业 Q9 数据：A/A0=0.5, sigma=300 MPa -> sigma_t=%.1f MPa）" % (300.0 * 2.0))
+
+# EXP7 E 与 k 的关系：k = EA/L，三路求 deltaL
+E7, A7, L7, N7 = 2.0e5, 200.0, 500.0, 20.0e3
+k7 = E7 * A7 / L7                       # N/mm
+dL_formula = N7 * L7 / (E7 * A7)
+dL_spring = N7 / k7
+eps7 = (N7 / A7) / E7
+dL_strain = eps7 * L7
+print("  EXP7 E 与 k 的关系（E=%.0f MPa, A=%.0f mm^2, L=%.0f mm）：" % (E7, A7, L7))
+print("        k = EA/L = %.0f N/mm（量纲 N/mm）；E 的量纲是 MPa = N/mm^2" % k7)
+print("        三路 deltaL：公式 %.6f / N/k %.6f / eps*L %.6f mm（应一致）"
+      % (dL_formula, dL_spring, dL_strain))
 
 
 # ---------------------------------------------------------------------

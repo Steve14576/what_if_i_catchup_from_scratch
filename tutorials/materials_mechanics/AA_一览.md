@@ -48,10 +48,10 @@
 | 危险截面 | critical section | 应力最大的截面（等直杆取 $\lvert N\rvert$ 最大处、变截面取 $\lvert N\rvert/A$ 最大处）；破坏最可能从这里开始 | 第 02 讲 | 要会判断 |
 | 应力集中 | stress concentration | 截面突变处（孔、槽、台阶）局部应力显著高于 $N/A$ 平均值的现象 | 第 02 讲（认识层） | 认识；第 03 讲展开 |
 | 理论应力集中系数 | theoretical stress concentration factor（K） | $K=\sigma_{\max}/\sigma_{\text{名义}}$，$\sigma_{\text{名义}}$ 按净截面平均应力算；通常 $K>1$ | 第 02 讲（认识层） | 认识 |
-| 切应力互等定理 | theorem of complementary shear stresses | 过同一点、相互垂直的两个面上切应力大小相等，方向都指向（或都背离）两面的交线 | 第 02 讲（伏笔） | 知道有这回事；第 13 讲展开 |
+| 切应力互等定理 | theorem of complementary shear stresses | 过同一点、相互垂直的两个面上切应力大小相等，方向都指向（或都背离）两面的交线；**由微元力矩平衡证得** $\tau_{xy}=\tau_{yx}$ | 第 02 讲 | 要能证明；第 13 讲应用 |
 | 胡克定律 | Hooke's law | 线弹性范围内正应力与线应变成正比：$\sigma=E\varepsilon$（等价 $\Delta L=NL/(EA)$） | 第 03 讲 | 要能推导、会算，知道边界 |
-| 弹性模量 | elastic modulus（Young's modulus, E） | $\sigma=E\varepsilon$ 中的比例常数；材料的"硬"度指标，越大越难变形；单位 MPa | 第 03 讲 | 要能复述、会用 |
-| 拉压刚度 | tensile stiffness（EA） | 弹性模量与横截面积的乘积，衡量杆抵抗拉压变形的能力；越大越难拉长 | 第 03 讲 | 要能解释 |
+| 弹性模量 | elastic modulus（Young's modulus, E） | $\sigma=E\varepsilon$ 中的比例常数；材料的"硬"度指标。单位 MPa——因为 $\varepsilon$ 无量纲，所以 $E$ 与 $\sigma$ 同量纲；与弹簧常数 $k$ 的关系为 $k=EA/L$（$E$ 是材料量，几何由 $A/L$ 承担） | 第 03 讲 | 要能复述、会用、能与 $k$ 区分 |
+| 拉压刚度 | tensile stiffness（EA） | 弹性模量与横截面积的乘积，衡量截面抵抗拉压变形的能力；**不含长度**。整根杆的弹簧常数是 $k=EA/L$（单位 N/mm），$\Delta L=N/k$ | 第 03 讲 | 要能解释、与 $k$ 区分 |
 | 泊松比 | Poisson's ratio（μ） | 横向线应变与轴向线应变之比取正：$\varepsilon'=-\mu\varepsilon$；各向同性材料 $0<\mu<0.5$，金属约 0.25~0.35 | 第 03 讲 | 要会算横向变形 |
 | 体积应变 | volumetric strain（θ） | 单位体积的相对变化（三向线应变之和）；单向拉伸 $\theta=\frac{1-2\mu}{E}\sigma$，$\mu=0.5$（不可压缩）时 $\theta=0$ | 第 03 讲（引）、第 14 讲（正式） | 第 03 讲知道上界来历；第 14 讲展开 |
 | 比例极限 | proportional limit（σ_p） | $\sigma$ 与 $\varepsilon$ 保持正比（胡克定律成立）的上限应力 | 第 03 讲 | 要能识别 |
@@ -82,7 +82,7 @@
 | 扭矩图 | torque diagram | 沿轴长表示各截面扭矩 $T$ 的图；集中外力偶矩处突变，跳跃量等于该处外力偶矩 | 第 05 讲 | 要会作 |
 | 圆轴扭转 | torsion of a circular shaft | 外力偶矩绕轴线使圆轴各横截面绕轴相对转动的变形 | 第 05 讲 | 识别 |
 | 剪切胡克定律 | Hooke's law in shear | 线弹性范围内切应力与切应变成正比：$\tau=G\gamma$ | 第 05 讲 | 要能复述、会用 |
-| 剪切模量 | shear modulus（G） | $\tau=G\gamma$ 中的比例常数（材料常数）；$G=E/[2(1+\mu)]$ | 第 05 讲 | 要能复述 |
+| 剪切模量 | shear modulus（G） | $\tau=G\gamma$ 中的比例常数（材料常数）；单位 MPa——因 $\gamma$ 无量纲（弧度），$G$ 与 $\tau$ 同量纲。同一材料 $G<E$（钢约 80 vs 200 GPa），$G=E/[2(1+\mu)]\approx0.385E$ | 第 05 讲 | 要能复述、与 $E$ 区分 |
 | 极惯性矩 | polar moment of inertia（I_p） | 横截面对形心的 $\int\rho^2\,\mathrm{d}A$；实心圆 $I_p=\pi d^4/32$ | 第 05 讲 | 要会算 |
 | 抗扭截面系数 | torsional section modulus（W_t） | $I_p/(d/2)$；实心圆 $W_t=\pi d^3/16$；$\tau_{\max}=T/W_t$ | 第 05 讲 | 要会算 |
 | 纯剪切应力状态 | pure shear stress state | 只有切应力、没有正应力的应力状态（切应力互等的直接结果） | 第 05 讲（引） | 知道；第 13 讲展开 |
@@ -93,9 +93,9 @@
 | 空心轴 | hollow shaft | 内径 $d_0$、外径 $D$ 的圆环截面轴；$I_p=\pi(D^4-d_0^4)/32$；把低应力材料移到外缘 | 第 06 讲 | 要会算、会比较 |
 | 内外径比 | ratio of inner to outer diameter（α） | $\alpha=d_0/D$；衡量空心轴的"挖空程度" | 第 06 讲 | 认识 |
 | 翘曲 | warping | 非圆截面扭转后横截面不再保持平面、发生凹凸的现象（非圆不能用圆轴公式的根本原因） | 第 06 讲（认识层） | 知道 |
-| 静矩 | first moment of area（S_z） | 面积对某轴的面积矩：$S_z=\int_A y\,\mathrm{d}A$；对形心轴的静矩为零 | 第 07 讲 | 要会算 |
+| 静矩 | first moment of area（S_z） | 面积对某轴的面积矩：$S_z=\int_A y\,\mathrm{d}A$，单位 $\mathrm{mm^3}$；可正可负（$y$ 有正负），对形心轴的静矩为零 | 第 07 讲 | 要会算 |
 | 形心 | centroid（C） | 截面的几何中心：$y_c=S_z/A=\int_A y\,\mathrm{d}A/A$；组合截面 $y_c=\sum A_iy_i/\sum A_i$ | 第 07 讲 | 要会求 |
-| 惯性矩 | second moment of area（I_z、I_y） | 面积乘以其到轴距离平方的积分：$I_z=\int_A y^2\,\mathrm{d}A$；恒正，描述抗弯能力 | 第 07 讲 | 要会算 |
+| 惯性矩 | second moment of area（I_z、I_y） | 面积乘以其到轴距离平方的积分：$I_z=\int_A y^2\,\mathrm{d}A$，单位 $\mathrm{mm^4}$；恒正（平方），描述抗弯能力。平方的来源：正应力 $\propto y$，抗力臂又是 $y$ | 第 07 讲 | 要会算 |
 | 惯性半径 | radius of gyration（i） | $i=\sqrt{I/A}$，把惯性矩折算成的一个长度 | 第 07 讲 | 要会算 |
 | 平行移轴定理 | parallel-axis theorem | $I_z=I_{z_c}+a^2 A$（从形心轴移向平行轴）；矩形对底边 $bh^3/3$ | 第 07 讲 | 要会用、会推导 |
 | 惯性积 | product of inertia（I_yz） | $\int_A yz\,\mathrm{d}A$；描述截面相对坐标轴的不对称程度；转轴分析用 | 第 07 讲（认识层） | 认识 |
@@ -103,8 +103,8 @@
 | 梁 | beam | 以弯曲为主要变形的杆件；常见简支/悬臂/外伸梁 | 第 08 讲 | 识别 |
 | 简支梁 | simply supported beam | 一端铰支、一端滚支的梁（静定） | 第 08 讲 | 识别 |
 | 悬臂梁 | cantilever beam | 一端固定、另一端自由的梁 | 第 08 讲 | 识别 |
-| 剪力 | shear force（Q） | 横截面内垂直于梁轴线的内力；使微元顺时针转动为正（左上右下） | 第 08 讲 | 要会算、会定号 |
-| 弯矩 | bending moment（M） | 横截面内的内力偶；使梁下凸（下部受拉）为正 | 第 08 讲 | 要会算、会定号 |
+| 剪力 | shear force（Q） | 截面上分布内力沿截面方向的**合力**；使微元顺时针转动为正（左上右下）。取左段与取右段算出的结果相同 | 第 08 讲 | 要会算、会定号、会换侧 |
+| 弯矩 | bending moment（M） | 截面上分布内力对截面**形心**的**合力偶矩**（单位 N·mm）；使梁下凸（下部受拉）为正。不是"力乘距离"——那只是算法 | 第 08 讲 | 要会算、会定号、会换侧 |
 | 剪力图 | shear force diagram | 沿梁长表示剪力 $Q(x)$ 的图；集中力处突变 | 第 08 讲 | 要会作 |
 | 弯矩图 | bending moment diagram | 沿梁长表示弯矩 $M(x)$ 的图；$Q=0$ 处取极值 | 第 08 讲 | 要会作 |
 | 分布载荷 | distributed load（q） | 沿梁长连续分布的载荷（如自重），单位 N/m | 第 08 讲 | 识别 |
@@ -115,7 +115,7 @@
 | 中性层 | neutral surface | 梁内长度不变的一层（含中性轴的纵向面） | 第 09 讲 | 识别 |
 | 弯曲正应力 | bending normal stress | 弯矩引起的横截面正应力：$\sigma=My/I_z$；正负表示拉压 | 第 09 讲 | 要会算、会判拉压 |
 | 抗弯截面系数 | section modulus in bending（W_z） | $W_z=I_z/y_{\max}$；$\sigma_{\max}=M/W_z$ | 第 09 讲 | 要会算 |
-| 弯曲切应力 | bending shear stress（τ） | 剪力引起的横截面切应力：$\tau=Q S_z^*/(I_z b)$；中性轴最大、外缘为零 | 第 10 讲 | 要会算 |
+| 弯曲切应力 | bending shear stress（τ） | 剪力引起的横截面切应力：$\tau=Q S_z^*/(I_z b)$；由微段纵向力平衡得 $\tau'$，再用切应力互等转到横截面；中性轴最大、外缘为零 | 第 10 讲 | 要会算、能说清推导 |
 | 面积静矩 S_z* | first moment of area of the cut-off part | 所求点以外（切到边缘）那部分面积对中性轴的静矩；随所求点位置变化 | 第 10 讲 | 要会算 |
 | 挠度 | deflection（w） | 梁横截面形心沿竖向的位移；本课取向上为正（下挠为负，工程常指其大小） | 第 11 讲 | 要会算 |
 | 转角 | slope / angle of rotation（θ） | 横截面绕自身转过的角：$\theta=\mathrm{d}w/\mathrm{d}x$ | 第 11 讲 | 要会算 |
@@ -215,6 +215,7 @@
 | $K = \dfrac{\sigma_{\max}}{\sigma_{\text{名义}}}$ | $\sigma_{\max}$ 为峰值应力，$\sigma_{\text{名义}}$ 为净截面平均应力 | 应力集中度量；通常 $K>1$ | 第 02 讲（认识层） |
 | $\sigma = E\varepsilon$ | $E$ 为弹性模量（MPa） | 线弹性范围（$\sigma\le\sigma_p$） | 第 03 讲 |
 | $\Delta L = \dfrac{N L}{E A}$（**模板**：先定轴力 $N$，再代 $E$、$A$、$L$） | $N$ 轴力、$L$ 原长、$E$ 弹性模量、$A$ 横截面积（$EA$ 为拉压刚度） | 线弹性范围；等截面、单一轴力 | 第 03 讲 |
+| $k=\dfrac{EA}{L}$；$\Delta L=\dfrac{N}{k}$ | $k$ 为整根杆的弹簧常数（N/mm），与中学 $F=kx$ 对应 | 等截面、线弹性；$E$ 是材料量、$A/L$ 是几何量 | 第 03 讲 |
 | $\Delta L = \sum_i \dfrac{N_i L_i}{E_i A_i}$（连续变力时 $\Delta L=\int_0^L\frac{N(x)}{EA(x)}\mathrm{d}x$） | 第 $i$ 段轴力 $N_i$、长度 $L_i$、面积 $A_i$ | 线弹性范围；变截面/多段杆（各段带符号相加） | 第 03 讲 |
 | $\varepsilon' = -\mu\,\varepsilon$ | $\mu$ 泊松比，$\varepsilon'$ 横向线应变 | 线弹性、各向同性 | 第 03 讲 |
 | $\sigma_t=\sigma(1+\varepsilon)$；$\varepsilon_t=\ln(1+\varepsilon)$ | 塑性变形体积不变（$A_0L_0=AL$） | 工程值 → 真值换算（颈缩后差异显著） | 第 03 讲 |

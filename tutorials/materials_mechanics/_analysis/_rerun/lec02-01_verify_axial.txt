@@ -12,6 +12,9 @@
         alpha = 90 deg : sigma_a =    0.0 MPa , tau_a =    0.0 MPa
         极值：sigma_a 最大 = 100.0 MPa（alpha = 0）；tau_a 最大 = 50.0 MPa（alpha = 45 deg）
   EXP4 应力圆不变式：(sigma_a - sigma/2)^2 + tau_a^2 = (sigma/2)^2，最大偏差 = 2.27e-12（应为 0）
+  EXP5 切应力互等（tau_xy=50 MPa, dx=dy=1 mm, t=1 mm）：
+        右侧面合力 F1=50.0 N；由力矩平衡解出 tau_yx = 50.0 MPa（应等于 tau_xy）
+        残余力矩 = 0.0e+00 N*mm（应为 0）
 
 === 图 1：轴力与轴力图 ===
 [OK] figures/lec02_fig1_axial_diagram.svg 与 .png 已生成。

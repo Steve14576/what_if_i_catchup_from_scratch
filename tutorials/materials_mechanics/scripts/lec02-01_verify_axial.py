@@ -7,6 +7,7 @@
 #   EXP2 横截面正应力 sigma = N / A
 #   EXP3 斜截面应力 alpha 扫描：sigma_a = sigma*cos^2 a，tau_a = (sigma/2)sin2a
 #   EXP4 应力圆不变式核对
+#   EXP5 切应力互等：微元力矩平衡 -> tau_yx = tau_xy
 # 出图（编号按正文出现顺序）：
 #   lec02_fig1_axial_diagram      轴力与轴力图（含突变）
 #   lec02_fig2_plane_assumption   平面假设：横截面变形后仍为平面
@@ -83,6 +84,15 @@ c = sigma / 2.0
 inv = (sa_all - c) ** 2 + ta_all ** 2
 print("  EXP4 应力圆不变式：(sigma_a - sigma/2)^2 + tau_a^2 = (sigma/2)^2，最大偏差 = %.2e（应为 0）"
       % np.max(np.abs(inv - c ** 2)))
+
+# EXP5 切应力互等：由微元力矩平衡解出 tau_yx，并核对残余力矩
+txy, dx5, dy5, t5 = 50.0, 1.0, 1.0, 1.0          # MPa, mm, mm, mm
+F1 = txy * t5 * dy5
+tyx = F1 * (dx5 / 2.0) / ((t5 * dx5) * (dy5 / 2.0))
+M_res = F1 * (dx5 / 2.0) - tyx * t5 * dx5 * (dy5 / 2.0)
+print("  EXP5 切应力互等（tau_xy=%.0f MPa, dx=dy=%.0f mm, t=%.0f mm）：" % (txy, dx5, dy5))
+print("        右侧面合力 F1=%.1f N；由力矩平衡解出 tau_yx = %.1f MPa（应等于 tau_xy）" % (F1, tyx))
+print("        残余力矩 = %.1e N*mm（应为 0）" % M_res)
 
 
 # ---------------------------------------------------------------------

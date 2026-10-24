@@ -28,6 +28,11 @@ FIG_RE = re.compile(r"!\[[^\]]*\]\(figures/([^)]+)\)")
 NUM_RE = re.compile(r"\d+\.\d+")
 LEC_RE = re.compile(r"^(0[1-9]|[12]\d)_")
 
+# C4 每讲图数预期（默认 3；只登记例外）
+FIG_EXPECT = {
+    "10": 4,   # 新增推导图（微段取上块 + 两端应力差由底面切应力平衡）
+}
+
 # C5 已知可接受项：(讲次正文文件名, 脚本数字)
 # 判定依据：属"脚本算出的中间量"或"正文改用科学计数法"，正文引用的关键结论均可对上。
 C5_ACCEPT = {
@@ -73,8 +78,10 @@ for md in mds:
     for r in refs:
         if not os.path.exists(os.path.join(BASE, "figures", r)):
             issues.append("[C4] %s: 图文件缺失 %s" % (name, r))
-    if is_lec and len(refs) != 3:
-        issues.append("[C4] %s: 图引用数 %d != 3" % (name, len(refs)))
+    # 默认每讲 3 张；个别讲需要单独登记（如第 10 讲推导图 -> 4 张）
+    expect = FIG_EXPECT.get(name[:2], 3)
+    if is_lec and len(refs) != expect:
+        issues.append("[C4] %s: 图引用数 %d != %d" % (name, len(refs), expect))
 
     # C5 数字对账
     if not is_lec:
