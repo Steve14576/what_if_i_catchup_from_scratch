@@ -1,7 +1,7 @@
 ---
 name: wiicufs
 description: 教程生成 skill。当且仅当用户明确输入 /wiicufs 或明确点名时加载；其余时候视为不存在。
-version: 1.5.1
+version: 1.5.2
 ---
 # WIICUFS 1.5.0：自然、完整、可验证的技术教程
 
