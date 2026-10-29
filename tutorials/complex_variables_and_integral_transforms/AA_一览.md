@@ -98,6 +98,10 @@
 | 留数定理 | residue theorem | 闭路积分等于 $2\pi i$ 乘内部各奇点留数之和 | 第 13 讲 | 要会用 |
 | 无穷远留数 | residue at infinity | $\operatorname{Res}[f,\infty]=-a_{-1}$（$\lvert z\rvert>R$ 展开中 $z^{-1}$ 系数取负） | 第 13 讲 | 要会算 |
 | 留数总和为零 | sum of residues | 所有有限奇点留数之和加上无穷远留数等于零 | 第 13 讲 | 要会用 |
+| 约当引理 | Jordan's lemma | $a>0$ 且 $\max_{C_R}\lvert R(z)\rvert\to0$ 时，上半圆上 $\int R(z)e^{iaz}dz\to0$，上界 $\frac{\pi}{a}\max\lvert R\rvert$ | 第 14 讲 | 要会用，证明要看懂 |
+| 约当不等式 | Jordan's inequality | $\sin\theta\ge\frac{2\theta}{\pi}$，$0\le\theta\le\frac{\pi}{2}$ | 第 14 讲 | 要知道 |
+| 柯西主值 | Cauchy principal value，PV | 在实轴奇点两侧对称挖去长 $\varepsilon$ 的一段再取极限所得的积分 | 第 14 讲 | 要会算 |
+| 小半圆引理 | indentation lemma | 一阶极点上方半径 $\varepsilon$ 的顺时针半圆上积分 $\to-\pi i\operatorname{Res}$ | 第 14 讲 | 要会用 |
 
 ## 二、公式
 
@@ -180,6 +184,12 @@
 | $\oint_\Gamma f\,dz=2\pi i\sum_k\operatorname{Res}[f,z_k]$ | 留数定理 | $\Gamma$ 逆时针，内部只有有限个孤立奇点 | 第 13 讲 |
 | $\operatorname{Res}[f,\infty]=-a_{-1}=-\operatorname{Res}[f(1/t)/t^2,0]$ | 无穷远留数 | $f$ 在 $\lvert z\rvert>R$ 解析 | 第 13 讲 |
 | $\sum_k\operatorname{Res}[f,z_k]+\operatorname{Res}[f,\infty]=0$ | 留数总和为零 | 扩充复平面上只有有限个奇点 | 第 13 讲 |
+| $\int_{-\infty}^{\infty}\frac{P}{Q}dx=2\pi i\sum_{\operatorname{Im}z_k>0}\operatorname{Res}$ | 类型一 | $\deg Q\ge\deg P+2$，$Q$ 无实零点 | 第 14 讲 |
+| $z=e^{i\theta}$：$\cos\theta=\frac{z+z^{-1}}{2}$，$\sin\theta=\frac{z-z^{-1}}{2i}$，$d\theta=\frac{dz}{iz}$ | 类型二代换 | 被积函数在单位圆上无奇点；只算圆内留数 | 第 14 讲 |
+| $\int_{-\infty}^{\infty}R(x)e^{iax}dx=2\pi i\sum_{\operatorname{Im}z_k>0}\operatorname{Res}[Re^{iaz}]$ | 类型三 | $a>0$，$R\to0$，实轴无奇点；$a<0$ 改用下半平面 | 第 14 讲 |
+| $\left\lvert\int_{C_R}Re^{iaz}dz\right\rvert\le\frac{\pi}{a}\max_{C_R}\lvert R\rvert$ | 约当引理 | $a>0$，$C_R$ 为上半圆 | 第 14 讲 |
+| $\operatorname{PV}\int f\,dx=2\pi i\sum_{\text{上}}\operatorname{Res}+\pi i\sum_{\text{实轴}}\operatorname{Res}$ | 主值公式 | 实轴上只有一阶极点，大半圆积分 $\to0$ | 第 14 讲 |
+| $\int_{-\infty}^{\infty}\frac{\sin x}{x}dx=\pi$ | 主值经典例 | — | 第 14 讲 |
 
 ## 三、编号与讲次索引
 
