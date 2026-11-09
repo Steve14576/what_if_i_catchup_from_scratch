@@ -62,6 +62,23 @@
 | 超几何分布 | hypergeometric distribution | 有限总体不放回抽取的成功数；$P(X=k)=\frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}$ | 第 05 讲 | 要能推导/手算 |
 | 无记忆性 | memoryless property | $P(X>m+n\mid X>m)=P(X>n)$；几何分布与指数分布具有 | 第 05 讲 | 要建立直觉 |
 | 稀有事件近似 | Poisson approximation | $n$ 大、$p$ 小、$np=\lambda$ 固定时二项分布 $\approx$ 泊松分布 | 第 05 讲 | 要会用 |
+| 均匀分布 | uniform distribution, $U(a,b)$ | 在区间 $[a,b]$ 上等可能取值；密度 $f=1/(b-a)$（$a<x<b$），分布函数 $F=(x-a)/(b-a)$ | 第 06 讲 | 要能推导/手算 |
+| 指数分布 | exponential distribution, $\mathrm{Exp}(\lambda)$ | 描述等待时间；密度 $f=\lambda e^{-\lambda x}$（$x>0$），分布函数 $F=1-e^{-\lambda x}$，尾概率 $e^{-\lambda t}$；具无记忆性 | 第 06 讲 | 要能推导/手算 |
+| 速率参数 | rate parameter, $\lambda$ | 指数分布中单位时间内事件发生的速率，量纲为 1/时间；$\lambda$ 越大等待越短 | 第 06 讲 | 要建立直觉 |
+| 正态分布 / 高斯分布 | normal (Gaussian) distribution, $N(\mu,\sigma^2)$ | 密度为 $\frac{1}{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/(2\sigma^2)}$ 的连续分布；$\mu$ 是位置参数（中心），$\sigma$ 是尺度参数（$\sigma^2$ 为方差）；定义域为整条实轴 | 第 07 讲 | 要能推导/手算 |
+| 标准正态分布 | standard normal distribution, $N(0,1)$ | $\mu=0$、$\sigma=1$ 的正态分布；任何正态标准化后都化为它 | 第 07 讲 | 要能推导/手算 |
+| 标准化 | standardization, $Z=\frac{X-\mu}{\sigma}$ | 把 $X\sim N(\mu,\sigma^2)$ 变成 $Z\sim N(0,1)$ 的平移+缩放变换；只换坐标，不改变概率 | 第 07 讲 | 要能推导/手算 |
+| 标准正态分布函数 | $\Phi(z)$ | $\Phi(z)=P(Z\le z)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{z}e^{-t^2/2}\,\mathrm{d}t$；无初等函数表达式，只能查表或数值计算 | 第 07 讲 | 要能推导/手算（查表） |
+| $3\sigma$ 法则 | three-sigma rule | 正态下 $P(\lvert X-\mu\rvert<k\sigma)=2\Phi(k)-1$；$k=1,2,3$ 分别给 $0.6827/0.9545/0.9973$；**仅正态（或极接近正态）成立** | 第 07 讲 | 要建立直觉 |
+| 分位点 | quantile | 满足 $P(X\le x_q)=q$ 的那个 $x_q$；描述分布被切掉多少面积处的取值 | 第 07 讲 | 要会用 |
+| 厚尾 | heavy tail | 极端值出现频率显著高于正态的分布特征；此时用正态建模会严重低估极端事件概率 | 第 07 讲 | 要建立直觉 |
+| 中心极限定理 | central limit theorem, CLT | 大量相互独立、同分布的随机变量之和经标准化后，分布趋近 $N(0,1)$；是正态普遍性的来源 | 第 07 讲（预告）、第 14 讲（正式） | 要知道有这回事 |
+| 随机变量函数的分布 | distribution of $g(X)$ | 已知 $X$ 的分布时，新随机变量 $Y=g(X)$ 的分布；不能直接把 $g^{-1}(y)$ 代入 $f_X$ 得到 | 第 08 讲 | 要能推导/手算 |
+| 分布函数法 | CDF method | 先求 $F_Y(y)=P(g(X)\le y)$（解不等式化到 $X$），再对 $y$ 求导得密度的通法；适用于任意 $g$ | 第 08 讲 | 要能推导/手算 |
+| 公式法 / 变量变换法 | transformation (change-of-variable) method | $g$ 严格单调可导时直接用 $f_Y(y)=f_X(h(y))\lvert h'(y)\rvert$，$h$ 是 $g$ 的反函数 | 第 08 讲 | 要能推导/手算 |
+| 雅可比（一维） | Jacobian (1-D) | 反函数导数的绝对值 $\lvert h'(y)\rvert$，含义是"$Y$ 走一个单位时 $X$ 走多少个单位"（宽度缩放比的倒数）；二维时为行列式（第 10 讲） | 第 08 讲 | 要会用 |
+| 支（分支） | branch | 非单调 $g$ 在每一段单调区间上的反函数分支；每个 $y$ 的水平线与图像的交点数就是支数 | 第 08 讲 | 要建立直觉 |
+| 卡方分布 | chi-square distribution, $\chi^2(k)$ | $k$ 个相互独立的标准正态变量的平方和所服从的分布；$k=1$ 时密度为 $\frac{1}{\sqrt{2\pi y}}e^{-y/2}$（$y>0$） | 第 08 讲（预告）、第 15 讲（正式） | 要知道有这回事 |
 
 ## 二、关键公式
 
@@ -96,3 +113,24 @@
 | $P(X=k)=\frac{\lambda^{k}}{k!}e^{-\lambda}$ | 泊松分布分布律 | 稀有事件计数，$\lambda$ 为平均次数 | 第 05 讲 §3.1 |
 | $P(X=k)=(1-p)^{k-1}p$ | 几何分布分布律（$k\ge1$） | 数到首次成功（试验次数口径） | 第 05 讲 §4.1 |
 | $P(X=k)=\frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}$ | 超几何分布分布律 | 有限总体 $N$，成功类 $K$，抽 $n$ 不放回 | 第 05 讲 §5.1 |
+| $f(x)=\dfrac{1}{b-a}$（$a<x<b$） | 均匀分布密度 | 其余处为 0 | 第 06 讲 §2.2 |
+| $F(x)=\dfrac{x-a}{b-a}$（$a\le x\le b$） | 均匀分布分布函数 | $x<a$ 为 0，$x>b$ 为 1 | 第 06 讲 §2.2 |
+| $f(x)=\lambda e^{-\lambda x}$（$x>0$） | 指数分布密度 | $x\le0$ 时为 0 | 第 06 讲 §3.2 |
+| $F(x)=1-e^{-\lambda x}$（$x\ge0$） | 指数分布分布函数 | $x<0$ 时为 0 | 第 06 讲 §3.2 |
+| $P(X>t)=e^{-\lambda t}$ | 指数分布尾概率 | $t\ge0$ | 第 06 讲 §3.2 |
+| $P(X>s+t\mid X>s)=P(X>t)$ | 无记忆性 | 指数分布（连续）、几何分布（离散） | 第 06 讲 §3.6 |
+| $f(x)=\dfrac{1}{\sqrt{2\pi}\,\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ | $\mu$=位置参数，$\sigma$=尺度参数（$\sigma>0$） | 正态分布，$x\in\mathbb R$ | 第 07 讲 §1.1 |
+| $\int_{-\infty}^{\infty}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\,\mathrm{d}x=\sigma\sqrt{2\pi}$ | 高斯积分（平移缩放形式） | $\sigma>0$ | 第 07 讲 §1.3（BB.4） |
+| $Z=\dfrac{X-\mu}{\sigma}\sim N(0,1)$ | 标准化 | $X\sim N(\mu,\sigma^2)$，$\sigma>0$ | 第 07 讲 §3.1 |
+| $P(X\le c)=\Phi\left(\dfrac{c-\mu}{\sigma}\right)$ | 正态分布函数化为标准正态 | $X\sim N(\mu,\sigma^2)$ | 第 07 讲 §4.2 |
+| $\Phi(-z)=1-\Phi(z)$ | 标准正态对称性 | 任意实数 $z$ | 第 07 讲 §4.2 |
+| $P(a<X<b)=\Phi\left(\frac{b-\mu}{\sigma}\right)-\Phi\left(\frac{a-\mu}{\sigma}\right)$ | 正态区间概率 | $X\sim N(\mu,\sigma^2)$，$a<b$ | 第 07 讲 §4.2 |
+| $P(\lvert X-\mu\rvert<k\sigma)=2\Phi(k)-1$ | $3\sigma$ 法则的一般式 | 正态，$k>0$ | 第 07 讲 §5.1 |
+| $aX+b\sim N(a\mu+b,\ a^2\sigma^2)$ | 正态的线性变换 | $X\sim N(\mu,\sigma^2)$，$a\ne0$ | 第 07 讲 §6.1 |
+| $\displaystyle\sum_{i=1}^{n}a_iX_i\sim N\left(\sum_{i=1}^{n}a_i\mu_i,\ \sum_{i=1}^{n}a_i^2\sigma_i^2\right)$ | 正态的线性组合 | 各 $X_i$ 相互独立且 $X_i\sim N(\mu_i,\sigma_i^2)$ | 第 07 讲 §6.2 |
+| $F_Y(y)=P\bigl(g(X)\le y\bigr)$ | 分布函数法第一步；再解不等式、求导 | 任意 $g$ | 第 08 讲 §2.1 |
+| $f_Y(y)=f_X\bigl(h(y)\bigr)\,\lvert h'(y)\rvert$ | $h=g^{-1}$；$\lvert h'\rvert$ 为宽度缩放比 | $g$ 严格单调、可导、$g'\ne0$ | 第 08 讲 §3.2 |
+| $f_Y(y)=\displaystyle\sum_{i=1}^{k}f_X\bigl(h_i(y)\bigr)\,\lvert h_i'(y)\rvert$ | 分段单调时逐支相加 | 每段严格单调可导 | 第 08 讲 §4.2 |
+| $f_Y(y)=\dfrac{1}{2\sqrt{y}}$（$0<y<1$） | $Y=X^2$，$X\sim U(0,1)$（对 $U(-1,1)$ 也成立） | $0<y<1$，其余为 0 | 第 08 讲 §2.2 / §2.3 |
+| $f_Y(y)=\dfrac{1}{\sqrt{2\pi y}}e^{-y/2}$（$y>0$） | $Y=X^2$，$X\sim N(0,1)$，即 $\chi^2(1)$ | $y>0$，其余为 0 | 第 08 讲 §4.1 |
+| $f_Y(y)=2\varphi(y)$（$y>0$） | $Y=\lvert X\rvert$，$X\sim N(0,1)$；$\varphi$ 为标准正态密度 | $y>0$，其余为 0 | 第 08 讲 §4.4 |
