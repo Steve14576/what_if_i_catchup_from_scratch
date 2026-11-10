@@ -4,7 +4,7 @@
 > 每条标注：首次出现讲次 + 理解层次（**要会用**（含推导/手算）｜**知道有这回事**（知道是什么 + 何时找它）｜**建立直觉**（辅助理解的路标，不是证明））。
 > 随讲增补；第 2 遍回查时批量对账（首次出现讲次、定义、公式条件与正文交叉核对）。
 
-> 当前覆盖：第 01–15 讲。
+> 当前覆盖：第 01–18 讲。
 
 ## 一、概念与术语（中英对照）
 
@@ -56,6 +56,10 @@
 | 柱面/球面坐标 | cylindrical / spherical coordinates | 柱面：$x=r\cosθ,y=r\sinθ,z=z$；球面：$x=ρ\sinφ\cosθ,y=ρ\sinφ\sinθ,z=ρ\cosφ$，**$φ$ 从正 $z$ 轴量起**（$0\leφ\leπ$），$θ$ 为方位角；选择看边界在哪个坐标系下是常数（圆柱/旋转体→柱面；球/球+锥→球面） | 第 14 讲 | 要会用 |
 | 质量、质心与矩 | mass / centroid / moments | 质量 $m=\iint\rho\,d\sigma$ 或 $\iiint\rho\,dV$；**一阶矩**（对 $yz$ 面为 $\iiint x\rho$）除以质量得质心坐标 $\overline{x}=M_{yz}/m$；$\rho$ 常数时质心=形心；重积分 = 加权求和（零阶矩→面积/体积/质量、一阶矩→质心、二阶矩→惯量） | 第 15 讲 | 要会用 |
 | 转动惯量 | moment of inertia | 离散 $I=\sum m_ir_i^2$、连续 $I=\iiint r^2\rho\,dV$（$r$ 为到轴距离）；$I_x=\iiint(y^2+z^2)\rho$、$I_y=\iiint(x^2+z^2)\rho$、$I_z=\iiint(x^2+y^2)\rho$、$I_O=\iiint(x^2+y^2+z^2)\rho$；**$I_x+I_y+I_z=2I_O$**；平面薄片 $I_z=I_x+I_y$、$I_O=I_z$ | 第 15 讲 | 要会用 |
+| 第一类曲线积分（对弧长） | line integral of the first kind | 沿曲线把“值 × 弧长元”累加：$\int_L f\,ds$；$ds$ 由小段弦长→勾股→参数导数得出；$f=1$ 得弧长、$f$ 为线密度得质量、$f$ 为高度得柱面面积（认识层）；**不带方向**（$ds\ge0$，正反同值） | 第 16 讲 | 要会用 |
+| 第二类曲线积分（对坐标） | line integral of the second kind | 沿有向曲线把“力 × 有向位移”累加：$\int_L P\,dx+Q\,dy=\int_L\mathbf F\cdot d\mathbf r$；**反向变号**；$dx=\cos\alpha\,ds$、$dy=\cos\beta\,ds$（方向余弦）；闭合曲线记 $\oint$，平面正向通常逆时针 | 第 17 讲 | 要会用 |
+| 格林公式 | Green's theorem | 闭区域 $D$ 的正向边界 $L$ 上：$\oint_L P\,dx+Q\,dy=\iint_D(Q_x-P_y)\,d\sigma$；条件：闭区域、**正向**（区域在左手边）、$P,Q$ 连续偏导；一般区域可分割证明（内部边界抵消） | 第 18 讲 | 要会用 |
+| 路径无关与四等价 | path independence | **单连通**区域上：① $\int P\,dx+Q\,dy$ 与路径无关 ⇔ ② 任意闭曲线积分为 0 ⇔ ③ 存在原函数 $u$（$du=P\,dx+Q\,dy$）⇔ ④ $P_y=Q_x$；**单连通不能省**：$(-y,x)/(x^2+y^2)$ 绕原点积分为 $2\pi$；多连通时外边界逆时针、内边界顺时针 | 第 18 讲 | 要会用 |
 
 ## 二、公式
 
@@ -94,3 +98,7 @@
 | 面积/体积：$A=\iint_D1\,d\sigma$；$V=\iiint_\Omega1\,dV=\iint_D(z_{\text{上}}-z_{\text{下}})d\sigma$ | $D$ 为投影；两种体积写法等价 | 区域满足相应描述 | 第 15 讲 |
 | 质心：$\overline{x}=\dfrac{\iiint x\rho\,dV}{\iiint\rho\,dV}$（其余分量同理） | 分子为对 $yz$ 面的一阶矩；薄片版把 $dV$ 换成 $d\sigma$ | 密度非负；$\rho$ 常数时退化为形心 | 第 15 讲 |
 | 转动惯量：$I_z=\iiint(x^2+y^2)\rho\,dV$；$I_x+I_y+I_z=2I_O$ | $r^2$ 为到轴距离平方；$I_O$ 对原点 | 均匀球 $I_z=\frac25mR^2$；薄球壳 $\frac23mR^2$ | 第 15 讲 |
+| 弧长元与第一类曲线积分：$ds=\sqrt{x'^2+y'^2}\,dt$；$\int_L f\,ds=\int_\alpha^\beta f(x(t),y(t))\sqrt{x'^2+y'^2}\,dt$ | 显式 $y=f(x)$ 用 $\sqrt{1+f'^2}\,dx$；极坐标用 $\sqrt{r^2+r'^2}\,d\theta$；上下限从小到大 | 曲线分段光滑；$ds$ 不可写成 $dx$ | 第 16 讲 |
+| 两类曲线积分关系：$\int_L P\,dx+Q\,dy=\int_L(P\cos\alpha+Q\cos\beta)\,ds$ | $(\cos\alpha,\cos\beta)$ 为单位切向量（方向余弦）；$dx,dy$ 是 $ds$ 的带符号投影 | 方向余弦按曲线定向取；第二类反向变号 | 第 17 讲 |
+| 面积公式：$A=\frac12\oint_L x\,dy-y\,dx$ | $L$ 为正向边界；由格林取 $P=-y,Q=x$ | 区域闭、边界分段光滑、正向 | 第 18 讲 |
+| 全微分求积：$u(x,y)=\int_{x_0}^{x}P(s,y_0)\,ds+\int_{y_0}^{y}Q(x,t)\,dt$ | 折线路径（先水平后竖直）；需 $P_y=Q_x$ 且单连通 | 结果与路径无关；可加起点函数值 | 第 18 讲 |
