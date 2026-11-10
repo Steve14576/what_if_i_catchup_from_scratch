@@ -1,10 +1,10 @@
-# 高等数学 II（下）：概念、公式与中英对照（字典）
+﻿# 高等数学 II（下）：概念、公式与中英对照（字典）
 
 > 本文件是**附录字典**：每条给出完整定义（读者忘了翻回来能重新明白"它到底是什么"），不是用法提示的堆砌；正文不缩写成字典条目，字典也不只甩名字。
 > 每条标注：首次出现讲次 + 理解层次（**要会用**（含推导/手算）｜**知道有这回事**（知道是什么 + 何时找它）｜**建立直觉**（辅助理解的路标，不是证明））。
 > 随讲增补；第 2 遍回查时批量对账（首次出现讲次、定义、公式条件与正文交叉核对）。
 
-> 当前覆盖：第 01–20 讲。
+> 当前覆盖：第 01–24 讲。
 
 ## 一、概念与术语（中英对照）
 
@@ -62,6 +62,19 @@
 | 路径无关与四等价 | path independence | **单连通**区域上：① $\int P\,dx+Q\,dy$ 与路径无关 ⇔ ② 任意闭曲线积分为 0 ⇔ ③ 存在原函数 $u$（$du=P\,dx+Q\,dy$）⇔ ④ $P_y=Q_x$；**单连通不能省**：$(-y,x)/(x^2+y^2)$ 绕原点积分为 $2\pi$；多连通时外边界逆时针、内边界顺时针 | 第 18 讲 | 要会用 |
 | 第一类曲面积分（对面积） | surface integral of the first kind | 沿曲面把“值 × 面积元”累加：$\iint_\Sigma f\,dS$；$dS$ 由投影得 $dS=\sqrt{1+z_x^2+z_y^2}\,dx\,dy$（投影缩短因子 $|\cos\gamma|$），参数化得 $|\mathbf r_u\times\mathbf r_v|\,du\,dv$；$f=1$ 面积、$f$ 面密度质量、$f$ 电荷面密度电荷；**不带方向**（与曲面的侧无关） | 第 19 讲 | 要会用 |
 | 第二类曲面积分（通量） | surface integral of the second kind | 沿**定向**曲面把“穿过面元的量”累加：$\iint_\Sigma\mathbf F\cdot d\mathbf S=\iint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy$；有向面元 $d\mathbf S=\mathbf n\,dS=(\cos\alpha,\cos\beta,\cos\gamma)dS$；**投影定号** $\iint R\,dx\,dy=\pm\iint_D R\,dx\,dy$（上侧 $+$、下侧 $-$）；**换侧变号** | 第 20 讲 | 要会用 |
+| 散度 | divergence | $\mathrm{div}\,\mathbf F=P_x+Q_y+R_z$；描述一点处“源/汇”的强弱（正为源、负为汇）；高斯公式的被积函数 | 第 21 讲 | 要会用 |
+| 旋度 | curl | $\nabla\times\mathbf F=(R_y-Q_z,\ P_z-R_x,\ Q_x-P_y)$；描述一点处旋转的强弱与轴；斯托克斯公式的被积函数 | 第 21 讲 | 要会用 |
+| 高斯公式 | divergence theorem | $\oiint_\Sigma\mathbf F\cdot d\mathbf S=\iiint_\Omega\mathrm{div}\,\mathbf F\,dV$；条件：闭区域、$P,Q,R$ 连续偏导、$\Sigma$ 取**外侧** | 第 21 讲 | 要会用 |
+| 斯托克斯公式 | Stokes' theorem | $\oint_\Gamma\mathbf F\cdot d\mathbf r=\iint_\Sigma(\nabla\times\mathbf F)\cdot\mathbf n\,dS$；条件：定向曲面、$\Gamma$ 与 $\mathbf n$ 成**右手系** | 第 21 讲 | 要会用 |
+| 拉普拉斯算子与调和函数 | Laplacian, harmonic function | $\Delta f=\nabla\cdot\nabla f=f_{xx}+f_{yy}+f_{zz}$（先梯度再散度，直角坐标下才写成三个二阶偏导之和）；满足 $\Delta f=0$ 的 $f$ 叫**调和函数** | 第 22 讲 | 要会用 |
+| 数项级数与收敛 | series, convergence | 无穷多项相加的“和”定义为部分和 $S_n=a_1+\cdots+a_n$ 的极限；$S_n\to S$ 叫**收敛**、$S$ 叫和，否则叫**发散** | 第 23 讲 | 要会用 |
+| 几何级数 | geometric series | $\sum_{n=0}^\infty q^n$；部分和 $S_n=\frac{1-q^{n+1}}{1-q}$（$q\ne1$）；$|q|<1$ 收敛到 $\frac1{1-q}$，$|q|\ge1$ 发散 | 第 23 讲 | 要会用 |
+| 调和级数 | harmonic series | $\sum_{n=1}^\infty\frac1n$；**发散**。分组证明：第 $k$ 组（$2^{k-1}$ 项）的和 $\ge\frac12$，前 $2^k$ 项和 $\ge1+\frac k2$，无界 | 第 23 讲 | 要会用 |
+| 比较判别法与 p 级数 | comparison test, p-series | $0\le a_n\le b_n$：$\sum b_n$ 收敛 ⇒ $\sum a_n$ 收敛；$\sum a_n$ 发散 ⇒ $\sum b_n$ 发散。$p$ 级数 $\sum1/n^p$：$p>1$ 收敛、$p\le1$ 发散 | 第 23 讲 | 要会用 |
+| 比值判别法 | ratio test | $a_n>0$，$\lim\frac{a_{n+1}}{a_n}=\rho$：$\rho<1$ 收敛、$\rho>1$ 发散、$\rho=1$ 失效（如 $\sum1/n$ 与 $\sum1/n^2$ 同为 1） | 第 23 讲 | 要会用 |
+| 极限比较判别法 | limit comparison test | $a_n,b_n>0$，$a_n/b_n\to c\in(0,\infty)$ ⇒ **同敛散**（$\frac c2b_n\le a_n\le2cb_n$）；$a_n\sim b_n$ 是 $c=1$ 的特例；$c=0$ / $\infty$ 只有单向结论 | 第 24 讲 | 要会用 |
+| 根值判别法 | root test | $a_n>0$，$\sqrt[n]{a_n}\to\rho$：$\rho<1$ 收敛、$\rho>1$ 发散、$\rho=1$ 失效（$\sum1/n$ 与 $\sum1/n^2$ 同为 1） | 第 24 讲 | 要会用 |
+| 积分判别法 | integral test | $f$ 在 $[1,\infty)$ 上**正、连续、单调递减**，$a_n=f(n)$；则 $\sum a_n$ 与 $\int_1^\infty f(x)dx$ 同敛散（面积夹逼） | 第 24 讲 | 要会用 |
 
 ## 二、公式
 
@@ -106,3 +119,8 @@
 | 全微分求积：$u(x,y)=\int_{x_0}^{x}P(s,y_0)\,ds+\int_{y_0}^{y}Q(x,t)\,dt$ | 折线路径（先水平后竖直）；需 $P_y=Q_x$ 且单连通 | 结果与路径无关；可加起点函数值 | 第 18 讲 |
 | 面积元与第一类曲面积分：$dS=\sqrt{1+z_x^2+z_y^2}\,dx\,dy$；$\iint_\Sigma f\,dS=\iint_D f(x,y,z(x,y))\sqrt{1+z_x^2+z_y^2}\,dx\,dy$ | 参数化 $dS=|\mathbf r_u\times\mathbf r_v|\,du\,dv$；球面 $R^2\sin\varphi\,d\varphi\,d\theta$；柱面 $R\,d\theta\,dz$ | 投影必须单值；重叠要分片或换投影面 | 第 19 讲 |
 | 通量与两类关系：$\iint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy=\iint_\Sigma(P\cos\alpha+Q\cos\beta+R\cos\gamma)\,dS$ | 有向面元 $d\mathbf S=\mathbf n\,dS$；$dy\,dz=\cos\alpha\,dS$ 等；$\cos\gamma$ 定上下侧符号 | 换侧两边同时变号；投影单值 | 第 20 讲 |
+| 高斯公式：$\oiint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy=\iiint_\Omega(P_x+Q_y+R_z)\,dV$ | 散度 $\mathrm{div}\,\mathbf F=P_x+Q_y+R_z$；$\Omega$ 的边界取外侧 | 闭区域、连续偏导；内侧变号 | 第 21 讲 |
+| 斯托克斯公式：$\oint_\Gamma P\,dx+Q\,dy+R\,dz=\iint_\Sigma(R_y-Q_z)\,dy\,dz+(P_z-R_x)\,dz\,dx+(Q_x-P_y)\,dx\,dy$ | 旋度 $(R_y-Q_z,P_z-R_x,Q_x-P_y)$；$\Gamma$ 与 $\mathbf n$ 右手系 | 曲面定向；平面片退化为格林 | 第 21 讲 |
+| 两个恒等式：∇×(∇f)=0；∇·(∇×F)=0 | 需二阶偏导连续（混合偏导相等） | “梯无旋、旋无散”；前者解释保守场环量为 0 | 第 22 讲 |
+| 几何级数与 p 级数：$\sum q^n=\frac{1}{1-q}$（$|q|<1$）；$\sum\frac1{n^p}$：$p>1$ 收敛、$p\le1$ 发散 | 几何级数从 $q^0$ 或 $q^1$ 开始相差一个 $q$；p 级数 $p=1$ 即调和级数 | 比值判别法失效时用 p 级数比较 | 第 23 讲 |
+| 积分夹逼：$\int_1^{N+1}f(x)dx\le\sum_{n=1}^{N}f(n)\le f(1)+\int_1^{N}f(x)dx$ | $f$ 正、连续、单调递减 | 由此得级数与积分同敛散；可证 p 级数 | 第 24 讲 |
