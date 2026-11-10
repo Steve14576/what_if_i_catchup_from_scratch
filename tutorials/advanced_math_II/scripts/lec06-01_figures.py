@@ -88,7 +88,7 @@ ax.grid(alpha=0.3)
 ax.axhline(0, color="0.8", lw=0.6)
 ax.axvline(0, color="0.8", lw=0.6)
 ax.set_title(r"$x^2+y^2=1$: $(F_x,F_y)$ is perpendicular to the tangent", fontsize=10)
-fig.savefig(OUT / "lec06_fig2_implicit_geometry.svg", format="svg", bbox_inches="tight")
+fig.savefig(OUT / "lec06_fig6_implicit_geometry.svg", format="svg", bbox_inches="tight")
 plt.close(fig)
 
 # ---------------- fig 3: sphere equator: no single-valued z(x,y) ----------------
@@ -111,7 +111,7 @@ ax.set_xlim(-1.2, 1.2); ax.set_ylim(-1.2, 1.2); ax.set_zlim(-1.3, 1.3)
 ax.view_init(elev=16, azim=-60)
 ax.set_title("equator: one (x,y) meets two z values", fontsize=10)
 fig.tight_layout()
-fig.savefig(OUT / "lec06_fig3_sphere_equator.svg", format="svg")
+fig.savefig(OUT / "lec06_fig7_sphere_equator.svg", format="svg")
 plt.close(fig)
 
 # helpers shared by the four form figures
@@ -140,7 +140,7 @@ ax.text(3.5, 2.4, r"$ds/dt=2t$", fontsize=10)
 ax.text(3.2, 0.6, r"$dz/dt=e^u\cos s\cdot 2t$   (1 path, 3 factors)", ha="center", fontsize=10)
 ax.set_title("form 1: three-level chain", fontsize=11)
 fig.tight_layout()
-fig.savefig(OUT / "lec06_fig4_three_level.svg", format="svg")
+fig.savefig(OUT / "lec06_fig2_three_level.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 5: form 2, layered branching ----------------
@@ -171,7 +171,7 @@ ax.text(4.9, 2.5, r"$1$", fontsize=10)
 ax.text(4.0, 0.6, r"4 paths: $96+16-1+3=114$", ha="center", fontsize=10)
 ax.set_title("form 2: layered branching", fontsize=11)
 fig.tight_layout()
-fig.savefig(OUT / "lec06_fig5_branching.svg", format="svg")
+fig.savefig(OUT / "lec06_fig3_branching.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 6: form 3, direct + indirect ----------------
@@ -192,7 +192,7 @@ ax.text(5.6, 2.8, r"$u_y$", fontsize=10)
 ax.text(3.4, 0.8, r"$z_x=2xu+x^2$; at $(1,2)$: $7$  (direct only: $6$)", ha="center", fontsize=9.5)
 ax.set_title("form 3: direct + indirect", fontsize=11)
 fig.tight_layout()
-fig.savefig(OUT / "lec06_fig6_direct_indirect.svg", format="svg")
+fig.savefig(OUT / "lec06_fig4_direct_indirect.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 7: form 4, direct + indirect + layers ----------------
@@ -217,7 +217,7 @@ ax.text(3.95, 4.55, r"$u_y=x$", color="tab:orange", fontsize=10)
 ax.text(4.0, 0.8, r"4 paths: $2x+4xy+y+2x^2$; at $x=0.5$: $2.25$", ha="center", fontsize=10)
 ax.set_title("form 4: direct + indirect + layers", fontsize=11)
 fig.tight_layout()
-fig.savefig(OUT / "lec06_fig7_combined.svg", format="svg")
+fig.savefig(OUT / "lec06_fig5_combined.svg", format="svg")
 plt.close(fig)
 
 for p in sorted(OUT.glob("lec06_fig*.svg")):

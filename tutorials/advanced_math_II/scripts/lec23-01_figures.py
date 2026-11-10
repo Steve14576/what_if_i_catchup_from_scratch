@@ -28,7 +28,7 @@ ax.set_xlabel("n"); ax.set_ylabel("partial sum")
 ax.set_title("partial sums: convergent vs divergent", fontsize=10)
 ax.legend(fontsize=8, loc="upper left")
 fig.tight_layout()
-fig.savefig(OUT / "lec23_fig1_partial_sums.svg", format="svg")
+fig.savefig(OUT / "lec23_fig2_partial_sums.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 2: harmonic grouping ----------------
@@ -57,7 +57,7 @@ ax.axhline(0.5, color="tab:blue", lw=0.8, ls="--")
 ax.set_xlabel("term index"); ax.set_ylabel("1/n")
 ax.set_title(r"harmonic grouping: every block sums to at least 1/2", fontsize=10)
 fig.tight_layout()
-fig.savefig(OUT / "lec23_fig2_harmonic.svg", format="svg")
+fig.savefig(OUT / "lec23_fig1_harmonic.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 3: p-series ----------------

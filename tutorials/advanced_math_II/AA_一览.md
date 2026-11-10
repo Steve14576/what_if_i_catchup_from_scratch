@@ -57,13 +57,13 @@
 | 质量、质心与矩 | mass / centroid / moments | 质量 $m=\iint\rho\,d\sigma$ 或 $\iiint\rho\,dV$；**一阶矩**（对 $yz$ 面为 $\iiint x\rho$）除以质量得质心坐标 $\overline{x}=M_{yz}/m$；$\rho$ 常数时质心=形心；重积分 = 加权求和（零阶矩→面积/体积/质量、一阶矩→质心、二阶矩→惯量） | 第 15 讲 | 要会用 |
 | 转动惯量 | moment of inertia | 离散 $I=\sum m_ir_i^2$、连续 $I=\iiint r^2\rho\,dV$（$r$ 为到轴距离）；$I_x=\iiint(y^2+z^2)\rho$、$I_y=\iiint(x^2+z^2)\rho$、$I_z=\iiint(x^2+y^2)\rho$、$I_O=\iiint(x^2+y^2+z^2)\rho$；**$I_x+I_y+I_z=2I_O$**；平面薄片 $I_z=I_x+I_y$、$I_O=I_z$ | 第 15 讲 | 要会用 |
 | 第一类曲线积分（对弧长） | line integral of the first kind | 沿曲线把“值 × 弧长元”累加：$\int_L f\,ds$；$ds$ 由小段弦长→勾股→参数导数得出；$f=1$ 得弧长、$f$ 为线密度得质量、$f$ 为高度得柱面面积（认识层）；**不带方向**（$ds\ge0$，正反同值） | 第 16 讲 | 要会用 |
-| 第二类曲线积分（对坐标） | line integral of the second kind | 沿有向曲线把“力 × 有向位移”累加：$\int_L P\,dx+Q\,dy=\int_L\mathbf F\cdot d\mathbf r$；**反向变号**；$dx=\cos\alpha\,ds$、$dy=\cos\beta\,ds$（方向余弦）；闭合曲线记 $\oint$，平面正向通常逆时针 | 第 17 讲 | 要会用 |
+| 第二类曲线积分（对坐标） | line integral of the second kind | 沿有向曲线把“力 × 有向位移”累加：$\int_L P\,dx+Q\,dy=\int_L\mathbf F\cdot d\mathbf r$；**反向变号**；$dx=\cos\alpha\,ds$、$dy=\cos\beta\,ds$（方向余弦）；闭合曲线记 $\oint$，沿闭曲线走一圈的积分叫**环量**（circulation）；平面正向通常逆时针 | 第 17 讲 | 要会用 |
 | 格林公式 | Green's theorem | 闭区域 $D$ 的正向边界 $L$ 上：$\oint_L P\,dx+Q\,dy=\iint_D(Q_x-P_y)\,d\sigma$；条件：闭区域、**正向**（区域在左手边）、$P,Q$ 连续偏导；一般区域可分割证明（内部边界抵消） | 第 18 讲 | 要会用 |
-| 路径无关与四等价 | path independence | **单连通**区域上：① $\int P\,dx+Q\,dy$ 与路径无关 ⇔ ② 任意闭曲线积分为 0 ⇔ ③ 存在原函数 $u$（$du=P\,dx+Q\,dy$）⇔ ④ $P_y=Q_x$；**单连通不能省**：$(-y,x)/(x^2+y^2)$ 绕原点积分为 $2\pi$；多连通时外边界逆时针、内边界顺时针 | 第 18 讲 | 要会用 |
+| 路径无关与四等价 | path independence | **单连通**区域上：① $\int P\,dx+Q\,dy$ 与路径无关 ⇔ ② 任意闭曲线积分为 0 ⇔ ③ 存在原函数 $u$（也叫势函数，potential function；$du=P\,dx+Q\,dy$）⇔ ④ $P_y=Q_x$；满足这些条件的场叫**保守场**（conservative field）；**单连通不能省**：$(-y,x)/(x^2+y^2)$ 绕原点积分为 $2\pi$；多连通时外边界逆时针、内边界顺时针 | 第 18 讲 | 要会用 |
 | 第一类曲面积分（对面积） | surface integral of the first kind | 沿曲面把“值 × 面积元”累加：$\iint_\Sigma f\,dS$；$dS$ 由投影得 $dS=\sqrt{1+z_x^2+z_y^2}\,dx\,dy$（投影缩短因子 $|\cos\gamma|$），参数化得 $|\mathbf r_u\times\mathbf r_v|\,du\,dv$；$f=1$ 面积、$f$ 面密度质量、$f$ 电荷面密度电荷；**不带方向**（与曲面的侧无关） | 第 19 讲 | 要会用 |
 | 第二类曲面积分（通量） | surface integral of the second kind | 沿**定向**曲面把“穿过面元的量”累加：$\iint_\Sigma\mathbf F\cdot d\mathbf S=\iint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy$；有向面元 $d\mathbf S=\mathbf n\,dS=(\cos\alpha,\cos\beta,\cos\gamma)dS$；**投影定号** $\iint R\,dx\,dy=\pm\iint_D R\,dx\,dy$（上侧 $+$、下侧 $-$）；**换侧变号** | 第 20 讲 | 要会用 |
-| 散度 | divergence | $\mathrm{div}\,\mathbf F=P_x+Q_y+R_z$；描述一点处“源/汇”的强弱（正为源、负为汇）；高斯公式的被积函数 | 第 21 讲 | 要会用 |
-| 旋度 | curl | $\nabla\times\mathbf F=(R_y-Q_z,\ P_z-R_x,\ Q_x-P_y)$；描述一点处旋转的强弱与轴；斯托克斯公式的被积函数 | 第 21 讲 | 要会用 |
+| 散度 | divergence | $\mathrm{div}\,\mathbf F=P_x+Q_y+R_z$；描述一点处“源/汇”的强弱（正为源、负为汇）；它是**通量密度**（单位体积往外冒的通量）；高斯公式的被积函数 | 第 21 讲 | 要会用 |
+| 旋度 | curl | $\nabla\times\mathbf F=(R_y-Q_z,\ P_z-R_x,\ Q_x-P_y)$；描述一点处旋转的强弱与轴；沿法向的投影是**环量密度**（单位面积的环量）；斯托克斯公式的被积函数 | 第 21 讲 | 要会用 |
 | 高斯公式 | divergence theorem | $\oiint_\Sigma\mathbf F\cdot d\mathbf S=\iiint_\Omega\mathrm{div}\,\mathbf F\,dV$；条件：闭区域、$P,Q,R$ 连续偏导、$\Sigma$ 取**外侧** | 第 21 讲 | 要会用 |
 | 斯托克斯公式 | Stokes' theorem | $\oint_\Gamma\mathbf F\cdot d\mathbf r=\iint_\Sigma(\nabla\times\mathbf F)\cdot\mathbf n\,dS$；条件：定向曲面、$\Gamma$ 与 $\mathbf n$ 成**右手系** | 第 21 讲 | 要会用 |
 | 拉普拉斯算子与调和函数 | Laplacian, harmonic function | $\Delta f=\nabla\cdot\nabla f=f_{xx}+f_{yy}+f_{zz}$（先梯度再散度，直角坐标下才写成三个二阶偏导之和）；满足 $\Delta f=0$ 的 $f$ 叫**调和函数** | 第 22 讲 | 要会用 |
@@ -139,7 +139,7 @@
 | 全微分求积：$u(x,y)=\int_{x_0}^{x}P(s,y_0)\,ds+\int_{y_0}^{y}Q(x,t)\,dt$ | 折线路径（先水平后竖直）；需 $P_y=Q_x$ 且单连通 | 结果与路径无关；可加起点函数值 | 第 18 讲 |
 | 面积元与第一类曲面积分：$dS=\sqrt{1+z_x^2+z_y^2}\,dx\,dy$；$\iint_\Sigma f\,dS=\iint_D f(x,y,z(x,y))\sqrt{1+z_x^2+z_y^2}\,dx\,dy$ | 参数化 $dS=|\mathbf r_u\times\mathbf r_v|\,du\,dv$；球面 $R^2\sin\varphi\,d\varphi\,d\theta$；柱面 $R\,d\theta\,dz$ | 投影必须单值；重叠要分片或换投影面 | 第 19 讲 |
 | 通量与两类关系：$\iint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy=\iint_\Sigma(P\cos\alpha+Q\cos\beta+R\cos\gamma)\,dS$ | 有向面元 $d\mathbf S=\mathbf n\,dS$；$dy\,dz=\cos\alpha\,dS$ 等；$\cos\gamma$ 定上下侧符号 | 换侧两边同时变号；投影单值 | 第 20 讲 |
-| 高斯公式：$\oiint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy=\iiint_\Omega(P_x+Q_y+R_z)\,dV$ | 散度 $\mathrm{div}\,\mathbf F=P_x+Q_y+R_z$；$\Omega$ 的边界取外侧 | 闭区域、连续偏导；内侧变号 | 第 21 讲 |
+| 高斯公式：$\oiint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy=\iiint_\Omega(P_x+Q_y+R_z)\,dV$ | 散度 $\mathrm{div}\,\mathbf F=P_x+Q_y+R_z$；$\Omega$ 的边界取外侧 | 闭区域、连续偏导；内侧变号；**曲面不封闭时先补面再减补面** | 第 21 讲 |
 | 斯托克斯公式：$\oint_\Gamma P\,dx+Q\,dy+R\,dz=\iint_\Sigma(R_y-Q_z)\,dy\,dz+(P_z-R_x)\,dz\,dx+(Q_x-P_y)\,dx\,dy$ | 旋度 $(R_y-Q_z,P_z-R_x,Q_x-P_y)$；$\Gamma$ 与 $\mathbf n$ 右手系 | 曲面定向；平面片退化为格林 | 第 21 讲 |
 | 两个恒等式：∇×(∇f)=0；∇·(∇×F)=0 | 需二阶偏导连续（混合偏导相等） | “梯无旋、旋无散”；前者解释保守场环量为 0 | 第 22 讲 |
 | 几何级数与 p 级数：$\sum q^n=\frac{1}{1-q}$（$|q|<1$）；$\sum\frac1{n^p}$：$p>1$ 收敛、$p\le1$ 发散 | 几何级数从 $q^0$ 或 $q^1$ 开始相差一个 $q$；p 级数 $p=1$ 即调和级数 | 比值判别法失效时用 p 级数比较 | 第 23 讲 |
@@ -147,4 +147,4 @@
 | 莱布尼茨余项：$|S-S_n|\le a_{n+1}$ | $a_n$ 单调递减、$a_n\to0$（交错级数） | 用于估计截断误差 | 第 25 讲 |
 | 常用和函数：$\frac{1}{1-x}=\sum x^n$；$\frac{1}{(1-x)^2}=\sum(n+1)x^n$；$-\ln(1-x)=\sum\frac{x^n}{n}$ | 均在 $|x|<1$ 内成立；后两式由几何级数逐项求导/积分得到 | 端点另判：$-\ln(1-x)$ 在 $x=-1$ 也收敛 | 第 26 讲 |
 | 常用展开：$e^x=\sum\frac{x^n}{n!}$、$\sin x=\sum\frac{(-1)^nx^{2n+1}}{(2n+1)!}$、$\cos x=\sum\frac{(-1)^nx^{2n}}{(2n)!}$、$\frac1{1-x}=\sum x^n$、$\ln(1+x)=\sum\frac{(-1)^{n-1}x^n}{n}$、$(1+x)^\alpha$ | 前三式全轴；$\frac1{1-x}$、$\ln(1+x)$、$(1+x)^\alpha$ 在 $|x|<1$；$\ln(1+x)$ 端点 $x=1$ 也收敛 | 间接展开的基础；代换后重求收敛域 | 第 27 讲 |
-| 傅里叶系数：$a_k=\frac1\pi\int_{-\pi}^{\pi}f\cos kx\,dx$，$b_k=\frac1\pi\int_{-\pi}^{\pi}f\sin kx\,dx$，$a_0=\frac1\pi\int_{-\pi}^{\pi}f\,dx$ | 区间 $[-\pi,\pi]$；周期 $2\pi$；常数项写 $\frac{a_0}{2}$ 使公式统一 | 不同区间/周期需换因子；间断点收敛到中点 | 第 28 讲 |
+| 傅里叶系数：$a_k=\frac1\pi\int_{-\pi}^{\pi}f\cos kx\,dx$，$b_k=\frac1\pi\int_{-\pi}^{\pi}f\sin kx\,dx$，$a_0=\frac1\pi\int_{-\pi}^{\pi}f\,dx$；周期 $2l$：$a_k=\frac1l\int_{-l}^{l}f\cos\frac{k\pi x}{l}dx$，$b_k=\frac1l\int_{-l}^{l}f\sin\frac{k\pi x}{l}dx$ | 区间 $[-\pi,\pi]$；周期 $2\pi$；常数项写 $\frac{a_0}{2}$ 使公式统一；一般周期把 $\frac1\pi\to\frac1l$、$kx\to\frac{k\pi x}{l}$ | 不同区间/周期要换因子；间断点收敛到中点 | 第 28 讲 |

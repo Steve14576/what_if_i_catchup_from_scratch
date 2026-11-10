@@ -46,7 +46,7 @@ arrow("pe", "ct", style=":", color="tab:red", label=r"no: piecewise", dy=-0.25)
 arrow("pe", "df", style=":", color="tab:red", label=r"no: $\sqrt{|xy|}$", dy=0.0)
 ax.set_title("solid: implication; dotted: implication fails (counterexample)", fontsize=10)
 fig.tight_layout()
-fig.savefig(OUT / "lec05_fig1_relations.svg", format="svg")
+fig.savefig(OUT / "lec05_fig3_relations.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 2: sqrt(|xy|)/rho depends on direction ----------------
@@ -63,7 +63,7 @@ ax.set_ylim(-0.03, 0.8)
 ax.grid(alpha=0.3)
 ax.set_title(r"$f=\sqrt{|xy|}$: $f/\rho$ depends on the direction", fontsize=10)
 fig.tight_layout()
-fig.savefig(OUT / "lec05_fig2_nonDiff.svg", format="svg")
+fig.savefig(OUT / "lec05_fig4_nonDiff.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 3: partial derivatives as section-curve slopes ----------------
@@ -89,7 +89,7 @@ ax.set_xlim(-1.2, 1.6); ax.set_ylim(-1.2, 1.6); ax.set_zlim(0, 4.5)
 ax.view_init(elev=22, azim=-60)
 ax.set_title("partial derivatives: slopes of the two section curves", fontsize=9)
 fig.tight_layout()
-fig.savefig(OUT / "lec05_fig3_partials_geometry.svg", format="svg")
+fig.savefig(OUT / "lec05_fig1_partials_geometry.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 4: differentiability = local plane approximation ----------------
@@ -109,7 +109,7 @@ ax.view_init(elev=20, azim=-60)
 ax.set_title(r"differentiable: surface and its approximating plane" "\n"
              r"$z=2+2(x-1)+2(y-1)$ near $(1,1,2)$", fontsize=9)
 fig.tight_layout()
-fig.savefig(OUT / "lec05_fig4_linear_approx.svg", format="svg")
+fig.savefig(OUT / "lec05_fig2_linear_approx.svg", format="svg")
 plt.close(fig)
 
 # ---------------- fig 5: surface of sqrt(|xy|) ----------------
