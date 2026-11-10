@@ -4,7 +4,7 @@
 > 每条标注：首次出现讲次 + 理解层次（**要会用**（含推导/手算）｜**知道有这回事**（知道是什么 + 何时找它）｜**建立直觉**（辅助理解的路标，不是证明））。
 > 随讲增补；第 2 遍回查时批量对账（首次出现讲次、定义、公式条件与正文交叉核对）。
 
-> 当前覆盖：第 01–18 讲。
+> 当前覆盖：第 01–20 讲。
 
 ## 一、概念与术语（中英对照）
 
@@ -60,6 +60,8 @@
 | 第二类曲线积分（对坐标） | line integral of the second kind | 沿有向曲线把“力 × 有向位移”累加：$\int_L P\,dx+Q\,dy=\int_L\mathbf F\cdot d\mathbf r$；**反向变号**；$dx=\cos\alpha\,ds$、$dy=\cos\beta\,ds$（方向余弦）；闭合曲线记 $\oint$，平面正向通常逆时针 | 第 17 讲 | 要会用 |
 | 格林公式 | Green's theorem | 闭区域 $D$ 的正向边界 $L$ 上：$\oint_L P\,dx+Q\,dy=\iint_D(Q_x-P_y)\,d\sigma$；条件：闭区域、**正向**（区域在左手边）、$P,Q$ 连续偏导；一般区域可分割证明（内部边界抵消） | 第 18 讲 | 要会用 |
 | 路径无关与四等价 | path independence | **单连通**区域上：① $\int P\,dx+Q\,dy$ 与路径无关 ⇔ ② 任意闭曲线积分为 0 ⇔ ③ 存在原函数 $u$（$du=P\,dx+Q\,dy$）⇔ ④ $P_y=Q_x$；**单连通不能省**：$(-y,x)/(x^2+y^2)$ 绕原点积分为 $2\pi$；多连通时外边界逆时针、内边界顺时针 | 第 18 讲 | 要会用 |
+| 第一类曲面积分（对面积） | surface integral of the first kind | 沿曲面把“值 × 面积元”累加：$\iint_\Sigma f\,dS$；$dS$ 由投影得 $dS=\sqrt{1+z_x^2+z_y^2}\,dx\,dy$（投影缩短因子 $|\cos\gamma|$），参数化得 $|\mathbf r_u\times\mathbf r_v|\,du\,dv$；$f=1$ 面积、$f$ 面密度质量、$f$ 电荷面密度电荷；**不带方向**（与曲面的侧无关） | 第 19 讲 | 要会用 |
+| 第二类曲面积分（通量） | surface integral of the second kind | 沿**定向**曲面把“穿过面元的量”累加：$\iint_\Sigma\mathbf F\cdot d\mathbf S=\iint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy$；有向面元 $d\mathbf S=\mathbf n\,dS=(\cos\alpha,\cos\beta,\cos\gamma)dS$；**投影定号** $\iint R\,dx\,dy=\pm\iint_D R\,dx\,dy$（上侧 $+$、下侧 $-$）；**换侧变号** | 第 20 讲 | 要会用 |
 
 ## 二、公式
 
@@ -102,3 +104,5 @@
 | 两类曲线积分关系：$\int_L P\,dx+Q\,dy=\int_L(P\cos\alpha+Q\cos\beta)\,ds$ | $(\cos\alpha,\cos\beta)$ 为单位切向量（方向余弦）；$dx,dy$ 是 $ds$ 的带符号投影 | 方向余弦按曲线定向取；第二类反向变号 | 第 17 讲 |
 | 面积公式：$A=\frac12\oint_L x\,dy-y\,dx$ | $L$ 为正向边界；由格林取 $P=-y,Q=x$ | 区域闭、边界分段光滑、正向 | 第 18 讲 |
 | 全微分求积：$u(x,y)=\int_{x_0}^{x}P(s,y_0)\,ds+\int_{y_0}^{y}Q(x,t)\,dt$ | 折线路径（先水平后竖直）；需 $P_y=Q_x$ 且单连通 | 结果与路径无关；可加起点函数值 | 第 18 讲 |
+| 面积元与第一类曲面积分：$dS=\sqrt{1+z_x^2+z_y^2}\,dx\,dy$；$\iint_\Sigma f\,dS=\iint_D f(x,y,z(x,y))\sqrt{1+z_x^2+z_y^2}\,dx\,dy$ | 参数化 $dS=|\mathbf r_u\times\mathbf r_v|\,du\,dv$；球面 $R^2\sin\varphi\,d\varphi\,d\theta$；柱面 $R\,d\theta\,dz$ | 投影必须单值；重叠要分片或换投影面 | 第 19 讲 |
+| 通量与两类关系：$\iint_\Sigma P\,dy\,dz+Q\,dz\,dx+R\,dx\,dy=\iint_\Sigma(P\cos\alpha+Q\cos\beta+R\cos\gamma)\,dS$ | 有向面元 $d\mathbf S=\mathbf n\,dS$；$dy\,dz=\cos\alpha\,dS$ 等；$\cos\gamma$ 定上下侧符号 | 换侧两边同时变号；投影单值 | 第 20 讲 |
