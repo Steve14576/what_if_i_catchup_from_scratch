@@ -102,6 +102,34 @@
 | 约当不等式 | Jordan's inequality | $\sin\theta\ge\frac{2\theta}{\pi}$，$0\le\theta\le\frac{\pi}{2}$ | 第 14 讲 | 要知道 |
 | 柯西主值 | Cauchy principal value，PV | 在实轴奇点两侧对称挖去长 $\varepsilon$ 的一段再取极限所得的积分 | 第 14 讲 | 要会算 |
 | 小半圆引理 | indentation lemma | 一阶极点上方半径 $\varepsilon$ 的顺时针半圆上积分 $\to-\pi i\operatorname{Res}$ | 第 14 讲 | 要会用 |
+| 伸缩率 | scale factor | 映射在一点附近对长度的局部放大倍数，等于 $\lvert f'(z_0)\rvert$ | 第 15 讲 | 要会算 |
+| 旋转角 | rotation angle | 映射在一点附近对切向的局部旋转量，等于 $\arg f'(z_0)$ | 第 15 讲 | 要会算 |
+| 保角映射 | conformal mapping，共形映射 | 在区域内解析且导数处处不为零的映射；保持两条曲线的夹角大小与方向 | 第 15 讲 | 要会用 |
+| 反保角 | anti-conformal | 保持夹角大小但反转方向的映射，如 $w=\bar z$；本课程不把它算作保角映射 | 第 15 讲 | 认识层 |
+| 分式线性映射 | fractional linear mapping，Möbius transformation | 形如 $w=\frac{az+b}{cz+d}$、$ad-bc\ne0$ 的映射，在扩充复平面上是双射 | 第 15 讲 | 要会用 |
+| 保圆性 | circle-preserving property | 分式线性映射把圆或直线映成圆或直线（直线视为过无穷远点的圆） | 第 15 讲 | 要会用 |
+| 不动点 | fixed point | 满足 $w(z)=z$ 的点；分式线性映射最多有两个 | 第 15 讲 | 要会算 |
+| 保对称性 | symmetry preservation | 关于圆或直线对称的两点，其像关于像圆或像直线对称 | 第 15 讲 | 要会用 |
+| 交比 | cross ratio | 四点相对位置的量 $(z_1,z_2,z_3,z_4)=\frac{(z_1-z_2)(z_3-z_4)}{(z_1-z_3)(z_2-z_4)}$，在分式线性映射下不变 | 第 15 讲 | 提高档 |
+| 标准域 | standard domain | 区域映射时作为中转的两个标准区域：上半平面与单位圆 | 第 16 讲 | 要会用 |
+| 边界对应原理 | boundary correspondence | 单叶解析映射把边界一一映成边界且保持走向时，区域映成目标区域 | 第 16 讲 | 要会用 |
+| 儒可夫斯基映射 | Joukowski map | $w=\frac12(z+1/z)$，把圆映成椭圆、偏移圆映成翼型 | 第 16 讲 | 认识层 |
+| 傅里叶级数 | Fourier series | 用常数与各次谐波的正弦余弦之和表示周期信号 | 第 17 讲 | 要会用 |
+| 正交性 | orthogonality | 三角函数系中不同函数在一个周期上积分为零 | 第 17 讲 | 要会用 |
+| 狄利克雷条件 | Dirichlet conditions | 有界、有限个第一类间断点与极值点、其余连续；保证傅里叶级数收敛 | 第 17 讲 | 要会判断 |
+| 单边谱 | one-sided spectrum | 只画 $n\ge0$，把负频份量并到正频；幅度 $A_n=2\lvert c_n\rvert$ | 第 17 讲 | 要会画 |
+| 双边谱 | two-sided spectrum | 画全部整数 $n$ 的复系数 $c_n$，含负频率 | 第 17 讲 | 要会画 |
+| 吉布斯现象 | Gibbs phenomenon | 跳变处部分和过冲约跳变高度的 $9\%$，不随项数消失 | 第 17 讲 | 认识层 |
+| 帕塞瓦尔定理 | Parseval's theorem | 平均功率等于各频率分量功率之和 | 第 17 讲 | 要会用 |
+| 基波 | fundamental | 周期信号中角频率为 $2\pi/T$ 的分量（$n=1$） | 第 17 讲 | 要会用 |
+| 谐波 | harmonic | 周期信号中角频率为 $2n\pi/T$ 的分量（$n\ge1$） | 第 17 讲 | 要会用 |
+| 正弦积分 | sine integral，$\operatorname{Si}$ | $\operatorname{Si}(x)=\int_0^x\frac{\sin t}{t}dt$，无初等闭式 | 第 17 讲 | 认识层 |
+| 傅里叶变换 | Fourier transform，$\mathcal F$ | 把时间信号变为频率密度 $F(\omega)=\int f e^{-i\omega t}dt$ | 第 18 讲 | 要会用 |
+| 频谱密度 | spectral density | 非周期信号的 $F(\omega)$，量纲为幅度乘时间 | 第 18 讲 | 要理解 |
+| 绝对可积 | absolutely integrable | $\int\lvert f\rvert dt<\infty$，傅里叶变换存在的充分条件 | 第 18 讲 | 要会判断 |
+| sinc 函数 | sinc function | $\operatorname{sinc}x=\sin x/x$（本课程定义） | 第 18 讲 | 要会用 |
+| 截止角频率 | cut-off angular frequency | 一阶低通幅度降到 $1/\sqrt2$ 处的 $\omega=a$ | 第 18 讲 | 要理解 |
+| 分贝 | decibel，dB | 幅度比 $R$ 的 $20\log_{10}R$；$1/\sqrt2$ 对应 $-3.01\,\mathrm{dB}$ | 第 18 讲 | 要会用 |
 
 ## 二、公式
 
@@ -190,6 +218,28 @@
 | $\left\lvert\int_{C_R}Re^{iaz}dz\right\rvert\le\frac{\pi}{a}\max_{C_R}\lvert R\rvert$ | 约当引理 | $a>0$，$C_R$ 为上半圆 | 第 14 讲 |
 | $\operatorname{PV}\int f\,dx=2\pi i\sum_{\text{上}}\operatorname{Res}+\pi i\sum_{\text{实轴}}\operatorname{Res}$ | 主值公式 | 实轴上只有一阶极点，大半圆积分 $\to0$ | 第 14 讲 |
 | $\int_{-\infty}^{\infty}\frac{\sin x}{x}dx=\pi$ | 主值经典例 | — | 第 14 讲 |
+| $\lvert\Delta w\rvert\approx\lvert f'(z_0)\rvert\lvert\Delta z\rvert$，$\arg\Delta w\approx\arg f'(z_0)+\arg\Delta z$ | $\Delta w=f(z_0+\Delta z)-f(z_0)$；$\lvert f'\rvert$ 是伸缩率，$\arg f'$ 是旋转角 | $\Delta z\to0$，$f'(z_0)\ne0$ | 第 15 讲 |
+| $w=\frac{az+b}{cz+d}$，$ad-bc\ne0$ | 分式线性映射的系数 | 扩充复平面上的双射 | 第 15 讲 |
+| $w=\frac ac+\frac{bc-ad}{c^2}\cdot\frac{1}{z+d/c}$ | 四步分解：平移 → 反演 → 旋转伸缩 → 平移 | $c\ne0$ | 第 15 讲 |
+| $cz^2+(d-a)z-b=0$ | 不动点方程 | $w=(az+b)/(cz+d)$，最多两个解（含 $\infty$） | 第 15 讲 |
+| $(z_1,z_2,z_3,z_4)=\frac{(z_1-z_2)(z_3-z_4)}{(z_1-z_3)(z_2-z_4)}$ | 交比定义 | 分式线性映射下不变 | 第 15 讲 |
+| $(z,z_2,\infty,z_4)=\frac{z-z_2}{z_4-z_2}$，$(z,\infty,z_3,z_4)=\frac{z_3-z_4}{z-z_3}$ | 含 $\infty$ 的交比规则 | 四点中有一个为 $\infty$ | 第 15 讲 |
+| $w=\frac{1+iz}{1-iz}$ | 把 $0,1,\infty$ 映到 $1,i,-1$ 的映射 | 由三对点唯一确定 | 第 15 讲 |
+| $w=e^{i\theta}\frac{z-z_0}{z-\bar z_0}$ | 上半平面 → 单位圆，$z_0\mapsto0$ | $\operatorname{Im}z_0>0$ | 第 16 讲 |
+| $z=\frac{w\bar z_0-z_0}{w-1}$ | 单位圆 → 上半平面（逆映射） | 由标准映射解出 | 第 16 讲 |
+| $w=z^{\pi/\theta_0}$ | 顶角 $\theta_0$ 的角形域 → 上半平面 | 取 $\arg z\in(0,\theta_0)$ 的分支 | 第 16 讲 |
+| $w=e^{\pi z/a}$ | 宽 $a$ 的水平带形 → 上半平面 | $a>0$ | 第 16 讲 |
+| $w=\frac12(z+1/z)$，$a=\frac12(r+1/r)$，$b=\frac12\lvert r-1/r\rvert$ | 儒可夫斯基：半径 $r$ 的圆 → 半轴 $a,b$ 的椭圆 | 认识层；$r=1$ 退化为线段 | 第 16 讲 |
+| $a_n=\frac2T\int_0^Tf\cos n\omega t\,dt$，$b_n=\frac2T\int_0^Tf\sin n\omega t\,dt$ | 三角系数 | $n\ge1$；$a_0=\frac2T\int_0^Tf\,dt$ | 第 17 讲 |
+| $c_n=\frac1T\int_0^Tf(t)e^{-in\omega t}dt$ | 复指数系数 | 任意整数 $n$ | 第 17 讲 |
+| $c_0=\frac{a_0}{2}$，$c_n=\frac{a_n-ib_n}{2}$，$c_{-n}=\frac{a_n+ib_n}{2}$ | 两种系数换算 | $n>0$ | 第 17 讲 |
+| $A_n=2\lvert c_n\rvert=\sqrt{a_n^2+b_n^2}$，$\varphi_n=\arg c_n$ | 单边幅度与相位 | $n\ge1$；$A_0=a_0$ | 第 17 讲 |
+| $\frac1T\int_0^T\lvert f\rvert^2dt=\sum\lvert c_n\rvert^2=\frac{A_0^2}{4}+\sum\frac{A_n^2}{2}$ | 帕塞瓦尔（级数版） | $f$ 在周期上平方可积 | 第 17 讲 |
+| $\sum_{k=0}^{\infty}\frac1{(2k+1)^2}=\frac{\pi^2}{8}$ | 方波功率推出的级数 | — | 第 17 讲 |
+| $F(\omega)=\int_{-\infty}^{\infty}f e^{-i\omega t}dt$，$f=\frac1{2\pi}\int F e^{i\omega t}d\omega$ | 正逆变换（$2\pi$ 在逆变换前） | 绝对可积 | 第 18 讲 |
+| $F(\omega)=\tau\operatorname{sinc}\frac{\omega\tau}{2}$ | 矩形脉冲的变换 | $F(0)=\tau$，零点 $2k\pi/\tau$，主瓣 $4\pi/\tau$ | 第 18 讲 |
+| $F(\omega)=\frac1{a+i\omega}$ | $e^{-at}u(t)$ 的变换 | $a>0$ | 第 18 讲 |
+| $F(-\omega)=\overline{F(\omega)}$ | 实信号共轭对称 | $f$ 实 | 第 18 讲 |
 
 ## 三、编号与讲次索引
 
