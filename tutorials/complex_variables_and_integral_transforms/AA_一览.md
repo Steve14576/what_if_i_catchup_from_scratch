@@ -120,7 +120,7 @@
 | 单边谱 | one-sided spectrum | 只画 $n\ge0$，把负频份量并到正频；幅度 $A_n=2\lvert c_n\rvert$ | 第 17 讲 | 要会画 |
 | 双边谱 | two-sided spectrum | 画全部整数 $n$ 的复系数 $c_n$，含负频率 | 第 17 讲 | 要会画 |
 | 吉布斯现象 | Gibbs phenomenon | 跳变处部分和过冲约跳变高度的 $9\%$，不随项数消失 | 第 17 讲 | 认识层 |
-| 帕塞瓦尔定理 | Parseval's theorem | 平均功率等于各频率分量功率之和 | 第 17 讲 | 要会用 |
+| 帕塞瓦尔定理（级数版） | Parseval's theorem (series) | 平均功率等于各频率分量功率之和 | 第 17 讲 | 要会用 |
 | 基波 | fundamental | 周期信号中角频率为 $2\pi/T$ 的分量（$n=1$） | 第 17 讲 | 要会用 |
 | 谐波 | harmonic | 周期信号中角频率为 $2n\pi/T$ 的分量（$n\ge1$） | 第 17 讲 | 要会用 |
 | 正弦积分 | sine integral，$\operatorname{Si}$ | $\operatorname{Si}(x)=\int_0^x\frac{\sin t}{t}dt$，无初等闭式 | 第 17 讲 | 认识层 |
@@ -130,6 +130,25 @@
 | sinc 函数 | sinc function | $\operatorname{sinc}x=\sin x/x$（本课程定义） | 第 18 讲 | 要会用 |
 | 截止角频率 | cut-off angular frequency | 一阶低通幅度降到 $1/\sqrt2$ 处的 $\omega=a$ | 第 18 讲 | 要理解 |
 | 分贝 | decibel，dB | 幅度比 $R$ 的 $20\log_{10}R$；$1/\sqrt2$ 对应 $-3.01\,\mathrm{dB}$ | 第 18 讲 | 要会用 |
+| 卷积 | convolution，$f*g$ | 翻转—平移—相乘—积分的运算 $(f*g)(t)=\int f(\tau)g(t-\tau)d\tau$；频域里是乘法 | 第 19 讲 | 要会算 |
+| 调制 | modulation | 信号乘正弦（载波）以搬移频谱的操作；乘余弦为最简单的幅度调制 | 第 19 讲 | 要会用 |
+| 对偶（对称性） | duality | 把 $F$ 当时间信号，其变换为 $2\pi f(-\omega)$；与奇偶对称不是一回事 | 第 19 讲 | 要会用 |
+| 三角脉冲 | triangular pulse，$\Lambda$ | $\Lambda(t)=1-\lvert t\rvert$（$\lvert t\rvert<1$）；宽 $1$ 矩形的自卷积 | 第 19 讲 | 要会用 |
+| 零均值 | zero mean | $F(0)=\int f=0$，正负面积相消；积分性质无 $\delta$ 项的条件 | 第 19 讲 | 要会判断 |
+| 因果信号 | causal signal | $t<0$ 时为零的信号；两个因果信号的卷积仍因果 | 第 19 讲 | 要会判断 |
+| 权函数（系统响应核） | weighting kernel / impulse response | 系统对"距今 $t-\tau$ 的一份输入"的响应 $h(t-\tau)$；卷积 $y=\int x(\tau)h(t-\tau)d\tau$ 即加权延迟叠加 | 第 19 讲 | 要会用 |
+| 相关 | correlation | 不翻转的重叠积分；本课程不用 | 第 19 讲 | 认识层 |
+| 帕塞瓦尔定理（变换版） | Parseval's theorem (transform) | 总能量等于频谱能量密度积分除 $2\pi$ | 第 19 讲 | 要会用 |
+| $\delta$ 函数 | Dirac delta，$\delta(t)$ | 单位面积矩形 $\tau\to0$ 的极限对象；用 $\int\delta(t)\varphi(t)dt=\varphi(0)$ 定义，不是逐点函数 | 第 20 讲 | 要会用 |
+| 筛选性质 | sifting property | $\int\delta(t-t_0)\varphi(t)dt=\varphi(t_0)$，用 $\delta$ 在 $t_0$ 处“筛出”函数值 | 第 20 讲 | 要会用 |
+| 广义意义 | generalized sense | 等式只在“乘连续函数再积分”后成立；$\delta$ 与冲激串的运算均在此意义下 | 第 20 讲 | 要知道边界 |
+| 冲激串 | impulse train | 等间隔冲激之和 $\sum\delta(t-nT)$；周期信号的频谱就是冲激串 | 第 20 讲 | 要会用 |
+| 冲激强度（面积） | impulse strength | 冲激在积分中贡献的面积；周期信号第 $n$ 根为 $2\pi c_n$ | 第 20 讲 | 要会用 |
+| 抽样角频率 | sampling angular frequency，$\omega_s$ | $\omega_s=2\pi/T_s$；抽样后频谱以 $\omega_s$ 为周期复制 | 第 20 讲 | 要会用 |
+| Nyquist 条件 | Nyquist condition | 带限 $\omega_m$ 的信号可恢复的充分条件 $\omega_s>2\omega_m$（严格大于） | 第 20 讲 | 要会判断 |
+| 混叠（折叠频率） | aliasing / folding frequency | 副本重叠时高频折成低频；折叠频率取 $\lvert f_0-kf_s\rvert$ 中最小且 $\le f_s/2$ | 第 20 讲 | 要会算 |
+| 理想低通 | ideal low-pass filter | 频域矩形 $H=T_s\operatorname{rect}(\omega/(2\omega_c))$；时域核为 sinc，非因果不可实现 | 第 20 讲 | 认识层 |
+| 插值核 | interpolation kernel | $h(t)=\operatorname{sinc}(\omega_c t)$，在采样点 $h(nT_s)=0\ (n\ne0)$、$h(0)=1$ | 第 20 讲 | 要会用 |
 
 ## 二、公式
 
@@ -240,6 +259,32 @@
 | $F(\omega)=\tau\operatorname{sinc}\frac{\omega\tau}{2}$ | 矩形脉冲的变换 | $F(0)=\tau$，零点 $2k\pi/\tau$，主瓣 $4\pi/\tau$ | 第 18 讲 |
 | $F(\omega)=\frac1{a+i\omega}$ | $e^{-at}u(t)$ 的变换 | $a>0$ | 第 18 讲 |
 | $F(-\omega)=\overline{F(\omega)}$ | 实信号共轭对称 | $f$ 实 | 第 18 讲 |
+| $f(t-t_0)\leftrightarrow e^{-i\omega t_0}F(\omega)$ | 时移 | 只改相位不改幅度；因子与积分变量无关 | 第 19 讲 |
+| $e^{i\omega_0t}f(t)\leftrightarrow F(\omega-\omega_0)$ | 频移（调制） | 频谱整体搬移 | 第 19 讲 |
+| $f(at)\leftrightarrow\frac1{\lvert a\rvert}F(\omega/a)$ | 尺度 | $a\ne0$；$a<0$ 时微分负号与限对调负号相消 | 第 19 讲 |
+| $F(t)\leftrightarrow2\pi f(-\omega)$ | 对偶 | 逆变换成立；$2\pi$ 随口径 | 第 19 讲 |
+| $f'\leftrightarrow i\omega F$ | 时域微分 | $f(\pm\infty)=0$ 且 $f'$ 绝对可积 | 第 19 讲 |
+| $\int_{-\infty}^t f\leftrightarrow\frac{F}{i\omega}+\pi F(0)\delta(\omega)$ | 时域积分 | $F(0)=0$ 时 $\delta$ 项消失 | 第 19 讲 |
+| $tf\leftrightarrow iF'(\omega)$ | 频域微分 | $tf$ 绝对可积 | 第 19 讲 |
+| $\mathcal F[f*g]=F(\omega)G(\omega)$ | 卷积定理 | $f,g$ 绝对可积 | 第 19 讲 |
+| $\mathcal F[fg]=\frac1{2\pi}(F*G)(\omega)$ | 对偶式 | 系数跟"频域卷积"走 | 第 19 讲 |
+| $\int\lvert f\rvert^2=\frac1{2\pi}\int\lvert F\rvert^2$ | 帕塞瓦尔（变换版） | 能量有限 | 第 19 讲 |
+| $\operatorname{sinc}t\leftrightarrow\pi\operatorname{rect}(\omega/2)$ | 对偶算例 | 广义积分意义；$\lvert\omega\rvert<1$ 为 $\pi$ | 第 19 讲 |
+| $\Lambda(t)\leftrightarrow\operatorname{sinc}^2(\omega/2)$ | 三角脉冲 | $\Lambda=q*q$，$q$ 宽 $1$ | 第 19 讲 |
+| $(\Lambda*q)(t)$：$\lvert t\rvert\le\tfrac12$ 时 $\tfrac34-t^2$；$\tfrac12\le\lvert t\rvert\le\tfrac32$ 时 $\tfrac12(\tfrac32-\lvert t\rvert)^2$；其余 $0$ $\leftrightarrow\operatorname{sinc}^3(\omega/2)$ | 三重卷积 | 分段二次、$C^1$；每卷一次光滑一档、衰减快一档 | 第 19 讲 |
+| $\int_0^t f\leftrightarrow\frac{F}{i\omega}+\pi F(0)\delta-2\pi g(0)\delta$ | 因果积分 | $g_0=g-g(0)$；因果信号时 $g_0=g$；拉普拉斯 $F(s)/s$ 为其 $s$ 域版 | 第 19 讲 |
+| $\delta(at)=\delta(t)/\lvert a\rvert$ | $\delta$ 的尺度 | $a\ne0$；换元时限与 $dt$ 符号相消 | 第 20 讲 |
+| $f*\delta=f$ | 卷积单位元 | $f$ 在 $t$ 处连续 | 第 20 讲 |
+| $\mathcal F[\delta]=1$ | $\delta$ 的频谱 | 筛选，$\varphi=e^{-i\omega t}$ | 第 20 讲 |
+| $\mathcal F[1]=2\pi\delta(\omega)$ | 常数的频谱 | 广义意义；面积 $2\pi$ | 第 20 讲 |
+| $\cos\omega_0t\leftrightarrow\pi[\delta(\omega-\omega_0)+\delta(\omega+\omega_0)]$ | 余弦频谱 | 实偶→实偶冲激，各面积 $\pi$ | 第 20 讲 |
+| $\sin\omega_0t\leftrightarrow-i\pi[\delta(\omega-\omega_0)-\delta(\omega+\omega_0)]$ | 正弦频谱 | 实奇→纯虚奇冲激 | 第 20 讲 |
+| $\mathcal F[\sum c_ne^{in\omega_0t}]=2\pi\sum c_n\delta(\omega-n\omega_0)$ | 周期信号频谱 | 广义意义；强度 $2\pi c_n$ | 第 20 讲 |
+| $X_s(\omega)=\frac1{T_s}\sum_nX(\omega-n\omega_s)$ | 抽样频谱 | $\omega_s=2\pi/T_s$；带限且 $\omega_s>2\omega_m$ 可恢复 | 第 20 讲 |
+| $x(t)=\sum_nx(nT_s)\operatorname{sinc}(\omega_c(t-nT_s))$ | 理想重建 | $\omega_c=\pi/T_s$；理想低通不可实现 | 第 20 讲 |
+| $te^{-at}u(t)\leftrightarrow\frac1{(a+i\omega)^2}$ | 频域微分算例 | $a>0$ | 第 19 讲 |
+| $\frac1{1+t^2}\leftrightarrow\pi e^{-\lvert\omega\rvert}$ | 对偶算例 | 与第 14 讲留数结果一致 | 第 19 讲 |
+| $\int\operatorname{sinc}^2x\,dx=\pi$，$\int\operatorname{sinc}^4x\,dx=\frac{2\pi}{3}$ | 两个 sinc 积分 | 由帕塞瓦尔推出 | 第 19 讲 |
 
 ## 三、编号与讲次索引
 
