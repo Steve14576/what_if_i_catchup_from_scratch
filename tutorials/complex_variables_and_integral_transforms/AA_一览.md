@@ -149,6 +149,58 @@
 | 混叠（折叠频率） | aliasing / folding frequency | 副本重叠时高频折成低频；折叠频率取 $\lvert f_0-kf_s\rvert$ 中最小且 $\le f_s/2$ | 第 20 讲 | 要会算 |
 | 理想低通 | ideal low-pass filter | 频域矩形 $H=T_s\operatorname{rect}(\omega/(2\omega_c))$；时域核为 sinc，非因果不可实现 | 第 20 讲 | 认识层 |
 | 插值核 | interpolation kernel | $h(t)=\operatorname{sinc}(\omega_c t)$，在采样点 $h(nT_s)=0\ (n\ne0)$、$h(0)=1$ | 第 20 讲 | 要会用 |
+| 拉普拉斯变换 | Laplace transform，$\mathcal L$ | 单边积分 $F(s)=\int_{0^-}^{\infty}f(t)e^{-st}dt$，$s=\sigma+i\omega$ | 第 21 讲 | 要会用 |
+| 单边变换 | unilateral transform | 只积 $t\ge0$，下限 $0^-$；$t<0$ 的信息由初值给出 | 第 21 讲 | 要会用 |
+| 收敛域 | region of convergence，ROC | 使积分绝对收敛的 $s$ 集合；单边为右半平面 $\sigma>\sigma_0$ | 第 21 讲 | 要会求 |
+| 收敛横坐标 | abscissa of convergence，$\sigma_0$ | 增长界 $\lvert f\rvert\le Me^{\sigma_0t}$ 中的 $\sigma_0$，ROC 的左边界 | 第 21 讲 | 要会判断 |
+| 增长阶 | exponential order | 使 $\lvert f\rvert\le Me^{\sigma_0t}$ 成立的最小 $\sigma_0$；不存在则无拉普拉斯变换 | 第 21 讲 | 要理解 |
+| 极点 | pole | $F(s)$ 分母为零的点；单边 ROC 在极点右侧 | 第 21 讲 | 要会定位 |
+| 全平面 ROC | entire ROC | $\delta$ 等不增长信号的 ROC 为全 $s$ 平面 | 第 21 讲 | 要会判断 |
+| $(F,\mathrm{ROC})$ 配对 | transform pair with ROC | 单边口径下 $F$ 与 ROC 一起唯一确定因果信号 | 第 21 讲 | 要理解 |
+| 双边拉普拉斯 | two-sided Laplace transform | 积分下限 $-\infty$；同一 $F$ 配不同 ROC 对应不同信号 | 第 21 讲 | 认识层 |
+| 时移性质 | time-shift property | $f(t-t_0)u(t-t_0)\leftrightarrow e^{-st_0}F(s)$；ROC 不变 | 第 22 讲 | 要会用 |
+| s 域平移 | s-domain shift | $e^{at}f(t)\leftrightarrow F(s-a)$；ROC 平移 $a$ | 第 22 讲 | 要会用 |
+| 尺度性质 | scaling property | $f(at)\leftrightarrow\frac1aF(s/a)$，$a>0$；ROC 缩放 $a$ | 第 22 讲 | 要会用 |
+| 微分性质 | derivative property | $\mathcal L[f']=sF-f(0^-)$；高阶带全部低阶初值 | 第 22 讲 | 要会推 |
+| 积分性质 | integral property | $\mathcal L[\int_0^tf]=F/s$；ROC 加 $\sigma>0$ | 第 22 讲 | 要会用 |
+| s 域微分 | s-domain derivative | $\mathcal L[tf]=-F'(s)$ | 第 22 讲 | 要会用 |
+| 单边卷积 | one-sided convolution | $(f*g)(t)=\int_0^tf(\tau)g(t-\tau)d\tau$，两信号因果 | 第 22 讲 | 要会算 |
+| 卷积定理（拉氏） | convolution theorem | $\mathcal L[f*g]=F(s)G(s)$；无 $2\pi$ | 第 22 讲 | 要会用 |
+| 真分式 | proper rational function | 分子次数低于分母次数；初值/终值定理与部分分式的前提 | 第 22 讲 | 要会判断 |
+| 初值定理 | initial value theorem | $f(0^+)=\lim_{s\to\infty}sF(s)$，$F$ 真分式且极限存在 | 第 22 讲 | 要会用 |
+| 终值定理 | final value theorem | $f(\infty)=\lim_{s\to0}sF(s)$，$sF$ 极点全在左半平面 | 第 22 讲 | 要会用 |
+| 拉普拉斯逆变换 | inverse Laplace transform | 由 $F(s)$ 求 $f(t)$；单边默认 $t<0$ 为零 | 第 23 讲 | 要会用 |
+| 反演公式 | Bromwich inversion integral | $f(t)=\frac1{2\pi i}\int_{\sigma-i\infty}^{\sigma+i\infty}F(s)e^{st}ds$，$\sigma$ 在 ROC 内 | 第 23 讲 | 认识层 |
+| 假分式 | improper rational function | 分子次数不低于分母；先做多项式除法 | 第 23 讲 | 要会判断 |
+| 部分分式 | partial fractions | 把有理函数拆成表内项之和 | 第 23 讲 | 要会用 |
+| 单实极点 | simple real pole | 分母的单实根；系数 $A_k=(s-s_k)F(s)\lvert_{s_k}$ | 第 23 讲 | 要会用 |
+| 共轭复极点 | complex conjugate poles | $\alpha\pm i\beta$；配成阻尼正弦/余弦 | 第 23 讲 | 要会用 |
+| 重极点 | repeated pole | $m$ 阶极点；时域带 $t^{k-1}$ 因子 | 第 23 讲 | 要会用 |
+| 约当引理 | Jordan lemma | 大弧上 $F(s)e^{st}\to0$ 时可用留数求逆 | 第 23 讲 | 认识层 |
+| 卷积求逆 | inverse by convolution | $F=GH$ → $f=g*h$ | 第 23 讲 | 提高档 |
+| 单边逆变换口径 | unilateral inverse convention | $t<0$ 默认零；双边才需 ROC 区分 | 第 23 讲 | 要理解 |
+| 微分方程 | differential equation | 含未知函数及其导数的方程；最高阶导数的阶为方程的阶 | 第 24 讲 | 要会判断 |
+| 通解 | general solution | 含 $n$ 个任意常数的解族；线性方程通解覆盖全部解 | 第 24 讲 | 要理解 |
+| 特解 | particular solution | 初值定常数后得到的单个解 | 第 24 讲 | 要会用 |
+| 初值问题 | initial value problem | 方程加初值条件；初值个数等于阶数 | 第 24 讲 | 要会用 |
+| 积分因子 | integrating factor | $\mu=e^{\int Pdx}$，使 $\mu y'+\mu Py=(\mu y)'$ | 第 24 讲 | 要会用 |
+| 可分离变量 | separable equation | $y'=f(x)g(y)$ 可写成 $dy/g(y)=f\,dx$ | 第 24 讲 | 要会用 |
+| 特征方程 | characteristic equation | $ar^2+br+c=0$，由 $y=e^{rx}$ 代入得到 | 第 24 讲 | 要会推 |
+| 重根 | repeated root | $\Delta=0$；通解 $(C_1+C_2x)e^{rx}$ | 第 24 讲 | 要会用 |
+| 共轭复根 | complex conjugate roots | $\alpha\pm i\beta$；通解 $e^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)$ | 第 24 讲 | 要会用 |
+| 待定系数法 | undetermined coefficients | 按右端形状设 trial，代入比较系数 | 第 24 讲 | 要会用 |
+| 共振 | resonance | 右端指数等于特征根；特解多乘 $x$ | 第 24 讲 | 要会判断 |
+| 欧拉方程 | Euler equation | $x^2y''+axy'+by=0$；$y=x^r$ 得指标方程 | 第 24 讲 | 认识层 |
+| 三步法 | three-step Laplace method | 变换（初值进入）→解 $Y(s)$→逆变换 | 第 25 讲 | 要会用 |
+| 阻尼比 | damping ratio，$\zeta$ | RLC 中 $\zeta=R/2$（$L=C=1$）；极点实部 $-\zeta$ | 第 25 讲 | 要理解 |
+| 阻尼振荡频率 | damped natural frequency，$\omega_d$ | $\omega_d=\sqrt{1-\zeta^2}$（$\omega_0=1$） | 第 25 讲 | 要会算 |
+| 过阻尼 | overdamped | $R>2$，相异负实根，无过冲 | 第 25 讲 | 要会判断 |
+| 临界阻尼 | critically damped | $R=2$，重根，最快无过冲 | 第 25 讲 | 要会判断 |
+| 欠阻尼 | underdamped | $0<R<2$，共轭复根，振荡有过冲 | 第 25 讲 | 要会判断 |
+| 冲激响应 | impulse response | 零初值下 $Y=H(s)$，再逆变换 | 第 25 讲 | 要会用 |
+| 延迟因子 | delay factor | $e^{-sT}$ 对应延迟 $T$，逆变换带 $u(t-T)$ | 第 25 讲 | 要会用 |
+| 过冲量 | overshoot | $M_p=e^{-\pi\zeta/\sqrt{1-\zeta^2}}$ | 第 25 讲 | 要会算 |
+| 峰值时间 | peak time | $t_p=\pi/\omega_d$ | 第 25 讲 | 要会算 |
 
 ## 二、公式
 
@@ -282,6 +334,44 @@
 | $\mathcal F[\sum c_ne^{in\omega_0t}]=2\pi\sum c_n\delta(\omega-n\omega_0)$ | 周期信号频谱 | 广义意义；强度 $2\pi c_n$ | 第 20 讲 |
 | $X_s(\omega)=\frac1{T_s}\sum_nX(\omega-n\omega_s)$ | 抽样频谱 | $\omega_s=2\pi/T_s$；带限且 $\omega_s>2\omega_m$ 可恢复 | 第 20 讲 |
 | $x(t)=\sum_nx(nT_s)\operatorname{sinc}(\omega_c(t-nT_s))$ | 理想重建 | $\omega_c=\pi/T_s$；理想低通不可实现 | 第 20 讲 |
+| $F(s)=\int_{0^-}^{\infty}f(t)e^{-st}dt$ | 单边拉普拉斯 | $s=\sigma+i\omega$；ROC 为 $\operatorname{Re}s>\sigma_0$ | 第 21 讲 |
+| $\mathcal L[\delta]=1$ | $\delta$ 的变换 | 全平面；依赖下限 $0^-$ | 第 21 讲 |
+| $\mathcal L[u]=1/s$ | 阶跃 | $\operatorname{Re}s>0$ | 第 21 讲 |
+| $\mathcal L[e^{at}]=1/(s-a)$ | 指数 | $\operatorname{Re}s>a$ | 第 21 讲 |
+| $\mathcal L[t^n]=n!/s^{n+1}$ | 幂 | $\operatorname{Re}s>0$，$n$ 非负整数 | 第 21 讲 |
+| $\mathcal L[\sin\omega t]=\omega/(s^2+\omega^2)$，$\mathcal L[\cos\omega t]=s/(s^2+\omega^2)$ | 三角 | $\operatorname{Re}s>0$ | 第 21 讲 |
+| $F(i\omega)=\mathcal F[f]$（ROC 含虚轴时） | 与傅里叶的关系 | 因果信号；否则不能代入 | 第 21 讲 |
+| $\mathcal L[f(t-t_0)u(t-t_0)]=e^{-st_0}F(s)$ | 时移 | ROC 不变；必须带阶跃 | 第 22 讲 |
+| $\mathcal L[e^{at}f]=F(s-a)$ | s 域平移 | ROC 平移 $a$ | 第 22 讲 |
+| $\mathcal L[f(at)]=\frac1aF(s/a)$ | 尺度 | $a>0$；ROC 缩放 | 第 22 讲 |
+| $\mathcal L[f']=sF-f(0^-)$，$\mathcal L[f'']=s^2F-sf(0^-)-f'(0^-)$ | 微分 | 初值取 $0^-$；高阶带全 | 第 22 讲 |
+| $\mathcal L[\int_0^tf]=F/s$ | 积分 | ROC 加 $\sigma>0$ | 第 22 讲 |
+| $\mathcal L[tf]=-F'(s)$ | s 域微分 | 负号 | 第 22 讲 |
+| $\mathcal L[f*g]=F(s)G(s)$ | 卷积定理 | 单边、因果；ROC 交集 | 第 22 讲 |
+| $f(0^+)=\lim_{s\to\infty}sF(s)$ | 初值定理 | $F$ 真分式 | 第 22 讲 |
+| $f(\infty)=\lim_{s\to0}sF(s)$ | 终值定理 | $sF$ 极点全在左半平面 | 第 22 讲 |
+| $f(t)=\frac1{2\pi i}\int_{\sigma-i\infty}^{\sigma+i\infty}F(s)e^{st}ds$ | 反演公式 | $\sigma$ 在 ROC 内；认识层 | 第 23 讲 |
+| $A_k=(s-s_k)F(s)\lvert_{s=s_k}$ | 单实极点系数 | 极点互异 | 第 23 讲 |
+| $\mathcal L^{-1}\!\left[\frac{B(s-\alpha)+C\beta}{(s-\alpha)^2+\beta^2}\right]=e^{\alpha t}(B\cos\beta t+C\sin\beta t)$ | 共轭复极点 | $\beta>0$ | 第 23 讲 |
+| $A_k=\frac1{(m-k)!}\frac{d^{m-k}}{ds^{m-k}}[(s-s_0)^mF(s)]\lvert_{s_0}$ | 重极点系数 | $k=1,\dots,m$ | 第 23 讲 |
+| $\mathcal L^{-1}\!\left[\frac{1}{(s-s_0)^k}\right]=\frac{t^{k-1}}{(k-1)!}e^{s_0t}$ | 重极点逆变换 | 阶乘与阶数配对 | 第 23 讲 |
+| $f(t)=\sum_k\operatorname{Res}[F(s)e^{st},s_k]$ | 留数法 | $t>0$；大弧条件 | 第 23 讲 |
+| $f=g*h=\int_0^t g(\tau)h(t-\tau)d\tau$ | 卷积求逆 | $F=GH$，两信号因果 | 第 23 讲 |
+| $F=P_0+R/Q$ | 假分式除法 | 多项式部分给 $\delta$ 及导数 | 第 23 讲 |
+| $y=e^{-\int Pdx}[\int Qe^{\int Pdx}dx+C]$ | 一阶线性通解 | $P,Q$ 连续 | 第 24 讲 |
+| $y=C_1e^{r_1x}+C_2e^{r_2x}$ | 相异实根 | $\Delta>0$ | 第 24 讲 |
+| $y=(C_1+C_2x)e^{rx}$ | 重根 | $\Delta=0$ | 第 24 讲 |
+| $y=e^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)$ | 共轭复根 | $\Delta<0$，$r=\alpha\pm i\beta$ | 第 24 讲 |
+| $y_p=x^kQ_n(x)e^{\lambda x}$ | 待定系数（指数型） | $k$ 为 $\lambda$ 的特征根重数（0/1/2） | 第 24 讲 |
+| $y_p=A\cos\omega x+B\sin\omega x$ | 待定系数（三角型） | 两项都要设 | 第 24 讲 |
+| $r(r-1)+ar+b=0$ | 欧拉指标方程 | $x>0$ | 第 24 讲 |
+| $Y(s)=\frac{F+a(sy_0+y_0')+by_0}{as^2+bs+c}$ | 二阶变换解 | 初值在分子 | 第 25 讲 |
+| $Y(s)=\frac{E}{s(s^2+Rs+1)}$ | RLC 阶跃 | $L=C=1$，零初值 | 第 25 讲 |
+| $u_C=1-(1+t)e^{-t}$ | 临界响应 | $R=2$ | 第 25 讲 |
+| $u_C=1-e^{-\zeta t}[\cos\omega_dt+\frac{\zeta}{\omega_d}\sin\omega_dt]$ | 欠阻尼响应 | $\zeta=R/2$，$\omega_d=\sqrt{1-\zeta^2}$ | 第 25 讲 |
+| $y=e^{-t}-e^{-2t}$ | 冲激响应例 | $y''+3y'+2y=\delta$ | 第 25 讲 |
+| $y=\frac12(1-e^{-2(t-2)})u(t-2)$ | 延迟阶跃例 | $y'+2y=u(t-2)$ | 第 25 讲 |
+| $M_p=e^{-\pi\zeta/\sqrt{1-\zeta^2}}$，$t_p=\pi/\omega_d$ | 过冲与峰值 | 欠阻尼二阶 | 第 25 讲 |
 | $te^{-at}u(t)\leftrightarrow\frac1{(a+i\omega)^2}$ | 频域微分算例 | $a>0$ | 第 19 讲 |
 | $\frac1{1+t^2}\leftrightarrow\pi e^{-\lvert\omega\rvert}$ | 对偶算例 | 与第 14 讲留数结果一致 | 第 19 讲 |
 | $\int\operatorname{sinc}^2x\,dx=\pi$，$\int\operatorname{sinc}^4x\,dx=\frac{2\pi}{3}$ | 两个 sinc 积分 | 由帕塞瓦尔推出 | 第 19 讲 |
