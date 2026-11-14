@@ -29,6 +29,18 @@
 | 终端 | terminal | 显示命令行、接收键盘输入并显示程序输出的窗口程序 | 第 01 讲 | 要会（会用五条命令） |
 | shell | shell | 解析并执行你敲的命令的程序；PowerShell 与 cmd 是两种 | 第 01 讲 | 只认得 |
 | 码页 | code page | 终端用来把字节解码成字符的那套编码规则；Windows 中文环境历史默认 936（GBK） | 第 01 讲 | 只认得（知道乱码与它有关） |
+| 环境变量 | environment variable | 操作系统提供给程序的一组"名字=值"配置；`PATH` 就是其中一个 | 第 02 讲 | 只认得 |
+| `PATH` | —— | 一个环境变量，内容是一串目录；shell 按顺序在这些目录里找命令 | 第 02 讲 | 要会（会看、会加） |
+| 虚拟环境 | virtual environment（venv） | 一个项目专用的小环境：独立的 site-packages 加上指向解释器的启动器 | 第 02 讲 | 要会（建/激活/退出/删） |
+| `site-packages` | —— | 第三方包装在磁盘上的目录；每个解释器或环境各有一份 | 第 02 讲 | 要会（能找到它） |
+| `pip` | pip | Python 自带的包管理命令，从包索引下载并安装包 | 第 02 讲 | 要会 |
+| 包索引 | package index（PyPI） | 公开的 Python 包仓库，`pip` 默认从这里取包 | 第 02 讲 | 只认得 |
+| wheel | `.whl` | 预编译好的包文件格式，`pip` 下载后解压到 site-packages | 第 02 讲 | 只认得 |
+| 锁文件 | lock file（`uv.lock`） | 记录每个依赖的确切版本，保证别人装出同样的环境 | 第 02 讲 | 只认得 |
+| IDE | integrated development environment | 在编辑器之上集成"选解释器、运行、调试"的工具 | 第 02 讲 | 只认得（会用即可） |
+| 执行策略 | execution policy | Windows 限制哪些脚本可以运行的设置 | 第 02 讲 | 只认得（知道怎么临时放行） |
+| BOM | byte order mark | 文件开头用来标记编码的几个字节；UTF-8 BOM 会让某些读取多出 `\ufeff` | 第 02 讲 | 只认得 |
+| 标准库 | standard library | 随 Python 一起安装的模块集合（如 `json`），来自原始解释器而不是 site-packages | 第 02 讲 | 只认得 |
 
 ## 二、公式与常量
 
@@ -52,6 +64,17 @@
 | 写入文本（UTF-8） | `"文本" \| Set-Content -Encoding utf8 文件名` | PowerShell 5.1 的 `>` 写 UTF-16，不能用来写 `.py` |
 | 看当前码页 | `chcp` | 中文环境常见 936 |
 | 中止程序 | `Ctrl+C` | 死循环时使用 |
+| 建虚拟环境 | `python -m venv .venv` | 第二个参数是目录名，惯例叫 `.venv` |
+| 激活（PowerShell） | `.\.venv\Scripts\Activate.ps1` | 提示符前会出现 `(.venv)` |
+| 激活（cmd） | `.\.venv\Scripts\activate.bat` | 同上 |
+| 退出虚拟环境 | `deactivate` | 只影响当前窗口 |
+| 装包 | `python -m pip install 包名` | 比裸 `pip` 稳 |
+| 看已装包 | `python -m pip list` | —— |
+| 看包信息 | `python -m pip show 包名` | `Location` 是安装位置 |
+| 导出依赖 | `python -m pip freeze > requirements.txt` | 含间接依赖 |
+| 临时带依赖运行 | `uv run --with 包名 python 脚本.py` | 不改项目环境 |
+| 看/改码页 | `chcp` | 65001 为 UTF-8 |
+| 临时放行脚本 | `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` | 只对当前窗口生效 |
 
 ## 四、名称对照（本讲出现的文件与概念）
 
@@ -64,3 +87,7 @@
 | `cmd` / `powershell` | 两种 shell 程序的名字，也可以直接用来打开黑窗口 |
 | `__main__` | 一个脚本被直接运行时，解释器赋予它的模块名 |
 | `hello.py`、`data.csv` | 只是示例文件名，不代表特定内容 |
+| `.venv` | 虚拟环境目录的惯例名；内含一份独立 site-packages 与启动器 |
+| `py` | Windows 的 Python 启动器，用 `py -3.12` 指定版本 |
+| `uv` | 管解释器/环境/依赖/运行的工具，自带锁文件 |
+| `requirements.txt` | 依赖清单，记录包名与版本 |
