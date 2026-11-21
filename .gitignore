@@ -31,3 +31,6 @@ dist/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 个人资料（不入库）
+personal/

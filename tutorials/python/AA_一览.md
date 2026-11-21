@@ -152,6 +152,20 @@
 | 裸 except | bare except | 等价于捕获 `BaseException`，会吞掉 `SystemExit` / `KeyboardInterrupt` | 第 18 讲 | 要能解释 |
 | 自定义异常 | custom exception | 继承 `Exception` 的类，让调用方能按类型精确捕获 | 第 18 讲 | 要会用 |
 | EAFP / LBYL | — | "先做、出错再处理" / "先检查、再动手"两种风格 | 第 18 讲 | 要能解释 |
+| 文件对象 | file object | `open` 返回的可读写对象，带位置指针与缓冲区 | 第 19 讲 | 要会用 |
+| 打开模式 | mode | `r` / `w` / `a` / `x` / `b` / `+` 的组合，决定副作用 | 第 19 讲 | 要会用 |
+| 默认编码 | preferred encoding | `open` 不写 `encoding` 时用的平台编码（本机 cp936） | 第 19 讲 | 要能解释 |
+| 通用换行 | universal newlines | 文本模式读写时把 `\r\n`、`\r` 归一成 `\n` 的行为 | 第 19 讲 | 要能解释 |
+| pathlib | — | 标准库的路径对象，用 `/` 拼接并提供 `.parent` / `resolve()` 等属性 | 第 19 讲 | 要会用 |
+| CSV 模块 | csv | 标准库的表格读写，处理引号与逗号转义 | 第 19 讲 | 要会用 |
+| JSON 模块 | json | 标准库的 JSON 读写，`ensure_ascii` 控制中文是否转义 | 第 19 讲 | 要会用 |
+| 类 | class | `class` 语句运行后得到的类对象，存方法与类属性 | 第 20 讲 | 要会用 |
+| 实例 | instance | 调用类得到的对象，`__dict__` 只装自己的属性 | 第 20 讲 | 要会用 |
+| 实例属性 | instance attribute | 在 `__init__` 或实例上赋的值，每个实例一份 | 第 20 讲 | 要会用 |
+| 类属性 | class attribute | 定义在类里的值，所有实例共享同一份 | 第 20 讲 | 要会用 |
+| 绑定方法 | bound method | 通过实例访问方法时生成，已记住该实例（`__self__`） | 第 20 讲 | 要能解释 |
+| 名字改写 | name mangling | 类里 `__x` 存成 `_类名__x`，避免子类重名 | 第 20 讲 | 要能解释 |
+| 不变量 | invariant | 一个对象应当始终满足的条件，由方法维护 | 第 20 讲 | 要能解释 |
 
 ## 二、命令
 
